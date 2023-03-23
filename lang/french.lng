@@ -1,0 +1,101 @@
+﻿##grflangid 0x03
+#Above is the French Id
+#ref. https://newgrf-specs.tt-wiki.net/wiki/Language_IDs
+
+STR_GRF_NAME             :RattRoads 1.0.2
+STR_GRF_DESC             :{}RattRoads is an NRT road and tramtrack set based on roads from the United States, Europe, and abroad.{}{}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2020 Andrew350{ORANGE}{}Licensed under GPLv2
+STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?f=26&t=76183
+STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
+
+STR_PARAM_1_NAME               :Disponibilité des routes
+STR_PARAM_1_DESC               :Ce paramètre modifie la disponibilité des routes selon la date. {ORANGE}Dépendant de l'année{BLACK} est le comportement par défaut où chaque type de route est introduite après un certain temps, alors que {ORANGE}Toujours disponibles{BLACK} rend toutes les routes disponibles dès le début du jeu.
+STR_PARAM_INTRO_YEAR_DEF       :Dépendant de l'année {SILVER}(Défaut)
+STR_PARAM_INTRO_YEAR_REMOVE    :Toujours disponibles
+
+STR_PARAM_2_NAME               :Speed Units
+STR_PARAM_2_DESC               :Choose your preferred units for speed {ORANGE}(make sure this is the same as your game setting!){BLACK}. This makes sure your speed limits look 'realistic', e.g. no more silly 57 km/h speed limits due to unit conversions
+STR_PARAM_UNITS_MPH            :MPH
+STR_PARAM_UNITS_KMH            :KM/H
+STR_PARAM_UNITS_MPS            :M/S
+
+STR_PARAM_3_NAME               :Speed Limits
+STR_PARAM_3_DESC               :This parameter adjusts speed limits. {}{ORANGE}Normal{BLACK} is default behavior with generous speeds{}{ORANGE}Hard{BLACK} Lower speed limits{}{ORANGE}Harder{BLACK} Much lower speed limits{}{ORANGE}No Speed Limits{BLACK} Pedal to the metal!
+STR_PARAM_DIFFICULTY_DEF       :Normal {SILVER}(Default)
+STR_PARAM_DIFFICULTY_HARD      :Hard
+STR_PARAM_DIFFICULTY_HARDER    :Harder
+STR_PARAM_DIFFICULTY_NONE      :No Speed Limits
+
+STR_PARAM_4_NAME               :Road Style
+STR_PARAM_4_DESC               :This parameter allows you to adjust which road style appears in-game. Currently there are two options: {ORANGE}American{BLACK} and {ORANGE}European/UK
+STR_PARAM_ROAD_STYLE_1         :American {SILVER}(Default)
+STR_PARAM_ROAD_STYLE_2         :European/UK
+
+STR_PARAM_5_NAME               :Enable electrified roads
+STR_PARAM_5_DESC               :If enabled, this option adds electrified versions of 4 roadtypes for use with trolleybuses and other catenary-powered road vehicles. These roadtypes require the addition of NRT-enabled vehicle sets to be useful, hence why they are disabled by default.
+
+STR_PARAM_6_NAME               :Enable houses along highways
+STR_PARAM_6_DESC               :By default, houses are forbidden from spawning alongside highways; activating this option enables it.{}{} {ORANGE}It is highly recommended to turn this on for multiplayer servers to prevent griefing from malicious or careless players.{BLACK}
+
+STR_GENERIC_BUILD_VEHICLE  :Construire de nouveaux véhicules routiers
+STR_GENERIC_AUTOREPLACE    :Véhicules routiers
+STR_GENERIC_NEW_ENGINE     :route
+
+STR_OLD_TOWN_ROAD_NAME               :Old Town Road
+STR_OLD_TOWN_ROAD_TOOLBAR            :Old Town Road Construction
+STR_OLD_TOWN_ROAD_MENU               :Old Town Road construction
+
+STR_DIRT_ROAD_NAME                   :Routes en terre
+STR_DIRT_ROAD_TOOLBAR                :Construction de routes en terre
+STR_DIRT_ROAD_MENU                   :Construction de routes en terre
+
+STR_SETT_PAVEMENT_ROAD_NAME          :Routes pavées
+STR_SETT_PAVEMENT_ROAD_TOOLBAR       :Construction de routes pavées
+STR_SETT_PAVEMENT_ROAD_MENU          :Construction de routes pavées
+
+STR_BASIC_ASPHALT_ROAD_NAME          :Routes en asphalte basique
+STR_BASIC_ASPHALT_ROAD_TOOLBAR       :Construction de routes en asphalte basique
+STR_BASIC_ASPHALT_ROAD_MENU          :Construction de routes en asphalte basique
+
+STR_IMPROVED_ASPHALT_ROAD_NAME       :Routes en asphalte amélioré
+STR_IMPROVED_ASPHALT_ROAD_TOOLBAR    :Construction de routes en asphalte amélioré
+STR_IMPROVED_ASPHALT_ROAD_MENU       :Construction de routes en asphalte amélioré
+
+STR_MODERN_ASPHALT_ROAD_NAME         :Routes en asphalte moderne
+STR_MODERN_ASPHALT_ROAD_TOOLBAR      :Construction de routes en asphalte moderne
+STR_MODERN_ASPHALT_ROAD_MENU         :Construction de routes en asphalte moderne
+
+STR_HIGHWAY_ROAD_NAME                :Autoroutes
+STR_HIGHWAY_ROAD_TOOLBAR             :Construction d'autoroutes
+STR_HIGHWAY_ROAD_MENU                :Construction d'autoroutes
+
+
+
+STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_NAME          :Electrified Sett Paved Road
+STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_TOOLBAR       :Electrified Sett Paved Road Construction
+STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_MENU          :Electrified Sett Paved Road construction
+
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Basic Asphalt Road
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Basic Asphalt Road Construction
+STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_MENU    		 :Electrified Basic Asphalt Road construction
+
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Improved Asphalt Road
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Improved Asphalt Road Construction
+STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified Improved Asphalt Road construction
+
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Modern Asphalt Road
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Modern Asphalt Road Construction
+STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified Modern Asphalt Road construction
+
+
+
+STR_TRAM_BUILD_VEHICLE             :Build New Tram Vehicles
+STR_TRAM_AUTOREPLACE               :Tram Vehicles
+STR_TRAM_NEW_ENGINE                :tram
+
+STR_TRAM_TRACK_NAME                :Tramway
+STR_TRAM_TRACK_TOOLBAR             :Tramway Construction
+STR_TRAM_TRACK_MENU                :Tramway construction
+
+STR_ELECTRIC_TRAM_TRACK_NAME       :Electric Tramway
+STR_ELECTRIC_TRAM_TRACK_TOOLBAR    :Electric Tramway Construction
+STR_ELECTRIC_TRAM_TRACK_MENU       :Electric Tramway construction
