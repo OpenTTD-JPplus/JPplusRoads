@@ -3,8 +3,8 @@ grf {
 		name: string(STR_GRF_NAME);
 		desc: string(STR_GRF_DESC);
 		url: string(STR_GRF_URL);
-		version: 11; //1.0.2
-		min_compatible_version: 9; //1.0.0
+		version: 20; 
+		min_compatible_version: 20; 
 		param {
 			param_intro_year {
 				type:      int;
@@ -83,7 +83,6 @@ grf {
 if (ttd_platform != PLATFORM_OPENTTD || (openttd_version < version_openttd(1, 10, 0, 0))) {
 	error(FATAL, REQUIRES_OPENTTD, string(STR_MIN_OPENTTD_VERSION));
 }
-
 //========================
 //begin defining templates
 //========================
@@ -180,10 +179,10 @@ template template_road_bridge_overlay (x, y) {
 	[ x+345,       y,       64,    39,     -31,       -8]  //nw slope
 }
 template template_road_tunnels (x, y) {
-	[ x,           y,       64,    31,     -31,        0]  //ne
-	[ x+69,        y,       64,    31,     -31,        0]  //se
-	[ x+138,       y,       64,    31,     -31,        0]  //sw
-	[ x+207,       y,       64,    31,     -31,        0]  //nw
+	[ x+69,           y,       64,    31,     -31,        0]  //ne
+	[ x,        y,       64,    31,     -31,        0]  //se
+	[ x+207,       y,       64,    31,     -31,        0]  //sw
+	[ x+138,       y,       64,    31,     -31,        0]  //nw
 }
 
 template template_tunnel_portals (y) {
@@ -203,45 +202,82 @@ spriteset(spriteset_blank_underlay, "gfx/blank_underlay.png") {
 	template_road_tunnels(1, 81)
 }
 
-//========================
-//begin defining roadtypes
-//========================
 roadtypetable {
  	OLD_, DIRT, STNS, ROAD, ASP1, ASP2, HWAY, ELSP, ELRD, ELA1, ELA2, ASP0
 }
+//==================================
+//==========Extra Stuff=============
+//==================================
 
+// temperate road tunnels 2389 - 2396
+replace spr2389(2389, "gfx/roadtunnel.png") { template_tunnel_portals(27) }
 
-spriteset (spriteset_old_town_road_underlay, "gfx/dirt_new.png") {
+// arctic road tunnel 238 - 245
+replace spr238( 238, "gfx/roadtunnel.png") { template_tunnel_portals(101) }
+
+// snowy road tunnels 2421 - 2428
+replace spr2421(2421, "gfx/roadtunnel.png") { template_tunnel_portals(249) }
+
+// tropic road tunnels 226
+replace spr226( 226, "gfx/roadtunnel.png") { template_tunnel_portals(175) }
+
+// desert road tunnels 509 - 516
+replace spr509( 509, "gfx/roadtunnel.png") { template_tunnel_portals(322) }
+
+replace replace_road_city_universal (1313, "gfx/misc_sprites.png") { //replaces the base sprites to make sure city roads stay consistent across base sets
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_old_town_road_underlay_snow, "gfx/dirt_new_snow.png") {
+replacenew replace_oneway_road_overlays (ONE_WAY_ROAD, "gfx/misc_sprites.png") {
+	[ 1,          113,       17,      9,       -6,       -6]
+	[ 23,         113,       17,      9,      -10,       -5]
+	[ 45,         113,       41,     24,      -21,      -15, ANIM]
+	[ 91,         113,       17,      9,       -6,       -5]
+	[ 113,        113,       17,      9,       -8,       -6]
+	[ 135,        113,       41,     24,      -18,      -15, ANIM]
+}
+if (climate == CLIMATE_TROPICAL) { //OpenGFX subtropic city trees need custom offsets to compensate for roads being slightly wider than standard
+	replace replace_subtropical_city_trees (4626, "gfx/misc_sprites.png") { 
+		[ 1,         73,       20,    35,      -9,      -31]
+	}
+}
+if (year_loaded < 1920) { //Use old street lights for early games; will switch on game reload
+	replace replace_old_street_lamps (1406, "gfx/misc_sprites.png") { //old street lights
+	[ 26,        94,        4,      14,         1,     -13]
+	[ 35,        94,        4,      14,        -4,     -14]
+	}
+}
+
+spriteset (spriteset_old_town_road_underlay, "gfx/roads/dirt_urban.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_old_town_road_underlay_sand, "gfx/dirt_new_sand.png") {
+spriteset (spriteset_old_town_road_underlay_snow, "gfx/roads/dirt_new_snow.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_old_town_road_city, "gfx/cobblestone_street.png") {
+spriteset (spriteset_old_town_road_underlay_sand, "gfx/roads/dirt_new_sand.png") {
+	template_roads_main_new(1, 1)
+}
+spriteset (spriteset_old_town_road_city, "gfx/roads/cobblestone_urban.png") {
 	template_roads_main_new(1, 226)
 }
-spriteset (spriteset_old_town_road_bridge_overlay, "gfx/cobblestone_street.png") {
+spriteset (spriteset_old_town_road_bridge_overlay, "gfx/roads/cobblestone_urban.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_old_town_road_bridge_overlay_snow, "gfx/cobblestone_street_snow.png") {
+spriteset (spriteset_old_town_road_bridge_overlay_snow, "gfx/roads/cobblestone_street_snow.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_old_town_road_tunnels, "gfx/cobblestone_street.png") {
+spriteset (spriteset_old_town_road_tunnels, "gfx/roads/cobblestone_urban.png") {
 	template_road_tunnels(1, 81)
 }
-spriteset (spriteset_old_town_road_gui, "gfx/dirt_new.png") {
+spriteset (spriteset_old_town_road_gui, "gfx/roads/dirt_urban.png") {
 	template_roads_gui(1, 153)
 }
-spriteset (spriteset_old_town_road_stops, "gfx/dirt_new.png") {
+spriteset (spriteset_old_town_road_stops, "gfx/roads/dirt_urban.png") {
 	template_road_stops(1, 117)
 }
-spriteset (spriteset_old_town_road_stops_snow, "gfx/dirt_new_snow.png") {
+spriteset (spriteset_old_town_road_stops_snow, "gfx/roads/dirt_new_snow.png") {
 	template_road_stops(1, 117)
 }
-spriteset (spriteset_old_town_road_stops_sand, "gfx/dirt_new_sand.png") {
+spriteset (spriteset_old_town_road_stops_sand, "gfx/roads/dirt_new_sand.png") {
 	template_road_stops(1, 117)
 }
 switch (FEAT_ROADTYPES, SELF, switch_old_town_road_stops_terrain_check, terrain_type) {
@@ -358,7 +394,7 @@ item(FEAT_ROADTYPES, item_old_town_road, 00) {
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
 		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD, ROADTYPE_FLAG_HIDDEN);
+		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
 //		construction_cost:           2; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 //		maintenance_cost:            4; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
 //		speed_limit:                 25 mph;
@@ -381,39 +417,37 @@ item(FEAT_ROADTYPES, item_old_town_road, 00) {
 
 
 
-
-
-spriteset (spriteset_dirt_road_underlay, "gfx/dirt_new.png") {
+spriteset (spriteset_dirt_road_underlay, "gfx/roads/dirt_rural.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_dirt_road_underlay_snow, "gfx/dirt_new_snow.png") {
+spriteset (spriteset_dirt_road_underlay_snow, "gfx/roads/dirt_new_snow.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_dirt_road_underlay_sand, "gfx/dirt_new_sand.png") {
+spriteset (spriteset_dirt_road_underlay_sand, "gfx/roads/dirt_new_sand.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_dirt_road_city, "gfx/dirt_new.png") {
+spriteset (spriteset_dirt_road_city, "gfx/roads/dirt_rural.png") {
 	template_roads_main_new(1, 226)
 }
-spriteset (spriteset_dirt_road_bridge_overlay, "gfx/dirt_new.png") {
+spriteset (spriteset_dirt_road_bridge_overlay, "gfx/roads/dirt_rural.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_dirt_road_bridge_overlay_snow, "gfx/dirt_new_snow.png") {
+spriteset (spriteset_dirt_road_bridge_overlay_snow, "gfx/roads/dirt_new_snow.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_dirt_road_tunnels, "gfx/dirt_new.png") {
+spriteset (spriteset_dirt_road_tunnels, "gfx/roads/dirt_rural.png") {
 	template_road_tunnels(1, 81)
 }
-spriteset (spriteset_dirt_road_gui, "gfx/dirt_new.png") {
+spriteset (spriteset_dirt_road_gui, "gfx/roads/dirt_rural.png") {
 	template_roads_gui(1, 153)
 }
-spriteset (spriteset_dirt_road_stops, "gfx/dirt_new.png") {
+spriteset (spriteset_dirt_road_stops, "gfx/roads/dirt_rural.png") {
 	template_road_stops(1, 117)
 }
-spriteset (spriteset_dirt_road_stops_snow, "gfx/dirt_new_snow.png") {
+spriteset (spriteset_dirt_road_stops_snow, "gfx/roads/dirt_new_snow.png") {
 	template_road_stops(1, 117)
 }
-spriteset (spriteset_dirt_road_stops_sand, "gfx/dirt_new_sand.png") {
+spriteset (spriteset_dirt_road_stops_sand, "gfx/roads/dirt_new_sand.png") {
 	template_road_stops(1, 117)
 }
 switch (FEAT_ROADTYPES, SELF, switch_dirt_road_stops_terrain_check, terrain_type) {
@@ -553,73 +587,79 @@ item(FEAT_ROADTYPES, item_dirt_road, 01) {
 
 
 
-
- 
-spriteset (spriteset_cobblestone_street_underlay, "gfx/cobblestone_street.png") {
+spriteset (spriteset_dirt_street_underlay, "gfx/roads/dirt_urban.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_cobblestone_street_underlay_snow, "gfx/cobblestone_street_snow.png") {
+spriteset (spriteset_dirt_street_underlay_snow, "gfx/roads/dirt_new_snow.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_cobblestone_street_city, "gfx/cobblestone_street.png") {
+spriteset (spriteset_dirt_street_underlay_sand, "gfx/roads/dirt_new_sand.png") {
+	template_roads_main_new(1, 1)
+}
+spriteset (spriteset_dirt_street_city, "gfx/roads/dirt_urban.png") {
 	template_roads_main_new(1, 226)
 }
-spriteset (spriteset_cobblestone_street_bridge_overlay, "gfx/cobblestone_street.png") {
+spriteset (spriteset_dirt_street_bridge_overlay, "gfx/roads/dirt_urban.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_cobblestone_street_bridge_overlay_snow, "gfx/cobblestone_street_snow.png") {
+spriteset (spriteset_dirt_street_bridge_overlay_snow, "gfx/roads/dirt_new_snow.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_cobblestone_street_tunnels, "gfx/cobblestone_street.png") {
+spriteset (spriteset_dirt_street_tunnels, "gfx/roads/dirt_urban.png") {
 	template_road_tunnels(1, 81)
 }
-spriteset (spriteset_cobblestone_street_gui, "gfx/cobblestone_street.png") {
+spriteset (spriteset_dirt_street_gui, "gfx/roads/dirt_urban.png") {
 	template_roads_gui(1, 153)
 }
-spriteset (spriteset_cobblestone_street_stops, "gfx/cobblestone_street.png") {
+spriteset (spriteset_dirt_street_stops, "gfx/roads/dirt_urban.png") {
 	template_road_stops(1, 117)
 }
-spriteset (spriteset_cobblestone_street_stops_snow, "gfx/cobblestone_street_snow.png") {
+spriteset (spriteset_dirt_street_stops_snow, "gfx/roads/dirt_new_snow.png") {
 	template_road_stops(1, 117)
 }
-switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_stops_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_cobblestone_street_stops_snow;
-	spriteset_cobblestone_street_stops;
+spriteset (spriteset_dirt_street_stops_sand, "gfx/roads/dirt_new_sand.png") {
+	template_road_stops(1, 117)
 }
-switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_bridge_surface_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_cobblestone_street_bridge_overlay_snow;
-	spriteset_cobblestone_street_bridge_overlay;
+switch (FEAT_ROADTYPES, SELF, switch_dirt_street_stops_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_dirt_street_stops_snow;
+	TILETYPE_DESERT: spriteset_dirt_street_stops_sand;
+	spriteset_dirt_street_stops;
 }
-switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_town_zone, town_zone) {
-	TOWNZONE_CENTRE: spriteset_cobblestone_street_city;
-	TOWNZONE_INNER_SUBURB: spriteset_cobblestone_street_city;
-	TOWNZONE_OUTER_SUBURB: spriteset_cobblestone_street_city;
-	TOWNZONE_OUTSKIRT: spriteset_cobblestone_street_city;
-	spriteset_cobblestone_street_underlay;
+switch (FEAT_ROADTYPES, SELF, switch_dirt_street_bridge_surface_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_dirt_street_bridge_overlay_snow;
+	spriteset_dirt_street_bridge_overlay;
 }
-switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_underlay_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_cobblestone_street_underlay_snow;
-	switch_cobblestone_street_town_zone;
+switch (FEAT_ROADTYPES, SELF, switch_dirt_street_town_zone, town_zone) {
+	TOWNZONE_CENTRE: spriteset_dirt_street_city;
+	TOWNZONE_INNER_SUBURB: spriteset_dirt_street_city;
+	TOWNZONE_OUTER_SUBURB: spriteset_dirt_street_city;
+	TOWNZONE_OUTSKIRT: spriteset_dirt_street_city;
+	spriteset_dirt_street_underlay;
+}
+switch (FEAT_ROADTYPES, SELF, switch_dirt_street_underlay_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_dirt_street_underlay_snow;
+	TILETYPE_DESERT: spriteset_dirt_street_underlay_sand;
+	switch_dirt_street_town_zone;
 }
 if (param_difficulty == 0) { //normal speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {	
-		speed_limit:                 30 mph;
+		speed_limit:                 25 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {	
-		speed_limit:                 50 km/h;
+		speed_limit:                 40 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {	
-		speed_limit:                 13 m/s;
+		speed_limit:                 11 m/s;
 	}
 }
 }
@@ -628,46 +668,21 @@ item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
 
 if (param_difficulty == 1) { //low speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
-	property {	
-		speed_limit:                 20 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
-	property {	
-		speed_limit:                 30 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
-	property {	
-		speed_limit:                 9 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {	
 		speed_limit:                 15 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {	
 		speed_limit:                 20 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {	
 		speed_limit:                 7 m/s;
 	}
@@ -676,74 +691,97 @@ item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
 }
 
 
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+if (param_difficulty == 2) { //very low speed limit
+if (param_speed_units == 0) { //mph
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {	
+		speed_limit:                 10 mph;
+	}
+}
+}
+if (param_speed_units == 1) { //km/h
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
+	property {	
+		speed_limit:                 15 km/h;
+	}
+}
+}
+if (param_speed_units == 2) { //m/s
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
+	property {	
+		speed_limit:                 4 m/s;
+	}
+}
+}
+}
+
+
+if (param_difficulty == 3) { //no speed limit
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
+	property {		
 		speed_limit:                 0;
 	}
 }
 }
-item(FEAT_ROADTYPES, item_cobblestone_street, 03) {
+item(FEAT_ROADTYPES, item_dirt_street, 02) {
 	property {
-		label:                       "STNS";
+		label:                       "DIRT";
 		introduction_date:           0;
-		name:                        string(STR_STONE_STREET_NAME);
-		toolbar_caption:             string(STR_STONE_STREET_TOOLBAR);
-		menu_text:                   string(STR_STONE_STREET_MENU);
+		name:                        string(STR_DIRT_STREET_NAME);
+		toolbar_caption:             string(STR_DIRT_STREET_TOOLBAR);
+		menu_text:                   string(STR_DIRT_STREET_MENU);
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
 		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
 //		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
-		construction_cost:           3; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            6; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 30 mph;
-		sort_order:                  02;		
+		construction_cost:           2; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
+		maintenance_cost:            4; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
+//		speed_limit:                 25 mph;
+		sort_order:                  00;
 //		map_colour:                  ?;
 //		requires_roadtype_list:      ?;
 //		introduces_roadtype_list:    ?;
 //		alternative_roadtype_list:   ?;
 	}
 	graphics {
-		gui:						 spriteset_cobblestone_street_gui;
-		underlay:                    switch_cobblestone_street_underlay_terrain_check;
-		roadstops:                   switch_cobblestone_street_stops_terrain_check;
-//		track_overlay:               spriteset_cobblestone_street_overlay;
-		bridge_surfaces:             switch_cobblestone_street_bridge_surface_terrain_check;
-//		tunnels:                     spriteset_cobblestone_street_tunnels;
-//		tunnel_overlay:              spriteset_cobblestone_street_tunnel_overlay;
+		gui:						 spriteset_dirt_street_gui;
+		underlay:                    switch_dirt_street_underlay_terrain_check;
+		roadstops:                   switch_dirt_street_stops_terrain_check;
+//		track_overlay:               spriteset_dirt_street_overlay;
+		bridge_surfaces:             switch_dirt_street_bridge_surface_terrain_check;
+//		tunnels:                     spriteset_dirt_street_tunnels;
+//		tunnel_overlay:              spriteset_dirt_street_tunnel_overlay;
 	}
 }
 
 
 
-
-
-spriteset (spriteset_cobblestone_road_underlay, "gfx/cobblestone_road.png") {
+spriteset (spriteset_cobblestone_road_underlay, "gfx/roads/cobblestone_rural.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_cobblestone_road_underlay_snow, "gfx/cobblestone_road_snow.png") {
+spriteset (spriteset_cobblestone_road_underlay_snow, "gfx/roads/cobblestone_road_snow.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_cobblestone_road_city, "gfx/cobblestone_road.png") {
+spriteset (spriteset_cobblestone_road_city, "gfx/roads/cobblestone_rural.png") {
 	template_roads_main_new(1, 226)
 }
-spriteset (spriteset_cobblestone_road_bridge_overlay, "gfx/cobblestone_road.png") {
+spriteset (spriteset_cobblestone_road_bridge_overlay, "gfx/roads/cobblestone_rural.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_cobblestone_road_bridge_overlay_snow, "gfx/cobblestone_road_snow.png") {
+spriteset (spriteset_cobblestone_road_bridge_overlay_snow, "gfx/roads/cobblestone_road_snow.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_cobblestone_road_tunnels, "gfx/cobblestone_road.png") {
+spriteset (spriteset_cobblestone_road_tunnels, "gfx/roads/cobblestone_rural.png") {
 	template_road_tunnels(1, 81)
 }
-spriteset (spriteset_cobblestone_road_gui, "gfx/cobblestone_road.png") {
+spriteset (spriteset_cobblestone_road_gui, "gfx/roads/cobblestone_rural.png") {
 	template_roads_gui(1, 153)
 }
-spriteset (spriteset_cobblestone_road_stops, "gfx/cobblestone_road.png") {
+spriteset (spriteset_cobblestone_road_stops, "gfx/roads/cobblestone_rural.png") {
 	template_road_stops(1, 117)
 }
-spriteset (spriteset_cobblestone_road_stops_snow, "gfx/cobblestone_road_snow.png") {
+spriteset (spriteset_cobblestone_road_stops_snow, "gfx/roads/cobblestone_road_snow.png") {
 	template_road_stops(1, 117)
 }
 switch (FEAT_ROADTYPES, SELF, switch_cobblestone_road_stops_terrain_check, terrain_type) {
@@ -767,21 +805,21 @@ switch (FEAT_ROADTYPES, SELF, switch_cobblestone_road_underlay_terrain_check, te
 }
 if (param_difficulty == 0) { //normal speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 30 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 50 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 13 m/s;
 	}
@@ -792,21 +830,21 @@ item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
 
 if (param_difficulty == 1) { //low speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 20 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 30 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 9 m/s;
 	}
@@ -817,21 +855,21 @@ item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
 
 if (param_difficulty == 2) { //very low speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 15 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 20 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 7 m/s;
 	}
@@ -841,13 +879,13 @@ item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
 
 
 if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {	
 		speed_limit:                 0;
 	}
 }
 }
-item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
+item(FEAT_ROADTYPES, item_cobblestone_road, 05) {
 	property {
 		label:                       "STNR";
 		introduction_date:           0;
@@ -879,882 +917,69 @@ item(FEAT_ROADTYPES, item_cobblestone_road, 02) {
 	}
 }
 
-
-
-
-
-spriteset (spriteset_basic_asphalt_road_underlay, "gfx/basic_asphalt.png") {
+spriteset (spriteset_cobblestone_street_underlay, "gfx/roads/cobblestone_urban.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_basic_asphalt_road_underlay_snow, "gfx/basic_asphalt_snow.png") {
+spriteset (spriteset_cobblestone_street_underlay_snow, "gfx/roads/cobblestone_street_snow.png") {
 	template_roads_main_new(1, 1)
 }
-spriteset (spriteset_basic_asphalt_road_city, "gfx/basic_asphalt.png") {
+spriteset (spriteset_cobblestone_street_city, "gfx/roads/cobblestone_urban.png") {
 	template_roads_main_new(1, 226)
 }
-spriteset (spriteset_basic_asphalt_road_bridge_overlay, "gfx/basic_asphalt.png") {
+spriteset (spriteset_cobblestone_street_bridge_overlay, "gfx/roads/cobblestone_urban.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_basic_asphalt_road_bridge_overlay_snow, "gfx/basic_asphalt_snow.png") {
+spriteset (spriteset_cobblestone_street_bridge_overlay_snow, "gfx/roads/cobblestone_street_snow.png") {
 	template_road_bridge_overlay(1, 37)
 }
-spriteset (spriteset_basic_asphalt_road_tunnels, "gfx/basic_asphalt.png") {
+spriteset (spriteset_cobblestone_street_tunnels, "gfx/roads/cobblestone_urban.png") {
 	template_road_tunnels(1, 81)
 }
-spriteset (spriteset_basic_asphalt_gui, "gfx/basic_asphalt.png") {
+spriteset (spriteset_cobblestone_street_gui, "gfx/roads/cobblestone_urban.png") {
 	template_roads_gui(1, 153)
 }
-spriteset (spriteset_basic_asphalt_road_stops, "gfx/basic_asphalt.png") {
+spriteset (spriteset_cobblestone_street_stops, "gfx/roads/cobblestone_urban.png") {
 	template_road_stops(1, 117)
 }
-spriteset (spriteset_basic_asphalt_road_stops_snow, "gfx/basic_asphalt_snow.png") {
+spriteset (spriteset_cobblestone_street_stops_snow, "gfx/roads/cobblestone_street_snow.png") {
 	template_road_stops(1, 117)
 }
-switch (FEAT_ROADTYPES, SELF, switch_basic_asphalt_road_stops_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_basic_asphalt_road_stops_snow;
-	spriteset_basic_asphalt_road_stops;
+switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_stops_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_cobblestone_street_stops_snow;
+	spriteset_cobblestone_street_stops;
 }
-switch (FEAT_ROADTYPES, SELF, switch_basic_asphalt_road_bridge_surface_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_basic_asphalt_road_bridge_overlay_snow;
-	spriteset_basic_asphalt_road_bridge_overlay;
+switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_bridge_surface_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_cobblestone_street_bridge_overlay_snow;
+	spriteset_cobblestone_street_bridge_overlay;
 }
-switch (FEAT_ROADTYPES, SELF, switch_basic_asphalt_road_town_zone, town_zone) {
-	TOWNZONE_CENTRE: spriteset_basic_asphalt_road_city;
-	TOWNZONE_INNER_SUBURB: spriteset_basic_asphalt_road_city;
-	TOWNZONE_OUTER_SUBURB: spriteset_basic_asphalt_road_city;
-	TOWNZONE_OUTSKIRT: spriteset_basic_asphalt_road_city;
-	spriteset_basic_asphalt_road_underlay;
+switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_town_zone, town_zone) {
+	TOWNZONE_CENTRE: spriteset_cobblestone_street_city;
+	TOWNZONE_INNER_SUBURB: spriteset_cobblestone_street_city;
+	TOWNZONE_OUTER_SUBURB: spriteset_cobblestone_street_city;
+	TOWNZONE_OUTSKIRT: spriteset_cobblestone_street_city;
+	spriteset_cobblestone_street_underlay;
 }
-switch (FEAT_ROADTYPES, SELF, switch_basic_asphalt_road_underlay_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_basic_asphalt_road_underlay_snow;
-	switch_basic_asphalt_road_town_zone;
+switch (FEAT_ROADTYPES, SELF, switch_cobblestone_street_underlay_terrain_check, terrain_type) {
+	TILETYPE_SNOW: spriteset_cobblestone_street_underlay_snow;
+	switch_cobblestone_street_town_zone;
 }
 if (param_difficulty == 0) { //normal speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 40 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 60 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 18 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 30 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 50 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 13 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 20 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 30 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 9 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) {
-	property {		
-		speed_limit:                 0;
-	}
-}
-}
-//this roadtype was wrongly given the label "ROAD", which caused it to always appear even before 1920 (when it was supposed to appear)
-//it has to remain here for compatibility though, so instead it is "hidden" and replaced by the new type below
-//i've made it so that this is the roadtype towns will build, while the new type is what players will build
-//while technically they will be 2 separate roadtypes, functionally and visually they will be identical
-//I probably could have removed the town_build function, but this way at least the old type isn't completely useless 
-//and since all roadtypes are compatible to each other anyway it shouldn't cause any problems
-//in theory this could even be used to make some special town-only features, but for now it does nothing different
-item(FEAT_ROADTYPES, item_basic_asphalt_road, 05) { 
-	property {
-		label:                       "ROAD";
-		introduction_date:           (param_intro_year == 0) ? date(1920,01,01) : 0;
-		name:                        string(STR_BASIC_ASPHALT_ROAD_NAME);
-		toolbar_caption:             string(STR_BASIC_ASPHALT_ROAD_TOOLBAR);
-		menu_text:                   string(STR_BASIC_ASPHALT_ROAD_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD, ROADTYPE_FLAG_HIDDEN);
-		construction_cost:           4; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            8; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 40 mph;
-		sort_order:                  04;
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 spriteset_basic_asphalt_gui;
-		underlay:                    switch_basic_asphalt_road_underlay_terrain_check;
-		roadstops:                   switch_basic_asphalt_road_stops_terrain_check;
-//		track_overlay:               spriteset_improved_asphalt_road_overlay;
-		bridge_surfaces:             switch_basic_asphalt_road_bridge_surface_terrain_check;
-//		tunnels:                     spriteset_basic_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_basic_asphalt_tunnel_overlay;
-	}
-}
-
-
-
-
-
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 40 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 60 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 18 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 30 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 50 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 13 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 20 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 30 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 9 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) {
-	property {		
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_basic_asphalt_road_new, 15) { //this is the correct basic asphalt road which remains buildable by players
-	property {
-		label:                       "ASP0";
-		introduction_date:           (param_intro_year == 0) ? date(1920,01,01) : 0;
-		name:                        string(STR_BASIC_ASPHALT_ROAD_NAME);
-		toolbar_caption:             string(STR_BASIC_ASPHALT_ROAD_TOOLBAR);
-		menu_text:                   string(STR_BASIC_ASPHALT_ROAD_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
-//		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
-		construction_cost:           4; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            8; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 40 mph;
-		sort_order:                  04;
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 spriteset_basic_asphalt_gui;
-		underlay:                    switch_basic_asphalt_road_underlay_terrain_check;
-		roadstops:                   switch_basic_asphalt_road_stops_terrain_check;
-//		track_overlay:               spriteset_improved_asphalt_road_overlay;
-		bridge_surfaces:             switch_basic_asphalt_road_bridge_surface_terrain_check;
-//		tunnels:                     spriteset_basic_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_basic_asphalt_tunnel_overlay;
-	}
-}
-
-
-
-
-
-
-spriteset (spriteset_improved_asphalt_road_underlay, "gfx/improved_asphalt.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_improved_asphalt_road_underlay_snow, "gfx/improved_asphalt_snow.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_improved_asphalt_road_underlay_euro, "gfx/improved_asphalt_euro.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_improved_asphalt_road_underlay_euro_snow, "gfx/improved_asphalt_euro_snow.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_improved_asphalt_road_city, "gfx/improved_asphalt.png") {
-	template_roads_main_new(1, 226)
-}
-spriteset (spriteset_improved_asphalt_road_city_euro, "gfx/improved_asphalt_euro.png") {
-	template_roads_main_new(1, 190)
-}
-spriteset (spriteset_improved_asphalt_road_bridge_overlay, "gfx/improved_asphalt.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_improved_asphalt_road_bridge_overlay_snow, "gfx/improved_asphalt_snow.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_improved_asphalt_road_bridge_overlay_euro, "gfx/improved_asphalt_euro.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_improved_asphalt_road_bridge_overlay_euro_snow, "gfx/improved_asphalt_euro_snow.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_improved_asphalt_road_tunnels, "gfx/improved_asphalt.png") {
-	template_road_tunnels(1, 81)
-}
-spriteset (spriteset_improved_asphalt_road_tunnels_euro, "gfx/improved_asphalt_euro.png") {
-	template_road_tunnels(1, 81)
-}
-spriteset (spriteset_improved_asphalt_gui, "gfx/improved_asphalt.png") {
-	template_roads_gui(1, 153)
-}
-spriteset (spriteset_improved_asphalt_gui_euro, "gfx/improved_asphalt_euro.png") {
-	template_roads_gui(1, 117)
-}
-spriteset (spriteset_improved_asphalt_road_stops, "gfx/improved_asphalt.png") {
-	template_road_stops(1, 117)
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_town_zone, town_zone) {
-	TOWNZONE_CENTRE: spriteset_improved_asphalt_road_city;
-	TOWNZONE_INNER_SUBURB: spriteset_improved_asphalt_road_city;
-	TOWNZONE_OUTER_SUBURB: spriteset_improved_asphalt_road_city;
-	TOWNZONE_OUTSKIRT: spriteset_improved_asphalt_road_city;
-	spriteset_improved_asphalt_road_underlay;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_town_zone_euro, town_zone) {
-	TOWNZONE_CENTRE: spriteset_improved_asphalt_road_city_euro;
-	TOWNZONE_INNER_SUBURB: spriteset_improved_asphalt_road_city_euro;
-	TOWNZONE_OUTER_SUBURB: spriteset_improved_asphalt_road_city_euro;
-	TOWNZONE_OUTSKIRT: spriteset_improved_asphalt_road_city_euro;
-	spriteset_improved_asphalt_road_underlay_euro;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_road_underlay_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_improved_asphalt_road_underlay_snow;
-	switch_improved_asphalt_town_zone;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_road_underlay_euro_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_improved_asphalt_road_underlay_euro_snow;
-	switch_improved_asphalt_town_zone_euro;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_style_check, param_road_style) {
-	1: switch_improved_asphalt_road_underlay_euro_terrain_check;
-	switch_improved_asphalt_road_underlay_terrain_check;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_gui_style_check, param_road_style) {
-	1: spriteset_improved_asphalt_gui_euro;
-	spriteset_improved_asphalt_gui;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_bridge_overlay_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_improved_asphalt_road_bridge_overlay_snow;
-	spriteset_improved_asphalt_road_bridge_overlay;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_bridge_overlay_euro_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_improved_asphalt_road_bridge_overlay_euro_snow;
-	spriteset_improved_asphalt_road_bridge_overlay_euro;
-}
-switch (FEAT_ROADTYPES, SELF, switch_improved_asphalt_bridge_overlay_style_check, param_road_style) {
-	1: switch_improved_asphalt_bridge_overlay_euro_terrain_check;
-	switch_improved_asphalt_bridge_overlay_terrain_check;
-}
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 55 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 90 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 24 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 40 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 60 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 18 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 30 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 50 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 13 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {	
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_improved_asphalt_road, 07) {
-	property {
-		label:                       "ASP1";
-		introduction_date:           (param_intro_year == 0) ? date(1940,01,01) : 0;
-		name:                        string(STR_IMPROVED_ASPHALT_ROAD_NAME);
-		toolbar_caption:             string(STR_IMPROVED_ASPHALT_ROAD_TOOLBAR);
-		menu_text:                   string(STR_IMPROVED_ASPHALT_ROAD_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
-		construction_cost:           6; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            12; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 55 mph;
-		sort_order:                  06;		
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 switch_improved_asphalt_gui_style_check;
-		underlay:                    switch_improved_asphalt_style_check;
-		roadstops:                   spriteset_improved_asphalt_road_stops;
-//		track_overlay:               spriteset_improved_asphalt_road_overlay;
-		bridge_surfaces:             switch_improved_asphalt_bridge_overlay_style_check;
-		tunnels:                     spriteset_improved_asphalt_road_tunnels;
-		tunnel_overlay:              spriteset_blank_underlay;
-	}
-}
-
-
-
-
-
-spriteset (spriteset_modern_asphalt_road_underlay, "gfx/modern_asphalt.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_modern_asphalt_road_underlay_snow, "gfx/modern_asphalt_snow.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_modern_asphalt_road_underlay_euro, "gfx/modern_asphalt_euro.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_modern_asphalt_road_underlay_euro_snow, "gfx/modern_asphalt_euro_snow.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_modern_asphalt_road_city, "gfx/modern_asphalt.png") {
-	template_roads_main_new(1, 226)
-}/*
-spriteset (spriteset_modern_asphalt_road_city_parking1, "gfx/modern_asphalt.png") {
-	template_roads_main_modern_city1(1, 226)
-}
-spriteset (spriteset_modern_asphalt_road_city_parking2, "gfx/modern_asphalt.png") {
-	template_roads_main_modern_city2(1, 226)
-}*/
-spriteset (spriteset_modern_asphalt_road_city_euro, "gfx/modern_asphalt_euro.png") {
-	template_roads_main_new(1, 190)
-}
-spriteset (spriteset_modern_asphalt_road_bridge_overlay, "gfx/modern_asphalt.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_modern_asphalt_road_bridge_overlay_snow, "gfx/modern_asphalt_snow.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_modern_asphalt_road_bridge_overlay_euro, "gfx/modern_asphalt_euro.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_modern_asphalt_road_bridge_overlay_euro_snow, "gfx/modern_asphalt_euro_snow.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_modern_asphalt_road_tunnels, "gfx/modern_asphalt.png") {
-	template_road_tunnels(1, 81)
-}
-spriteset (spriteset_modern_asphalt_road_tunnels_euro, "gfx/modern_asphalt_euro.png") {
-	template_road_tunnels(1, 81)
-}
-spriteset (spriteset_modern_asphalt_gui, "gfx/modern_asphalt.png") {
-	template_roads_gui(1, 153)
-}
-spriteset (spriteset_modern_asphalt_gui_euro, "gfx/modern_asphalt_euro.png") {
-	template_roads_gui(1, 117)
-}
-spriteset (spriteset_modern_asphalt_road_stops, "gfx/modern_asphalt.png") {
-	template_road_stops(1, 117)
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_town_zone, town_zone) {
-	TOWNZONE_CENTRE: spriteset_modern_asphalt_road_city; //zone 4, streetlights
-	TOWNZONE_INNER_SUBURB: spriteset_modern_asphalt_road_city; //zone 3, trees
-	TOWNZONE_OUTER_SUBURB: spriteset_modern_asphalt_road_city; //zone 2, none
-	TOWNZONE_OUTSKIRT: spriteset_modern_asphalt_road_city; //zone 1, none
-	spriteset_modern_asphalt_road_underlay;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_town_zone_euro, town_zone) {
-	TOWNZONE_CENTRE: spriteset_modern_asphalt_road_city_euro;
-	TOWNZONE_INNER_SUBURB: spriteset_modern_asphalt_road_city_euro;
-	TOWNZONE_OUTER_SUBURB: spriteset_modern_asphalt_road_city_euro;
-	TOWNZONE_OUTSKIRT: spriteset_modern_asphalt_road_city_euro;
-	spriteset_modern_asphalt_road_underlay_euro;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_road_underlay_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_modern_asphalt_road_underlay_snow;
-	switch_modern_asphalt_town_zone;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_road_underlay_euro_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_modern_asphalt_road_underlay_euro_snow;
-	switch_modern_asphalt_town_zone_euro;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_style_check, param_road_style) {
-	1: switch_modern_asphalt_road_underlay_euro_terrain_check;
-	switch_modern_asphalt_road_underlay_terrain_check;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_gui_style_check, param_road_style) {
-	1: spriteset_modern_asphalt_gui_euro;
-	spriteset_modern_asphalt_gui;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_bridge_overlay_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_modern_asphalt_road_bridge_overlay_snow;
-	spriteset_modern_asphalt_road_bridge_overlay;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_bridge_overlay_euro_terrain_check, terrain_type) {
-	TILETYPE_SNOW: spriteset_modern_asphalt_road_bridge_overlay_euro_snow;
-	spriteset_modern_asphalt_road_bridge_overlay_euro;
-}
-switch (FEAT_ROADTYPES, SELF, switch_modern_asphalt_bridge_overlay_style_check, param_road_style) {
-	1: switch_modern_asphalt_bridge_overlay_euro_terrain_check;
-	switch_modern_asphalt_bridge_overlay_terrain_check;
-}
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 85 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 140 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 38 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 60 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 100 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 27 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 50 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 80 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {	
-		speed_limit:                 22 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {		
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_modern_asphalt_road, 09) {
-	property {
-		label:                       "ASP2";
-		introduction_date:           (param_intro_year == 0) ? date(1970,01,01) : 0;
-		name:                        string(STR_MODERN_ASPHALT_ROAD_NAME);
-		toolbar_caption:             string(STR_MODERN_ASPHALT_ROAD_TOOLBAR);
-		menu_text:                   string(STR_MODERN_ASPHALT_ROAD_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
-		construction_cost:           8; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            16; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 85 mph;
-		sort_order:                  08;		
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 switch_modern_asphalt_gui_style_check;
-		underlay:                    switch_modern_asphalt_style_check;
-		roadstops:                   spriteset_modern_asphalt_road_stops;
-//		track_overlay:               spriteset_modern_asphalt_road_overlay;
-		bridge_surfaces:             switch_modern_asphalt_bridge_overlay_style_check;
-//		tunnels:                     spriteset_modern_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_modern_asphalt_tunnel_overlay;
-	}
-}
-
-
-
-
-
-spriteset (spriteset_highway_road_underlay, "gfx/highway.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_highway_road_city, "gfx/highway.png") {
-	template_roads_main_new(1, 1)
-}
-spriteset (spriteset_highway_road_bridge_overlay, "gfx/highway.png") {
-	template_road_bridge_overlay(1, 37)
-}
-spriteset (spriteset_highway_road_tunnels, "gfx/highway.png") {
-	template_road_tunnels(1, 81)
-}
-spriteset (spriteset_highway_gui, "gfx/highway.png") {
-	template_roads_gui(1, 153)
-}
-spriteset (spriteset_highway_road_stops, "gfx/highway.png") {
-	template_road_stops(1, 117)
-}
-switch (FEAT_ROADTYPES, SELF, switch_highway_town_zone, town_zone) {
-	TOWNZONE_CENTRE: spriteset_highway_road_city;
-	TOWNZONE_INNER_SUBURB: spriteset_highway_road_city;
-	TOWNZONE_OUTER_SUBURB: spriteset_highway_road_city;
-	TOWNZONE_OUTSKIRT: spriteset_highway_road_city;
-	spriteset_highway_road_underlay;
-}
-if (param_difficulty == 0) { //normal speed limit
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 0;
-	}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 85 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 140 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 38 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 70 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 110 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 31 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {	
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_highway_road, 11) {
-	property {
-		label:                       "HWAY";
-		introduction_date:           (param_intro_year == 0) ? date(1955,01,01) : 0;
-		name:                        string(STR_HIGHWAY_ROAD_NAME);
-		toolbar_caption:             string(STR_HIGHWAY_ROAD_TOOLBAR);
-		menu_text:                   string(STR_HIGHWAY_ROAD_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
-		roadtype_flags:              (param_houses == 0) ? bitmask(ROADTYPE_FLAG_NO_HOUSES, ROADTYPE_FLAG_NO_LEVEL_CROSSING) : bitmask(ROADTYPE_FLAG_NO_LEVEL_CROSSING); //default(0) behavior disables houses; with this param turned on houses are enabled (this is to prevent griefing in multiplayer)
-		construction_cost:           20; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            24; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 0;
-		sort_order:                  10;
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 spriteset_highway_gui;
-		underlay:                    switch_highway_town_zone;
-		roadstops:                   spriteset_highway_road_stops;
-//		track_overlay:               spriteset_highway_road_overlay;
-		bridge_surfaces:             spriteset_highway_road_bridge_overlay;
-//		tunnels:                     spriteset_highway_road_tunnels;
-//		tunnel_overlay:              spriteset_highway_tunnel_overlay;
-	}
-}
-
-
-
-//===========================
-//Begin electrified roadtypes
-//===========================
-
-spriteset (spriteset_cobblestone_street_electric_gui, "gfx/gui_electric_road.png") {
-	template_roads_gui(1, 1)
-}
-spriteset (spriteset_basic_asphalt_electric_gui, "gfx/gui_electric_road.png") {
-	template_roads_gui(1, 74)
-}
-spriteset (spriteset_generic_asphalt_yellow_electric_gui, "gfx/gui_electric_road.png") {
-	template_roads_gui(1, 147)
-}
-spriteset (spriteset_generic_asphalt_white_electric_gui, "gfx/gui_electric_road.png") {
-	template_roads_gui(1, 220)
-}
-switch (FEAT_ROADTYPES, SELF, switch_electric_road_gui_style_check, param_road_style) {
-	1: spriteset_generic_asphalt_white_electric_gui;
-	spriteset_generic_asphalt_yellow_electric_gui;
-}
-
-
-if (param_electric_roads == 1) {
-
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
-	property {	
-		speed_limit:                 30 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
-	property {	
-		speed_limit:                 50 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 13 m/s;
 	}
@@ -1765,21 +990,21 @@ item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
 
 if (param_difficulty == 1) { //low speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 20 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 30 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 9 m/s;
 	}
@@ -1790,21 +1015,21 @@ item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
 
 if (param_difficulty == 2) { //very low speed limit
 if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 15 mph;
 	}
 }
 }
 if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 20 km/h;
 	}
 }
 }
 if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 7 m/s;
 	}
@@ -1814,35 +1039,35 @@ item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
 
 
 if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {	
 		speed_limit:                 0;
 	}
 }
 }
-item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
+item(FEAT_ROADTYPES, item_cobblestone_street, 06) {
 	property {
-		label:                       "ELSP";
-		introduction_date:           (param_intro_year == 0) ? date(1882,01,01) : 0;
-		name:                        string(STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_NAME);
-		toolbar_caption:             string(STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_TOOLBAR);
-		menu_text:                   string(STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_MENU);
+		label:                       "STNS";
+		introduction_date:           0;
+		name:                        string(STR_STONE_STREET_NAME);
+		toolbar_caption:             string(STR_STONE_STREET_TOOLBAR);
+		menu_text:                   string(STR_STONE_STREET_MENU);
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ELSP", "ELRD", "ELA1", "ELA2", "ELA0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
-		construction_cost:           6; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            12; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
+		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
+//		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
+		construction_cost:           3; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
+		maintenance_cost:            6; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
 //		speed_limit:                 30 mph;
-		sort_order:                  03;		
+		sort_order:                  02;		
 //		map_colour:                  ?;
 //		requires_roadtype_list:      ?;
 //		introduces_roadtype_list:    ?;
 //		alternative_roadtype_list:   ?;
 	}
 	graphics {
-		gui:						 spriteset_cobblestone_street_electric_gui;
+		gui:						 spriteset_cobblestone_street_gui;
 		underlay:                    switch_cobblestone_street_underlay_terrain_check;
 		roadstops:                   switch_cobblestone_street_stops_terrain_check;
 //		track_overlay:               spriteset_cobblestone_street_overlay;
@@ -1852,606 +1077,3 @@ item(FEAT_ROADTYPES, item_cobblestone_street_electric, 04) {
 	}
 }
 
-
-
-
-
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 40 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 60 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 18 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 30 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 50 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 13 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 20 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 30 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 9 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {		
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified, 06) {
-	property {
-		label:                       "ELRD";
-		introduction_date:           (param_intro_year == 0) ? date(1920,01,01) : 0;
-		name:                        string(STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_NAME);
-		toolbar_caption:             string(STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR);
-		menu_text:                   string(STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ELSP", "ELRD", "ELA1", "ELA2", "ELA0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY, ROADTYPE_FLAG_HIDDEN);
-		construction_cost:           8; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            16; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 40 mph;
-//		sort_order:                  05;
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 spriteset_basic_asphalt_electric_gui;
-		underlay:                    switch_basic_asphalt_road_underlay_terrain_check;
-		roadstops:                   switch_basic_asphalt_road_stops_terrain_check;
-//		track_overlay:               spriteset_improved_asphalt_road_overlay;
-		bridge_surfaces:             switch_basic_asphalt_road_bridge_surface_terrain_check;
-//		tunnels:                     spriteset_basic_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_basic_asphalt_tunnel_overlay;
-	}
-}
-
-
-
-
-
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 40 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 60 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 18 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 30 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 50 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 13 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 20 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 30 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 9 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {		
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_basic_asphalt_road_electrified_new, 16) {
-	property {
-		label:                       "ELA0";
-		introduction_date:           (param_intro_year == 0) ? date(1920,01,01) : 0;
-		name:                        string(STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_NAME);
-		toolbar_caption:             string(STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR);
-		menu_text:                   string(STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ELSP", "ELRD", "ELA1", "ELA2", "ELA0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
-		construction_cost:           8; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            16; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 40 mph;
-		sort_order:                  05;
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 spriteset_basic_asphalt_electric_gui;
-		underlay:                    switch_basic_asphalt_road_underlay_terrain_check;
-		roadstops:                   switch_basic_asphalt_road_stops_terrain_check;
-//		track_overlay:               spriteset_improved_asphalt_road_overlay;
-		bridge_surfaces:             switch_basic_asphalt_road_bridge_surface_terrain_check;
-//		tunnels:                     spriteset_basic_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_basic_asphalt_tunnel_overlay;
-	}
-}
-
-
-
-
-
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 55 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 90 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 24 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 40 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 60 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 18 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 30 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 50 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 13 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {	
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_improved_asphalt_road_electrified, 08) {
-	property {
-		label:                       "ELA1";
-		introduction_date:           (param_intro_year == 0) ? date(1940,01,01) : 0;
-		name:                        string(STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_NAME);
-		toolbar_caption:             string(STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR);
-		menu_text:                   string(STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ELSP", "ELRD", "ELA1", "ELA2", "ELA0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
-		construction_cost:           12; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            24; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 55 mph;
-		sort_order:                  07;		
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 switch_electric_road_gui_style_check;
-		underlay:                    switch_improved_asphalt_style_check;
-		roadstops:                   spriteset_improved_asphalt_road_stops;
-//		track_overlay:               spriteset_improved_asphalt_road_overlay;
-		bridge_surfaces:             switch_improved_asphalt_bridge_overlay_style_check;
-//		tunnels:                     spriteset_improved_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_improved_asphalt_tunnel_overlay;
-	}
-}
-
-
-
-
-
-if (param_difficulty == 0) { //normal speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 85 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 140 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 38 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 1) { //low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 60 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 100 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 27 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 2) { //very low speed limit
-if (param_speed_units == 0) { //mph
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 50 mph;
-	}
-}
-}
-if (param_speed_units == 1) { //km/h
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 80 km/h;
-	}
-}
-}
-if (param_speed_units == 2) { //m/s
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {	
-		speed_limit:                 22 m/s;
-	}
-}
-}
-}
-
-
-if (param_difficulty == 3) { //no speed limit
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {		
-		speed_limit:                 0;
-	}
-}
-}
-item(FEAT_ROADTYPES, item_modern_asphalt_road_electrified, 10) {
-	property {
-		label:                       "ELA2";
-		introduction_date:           (param_intro_year == 0) ? date(1970,01,01) : 0;
-		name:                        string(STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_NAME);
-		toolbar_caption:             string(STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR);
-		menu_text:                   string(STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_MENU);
-		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
-		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ELSP", "ELRD", "ELA1", "ELA2", "ELA0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_CATENARY);
-		construction_cost:           16; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            32; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 85 mph;
-		sort_order:                  09;		
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}
-	graphics {
-		gui:						 switch_electric_road_gui_style_check;
-		underlay:                    switch_modern_asphalt_style_check;
-		roadstops:                   spriteset_modern_asphalt_road_stops;
-//		track_overlay:               spriteset_modern_asphalt_road_overlay;
-		bridge_surfaces:             switch_modern_asphalt_bridge_overlay_style_check;
-//		tunnels:                     spriteset_modern_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_modern_asphalt_tunnel_overlay;
-	}
-}
-
-} //end electric road section
-
-
-
-//===========================
-//======Begin tramtypes======
-//===========================
-
-tramtypetable {
- 	RAIL, ELRL
-}
-
-
-
-item(FEAT_TRAMTYPES, item_basic_tramtrack, 13) {
-	property {
-		label:                       "RAIL";
-		introduction_date:           0;
-		name:                        string(STR_TRAM_TRACK_NAME);
-		toolbar_caption:             string(STR_TRAM_TRACK_TOOLBAR);
-		menu_text:                   string(STR_TRAM_TRACK_MENU);
-		build_window_caption:        string(STR_TRAM_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_TRAM_AUTOREPLACE);
-		new_engine_text:             string(STR_TRAM_NEW_ENGINE);
-		powered_tramtype_list:       ["RAIL", "ELRL"];
-//		tramtype_flags:              bitmask(TRAMTYPE_FLAG_CATENARY);
-		construction_cost:           8; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            16; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 85 mph;
-		sort_order:                  00;		
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}/*
-	graphics {
-		gui:						 switch_electric_road_gui_style_check;
-		underlay:                    switch_modern_asphalt_style_check;
-		roadstops:                   spriteset_modern_asphalt_road_stops;
-//		track_overlay:               spriteset_modern_asphalt_road_overlay;
-		bridge_surfaces:             switch_modern_asphalt_bridge_overlay_style_check;
-//		tunnels:                     spriteset_modern_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_modern_asphalt_tunnel_overlay;
-	}*/
-}
-
-
-
-
-item(FEAT_TRAMTYPES, item_electric_tramtrack, 14) {
-	property {
-		label:                       "ELRL";
-		introduction_date:           0;
-		name:                        string(STR_ELECTRIC_TRAM_TRACK_NAME);
-		toolbar_caption:             string(STR_ELECTRIC_TRAM_TRACK_TOOLBAR);
-		menu_text:                   string(STR_ELECTRIC_TRAM_TRACK_MENU);
-		build_window_caption:        string(STR_TRAM_BUILD_VEHICLE);
-		autoreplace_text:            string(STR_TRAM_AUTOREPLACE);
-		new_engine_text:             string(STR_TRAM_NEW_ENGINE);
-		powered_tramtype_list:       ["ELRL"];
-		tramtype_flags:              bitmask(TRAMTYPE_FLAG_CATENARY);
-		construction_cost:           16; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
-		maintenance_cost:            24; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
-//		speed_limit:                 85 mph;
-		sort_order:                  01;		
-//		map_colour:                  ?;
-//		requires_roadtype_list:      ?;
-//		introduces_roadtype_list:    ?;
-//		alternative_roadtype_list:   ?;
-	}/*
-	graphics {
-		gui:						 switch_electric_road_gui_style_check;
-		underlay:                    switch_modern_asphalt_style_check;
-		roadstops:                   spriteset_modern_asphalt_road_stops;
-//		track_overlay:               spriteset_modern_asphalt_road_overlay;
-		bridge_surfaces:             switch_modern_asphalt_bridge_overlay_style_check;
-//		tunnels:                     spriteset_modern_asphalt_road_tunnels;
-//		tunnel_overlay:              spriteset_modern_asphalt_tunnel_overlay;
-	}*/
-}
-
-
-
-
-//==================================
-//============Objects===============
-//==================================
-
-//removed for this release
-
-//==================================
-//==========Extra Stuff=============
-//==================================
-
-// temperate road tunnels 2389 - 2396
-replace spr2389(2389, "gfx/roadtunnel.png") { template_tunnel_portals(27) }
-
-// arctic road tunnel 238 - 245
-replace spr238( 238, "gfx/roadtunnel.png") { template_tunnel_portals(101) }
-
-// snowy road tunnels 2421 - 2428
-replace spr2421(2421, "gfx/roadtunnel.png") { template_tunnel_portals(249) }
-
-// tropic road tunnels 226
-replace spr226( 226, "gfx/roadtunnel.png") { template_tunnel_portals(175) }
-
-// desert road tunnels 509 - 516
-replace spr509( 509, "gfx/roadtunnel.png") { template_tunnel_portals(322) }
-
-replace replace_road_city_universal (1313, "gfx/misc_sprites.png") { //replaces the base sprites to make sure city roads stay consistent across base sets
-	template_roads_main_new(1, 1)
-}
-replacenew replace_oneway_road_overlays (ONE_WAY_ROAD, "gfx/misc_sprites.png") {
-	[ 1,          113,       17,      9,       -6,       -6]
-	[ 23,         113,       17,      9,      -10,       -5]
-	[ 45,         113,       41,     24,      -21,      -15, ANIM]
-	[ 91,         113,       17,      9,       -6,       -5]
-	[ 113,        113,       17,      9,       -8,       -6]
-	[ 135,        113,       41,     24,      -18,      -15, ANIM]
-}
-if (climate == CLIMATE_TROPICAL) { //OpenGFX subtropic city trees need custom offsets to compensate for roads being slightly wider than standard
-	replace replace_subtropical_city_trees (4626, "gfx/misc_sprites.png") { 
-		[ 1,         73,       20,    35,      -9,      -31]
-	}
-}
-if (year_loaded < 1920) { //Use old street lights for early games; will switch on game reload
-	replace replace_old_street_lamps (1406, "gfx/misc_sprites.png") { //old street lights
-	[ 26,        94,        4,      14,         1,     -13]
-	[ 35,        94,        4,      14,        -4,     -14]
-	}
-}

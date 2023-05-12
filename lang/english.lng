@@ -2,7 +2,7 @@
 
 #Above is the English US id
 
-STR_GRF_NAME             :JP+ Roads 0.1
+STR_GRF_NAME             :JP+ Roads Alpha
 STR_GRF_DESC             :{}JP+ Roads is an NRT road and tramtrack set based on roads from Japan{}{}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2020 Andrew350{ORANGE}{}Licensed under GPLv2
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?f=26&t=76183
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
@@ -47,6 +47,10 @@ STR_OLD_TOWN_ROAD_MENU               :Old Town Road construction
 STR_DIRT_ROAD_NAME                   :Dirt Road
 STR_DIRT_ROAD_TOOLBAR                :Dirt Road Construction
 STR_DIRT_ROAD_MENU                   :Dirt Road construction
+
+STR_DIRT_STREET_NAME                   :Dirt Street
+STR_DIRT_STREET_TOOLBAR                :Dirt Street Construction
+STR_DIRT_STREET_MENU                   :Dirt Street construction
 
 STR_STONE_ROAD_NAME          		:Cobblestone Road
 STR_STONE_ROAD_TOOLBAR       		:Cobblestone Road Construction
