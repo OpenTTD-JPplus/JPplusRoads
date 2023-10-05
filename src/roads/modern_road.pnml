@@ -139,7 +139,7 @@ item(FEAT_ROADTYPES, item_modern_road, 07) {
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
 		powered_roadtype_list:       ["OLD_", "DIRT", "STNS", "STNR", "ROAD", "ASP1", "ASP2", "HWAY", "ELSP", "ELRD", "ELA1", "ELA2", "ASP0"];
-		roadtype_flags:              bitmask(ROADTYPE_FLAG_NO_HOUSES);
+//		roadtype_flags:              bitmask(ROADTYPE_FLAG_NO_HOUSES);
 		construction_cost:           3; //Defaults: ROAD = 8, ELRD = 16, RAIL = 8, ELRL = 16
 		maintenance_cost:            6; //Defaults: ROAD = 16, ELRD = 24, RAIL = 16, ELRL = 24		
 //		speed_limit:                 30 mph;
