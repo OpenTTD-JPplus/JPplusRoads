@@ -2,8 +2,8 @@
 
 #Above is the English US id
 
-STR_GRF_NAME             :JP+ Roads Alpha
-STR_GRF_DESC             :{}JP+ Roads is an NRT road and tramtrack set based on roads from Japan{}{}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2020 Andrew350{ORANGE}{}Licensed under GPLv2
+STR_GRF_NAME             :JP+ Roads Diagonal Test
+STR_GRF_DESC             :{}JP+ Roads is an NRT road and tramtrack set based on roads from Japan{}{}Diagonal roads test version!{}{}{SILVER}{COPYRIGHT}2023 Emperor Jake{ORANGE}{}Licensed under GPLv2
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?f=26&t=76183
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
 
@@ -71,6 +71,10 @@ STR_IMPROVED_ASPHALT_ROAD_MENU       :Improved Asphalt Road construction
 STR_MODERN_ASPHALT_ROAD_NAME         :Modern Asphalt Road
 STR_MODERN_ASPHALT_ROAD_TOOLBAR      :Modern Asphalt Road Construction
 STR_MODERN_ASPHALT_ROAD_MENU         :Modern Asphalt Road construction
+
+STR_MODERN_ASPHALT_DIAG_ROAD_NAME         :Modern Asphalt Road (Diagonal) 
+STR_MODERN_ASPHALT_DIAG_ROAD_TOOLBAR      :Modern Asphalt Road (Diagonal) Construction
+STR_MODERN_ASPHALT_DIAG_ROAD_MENU         :Modern Asphalt Road (Diagonal) construction
 
 STR_HIGHWAY_ROAD_NAME                :Highway
 STR_HIGHWAY_ROAD_TOOLBAR             :Highway Construction

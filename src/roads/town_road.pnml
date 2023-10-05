@@ -136,7 +136,7 @@ item(FEAT_ROADTYPES, item_old_town_road, 00) {
 }
 item(FEAT_ROADTYPES, item_old_town_road, 00) {
 	property {
-		label:                       "OLD_";
+		label:                       "ROAD";
 		introduction_date:           0;
 		name:                        string(STR_OLD_TOWN_ROAD_NAME);
 		toolbar_caption:             string(STR_OLD_TOWN_ROAD_TOOLBAR);
