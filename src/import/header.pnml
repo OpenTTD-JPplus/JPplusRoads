@@ -1,0 +1,9 @@
+grf {
+  grfid: "YZ\AA\05";
+  name: string(STR_GRF_NAME);
+  desc: string(STR_GRF_DESC);
+  url: string(STR_GRF_URL);
+  version                            :001;//0.0.1
+  min_compatible_version             :001;
+// #include "params.pnml"
+}

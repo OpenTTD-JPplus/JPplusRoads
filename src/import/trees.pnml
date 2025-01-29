@@ -1,0 +1,575 @@
+//*Empty
+  spriteset(deco_empty, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/empty.png") {tmpl_trees (0,0)}
+//*2L
+  //spring
+    spriteset(tree_2l_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (0,0)}
+    spriteset(tree_2l_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (140,0)}
+    spriteset(tree_2l_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (280,0)}
+    spriteset(tree_2l_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (420,0)}
+
+    spriteset(tree_2l_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (0,0)}
+    spriteset(tree_2l_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (140,0)}
+    spriteset(tree_2l_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (280,0)}
+    spriteset(tree_2l_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (420,0)}
+  //summer
+    spriteset(tree_2l_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (0,73)}
+    spriteset(tree_2l_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (140,73)}
+    spriteset(tree_2l_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (280,73)}
+    spriteset(tree_2l_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (420,73)}
+
+    spriteset(tree_2l_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (0,73)}
+    spriteset(tree_2l_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (140,73)}
+    spriteset(tree_2l_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (280,73)}
+    spriteset(tree_2l_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (420,73)}
+  //fall
+    spriteset(tree_2l_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (0,146)}
+    spriteset(tree_2l_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (140,146)}
+    spriteset(tree_2l_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (280,146)}
+    spriteset(tree_2l_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (420,146)}
+
+    spriteset(tree_2l_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (0,146)}
+    spriteset(tree_2l_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (140,146)}
+    spriteset(tree_2l_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (280,146)}
+    spriteset(tree_2l_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (420,146)}
+  //winter
+    //regular
+      spriteset(tree_2l_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (0,219)}
+      spriteset(tree_2l_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (140,219)}
+      spriteset(tree_2l_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (280,219)}
+      spriteset(tree_2l_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (420,219)}
+
+      spriteset(tree_2l_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (0,219)}
+      spriteset(tree_2l_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (140,219)}
+      spriteset(tree_2l_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (280,219)}
+      spriteset(tree_2l_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (420,219)}
+    //snowed
+      spriteset(tree_2l_winter_snowed_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (0,292)}
+      spriteset(tree_2l_winter_snowed_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (140,292)}
+      spriteset(tree_2l_winter_snowed_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (280,292)}
+      spriteset(tree_2l_winter_snowed_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (420,292)}
+
+      spriteset(tree_2l_winter_snowed_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (0,292)}
+      spriteset(tree_2l_winter_snowed_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (140,292)}
+      spriteset(tree_2l_winter_snowed_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (280,292)}
+      spriteset(tree_2l_winter_snowed_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (420,292)}
+  //
+//
+//*Avenue Left
+  //spring
+    spriteset(tree_l_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (0,0)}
+    spriteset(tree_l_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (140,0)}
+    spriteset(tree_l_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (280,0)}
+    spriteset(tree_l_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (420,0)}
+
+    spriteset(tree_l_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (0,0)}
+    spriteset(tree_l_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (140,0)}
+    spriteset(tree_l_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (280,0)}
+    spriteset(tree_l_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (420,0)}
+  //summer
+    spriteset(tree_l_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (0,73)}
+    spriteset(tree_l_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (140,73)}
+    spriteset(tree_l_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (280,73)}
+    spriteset(tree_l_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (420,73)}
+
+    spriteset(tree_l_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (0,73)}
+    spriteset(tree_l_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (140,73)}
+    spriteset(tree_l_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (280,73)}
+    spriteset(tree_l_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (420,73)}
+  //fall
+    spriteset(tree_l_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (0,146)}
+    spriteset(tree_l_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (140,146)}
+    spriteset(tree_l_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (280,146)}
+    spriteset(tree_l_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (420,146)}
+
+    spriteset(tree_l_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (0,146)}
+    spriteset(tree_l_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (140,146)}
+    spriteset(tree_l_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (280,146)}
+    spriteset(tree_l_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (420,146)}
+  //winter
+    //regular
+      spriteset(tree_l_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (0,219)}
+      spriteset(tree_l_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (140,219)}
+      spriteset(tree_l_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (280,219)}
+      spriteset(tree_l_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (420,219)}
+
+      spriteset(tree_l_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (0,219)}
+      spriteset(tree_l_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (140,219)}
+      spriteset(tree_l_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (280,219)}
+      spriteset(tree_l_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (420,219)}
+    //snowed
+      spriteset(tree_l_winter_snowed_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (0,292)}
+      spriteset(tree_l_winter_snowed_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (140,292)}
+      spriteset(tree_l_winter_snowed_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (280,292)}
+      spriteset(tree_l_winter_snowed_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_front_left (420,292)}
+
+      spriteset(tree_l_winter_snowed_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (0,292)}
+      spriteset(tree_l_winter_snowed_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (140,292)}
+      spriteset(tree_l_winter_snowed_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (280,292)}
+      spriteset(tree_l_winter_snowed_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_l.png") {tmpl_trees_back_left (420,292)}
+  //
+//
+//*Avenue Right
+  //spring
+    spriteset(tree_r_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (0,0)}
+    spriteset(tree_r_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (140,0)}
+    spriteset(tree_r_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (280,0)}
+    spriteset(tree_r_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (420,0)}
+
+    spriteset(tree_r_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (0,0)}
+    spriteset(tree_r_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (140,0)}
+    spriteset(tree_r_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (280,0)}
+    spriteset(tree_r_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (420,0)}
+  //summer
+    spriteset(tree_r_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (0,73)}
+    spriteset(tree_r_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (140,73)}
+    spriteset(tree_r_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (280,73)}
+    spriteset(tree_r_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (420,73)}
+
+    spriteset(tree_r_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (0,73)}
+    spriteset(tree_r_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (140,73)}
+    spriteset(tree_r_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (280,73)}
+    spriteset(tree_r_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (420,73)}
+  //fall
+    spriteset(tree_r_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (0,146)}
+    spriteset(tree_r_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (140,146)}
+    spriteset(tree_r_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (280,146)}
+    spriteset(tree_r_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (420,146)}
+
+    spriteset(tree_r_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (0,146)}
+    spriteset(tree_r_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (140,146)}
+    spriteset(tree_r_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (280,146)}
+    spriteset(tree_r_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (420,146)}
+  //winter
+    //regular
+      spriteset(tree_r_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (0,219)}
+      spriteset(tree_r_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (140,219)}
+      spriteset(tree_r_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (280,219)}
+      spriteset(tree_r_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (420,219)}
+
+      spriteset(tree_r_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (0,219)}
+      spriteset(tree_r_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (140,219)}
+      spriteset(tree_r_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (280,219)}
+      spriteset(tree_r_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (420,219)}
+    //snowed
+      spriteset(tree_r_winter_snowed_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (0,292)}
+      spriteset(tree_r_winter_snowed_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (140,292)}
+      spriteset(tree_r_winter_snowed_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (280,292)}
+      spriteset(tree_r_winter_snowed_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_front_right (420,292)}
+
+      spriteset(tree_r_winter_snowed_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (0,292)}
+      spriteset(tree_r_winter_snowed_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (140,292)}
+      spriteset(tree_r_winter_snowed_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (280,292)}
+      spriteset(tree_r_winter_snowed_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_green_6l_r.png") {tmpl_trees_back_right (420,292)}
+  //
+//
+//TODO rework this pile of dogshit
+//*Trees 2L
+//front
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_1_f_0, current_day_of_year){
+    97..117:tree_2l_spring_1_f;
+    118..304:tree_2l_summer_1_f;
+    305..330:tree_2l_fall_1_f;
+    tree_2l_winter_1_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_1_f,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_1_f;
+    sw_trees_2l_1_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_2_f_0, current_day_of_year){
+    100..120:tree_2l_spring_2_f;
+    121..309:tree_2l_summer_2_f;
+    310..335:tree_2l_fall_2_f;
+    tree_2l_winter_2_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_2_f,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_2_f;
+    sw_trees_2l_2_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_3_f_0, current_day_of_year){
+    103..123:tree_2l_spring_3_f;
+    124..314:tree_2l_summer_3_f;
+    315..340:tree_2l_fall_3_f;
+    tree_2l_winter_3_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_3_f,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_3_f;
+    sw_trees_2l_3_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_4_f_0, current_day_of_year){
+    106..126:tree_2l_spring_4_f;
+    127..319:tree_2l_summer_4_f;
+    320..345:tree_2l_fall_4_f;
+    tree_2l_winter_4_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_4_f,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_4_f;
+    sw_trees_2l_4_f_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_trees_2l_f){
+    1:sw_trees_2l_1_f;
+    1:sw_trees_2l_2_f;
+    1:sw_trees_2l_3_f;
+    1:sw_trees_2l_4_f;
+  }
+//back
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_1_b_0, current_day_of_year){
+    97..117:tree_2l_spring_1_b;
+    118..304:tree_2l_summer_1_b;
+    305..330:tree_2l_fall_1_b;
+    tree_2l_winter_1_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_1_b,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_1_b;
+    sw_trees_2l_1_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_2_b_0, current_day_of_year){
+    100..120:tree_2l_spring_2_b;
+    121..309:tree_2l_summer_2_b;
+    310..335:tree_2l_fall_2_b;
+    tree_2l_winter_2_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_2_b,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_2_b;
+    sw_trees_2l_2_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_3_b_0, current_day_of_year){
+    103..123:tree_2l_spring_3_b;
+    124..314:tree_2l_summer_3_b;
+    315..340:tree_2l_fall_3_b;
+    tree_2l_winter_3_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_3_b,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_3_b;
+    sw_trees_2l_3_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_4_b_0, current_day_of_year){
+    106..126:tree_2l_spring_4_b;
+    127..319:tree_2l_summer_4_b;
+    320..345:tree_2l_fall_4_b;
+    tree_2l_winter_4_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_2l_4_b,terrain_type){
+    TILETYPE_SNOW:tree_2l_winter_snowed_4_b;
+    sw_trees_2l_4_b_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_trees_2l_b){
+    1:sw_trees_2l_1_b;
+    1:sw_trees_2l_2_b;
+    1:sw_trees_2l_3_b;
+    1:sw_trees_2l_4_b;
+  }
+//
+//*Trees Left
+//front
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_1_f_0, current_day_of_year){
+    97..117:tree_l_spring_1_f;
+    118..304:tree_l_summer_1_f;
+    305..330:tree_l_fall_1_f;
+    tree_l_winter_1_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_1_f,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_1_f;
+    sw_trees_left_1_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_2_f_0, current_day_of_year){
+    100..120:tree_l_spring_2_f;
+    121..309:tree_l_summer_2_f;
+    310..335:tree_l_fall_2_f;
+    tree_l_winter_2_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_2_f,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_2_f;
+    sw_trees_left_2_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_3_f_0, current_day_of_year){
+    103..123:tree_l_spring_3_f;
+    124..314:tree_l_summer_3_f;
+    315..340:tree_l_fall_3_f;
+    tree_l_winter_3_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_3_f,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_3_f;
+    sw_trees_left_3_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_4_f_0, current_day_of_year){
+    106..126:tree_l_spring_4_f;
+    127..319:tree_l_summer_4_f;
+    320..345:tree_l_fall_4_f;
+    tree_l_winter_4_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_4_f,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_4_f;
+    sw_trees_left_4_f_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_trees_left_f){
+    1:sw_trees_left_1_f;
+    1:sw_trees_left_2_f;
+    1:sw_trees_left_3_f;
+    1:sw_trees_left_4_f;
+  }
+//back
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_1_b_0, current_day_of_year){
+    97..117:tree_l_spring_1_b;
+    118..304:tree_l_summer_1_b;
+    305..330:tree_l_fall_1_b;
+    tree_l_winter_1_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_1_b,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_1_b;
+    sw_trees_left_1_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_2_b_0, current_day_of_year){
+    100..120:tree_l_spring_2_b;
+    121..309:tree_l_summer_2_b;
+    310..335:tree_l_fall_2_b;
+    tree_l_winter_2_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_2_b,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_2_b;
+    sw_trees_left_2_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_3_b_0, current_day_of_year){
+    103..123:tree_l_spring_3_b;
+    124..314:tree_l_summer_3_b;
+    315..340:tree_l_fall_3_b;
+    tree_l_winter_3_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_3_b,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_3_b;
+    sw_trees_left_3_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_4_b_0, current_day_of_year){
+    106..126:tree_l_spring_4_b;
+    127..319:tree_l_summer_4_b;
+    320..345:tree_l_fall_4_b;
+    tree_l_winter_4_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_left_4_b,terrain_type){
+    TILETYPE_SNOW:tree_l_winter_snowed_4_b;
+    sw_trees_left_4_b_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_trees_left_b){
+    1:sw_trees_left_1_b;
+    1:sw_trees_left_2_b;
+    1:sw_trees_left_3_b;
+    1:sw_trees_left_4_b;
+  }
+//
+//*Trees Right
+//front
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_1_f_0, current_day_of_year){
+    97..117:tree_r_spring_1_f;
+    118..304:tree_r_summer_1_f;
+    305..330:tree_r_fall_1_f;
+    tree_r_winter_1_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_1_f,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_1_f;
+    sw_trees_right_1_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_2_f_0, current_day_of_year){
+    100..120:tree_r_spring_2_f;
+    121..309:tree_r_summer_2_f;
+    310..335:tree_r_fall_2_f;
+    tree_r_winter_2_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_2_f,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_2_f;
+    sw_trees_right_2_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_3_f_0, current_day_of_year){
+    103..123:tree_r_spring_3_f;
+    124..314:tree_r_summer_3_f;
+    315..340:tree_r_fall_3_f;
+    tree_r_winter_3_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_3_f,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_3_f;
+    sw_trees_right_3_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_4_f_0, current_day_of_year){
+    106..126:tree_r_spring_4_f;
+    127..319:tree_r_summer_4_f;
+    320..345:tree_r_fall_4_f;
+    tree_r_winter_4_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_4_f,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_4_f;
+    sw_trees_right_4_f_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_trees_right_f){
+    1:sw_trees_right_1_f;
+    1:sw_trees_right_2_f;
+    1:sw_trees_right_3_f;
+    1:sw_trees_right_4_f;
+  }
+//back
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_1_b_0, current_day_of_year){
+    97..117:tree_r_spring_1_b;
+    118..304:tree_r_summer_1_b;
+    305..330:tree_r_fall_1_b;
+    tree_r_winter_1_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_1_b,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_1_b;
+    sw_trees_right_1_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_2_b_0, current_day_of_year){
+    100..120:tree_r_spring_2_b;
+    121..309:tree_r_summer_2_b;
+    310..335:tree_r_fall_2_b;
+    tree_r_winter_2_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_2_b,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_2_b;
+    sw_trees_right_2_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_3_b_0, current_day_of_year){
+    103..123:tree_r_spring_3_b;
+    124..314:tree_r_summer_3_b;
+    315..340:tree_r_fall_3_b;
+    tree_r_winter_3_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_3_b,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_3_b;
+    sw_trees_right_3_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_4_b_0, current_day_of_year){
+    106..126:tree_r_spring_4_b;
+    127..319:tree_r_summer_4_b;
+    320..345:tree_r_fall_4_b;
+    tree_r_winter_4_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_trees_right_4_b,terrain_type){
+    TILETYPE_SNOW:tree_r_winter_snowed_4_b;
+    sw_trees_right_4_b_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_trees_right_b){
+    1:sw_trees_right_1_b;
+    1:sw_trees_right_2_b;
+    1:sw_trees_right_3_b;
+    1:sw_trees_right_4_b;
+  }
+//
+

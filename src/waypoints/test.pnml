@@ -1,0 +1,24 @@
+spritelayout spritelayout_roadstop {
+	ground {
+		...
+	}
+	building {
+		...
+	}
+}
+
+switch (FEAT_ROADSTOPS, SELF, switch_roadstop, ...) {
+	...
+}
+
+item (FEAT_ROADSTOPS, item_roadstop)  {
+	property {
+		class: "TEST";
+		availability_type: RST_AVAILABILITY_TYPE_PASSENGER;
+		name: string(STR_ROADSTOP_NAME);
+		classname: string(STR_ROADSTOP_TEST_CLASS_NAME);
+	}
+	graphics {
+		default: switch_roadstop;
+	}
+}

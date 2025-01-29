@@ -1,0 +1,73 @@
+//White, Dashed
+  spriteset(road_avenue_6l_r_g_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_r_g_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (0,0,0,260,0)}
+  random_switch(FEAT_ROADTYPES,SELF,road_avenue_6l_r_g){
+    1:road_avenue_6l_r_g_1;
+    1:road_avenue_6l_r_g_2;
+  }
+  // spriteset(road_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  // "gfx/roads/pool/road_avenue_6l_asphalt_1_l.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  // spriteset(road_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  // "gfx/roads/pool/road_avenue_6l_asphalt_2_l.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+//Bridges
+  spriteset(bridge_avenue_6l_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_bridge (0,0)}
+
+
+item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
+    property {
+        name: string(STR_ROAD_AVENUE_6R);
+        label: "AV6R";
+        powered_roadtype_list: [REG_ROAD];
+        sort_order: 33;
+
+        introduction_date:date(1950,1,1);
+        speed_limit:50 km/h;
+        map_colour:167;
+
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+        toolbar_caption: string(STR_ROAD_AVENUE_6R);
+        menu_text: string(STR_NO_CROSSING,string(STR_ROAD_AVENUE_6R));
+        build_window_caption: string(STR_ROAD_AVENUE_6R);
+        autoreplace_text: string(STR_ROAD_AVENUE_6R);
+        new_engine_text: string(STR_ROAD_AVENUE_6R);
+    }
+    graphics {
+        underlay: road_avenue_6l_r_g;
+        catenary_front:sw_trees_right_f;
+        catenary_back:sw_trees_right_b;
+        bridge_surfaces:bridge_avenue_6l_r_g;
+    }
+}
+item(FEAT_ROADTYPES, road_avenue_6l_l, 34) {
+    property {
+        name: string(STR_ROAD_AVENUE_6L);
+        label: "AV6L";
+        sort_order: 34;
+        powered_roadtype_list: ["ROAD", "ELRD", "DORI","AV6R"];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:50 km/h;
+        map_colour:167;
+
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+        toolbar_caption: string(STR_ROAD_AVENUE_6L);
+        menu_text: string(STR_NO_CROSSING,string(STR_ROAD_AVENUE_6L));
+        build_window_caption: string(STR_ROAD_AVENUE_6L);
+        autoreplace_text: string(STR_ROAD_AVENUE_6L);
+        new_engine_text: string(STR_ROAD_AVENUE_6L);
+    }
+    graphics {
+        underlay: road_avenue_6l_l_g;
+        catenary_front:sw_trees_left_f;
+        catenary_back:sw_trees_left_b;
+        bridge_surfaces:bridge_avenue_6l_l_g;
+    }
+}

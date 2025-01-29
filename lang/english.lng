@@ -1,9 +1,7 @@
 ﻿##grflangid 0x00
 
-#Above is the English US id
-
-STR_GRF_NAME             :JP+ Roads Alpha
-STR_GRF_DESC             :{}JP+ Roads is an NRT road and tramtrack set based on roads from Japan{}{}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2020 Andrew350{ORANGE}{}Licensed under GPLv2
+STR_GRF_NAME             :{TITLE} v{VERSION}
+STR_GRF_DESC             :{}JP+ Roads is a road and tramtrack set based on the lovely scenery of Japan{}{}Use only with OpenTTD 1.10 or later!{}{}{SILVER}{COPYRIGHT}2017-2024 Andrew350
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?f=26&t=76183
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
 
@@ -25,6 +23,12 @@ STR_PARAM_DIFFICULTY_HARD      :Hard
 STR_PARAM_DIFFICULTY_HARDER    :Harder
 STR_PARAM_DIFFICULTY_NONE      :No Speed Limits
 
+STR_PARAM_SPEED_1:             :Realistic
+STR_PARAM_SPEED_2:             :Speeding
+STR_PARAM_SPEED_3:             :Boosted
+STR_PARAM_SPEED_4:             :No Limits
+
+
 STR_PARAM_4_NAME               :Road Style
 STR_PARAM_4_DESC               :This parameter allows you to adjust which road style appears in-game. Currently there are two options: {ORANGE}American{BLACK} and {ORANGE}European/UK
 STR_PARAM_ROAD_STYLE_1         :American {SILVER}(Default)
@@ -33,12 +37,62 @@ STR_PARAM_ROAD_STYLE_2         :European/UK
 STR_PARAM_5_NAME               :Enable electrified roads
 STR_PARAM_5_DESC               :If enabled, this option adds electrified versions of 4 roadtypes for use with trolleybuses and other catenary-powered road vehicles. These roadtypes require the addition of NRT-enabled vehicle sets to be useful, hence why they are disabled by default.
 
+# TODO should be by default
 STR_PARAM_6_NAME               :Enable houses along highways
 STR_PARAM_6_DESC               :By default, houses are forbidden from spawning alongside highways; activating this option enables it.{}{} {ORANGE}It is highly recommended to turn this on for multiplayer servers to prevent griefing from malicious or careless players.{BLACK}
 
+# Generic strings
 STR_GENERIC_BUILD_VEHICLE            :Build New Road Vehicles
 STR_GENERIC_AUTOREPLACE              :Road Vehicles
 STR_GENERIC_NEW_ENGINE               :road
+STR_NO_CROSSING:{STRING} {PUSH_COLOUR}{SILVER}{TRAIN}{POP_COLOUR}
+STR_NO_HOUSES:{STRING} {PUSH_COLOUR}{SILVER}{BUS}{POP_COLOUR}
+STR_GEN_ROAD:{STRING} Road{WHITE}
+STR_GEN_STREET:{STRING} Street{WHITE}
+STR_GEN_STREET_PED:{STRING}Pedestrian Street{WHITE}
+STR_GEN_ROAD_MENU:{STRING} Road Costruction
+STR_GEN_STREET_MENU:{STRING} Street Costruction
+STR_GEN_CONSTRUCTION:{STRING}Costruction
+
+# Road names
+STR_ROAD_FIELD:Field
+STR_ROAD_DIRT:Dirt
+STR_ROAD_GRAVEL:Gravel
+STR_ROAD_STONE:Stone
+STR_ROAD_CONCRETE:Concrete
+STR_ROAD_N_RURAL:Narrow Rural
+STR_ROAD_RURAL:Rural
+STR_ROAD_I_RURAL:Improved Rural
+STR_ROAD_RURAL_HIGHWAY:Rural Highway
+STR_ROAD_EXPRESS:Expressway
+STR_ROAD_EXPRESS_S:Expressway (solid lines)
+STR_ROAD_EXPRESS_R:Expressway (red surface)
+STR_ROAD_SLIP_L:Slip Road L
+STR_ROAD_SLIP_R:Slip Road R
+STR_ROAD_STONE_E:Stone (catenary)
+STR_ROAD_CONCRETE_E:Concrete (catenary)
+STR_ROAD_DISTRICT:District
+STR_ROAD_URBAN:Urban
+STR_ROAD_URBAN_E:Urban (catenary)
+STR_ROAD_PAVED:Urban Tiled
+STR_ROAD_GREEN:Greenery
+STR_ROAD_SAKURA:Sakura
+STR_ROAD_STREET_4L:4L Street L (deco){WHITE}
+STR_ROAD_STREET_4R:4L Street R (deco){WHITE}
+STR_ROAD_AVENUE_4L:4L Avenue L{WHITE}
+STR_ROAD_AVENUE_4R:4L Avenue R{WHITE}
+STR_ROAD_AVENUE_6L:6L Avenue L{WHITE}
+STR_ROAD_AVENUE_6R:6L Avenue R{WHITE}
+STR_ROAD_B_TILES:Brown-Tile
+STR_ROAD_R_TILES:Red-Tile
+STR_ROAD_CHIPS_DIRT:CHIPS Dirt
+STR_ROAD_CHIPS_CONC:CHIPS Concrete
+STR_ROAD_CHIPS_COBBLE:CHIPS Cobblestone
+STR_ROAD_ISR:ISR
+
+
+
+
 
 STR_OLD_TOWN_ROAD_NAME               :Old Town Road
 STR_OLD_TOWN_ROAD_TOOLBAR            :Old Town Road Construction
