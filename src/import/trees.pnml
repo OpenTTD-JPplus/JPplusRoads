@@ -1,6 +1,9 @@
 //*Empty
   spriteset(deco_empty, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/empty.png") {tmpl_trees (0,0)}
+//*Crash
+  spriteset(crash_barriers, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/crash_barriers.png") {tmpl_trees (0,0)}
 //*2L
   //spring
     spriteset(tree_2l_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
