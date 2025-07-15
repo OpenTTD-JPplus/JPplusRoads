@@ -27,7 +27,7 @@ item(FEAT_ROADTYPES, road_expressway_dw, 11) {
         sort_order: 11;
         powered_roadtype_list: [REG_ROAD];
 
-        introduction_date:date(1950,1,1);
+        introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
         map_colour:69;
         
@@ -55,7 +55,7 @@ item(FEAT_ROADTYPES, road_expressway_sw, 12) {
         sort_order: 12;
         powered_roadtype_list: [REG_ROAD];
 
-        introduction_date:date(1950,1,1);
+        introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
         map_colour:69;
         
@@ -83,7 +83,7 @@ item(FEAT_ROADTYPES, road_expressway_red, 13) {
         sort_order: 13;
         powered_roadtype_list: [REG_ROAD];
 
-        introduction_date:date(1950,1,1);
+        introduction_date:date(1963,7,16);
         speed_limit:60 km/h;
         map_colour:69;
         

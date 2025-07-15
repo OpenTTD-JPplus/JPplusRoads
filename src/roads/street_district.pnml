@@ -71,7 +71,7 @@ item(FEAT_ROADTYPES, road_district, 23) {
         build_window_caption: string(STR_ROAD_DISTRICT);
         autoreplace_text: string(STR_ROAD_DISTRICT);
         new_engine_text: string(STR_ROAD_DISTRICT);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY, ROADTYPE_FLAG_TOWN_BUILD);
         sort_order: 23;
     }
   graphics {
