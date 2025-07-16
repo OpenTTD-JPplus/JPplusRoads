@@ -6,6 +6,9 @@
 #include "import/trees.pnml"
 #include "import/bridges.pnml"
 
+#include "roads/road_rural_concrete.pnml"
+#include "roads/road_rural_asphalt.pnml"
+
 #include "roads/road_expressway.pnml"
 
 #include "roads/street_district.pnml"
