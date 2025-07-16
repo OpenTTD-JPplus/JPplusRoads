@@ -8,8 +8,8 @@ grf {
   name: string(STR_GRF_NAME);
   desc: string(STR_GRF_DESC);
   url: string(STR_GRF_URL);
-  version :001;
-  min_compatible_version :001;
+  version :002;
+  min_compatible_version :002;
 
 }
 
@@ -909,6 +909,11 @@ template tmpl_bridge(x,y) {
 # 7 "src/index.pnml" 2
 # 1 "src/import/bridges.pnml" 1
 
+spriteset(sw_bridge_rural_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_rural_stone_nm.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_rural_stone_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_rural_stone_sw.png") {tmpl_bridge (0,0)}
+
 spriteset(sw_bridge_rural_concrete_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_rural_concrete_nm.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -916,14 +921,150 @@ spriteset(sw_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
 spriteset(sw_bridge_rural_asphalt_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_rural_asphalt_sw.png") {tmpl_bridge (0,0)}
 
-spriteset(sw_bridge_2l_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(sw_bridge_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_stone_nm.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_stone_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_stone_sw.png") {tmpl_bridge (0,0)}
+
+spriteset(sw_bridge_2l_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_2l_nm_conc.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_2l_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_2l_sw_conc.png") {tmpl_bridge (0,0)}
+
+spriteset(sw_bridge_2l_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_nm.png") {tmpl_bridge (0,0)}
-spriteset(sw_bridge_2l_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(sw_bridge_2l_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_sw.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_2l_so, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_so.png") {tmpl_bridge (0,0)}
+
+switch(FEAT_ROADTYPES,SELF,sw_bridge_2l_nm,current_year){
+  0..1959:sw_bridge_2l_nm_conc;
+  sw_bridge_2l_nm_asph;
+}
+switch(FEAT_ROADTYPES,SELF,sw_bridge_2l_sw,current_year){
+  0..1959:sw_bridge_2l_sw_conc;
+  sw_bridge_2l_sw_asph;
+}
 # 8 "src/index.pnml" 2
 
+# 1 "src/roads/road_rural_field.pnml" 1
+
+  spriteset(sw_road_rural_field_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_rural_field_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_stone_main,town_zone){
+    1..4:sw_bridge_rural_stone_sw;
+    sw_bridge_rural_stone_nm;
+  }
+
+
+
+
+item(FEAT_ROADTYPES, road_rural_field, 1) {
+    property {
+        name: string(STR_ROAD_FIELD);
+        label: "RRA1";
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+
+        introduction_date:date(1800,1,1);
+        speed_limit:20 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_FIELD);
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_FIELD));
+        build_window_caption: string(STR_ROAD_FIELD);
+        autoreplace_text: string(STR_ROAD_FIELD);
+        new_engine_text: string(STR_ROAD_FIELD);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 1;
+    }
+  graphics {
+        underlay: sw_road_rural_field_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_rural_stone_main;
+    }
+}
+# 10 "src/index.pnml" 2
+# 1 "src/roads/road_rural_dirt.pnml" 1
+
+  spriteset(sw_road_rural_dirt_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_rural_dirt_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+
+
+
+
+item(FEAT_ROADTYPES, road_rural_dirt, 2) {
+    property {
+        name: string(STR_ROAD_DIRT);
+        label: "RRA2";
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+
+        introduction_date:date(1800,1,1);
+        speed_limit:30 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_DIRT);
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_DIRT));
+        build_window_caption: string(STR_ROAD_DIRT);
+        autoreplace_text: string(STR_ROAD_DIRT);
+        new_engine_text: string(STR_ROAD_DIRT);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 2;
+    }
+  graphics {
+        underlay: sw_road_rural_dirt_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_rural_stone_main;
+    }
+}
+# 11 "src/index.pnml" 2
+# 1 "src/roads/road_rural_stone.pnml" 1
+
+  spriteset(sw_road_rural_stone_nm_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_rural_stone_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+  spriteset(sw_road_rural_stone_dw_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_rural_stone_dw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+switch(FEAT_ROADTYPES,SELF,sw_road_rural_stone_main,town_zone){
+    3..4:sw_road_rural_stone_dw_gfx;
+    sw_road_rural_stone_nm_gfx;
+  }
+
+
+
+
+
+item(FEAT_ROADTYPES, road_rural_stone, 4) {
+    property {
+        name: string(STR_ROAD_STONE);
+        label: "RRA4";
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+
+        introduction_date:date(1800,1,1);
+        speed_limit:40 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_STONE);
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_STONE));
+        build_window_caption: string(STR_ROAD_STONE);
+        autoreplace_text: string(STR_ROAD_STONE);
+        new_engine_text: string(STR_ROAD_STONE);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 4;
+    }
+  graphics {
+        underlay: sw_road_rural_stone_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_rural_stone_main;
+    }
+}
+# 12 "src/index.pnml" 2
 # 1 "src/roads/road_rural_concrete.pnml" 1
 
   spriteset(sw_road_rural_concrete_nm_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -952,8 +1093,8 @@ item(FEAT_ROADTYPES, road_rural_concrete, 5) {
     property {
         name: string(STR_ROAD_CONCRETE);
         label: "RRA5";
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1930,1,1);
         speed_limit:60 km/h;
@@ -973,7 +1114,7 @@ item(FEAT_ROADTYPES, road_rural_concrete, 5) {
         bridge_surfaces:sw_bridge_rural_concrete_main;
     }
 }
-# 10 "src/index.pnml" 2
+# 13 "src/index.pnml" 2
 # 1 "src/roads/road_rural_asphalt.pnml" 1
 spriteset(sw_road_rural_asphalt_nm_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
 "gfx/roads/pool/road_rural_asphalt_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
@@ -1004,8 +1145,8 @@ switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_1_main,current_year>1959){
   }
 
 switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_old_main,town_zone){
-    3..4:sw_road_rural_asphalt_sw_gfx;
-    sw_road_rural_asphalt_dw_gfx;
+    3..4:sw_road_rural_concrete_sw_gfx;
+    sw_road_rural_concrete_dw_gfx;
 }
 switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_new_main,town_zone){
     3..4:sw_road_rural_asphalt_sw_gfx;
@@ -1028,8 +1169,8 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1, 7) {
     property {
         name: string(STR_ROAD_RURAL);
         label: "RRA7";
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1930,1,1);
         speed_limit:60 km/h;
@@ -1053,8 +1194,8 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
     property {
         name: string(STR_ROAD_I_RURAL);
         label: "RRA8";
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1930,1,1);
         speed_limit:80 km/h;
@@ -1074,7 +1215,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
         bridge_surfaces:sw_bridge_rural_asphalt_2_new_main;
     }
 }
-# 11 "src/index.pnml" 2
+# 14 "src/index.pnml" 2
 
 # 1 "src/roads/road_expressway.pnml" 1
 
@@ -1104,7 +1245,7 @@ item(FEAT_ROADTYPES, road_expressway_dw, 11) {
         name: string(STR_ROAD_EXPRESS);
         label: "REX1";
         sort_order: 11;
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
@@ -1132,7 +1273,7 @@ item(FEAT_ROADTYPES, road_expressway_sw, 12) {
         name: string(STR_ROAD_EXPRESS_S);
         label: "REX2";
         sort_order: 12;
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
@@ -1160,7 +1301,7 @@ item(FEAT_ROADTYPES, road_expressway_red, 13) {
         name: string(STR_ROAD_EXPRESS_R);
         label: "REX3";
         sort_order: 13;
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1963,7,16);
         speed_limit:60 km/h;
@@ -1183,9 +1324,136 @@ item(FEAT_ROADTYPES, road_expressway_red, 13) {
 
     }
 }
-# 13 "src/index.pnml" 2
+# 16 "src/index.pnml" 2
 
+# 1 "src/roads/street_dirt.pnml" 1
+
+  spriteset(sw_road_dirt_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_dirt_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+switch(FEAT_ROADTYPES,SELF,sw_bridge_stone_main,town_zone){
+    1..4:sw_bridge_stone_sw;
+    sw_bridge_stone_nm;
+  }
+
+
+
+
+item(FEAT_ROADTYPES, road_dirt, 16) {
+    property {
+        name: string(STR_ROAD_DIRT);
+        label: "STR1";
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+
+        introduction_date:date(1800,1,1);
+        speed_limit:30 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_DIRT);
+        menu_text: string(STR_GEN_STREET,string(STR_ROAD_DIRT));
+        build_window_caption: string(STR_ROAD_DIRT);
+        autoreplace_text: string(STR_ROAD_DIRT);
+        new_engine_text: string(STR_ROAD_DIRT);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 16;
+    }
+  graphics {
+        underlay: sw_road_dirt_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_stone_main;
+    }
+}
+# 18 "src/index.pnml" 2
+# 1 "src/roads/street_stone.pnml" 1
+
+  spriteset(sw_road_stone_nm_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_stone_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+  spriteset(sw_road_stone_sw_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_stone_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+
+switch(FEAT_ROADTYPES,SELF,sw_road_stone_main_1,current_year){
+    0..1959:sw_road_stone_nm_gfx;
+    sw_road_stone_sw_gfx;
+  }
+switch(FEAT_ROADTYPES,SELF,sw_road_stone_main,town_zone){
+    3..4:sw_road_stone_main_1;
+    sw_road_stone_nm_gfx;
+  }
+
+
+
+
+
+item(FEAT_ROADTYPES, road_stone, 18) {
+    property {
+        name: string(STR_ROAD_STONE);
+        label: "STR3";
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+
+        introduction_date:date(1800,1,1);
+        speed_limit:40 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_STONE);
+        menu_text: string(STR_GEN_STREET,string(STR_ROAD_STONE));
+        build_window_caption: string(STR_ROAD_STONE);
+        autoreplace_text: string(STR_ROAD_STONE);
+        new_engine_text: string(STR_ROAD_STONE);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 18;
+    }
+  graphics {
+        underlay: sw_road_stone_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_stone_main;
+    }
+}
+# 19 "src/index.pnml" 2
 # 1 "src/roads/street_district.pnml" 1
+
+  spriteset(road_district_conc_nm_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_district_conc_nm_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_nm.png") {tmpl_underlay_2 (140,0,0,0,0)}
+  spriteset(road_district_conc_nm_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_nm.png") {tmpl_underlay_2 (280,0,0,0,0)}
+
+random_switch(FEAT_ROADTYPES,SELF,sw_road_district_conc_no_markings_gfx){
+    2:road_district_conc_nm_def;
+    1:road_district_conc_nm_diamond;
+    1:road_district_conc_nm_manhole;
+  }
+
+
+  spriteset(road_district_conc_dw_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_dw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_district_conc_dw_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_dw.png") {tmpl_underlay_2 (140,0,0,0,0)}
+  spriteset(road_district_conc_dw_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_dw.png") {tmpl_underlay_2 (280,0,0,0,0)}
+
+  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_conc_dashed_white_gfx){
+    2:road_district_conc_dw_def;
+    1:road_district_conc_dw_manhole;
+    1:road_district_conc_dw_diamond;
+  }
+
+
+  spriteset(road_district_conc_sw_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_district_conc_sw_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (140,0,0,0,0)}
+  spriteset(road_district_conc_sw_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (280,0,0,0,0)}
+
+  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_conc_solid_white_gfx){
+    2:road_district_conc_sw_def;
+    1:road_district_conc_sw_manhole;
+    1:road_district_conc_sw_diamond;
+  }
 
   spriteset(road_district_nm_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_district_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
@@ -1194,7 +1462,7 @@ item(FEAT_ROADTYPES, road_expressway_red, 13) {
   spriteset(road_district_nm_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_district_nm.png") {tmpl_underlay_2 (280,0,0,0,0)}
 
-random_switch(FEAT_ROADTYPES,SELF,sw_road_district_no_markings_gfx){
+random_switch(FEAT_ROADTYPES,SELF,sw_road_district_asph_no_markings_gfx){
     2:road_district_nm_def;
     1:road_district_nm_diamond;
     1:road_district_nm_manhole;
@@ -1208,7 +1476,7 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_district_no_markings_gfx){
   spriteset(road_district_dw_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_district_dw.png") {tmpl_underlay_2 (280,0,0,0,0)}
 
-  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_dashed_white_gfx){
+  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_asph_dashed_white_gfx){
     2:road_district_dw_def;
     1:road_district_dw_manhole;
     1:road_district_dw_diamond;
@@ -1222,11 +1490,25 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_district_no_markings_gfx){
   spriteset(road_district_sw_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_district_sw.png") {tmpl_underlay_2 (280,0,0,0,0)}
 
-  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_solid_white_gfx){
+  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_asph_solid_white_gfx){
     2:road_district_sw_def;
     1:road_district_sw_manhole;
     1:road_district_sw_diamond;
   }
+
+switch(FEAT_ROADTYPES,SELF,sw_road_district_no_markings_gfx,current_year){
+  0..1959:sw_road_district_conc_no_markings_gfx;
+  sw_road_district_asph_no_markings_gfx;
+}
+switch(FEAT_ROADTYPES,SELF,sw_road_district_dashed_white_gfx,current_year){
+  0..1959:sw_road_district_conc_dashed_white_gfx;
+  sw_road_district_asph_dashed_white_gfx;
+}
+switch(FEAT_ROADTYPES,SELF,sw_road_district_solid_white_gfx,current_year){
+  0..1959:sw_road_district_conc_solid_white_gfx;
+  sw_road_district_asph_solid_white_gfx;
+}
+
 
 switch(FEAT_ROADTYPES,SELF,sw_road_district_main,town_zone){
     3..4:sw_road_district_solid_white_gfx;
@@ -1244,10 +1526,10 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_district_main,town_zone){
 item(FEAT_ROADTYPES, road_district, 23) {
     property {
         name: string(STR_ROAD_DISTRICT);
-        label: "ROAD";
+        label: "STR8";
         sort_order: 32;
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1258,7 +1540,7 @@ item(FEAT_ROADTYPES, road_district, 23) {
         build_window_caption: string(STR_ROAD_DISTRICT);
         autoreplace_text: string(STR_ROAD_DISTRICT);
         new_engine_text: string(STR_ROAD_DISTRICT);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY, ROADTYPE_FLAG_TOWN_BUILD);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
         sort_order: 23;
     }
   graphics {
@@ -1267,8 +1549,18 @@ item(FEAT_ROADTYPES, road_district, 23) {
         bridge_surfaces:sw_bridge_district_main;
     }
 }
-# 15 "src/index.pnml" 2
+# 20 "src/index.pnml" 2
 # 1 "src/roads/street_urban.pnml" 1
+
+  spriteset(road_urban_asphalt_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_urban_asphalt_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (0,0,0,130,0)}
+
+random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_1){
+    3:road_urban_asphalt_so_def_conc;
+    1:road_urban_asphalt_so_def_conc_1;
+  }
 
   spriteset(road_urban_asphalt_so_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
@@ -1279,19 +1571,23 @@ item(FEAT_ROADTYPES, road_district, 23) {
   spriteset(road_urban_asphalt_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
 
-random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main){
+random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_2){
     1:road_urban_asphalt_so_def;
     1:road_urban_asphalt_so_def_1;
     1:road_urban_asphalt_so_def_2;
     1:road_urban_asphalt_so_speed;
   }
+switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main,current_year){
+  0..1959:sw_road_urban_asphalt_so_main_1;
+  sw_road_urban_asphalt_so_main_2;
+}
 
 item(FEAT_ROADTYPES, road_urban_asphalt, 24) {
     property {
         name: string(STR_ROAD_URBAN);
-        label: "STU1";
+        label: "STR9";
         sort_order: 24;
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1314,8 +1610,18 @@ item(FEAT_ROADTYPES, road_urban_asphalt, 24) {
 
     }
 }
-# 16 "src/index.pnml" 2
+# 21 "src/index.pnml" 2
 # 1 "src/roads/street_urban_tile.pnml" 1
+
+  spriteset(road_urban_tile_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_urban_tile_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
+
+random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_1){
+    3:road_urban_tile_so_def_conc;
+    1:road_urban_tile_so_def_conc_1;
+  }
 
   spriteset(road_urban_tile_so_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
@@ -1326,19 +1632,23 @@ item(FEAT_ROADTYPES, road_urban_asphalt, 24) {
   spriteset(road_urban_tile_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
 
-random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main){
+random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_2){
     1:road_urban_tile_so_def;
     1:road_urban_tile_so_def_1;
     1:road_urban_tile_so_def_2;
     1:road_urban_tile_so_speed;
   }
+switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main,current_year){
+  0..1959:sw_road_urban_tile_so_main_1;
+  sw_road_urban_tile_so_main_2;
+}
 
 item(FEAT_ROADTYPES, road_urban_tile, 26) {
     property {
         name: string(STR_ROAD_PAVED);
-        label: "STU3";
+        label: "ST10";
         sort_order: 26;
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1362,8 +1672,18 @@ item(FEAT_ROADTYPES, road_urban_tile, 26) {
 
     }
 }
-# 17 "src/index.pnml" 2
+# 22 "src/index.pnml" 2
 # 1 "src/roads/street_urban_tile_trees.pnml" 1
+
+  spriteset(road_urban_tile_trees_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_urban_tile_trees_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
+
+random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_1){
+    3:road_urban_tile_trees_so_def_conc;
+    1:road_urban_tile_trees_so_def_conc_1;
+  }
 
   spriteset(road_urban_tile_trees_so_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
@@ -1374,19 +1694,23 @@ item(FEAT_ROADTYPES, road_urban_tile, 26) {
   spriteset(road_urban_tile_trees_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
 
-random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main){
+random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_2){
     1:road_urban_tile_trees_so_def;
     1:road_urban_tile_trees_so_def_1;
     1:road_urban_tile_trees_so_def_2;
     1:road_urban_tile_trees_so_speed;
   }
+switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main,current_year){
+    0..1959:sw_road_urban_tile_trees_so_main_1;
+    sw_road_urban_tile_trees_so_main_2;
+  }
 
 item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
     property {
         name: string(STR_ROAD_GREEN);
-        label: "STU4";
+        label: "ST11";
         sort_order: 27;
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1411,36 +1735,109 @@ item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
 
     }
 }
-# 18 "src/index.pnml" 2
+# 23 "src/index.pnml" 2
 # 1 "src/roads/street_6L_avenue.pnml" 1
 
-  spriteset(road_avenue_6l_r_g_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(road_avenue_6l_2_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+
+  spriteset(road_avenue_6l_2_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (0,0,0,130,0)}
-  spriteset(road_avenue_6l_r_g_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (0,0,0,260,0)}
-  random_switch(FEAT_ROADTYPES,SELF,road_avenue_6l_r_g){
-    1:road_avenue_6l_r_g_1;
-    1:road_avenue_6l_r_g_2;
+
+  spriteset(bridge_avenue_6l_2_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r_conc.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r_conc.png") {tmpl_bridge (0,0)}
+
+  spriteset(bridge_avenue_6l_2_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_bridge (0,0)}
+
+
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_2_r_main,current_year){
+    0..1959:bridge_avenue_6l_2_r_g_conc;
+    bridge_avenue_6l_2_r_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_3_r_main,current_year){
+    0..1959:bridge_avenue_6l_3_r_g_conc;
+    bridge_avenue_6l_3_r_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_r_main,town_zone){
+    1..4:bridge_avenue_6l_3_r_main;
+    bridge_avenue_6l_2_r_main;
   }
 
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_2_r_main,current_year){
+    0..1959:road_avenue_6l_2_r_g_conc;
+    road_avenue_6l_2_r_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_3_r_main,current_year){
+    0..1959:road_avenue_6l_3_r_g_conc;
+    road_avenue_6l_3_r_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_r_main,town_zone){
+    1..4:road_avenue_6l_3_r_main;
+    road_avenue_6l_2_r_main;
+  }
 
+  spriteset(road_avenue_6l_2_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
 
+  spriteset(road_avenue_6l_2_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_underlay_2 (0,0,0,130,0)}
 
-  spriteset(road_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(bridge_avenue_6l_2_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l_conc.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l_conc.png") {tmpl_bridge (0,0)}
 
-
-  spriteset(bridge_avenue_6l_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_bridge (0,0)}
-  spriteset(bridge_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(bridge_avenue_6l_2_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_bridge (0,0)}
+
+
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_2_l_main,current_year){
+    0..1959:bridge_avenue_6l_2_l_g_conc;
+    bridge_avenue_6l_2_l_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_3_l_main,current_year){
+    0..1959:bridge_avenue_6l_3_l_g_conc;
+    bridge_avenue_6l_3_l_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_l_main,town_zone){
+    1..4:bridge_avenue_6l_3_l_main;
+    bridge_avenue_6l_2_l_main;
+  }
+
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_2_l_main,current_year){
+    0..1959:road_avenue_6l_2_l_g_conc;
+    road_avenue_6l_2_l_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_3_l_main,current_year){
+    0..1959:road_avenue_6l_3_l_g_conc;
+    road_avenue_6l_3_l_g;
+  }
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_l_main,town_zone){
+    1..4:road_avenue_6l_3_l_main;
+    road_avenue_6l_2_l_main;
+  }
 
 
 item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
     property {
         name: string(STR_ROAD_AVENUE_6R);
-        label: "AV6R";
-        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        label: "ST17";
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
         sort_order: 33;
 
         introduction_date:date(1950,1,1);
@@ -1455,16 +1852,16 @@ item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
         new_engine_text: string(STR_ROAD_AVENUE_6R);
     }
     graphics {
-        underlay: road_avenue_6l_r_g;
+        underlay: road_avenue_6l_r_main;
         catenary_front:sw_trees_right_f;
         catenary_back:sw_trees_right_b;
-        bridge_surfaces:bridge_avenue_6l_r_g;
+        bridge_surfaces:bridge_avenue_6l_r_main;
     }
 }
 item(FEAT_ROADTYPES, road_avenue_6l_l, 34) {
     property {
         name: string(STR_ROAD_AVENUE_6L);
-        label: "AV6L";
+        label: "ST18";
         sort_order: 34;
         powered_roadtype_list: ["ROAD", "ELRD", "DORI","AV6R"];
 
@@ -1480,10 +1877,74 @@ item(FEAT_ROADTYPES, road_avenue_6l_l, 34) {
         new_engine_text: string(STR_ROAD_AVENUE_6L);
     }
     graphics {
-        underlay: road_avenue_6l_l_g;
+        underlay: road_avenue_6l_l_main;
         catenary_front:sw_trees_left_f;
         catenary_back:sw_trees_left_b;
-        bridge_surfaces:bridge_avenue_6l_l_g;
+        bridge_surfaces:bridge_avenue_6l_l_main;
     }
 }
-# 19 "src/index.pnml" 2
+# 24 "src/index.pnml" 2
+
+# 1 "src/roads/road_generic.pnml" 1
+  switch(FEAT_ROADTYPES,SELF,road_generic_rural_gfx,current_year){
+    0..1849:sw_road_rural_dirt_main;
+    1850..1934:sw_road_rural_stone_main;
+    1935..1959:sw_road_rural_concrete_main;
+    sw_road_rural_asphalt_1_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,road_generic_city_gfx,current_year){
+    0..1849:sw_road_dirt_main;
+    1850..1934:sw_road_stone_main;
+
+    1935..1959:sw_road_district_main;
+    sw_road_district_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,road_generic_main,town_zone){
+    1..4:road_generic_city_gfx;
+    road_generic_rural_gfx;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_generic_rural_gfx,current_year){
+    0..1934:sw_bridge_rural_stone_main;
+    1935..1959:sw_bridge_rural_concrete_main;
+    sw_bridge_rural_asphalt_1_new_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_generic_city_gfx,current_year){
+    0..1934:sw_bridge_stone_main;
+    1935..1959:sw_bridge_district_main;
+    sw_bridge_district_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_bridge_generic_main,town_zone){
+    1..4:bridge_generic_rural_gfx;
+    bridge_generic_city_gfx;
+  }
+
+
+
+
+
+item(FEAT_ROADTYPES, road_generic, 0) {
+    property {
+        name: string(STR_ROAD_DIRT);
+        label: "ROAD";
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+        introduces_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+
+        introduction_date:date(0,1,1);
+        speed_limit:50 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_DIRT);
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_DIRT));
+        build_window_caption: string(STR_ROAD_DIRT);
+        autoreplace_text: string(STR_ROAD_DIRT);
+        new_engine_text: string(STR_ROAD_DIRT);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN);
+        sort_order: 0;
+    }
+  graphics {
+        underlay: road_generic_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_generic_main;
+    }
+}
+# 26 "src/index.pnml" 2

@@ -1,0 +1,37 @@
+//*Stone
+  spriteset(sw_road_rural_field_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_rural_field_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  
+switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_stone_main,town_zone){
+    1..4:sw_bridge_rural_stone_sw;
+    sw_bridge_rural_stone_nm;
+  }
+// switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
+    
+//   }
+//
+item(FEAT_ROADTYPES, road_rural_field, 1) {
+    property {
+        name: string(STR_ROAD_FIELD);
+        label: "RRA1";
+        powered_roadtype_list: [REG_ROAD];
+        introduces_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1800,1,1);
+        speed_limit:20 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_FIELD);
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_FIELD));
+        build_window_caption: string(STR_ROAD_FIELD);
+        autoreplace_text: string(STR_ROAD_FIELD);
+        new_engine_text: string(STR_ROAD_FIELD);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 1;
+    }
+  graphics {
+        underlay: sw_road_rural_field_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_rural_stone_main;
+    }
+}
