@@ -46,8 +46,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_district_main,town_zone){
     sw_road_district_no_markings_gfx;
   }
 switch(FEAT_ROADTYPES,SELF,sw_bridge_district_main,town_zone){
-    3..4:sw_bridge_2l_sw;
-    1..2:sw_bridge_2l_dw;
+    1..4:sw_bridge_2l_sw;
     sw_bridge_2l_nm;
   }
 // switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
