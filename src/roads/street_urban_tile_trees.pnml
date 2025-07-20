@@ -2,7 +2,7 @@
   spriteset(road_urban_tile_trees_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
   spriteset(road_urban_tile_trees_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (140,0,0,130,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_1){
     3:road_urban_tile_trees_so_def_conc;
@@ -14,9 +14,9 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_1){
   spriteset(road_urban_tile_trees_so_def_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
   spriteset(road_urban_tile_trees_so_def_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (0,0,0,260,0)}
+  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (140,0,0,260,0)}
   spriteset(road_urban_tile_trees_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
+  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (280,0,0,390,0)}
 //
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_2){
     1:road_urban_tile_trees_so_def;
@@ -31,7 +31,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main,current_year){
 //
 item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
     property {
-        name: string(STR_ROAD_GREEN);
+        name: string(STR_ROAD_SAKURA);
         label: "ST11";
         sort_order: 27;
         powered_roadtype_list: [REG_ROAD];
@@ -52,6 +52,36 @@ item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
         underlay: sw_road_urban_tile_trees_so_main;
         catenary_front:sw_trees_2l_f;
         catenary_back:sw_trees_2l_b;
+        // depots: depot_normal_road;
+        bridge_surfaces: sw_bridge_2l_so;
+        // roadstops: roadstop_underlay_red;
+        // gui: gui_normal;
+        // direction_markings: st_direction_markings;
+    }
+}
+item(FEAT_ROADTYPES, road_urban_tile_sakura, 28) {
+    property {
+        name: string(STR_ROAD_GREEN);
+        label: "ST12";
+        sort_order: 28;
+        powered_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1930,1,1);
+        speed_limit:40 km/h;
+        map_colour:69;
+        
+        toolbar_caption: string(STR_ROAD_SAKURA);
+        menu_text: string(STR_NO_CROSSING,string(STR_GEN_STREET,string(STR_ROAD_SAKURA)));
+        build_window_caption: string(STR_ROAD_SAKURA);
+        autoreplace_text: string(STR_ROAD_SAKURA);
+        new_engine_text: string(STR_ROAD_SAKURA);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+        // track_overlay: road_overlays_red;
+        underlay: sw_road_urban_tile_trees_so_main;
+        catenary_front:sw_sakuras_right_f;
+        catenary_back:sw_sakuras_left_b;
         // depots: depot_normal_road;
         bridge_surfaces: sw_bridge_2l_so;
         // roadstops: roadstop_underlay_red;

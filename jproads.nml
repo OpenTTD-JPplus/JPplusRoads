@@ -13,6 +13,13 @@ grf {
 
 }
 
+replace trees_remove(4626, "gfx/gfx_placeholder.png") {
+ [ 0,0, 1,1, 0, 0]
+}
+replace lights_remove(1406 , "gfx/gfx_placeholder.png") {
+ [ 0,0, 1,1, 0, 0]
+ [ 0,0, 1,1, 0, 0]
+}
 replace road_underlay(1313, "gfx/misc/gfx_grass_temp.png") {
  [ 0,0, 64,31, -31, 0]
  [ 0,0, 64,31, -31, 0]
@@ -337,6 +344,30 @@ template tmpl_bridge(x,y) {
   spriteset(crash_barriers, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/crash_barriers.png") {tmpl_trees (0,0)}
 
+  spriteset(power_poles_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/power_poles.png") {tmpl_trees (0,0)}
+  spriteset(power_poles_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/power_poles_2.png") {tmpl_trees (0,0)}
+    random_switch(FEAT_ROADTYPES,SELF,power_poles_r){
+      3:power_poles_1;
+      1:power_poles_2;
+    }
+    switch(FEAT_ROADTYPES,SELF,power_poles,railtype){
+      0:deco_empty;
+      power_poles_r;
+    }
+    switch(FEAT_ROADTYPES,SELF,power_poles_restricted,town_zone){
+      4:deco_empty;
+      power_poles;
+    }
+
+  spriteset(light_poles_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/light_poles.png") {tmpl_trees (0,0)}
+    switch(FEAT_ROADTYPES,SELF,light_poles,railtype){
+      0:deco_empty;
+      light_poles_gfx;
+    }
+
 
     spriteset(tree_2l_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/decorations/tree_green_2l_f.png") {tmpl_trees (0,0)}
@@ -428,6 +459,100 @@ template tmpl_bridge(x,y) {
         "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (280,292)}
       spriteset(tree_2l_winter_snowed_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         "gfx/decorations/tree_green_2l_b.png") {tmpl_trees (420,292)}
+
+
+
+
+    spriteset(sakura_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (0,0)}
+    spriteset(sakura_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (140,0)}
+    spriteset(sakura_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (280,0)}
+    spriteset(sakura_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (420,0)}
+
+    spriteset(sakura_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (0,0)}
+    spriteset(sakura_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (140,0)}
+    spriteset(sakura_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (280,0)}
+    spriteset(sakura_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (420,0)}
+
+    spriteset(sakura_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (0,73)}
+    spriteset(sakura_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (140,73)}
+    spriteset(sakura_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (280,73)}
+    spriteset(sakura_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (420,73)}
+
+    spriteset(sakura_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (0,73)}
+    spriteset(sakura_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (140,73)}
+    spriteset(sakura_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (280,73)}
+    spriteset(sakura_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (420,73)}
+
+    spriteset(sakura_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (0,146)}
+    spriteset(sakura_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (140,146)}
+    spriteset(sakura_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (280,146)}
+    spriteset(sakura_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (420,146)}
+
+    spriteset(sakura_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (0,146)}
+    spriteset(sakura_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (140,146)}
+    spriteset(sakura_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (280,146)}
+    spriteset(sakura_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (420,146)}
+
+
+      spriteset(sakura_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (0,219)}
+      spriteset(sakura_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (140,219)}
+      spriteset(sakura_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (280,219)}
+      spriteset(sakura_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (420,219)}
+
+      spriteset(sakura_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (0,219)}
+      spriteset(sakura_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (140,219)}
+      spriteset(sakura_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (280,219)}
+      spriteset(sakura_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (420,219)}
+
+      spriteset(sakura_winter_snowed_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (0,292)}
+      spriteset(sakura_winter_snowed_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (140,292)}
+      spriteset(sakura_winter_snowed_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (280,292)}
+      spriteset(sakura_winter_snowed_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_f.png") {tmpl_trees (420,292)}
+
+      spriteset(sakura_winter_snowed_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (0,292)}
+      spriteset(sakura_winter_snowed_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (140,292)}
+      spriteset(sakura_winter_snowed_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (280,292)}
+      spriteset(sakura_winter_snowed_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+        "gfx/decorations/tree_sakura_2l_b.png") {tmpl_trees (420,292)}
 
 
 
@@ -906,6 +1031,199 @@ template tmpl_bridge(x,y) {
     1:sw_trees_right_3_b;
     1:sw_trees_right_4_b;
   }
+
+
+
+
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_1_f_0, current_day_of_year){
+    97..117:sakura_spring_1_f;
+    118..304:sakura_summer_1_f;
+    305..330:sakura_fall_1_f;
+    sakura_winter_1_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_1_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_1_f;
+    sw_sakuras_left_1_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_2_f_0, current_day_of_year){
+    100..120:sakura_spring_2_f;
+    121..309:sakura_summer_2_f;
+    310..335:sakura_fall_2_f;
+    sakura_winter_2_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_2_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_2_f;
+    sw_sakuras_left_2_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_3_f_0, current_day_of_year){
+    103..123:sakura_spring_3_f;
+    124..314:sakura_summer_3_f;
+    315..340:sakura_fall_3_f;
+    sakura_winter_3_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_3_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_3_f;
+    sw_sakuras_left_3_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_4_f_0, current_day_of_year){
+    106..126:sakura_spring_4_f;
+    127..319:sakura_summer_4_f;
+    320..345:sakura_fall_4_f;
+    sakura_winter_4_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_4_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_4_f;
+    sw_sakuras_left_4_f_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_f){
+    1:sw_sakuras_left_1_f;
+    1:sw_sakuras_left_2_f;
+    1:sw_sakuras_left_3_f;
+    1:sw_sakuras_left_4_f;
+  }
+
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_1_b_0, current_day_of_year){
+    97..117:sakura_spring_1_b;
+    118..304:sakura_summer_1_b;
+    305..330:sakura_fall_1_b;
+    sakura_winter_1_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_1_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_1_b;
+    sw_sakuras_left_1_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_2_b_0, current_day_of_year){
+    100..120:sakura_spring_2_b;
+    121..309:sakura_summer_2_b;
+    310..335:sakura_fall_2_b;
+    sakura_winter_2_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_2_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_2_b;
+    sw_sakuras_left_2_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_3_b_0, current_day_of_year){
+    103..123:sakura_spring_3_b;
+    124..314:sakura_summer_3_b;
+    315..340:sakura_fall_3_b;
+    sakura_winter_3_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_3_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_3_b;
+    sw_sakuras_left_3_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_4_b_0, current_day_of_year){
+    106..126:sakura_spring_4_b;
+    127..319:sakura_summer_4_b;
+    320..345:sakura_fall_4_b;
+    sakura_winter_4_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_4_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_4_b;
+    sw_sakuras_left_4_b_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_sakuras_left_b){
+    1:sw_sakuras_left_1_b;
+    1:sw_sakuras_left_2_b;
+    1:sw_sakuras_left_3_b;
+    1:sw_sakuras_left_4_b;
+  }
+
+
+
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_1_f_0, current_day_of_year){
+    97..117:sakura_spring_1_f;
+    118..304:sakura_summer_1_f;
+    305..330:sakura_fall_1_f;
+    sakura_winter_1_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_1_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_1_f;
+    sw_sakuras_right_1_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_2_f_0, current_day_of_year){
+    100..120:sakura_spring_2_f;
+    121..309:sakura_summer_2_f;
+    310..335:sakura_fall_2_f;
+    sakura_winter_2_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_2_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_2_f;
+    sw_sakuras_right_2_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_3_f_0, current_day_of_year){
+    103..123:sakura_spring_3_f;
+    124..314:sakura_summer_3_f;
+    315..340:sakura_fall_3_f;
+    sakura_winter_3_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_3_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_3_f;
+    sw_sakuras_right_3_f_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_4_f_0, current_day_of_year){
+    106..126:sakura_spring_4_f;
+    127..319:sakura_summer_4_f;
+    320..345:sakura_fall_4_f;
+    sakura_winter_4_f;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_4_f,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_4_f;
+    sw_sakuras_right_4_f_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_f){
+    1:sw_sakuras_right_1_f;
+    1:sw_sakuras_right_2_f;
+    1:sw_sakuras_right_3_f;
+    1:sw_sakuras_right_4_f;
+  }
+
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_1_b_0, current_day_of_year){
+    97..117:sakura_spring_1_b;
+    118..304:sakura_summer_1_b;
+    305..330:sakura_fall_1_b;
+    sakura_winter_1_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_1_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_1_b;
+    sw_sakuras_right_1_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_2_b_0, current_day_of_year){
+    100..120:sakura_spring_2_b;
+    121..309:sakura_summer_2_b;
+    310..335:sakura_fall_2_b;
+    sakura_winter_2_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_2_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_2_b;
+    sw_sakuras_right_2_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_3_b_0, current_day_of_year){
+    103..123:sakura_spring_3_b;
+    124..314:sakura_summer_3_b;
+    315..340:sakura_fall_3_b;
+    sakura_winter_3_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_3_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_3_b;
+    sw_sakuras_right_3_b_0;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_4_b_0, current_day_of_year){
+    106..126:sakura_spring_4_b;
+    127..319:sakura_summer_4_b;
+    320..345:sakura_fall_4_b;
+    sakura_winter_4_b;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_4_b,terrain_type){
+    TILETYPE_SNOW:sakura_winter_snowed_4_b;
+    sw_sakuras_right_4_b_0;
+  }
+  random_switch(FEAT_ROADTYPES,SELF,sw_sakuras_right_b){
+    1:sw_sakuras_right_1_b;
+    1:sw_sakuras_right_2_b;
+    1:sw_sakuras_right_3_b;
+    1:sw_sakuras_right_4_b;
+  }
 # 7 "src/index.pnml" 2
 # 1 "src/import/bridges.pnml" 1
 
@@ -1017,7 +1335,7 @@ item(FEAT_ROADTYPES, road_rural_dirt, 2) {
     }
   graphics {
         underlay: sw_road_rural_dirt_main;
-        catenary_front:deco_empty;
+        catenary_back:light_poles;
         bridge_surfaces:sw_bridge_rural_stone_main;
     }
 }
@@ -1110,7 +1428,7 @@ item(FEAT_ROADTYPES, road_rural_concrete, 5) {
     }
   graphics {
         underlay: sw_road_rural_concrete_main;
-        catenary_front:deco_empty;
+        catenary_back:light_poles;
         bridge_surfaces:sw_bridge_rural_concrete_main;
     }
 }
@@ -1186,7 +1504,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1, 7) {
     }
   graphics {
         underlay: sw_road_rural_asphalt_1_main;
-        catenary_front:deco_empty;
+        catenary_front:light_poles;
         bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
     }
 }
@@ -1211,7 +1529,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
     }
   graphics {
         underlay: sw_road_rural_asphalt_2_main;
-        catenary_front:deco_empty;
+        catenary_back:light_poles;
         bridge_surfaces:sw_bridge_rural_asphalt_2_new_main;
     }
 }
@@ -1545,7 +1863,7 @@ item(FEAT_ROADTYPES, road_district, 23) {
     }
   graphics {
         underlay: sw_road_district_main;
-        catenary_front:deco_empty;
+        catenary_back:power_poles;
         bridge_surfaces:sw_bridge_district_main;
     }
 }
@@ -1555,7 +1873,7 @@ item(FEAT_ROADTYPES, road_district, 23) {
   spriteset(road_urban_asphalt_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
   spriteset(road_urban_asphalt_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (140,0,0,130,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_1){
     3:road_urban_asphalt_so_def_conc;
@@ -1567,9 +1885,9 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_1){
   spriteset(road_urban_asphalt_so_def_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
   spriteset(road_urban_asphalt_so_def_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (0,0,0,260,0)}
+  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (140,0,0,260,0)}
   spriteset(road_urban_asphalt_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
+  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (280,0,0,390,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_2){
     1:road_urban_asphalt_so_def;
@@ -1601,7 +1919,7 @@ item(FEAT_ROADTYPES, road_urban_asphalt, 24) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
-        catenary_front:deco_empty;
+        catenary_back:power_poles_restricted;
         underlay: sw_road_urban_asphalt_so_main;
 
         bridge_surfaces: sw_bridge_2l_so;
@@ -1616,7 +1934,7 @@ item(FEAT_ROADTYPES, road_urban_asphalt, 24) {
   spriteset(road_urban_tile_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
   spriteset(road_urban_tile_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (140,0,0,130,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_1){
     3:road_urban_tile_so_def_conc;
@@ -1628,9 +1946,9 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_1){
   spriteset(road_urban_tile_so_def_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
   spriteset(road_urban_tile_so_def_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (0,0,0,260,0)}
+  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (140,0,0,260,0)}
   spriteset(road_urban_tile_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
+  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (280,0,0,390,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_2){
     1:road_urban_tile_so_def;
@@ -1662,7 +1980,7 @@ item(FEAT_ROADTYPES, road_urban_tile, 26) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
-        catenary_front:deco_empty;
+        catenary_back:power_poles_restricted;
         underlay: sw_road_urban_tile_so_main;
 
         bridge_surfaces: sw_bridge_2l_so;
@@ -1678,7 +1996,7 @@ item(FEAT_ROADTYPES, road_urban_tile, 26) {
   spriteset(road_urban_tile_trees_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
   spriteset(road_urban_tile_trees_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_urban_tile_trees_conc_so.png") {tmpl_underlay_2 (140,0,0,130,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_1){
     3:road_urban_tile_trees_so_def_conc;
@@ -1690,9 +2008,9 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_1){
   spriteset(road_urban_tile_trees_so_def_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
   spriteset(road_urban_tile_trees_so_def_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (0,0,0,260,0)}
+  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (140,0,0,260,0)}
   spriteset(road_urban_tile_trees_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
+  "gfx/roads/pool/road_urban_tile_trees_so.png") {tmpl_underlay_2 (280,0,0,390,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main_2){
     1:road_urban_tile_trees_so_def;
@@ -1707,7 +2025,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main,current_year){
 
 item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
     property {
-        name: string(STR_ROAD_GREEN);
+        name: string(STR_ROAD_SAKURA);
         label: "ST11";
         sort_order: 27;
         powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
@@ -1728,6 +2046,36 @@ item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
         underlay: sw_road_urban_tile_trees_so_main;
         catenary_front:sw_trees_2l_f;
         catenary_back:sw_trees_2l_b;
+
+        bridge_surfaces: sw_bridge_2l_so;
+
+
+
+    }
+}
+item(FEAT_ROADTYPES, road_urban_tile_sakura, 28) {
+    property {
+        name: string(STR_ROAD_GREEN);
+        label: "ST12";
+        sort_order: 28;
+        powered_roadtype_list: ["RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","RRA9","REX1","REX2","REX3","REX4","REX5","REX6","STR1","STR2","STR3","STR4","STR5","STR6","STR7","STR8","STR9","ST10","ST11","ST12","ST13","ST14","ST15","ST16","ST17","ST18","PED1","PED2","PED3","IND1","IND2","IND3","IND4","IND5"];
+
+        introduction_date:date(1930,1,1);
+        speed_limit:40 km/h;
+        map_colour:69;
+
+        toolbar_caption: string(STR_ROAD_SAKURA);
+        menu_text: string(STR_NO_CROSSING,string(STR_GEN_STREET,string(STR_ROAD_SAKURA)));
+        build_window_caption: string(STR_ROAD_SAKURA);
+        autoreplace_text: string(STR_ROAD_SAKURA);
+        new_engine_text: string(STR_ROAD_SAKURA);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+
+        underlay: sw_road_urban_tile_trees_so_main;
+        catenary_front:sw_sakuras_right_f;
+        catenary_back:sw_sakuras_left_b;
 
         bridge_surfaces: sw_bridge_2l_so;
 
@@ -1895,7 +2243,6 @@ item(FEAT_ROADTYPES, road_avenue_6l_l, 34) {
   switch(FEAT_ROADTYPES,SELF,road_generic_city_gfx,current_year){
     0..1849:sw_road_dirt_main;
     1850..1934:sw_road_stone_main;
-
     1935..1959:sw_road_district_main;
     sw_road_district_main;
   }
@@ -1938,12 +2285,12 @@ item(FEAT_ROADTYPES, road_generic, 0) {
         build_window_caption: string(STR_ROAD_DIRT);
         autoreplace_text: string(STR_ROAD_DIRT);
         new_engine_text: string(STR_ROAD_DIRT);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
         sort_order: 0;
     }
   graphics {
         underlay: road_generic_main;
-        catenary_front:deco_empty;
+        catenary_back:deco_empty;
         bridge_surfaces:sw_bridge_generic_main;
     }
 }

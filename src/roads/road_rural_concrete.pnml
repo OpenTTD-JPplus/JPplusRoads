@@ -42,7 +42,7 @@ item(FEAT_ROADTYPES, road_rural_concrete, 5) {
     }
   graphics {
         underlay: sw_road_rural_concrete_main;
-        catenary_front:deco_empty;
+        catenary_back:light_poles;
         bridge_surfaces:sw_bridge_rural_concrete_main;
     }
 }

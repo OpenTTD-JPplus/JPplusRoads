@@ -130,7 +130,7 @@ item(FEAT_ROADTYPES, road_district, 23) {
     }
   graphics {
         underlay: sw_road_district_main;
-        catenary_front:deco_empty;
+        catenary_back:power_poles;
         bridge_surfaces:sw_bridge_district_main;
     }
 }

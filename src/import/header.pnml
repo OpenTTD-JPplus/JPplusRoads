@@ -8,6 +8,13 @@ grf {
 // #include "params.pnml"
 }
 
+replace trees_remove(4626, "gfx/gfx_placeholder.png") {
+	[ 0,0, 1,1, 0,  0]
+}
+replace lights_remove(1406  , "gfx/gfx_placeholder.png") {
+	[ 0,0, 1,1, 0,  0]
+	[ 0,0, 1,1, 0,  0]
+}
 replace road_underlay(1313, "gfx/misc/gfx_grass_temp.png") {
 	[ 0,0, 64,31, -31,  0]//flat
 	[ 0,0, 64,31, -31,  0]//flat
