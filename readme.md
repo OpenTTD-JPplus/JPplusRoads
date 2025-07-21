@@ -3,9 +3,9 @@ JP+ Roads is a NewGRF for OpenTTD, bringing different authentic roads, heavily i
 A sister set to 🛤️[JP+ Tracks](https://github.com/OpenTTD-JPplus/JPplusTracks), 🏙️[JP+ Buildings](https://github.com/OpenTTD-JPplus/JPplusBuildings) and 🌉[JP+ Bridges](https://github.com/OpenTTD-JPplus/JPplusBridges)
 
 ## Features<br>
-* Up to date list of Japanese Private Companies' trains
-* Real world train specs and liveries
-* Fully customizable costs, capacity, and amount of trains in game
+* Different road sprites, to provide maximum variety
+* Seasoned trees, timed change of pavement type and many more
+* Fully customizable speeds, costs, types and even hemispheres!
 
 ## Credits
 **Coding:** Yozora <br>
