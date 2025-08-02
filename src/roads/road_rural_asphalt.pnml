@@ -63,7 +63,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1, 7) {
         build_window_caption: string(STR_ROAD_RURAL);
         autoreplace_text: string(STR_ROAD_RURAL);
         new_engine_text: string(STR_ROAD_RURAL);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 7;
     }
   graphics {
@@ -88,7 +88,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
         build_window_caption: string(STR_ROAD_I_RURAL);
         autoreplace_text: string(STR_ROAD_I_RURAL);
         new_engine_text: string(STR_ROAD_I_RURAL);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 8;
     }
   graphics {

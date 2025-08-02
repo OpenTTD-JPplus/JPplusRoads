@@ -1295,7 +1295,7 @@ item(FEAT_ROADTYPES, road_rural_field, 1) {
         build_window_caption: string(STR_ROAD_FIELD);
         autoreplace_text: string(STR_ROAD_FIELD);
         new_engine_text: string(STR_ROAD_FIELD);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 1;
     }
   graphics {
@@ -1330,7 +1330,7 @@ item(FEAT_ROADTYPES, road_rural_dirt, 2) {
         build_window_caption: string(STR_ROAD_DIRT);
         autoreplace_text: string(STR_ROAD_DIRT);
         new_engine_text: string(STR_ROAD_DIRT);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 2;
     }
   graphics {
@@ -1373,7 +1373,7 @@ item(FEAT_ROADTYPES, road_rural_stone, 4) {
         build_window_caption: string(STR_ROAD_STONE);
         autoreplace_text: string(STR_ROAD_STONE);
         new_engine_text: string(STR_ROAD_STONE);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 4;
     }
   graphics {
@@ -1423,7 +1423,7 @@ item(FEAT_ROADTYPES, road_rural_concrete, 5) {
         build_window_caption: string(STR_ROAD_CONCRETE);
         autoreplace_text: string(STR_ROAD_CONCRETE);
         new_engine_text: string(STR_ROAD_CONCRETE);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 5;
     }
   graphics {
@@ -1499,7 +1499,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1, 7) {
         build_window_caption: string(STR_ROAD_RURAL);
         autoreplace_text: string(STR_ROAD_RURAL);
         new_engine_text: string(STR_ROAD_RURAL);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 7;
     }
   graphics {
@@ -1524,7 +1524,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
         build_window_caption: string(STR_ROAD_I_RURAL);
         autoreplace_text: string(STR_ROAD_I_RURAL);
         new_engine_text: string(STR_ROAD_I_RURAL);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 8;
     }
   graphics {
@@ -1554,10 +1554,6 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
   spriteset(bridge_expressway_red, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_expressway_red.png") {tmpl_bridge (0,0)}
 
-
-
-
-
 item(FEAT_ROADTYPES, road_expressway_dw, 11) {
     property {
         name: string(STR_ROAD_EXPRESS);
@@ -1574,7 +1570,7 @@ item(FEAT_ROADTYPES, road_expressway_dw, 11) {
         build_window_caption: string(STR_ROAD_EXPRESS);
         autoreplace_text: string(STR_ROAD_EXPRESS);
         new_engine_text: string(STR_ROAD_EXPRESS);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
         catenary_front:crash_barriers;
@@ -1602,7 +1598,7 @@ item(FEAT_ROADTYPES, road_expressway_sw, 12) {
         build_window_caption: string(STR_ROAD_EXPRESS_S);
         autoreplace_text: string(STR_ROAD_EXPRESS_S);
         new_engine_text: string(STR_ROAD_EXPRESS_S);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
         catenary_front:crash_barriers;
@@ -1614,6 +1610,7 @@ item(FEAT_ROADTYPES, road_expressway_sw, 12) {
 
     }
 }
+
 item(FEAT_ROADTYPES, road_expressway_red, 13) {
     property {
         name: string(STR_ROAD_EXPRESS_R);
@@ -1630,7 +1627,7 @@ item(FEAT_ROADTYPES, road_expressway_red, 13) {
         build_window_caption: string(STR_ROAD_EXPRESS_R);
         autoreplace_text: string(STR_ROAD_EXPRESS_R);
         new_engine_text: string(STR_ROAD_EXPRESS_R);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
         catenary_front:crash_barriers;

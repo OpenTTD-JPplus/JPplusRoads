@@ -26,7 +26,7 @@ item(FEAT_ROADTYPES, road_rural_field, 1) {
         build_window_caption: string(STR_ROAD_FIELD);
         autoreplace_text: string(STR_ROAD_FIELD);
         new_engine_text: string(STR_ROAD_FIELD);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 1;
     }
   graphics {

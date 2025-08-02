@@ -22,12 +22,12 @@ item(FEAT_ROADTYPES, road_rural_dirt, 2) {
         build_window_caption: string(STR_ROAD_DIRT);
         autoreplace_text: string(STR_ROAD_DIRT);
         new_engine_text: string(STR_ROAD_DIRT);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 2;
     }
   graphics {
         underlay: sw_road_rural_dirt_main;
-        catenary_back:light_poles;
+        catenary_back:deco_empty;
         bridge_surfaces:sw_bridge_rural_stone_main;
     }
 }
