@@ -29,7 +29,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main,current_year){
   sw_road_urban_asphalt_so_main_2;
 } 
 //
-item(FEAT_ROADTYPES, road_urban_asphalt, 24) {
+item(FEAT_ROADTYPES, road_urban_asphalt) {
     property {
         name: string(STR_ROAD_URBAN);
         label: "STR9";

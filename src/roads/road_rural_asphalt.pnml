@@ -47,7 +47,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_main,current_year>1959){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_rural_asphalt_1, 7) {
+item(FEAT_ROADTYPES, road_rural_asphalt_1) {
     property {
         name: string(STR_ROAD_RURAL);
         label: "RRA7";
@@ -72,7 +72,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1, 7) {
         bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
     }
 }
-item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
+item(FEAT_ROADTYPES, road_rural_asphalt_2) {
     property {
         name: string(STR_ROAD_I_RURAL);
         label: "RRA8";

@@ -108,7 +108,7 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_district_main,town_zone){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_district, 23) {
+item(FEAT_ROADTYPES, road_district) {
     property {
         name: string(STR_ROAD_DISTRICT);
         label: "STR8";//SDS2

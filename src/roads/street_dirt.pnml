@@ -10,7 +10,7 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_stone_main,town_zone){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_dirt, 16) {
+item(FEAT_ROADTYPES, road_dirt) {
     property {
         name: string(STR_ROAD_DIRT);
         label: "STR1";

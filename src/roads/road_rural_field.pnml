@@ -10,7 +10,7 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_stone_main,town_zone){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_rural_field, 1) {
+item(FEAT_ROADTYPES, road_rural_field) {
     property {
         name: string(STR_ROAD_FIELD);
         label: "RRA1";

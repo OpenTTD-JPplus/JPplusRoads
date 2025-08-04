@@ -16,7 +16,7 @@
   spriteset(bridge_expressway_red, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_expressway_red.png") {tmpl_bridge (0,0)}
 
-item(FEAT_ROADTYPES, road_expressway_dw, 11) {
+item(FEAT_ROADTYPES, road_expressway_dw) {
     property {
         name: string(STR_ROAD_EXPRESS);
         label: "REX1";
@@ -44,7 +44,7 @@ item(FEAT_ROADTYPES, road_expressway_dw, 11) {
         // direction_markings: st_direction_markings;
     }
 }
-item(FEAT_ROADTYPES, road_expressway_sw, 12) {
+item(FEAT_ROADTYPES, road_expressway_sw) {
     property {
         name: string(STR_ROAD_EXPRESS_S);
         label: "REX2";
@@ -73,7 +73,7 @@ item(FEAT_ROADTYPES, road_expressway_sw, 12) {
     }
 }
 
-item(FEAT_ROADTYPES, road_expressway_red, 13) {
+item(FEAT_ROADTYPES, road_expressway_red) {
     property {
         name: string(STR_ROAD_EXPRESS_R);
         label: "REX3";

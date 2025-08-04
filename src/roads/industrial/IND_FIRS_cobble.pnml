@@ -1,0 +1,24 @@
+item(FEAT_ROADTYPES, rd_IND_FIRS_cobble) {
+  property {
+    sort_order: 41;
+    label: "IND3";
+    powered_roadtype_list: [INDUSTRIAL];
+
+    introduction_date:date(0,1,1);
+    speed_limit:50 km/h;
+    map_colour:VAR_ALLEY;
+
+    name: string(STR_ROAD_FIRS_COBBLE);
+    toolbar_caption: string(STR_ROAD_FIRS_COBBLE);
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_COBBLE));
+    build_window_caption: string(STR_ROAD_FIRS_COBBLE);
+    autoreplace_text: string(STR_ROAD_FIRS_COBBLE);
+    new_engine_text: string(STR_ROAD_FIRS_COBBLE);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    underlay: gfx_IND_FIRS_cobble;
+    catenary_back:deco_empty;
+  }
+}

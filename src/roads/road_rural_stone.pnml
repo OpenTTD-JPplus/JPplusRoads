@@ -14,7 +14,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_rural_stone_main,town_zone){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_rural_stone, 4) {
+item(FEAT_ROADTYPES, road_rural_stone) {
     property {
         name: string(STR_ROAD_STONE);
         label: "RRA4";

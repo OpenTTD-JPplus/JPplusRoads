@@ -1,0 +1,24 @@
+item(FEAT_ROADTYPES, rd_IND_FIRS_concrete) {
+  property {
+    sort_order: 40;
+    label: "IND2";
+    powered_roadtype_list: [INDUSTRIAL];
+
+    introduction_date:date(0,1,1);
+    speed_limit:50 km/h;
+    map_colour:VAR_ALLEY;
+
+    name: string(STR_ROAD_FIRS_CONC);
+    toolbar_caption: string(STR_ROAD_FIRS_CONC);
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC));
+    build_window_caption: string(STR_ROAD_FIRS_CONC);
+    autoreplace_text: string(STR_ROAD_FIRS_CONC);
+    new_engine_text: string(STR_ROAD_FIRS_CONC);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    underlay: gfx_IND_FIRS_concrete;
+    catenary_back:deco_empty;
+  }
+}
