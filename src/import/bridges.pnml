@@ -36,3 +36,15 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_2l_sw,current_year){
   0..1959:sw_bridge_2l_sw_conc;
   sw_bridge_2l_sw_asph;
 } 
+
+
+
+
+spriteset(gfx_IND_FIRS_concrete_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_FIRS_concrete.png") {tmpl_bridge (0,0)}
+spriteset(gfx_IND_FIRS_cobble_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_FIRS_cobble.png") {tmpl_bridge (0,0)}
+spriteset(gfx_IND_ISR_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_ISR.png") {tmpl_bridge (0,0)}
+spriteset(gfx_IND_AUZ_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_AUZ.png") {tmpl_bridge (0,0)}

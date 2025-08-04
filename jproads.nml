@@ -346,9 +346,9 @@ template tmpl_bridge(x,y) {
   "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (140,0,0,0,0)}
 
   spriteset(gfx_IND_lh_FIRS_concrete_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_FIRS_concrete_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (140,0,40,0,70)}
 
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_FIRS_concrete_r) {2:gfx_IND_rh_FIRS_concrete_1;1:gfx_IND_rh_FIRS_concrete_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_FIRS_concrete_r) {2:gfx_IND_lh_FIRS_concrete_1;1:gfx_IND_lh_FIRS_concrete_2;}
@@ -363,9 +363,9 @@ template tmpl_bridge(x,y) {
   "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (140,0,0,0,0)}
 
   spriteset(gfx_IND_lh_FIRS_cobble_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_FIRS_cobble_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (140,0,40,0,70)}
 
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_FIRS_cobble_r) {2:gfx_IND_rh_FIRS_cobble_1;1:gfx_IND_rh_FIRS_cobble_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_FIRS_cobble_r) {2:gfx_IND_lh_FIRS_cobble_1;1:gfx_IND_lh_FIRS_cobble_2;}
@@ -380,9 +380,9 @@ template tmpl_bridge(x,y) {
   "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (140,0,0,0,0)}
 
   spriteset(gfx_IND_lh_ISR_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_ISR_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (140,0,40,0,70)}
 
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_ISR_r) {2:gfx_IND_rh_ISR_1;1:gfx_IND_rh_ISR_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_ISR_r) {2:gfx_IND_lh_ISR_1;1:gfx_IND_lh_ISR_2;}
@@ -397,9 +397,9 @@ template tmpl_bridge(x,y) {
   "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (140,0,0,0,0)}
 
   spriteset(gfx_IND_lh_AUZ_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_AUZ_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (140,0,40,0,70)}
 
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_AUZ_r) {2:gfx_IND_rh_AUZ_1;1:gfx_IND_rh_AUZ_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_AUZ_r) {2:gfx_IND_lh_AUZ_1;1:gfx_IND_lh_AUZ_2;}
@@ -1337,6 +1337,18 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_2l_sw,current_year){
   0..1959:sw_bridge_2l_sw_conc;
   sw_bridge_2l_sw_asph;
 }
+
+
+
+
+spriteset(gfx_IND_FIRS_concrete_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_FIRS_concrete.png") {tmpl_bridge (0,0)}
+spriteset(gfx_IND_FIRS_cobble_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_FIRS_cobble.png") {tmpl_bridge (0,0)}
+spriteset(gfx_IND_ISR_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_ISR.png") {tmpl_bridge (0,0)}
+spriteset(gfx_IND_AUZ_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/BRG_IND_AUZ.png") {tmpl_bridge (0,0)}
 # 11 "src/index.pnml" 2
 
 # 1 "src/roads/road_rural_field.pnml" 1
@@ -2329,7 +2341,7 @@ item(FEAT_ROADTYPES, rd_IND_FIRS_concrete) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    bridge_surfaces:gfx_IND_FIRS_concrete_bridge;
     underlay: gfx_IND_FIRS_concrete;
     catenary_back:deco_empty;
   }
@@ -2355,7 +2367,7 @@ item(FEAT_ROADTYPES, rd_IND_FIRS_cobble) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    bridge_surfaces:gfx_IND_FIRS_cobble_bridge;
     underlay: gfx_IND_FIRS_cobble;
     catenary_back:deco_empty;
   }
@@ -2381,7 +2393,7 @@ item(FEAT_ROADTYPES, rd_IND_ISR) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    bridge_surfaces:gfx_IND_ISR_bridge;
     underlay: gfx_IND_ISR;
     catenary_back:deco_empty;
   }
@@ -2407,7 +2419,7 @@ item(FEAT_ROADTYPES, rd_IND_AUZ) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    bridge_surfaces:gfx_IND_AUZ_bridge;
     underlay: gfx_IND_AUZ;
     catenary_back:deco_empty;
   }
