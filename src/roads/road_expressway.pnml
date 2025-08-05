@@ -35,7 +35,8 @@ item(FEAT_ROADTYPES, road_expressway_dw) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-        catenary_front:crash_barriers;
+        catenary_back:crash_barriers;
+
         underlay: sw_road_expressway_dw_main;
         // depots: depot_normal_road;
         bridge_surfaces: bridge_expressway_dw;
@@ -63,7 +64,7 @@ item(FEAT_ROADTYPES, road_expressway_sw) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-        catenary_front:crash_barriers;
+        catenary_back:crash_barriers;
         underlay: sw_road_expressway_sw_main;
         // depots: depot_normal_road;
         bridge_surfaces: bridge_expressway_sw;
@@ -92,7 +93,7 @@ item(FEAT_ROADTYPES, road_expressway_red) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-        catenary_front:crash_barriers;
+        catenary_back:crash_barriers;
         underlay: sw_road_expressway_red_main;
         // depots: depot_normal_road;
         bridge_surfaces: bridge_expressway_red;

@@ -30,4 +30,7 @@
 #include "roads/Industrial/IND_ISR.pnml"
 #include "roads/Industrial/IND_AUZ.pnml"
 
+#include "trams/deco/deco_lights.pnml"
+#include "trams/deco/deco_shutoko.pnml"
+
 #include "roads/road_generic.pnml"
