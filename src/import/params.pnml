@@ -1,0 +1,104 @@
+//*Basecosts
+  param 1 { 
+    param_cost {
+      type: int;
+      name: string(STR_PARAM_COST);
+      desc: string(STR_PARAM_COST);
+      min_value: 0;
+      max_value: 4;
+      def_value: 2;
+      names: {
+          0: string(STR_PARAM_COST_1);
+          1: string(STR_PARAM_COST_2);
+          2: string(STR_PARAM_COST_3);
+          3: string(STR_PARAM_COST_4);
+          4: string(STR_PARAM_COST_5);
+        };
+      }
+  }
+//*Speed */
+  param 2 { 
+    param_speed {
+      type: int;
+      name: string(STR_PARAM_SPEED);
+      desc: string(STR_PARAM_SPEED);
+      min_value: 0;
+      max_value: 2;
+      def_value: 0;
+      names: {
+          0: string(STR_PARAM_SPEED_1);
+          1: string(STR_PARAM_SPEED_2);
+          2: string(STR_PARAM_SPEED_3);
+        };
+      }
+  }
+//*Candy Roads */
+  param 3 { 
+    param_eyecandy_roadtypes {
+      type: bool;
+      name: string(STR_PARAM_CANDY_ROADS);
+      desc: string(STR_PARAM_CANDY_ROADS_DESC);
+      def_value: 0;
+      }
+  }
+//*Junction Markings */
+  param 4 { 
+    param_junc_markings {
+      type: int;
+      name: string(STR_PARAM_JUNC_MARKINGS);
+      desc: string(STR_PARAM_JUNC_MARKINGS);
+      min_value: 0;
+      max_value: 1;
+      def_value: 0;
+      names: {
+          0: string(STR_PARAM_JUNC_MARKINGS_1);
+          1: string(STR_PARAM_JUNC_MARKINGS_2);
+        };
+      }
+  }
+//*Enable Pedestrians */
+  param 5 { 
+    param_show_pedestrians {
+      type: bool;
+      name: string(STR_PARAM_PEDESTRIANS);
+      desc: string(STR_PARAM_PEDESTRIANS);
+      def_value: 0;
+      }
+  }
+//*Season Controller */
+  param 6 { 
+    param_seasons {
+      type: int;
+      name: string(STR_PARAM_SEASONS);
+      desc: string(STR_PARAM_SEASONS);
+      min_value: 0;
+      max_value: 5;
+      def_value: 0;
+      names: {
+          0: string(STR_PARAM_SEASONS_1);
+          1: string(STR_PARAM_SEASONS_2);
+          2: string(STR_PARAM_SEASONS_3);
+          3: string(STR_PARAM_SEASONS_4);
+          4: string(STR_PARAM_SEASONS_5);
+          5: string(STR_PARAM_SEASONS_6);
+        };
+      }
+  }
+//*Grass */
+  // param 7 { 
+  //   param_grass_style {
+  //     type: int;
+  //     name: string(STR_PARAM_GRASS);
+  //     desc: string(STR_PARAM_GRASS);
+  //     min_value: 0;
+  //     max_value: 4;
+  //     def_value: 2;
+  //     names: {
+  //         0: string(STR_PARAM_GRASS_1);
+  //         1: string(STR_PARAM_GRASS_2);
+  //         2: string(STR_PARAM_GRASS_3);
+  //         3: string(STR_PARAM_GRASS_4);
+  //         4: string(STR_PARAM_GRASS_5);
+  //       };
+  //     }
+  // }

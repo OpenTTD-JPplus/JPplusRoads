@@ -1,6 +1,6 @@
 //*Stone
   spriteset(sw_road_rural_dirt_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_rural_dirt_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  "gfx/roads/pool/road_rural_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
   
 // switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
     

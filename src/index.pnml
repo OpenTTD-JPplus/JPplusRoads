@@ -6,7 +6,7 @@
 
 #include "import/gfx_main.pnml"
 
-#include "import/trees.pnml"
+#include "import/gfx_decorations.pnml"
 #include "import/bridges.pnml"
 
 #include "roads/road_rural_field.pnml"

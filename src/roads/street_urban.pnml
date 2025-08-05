@@ -1,8 +1,8 @@
 //*Conc
   spriteset(road_urban_asphalt_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay (0,0,0,0,0)}
   spriteset(road_urban_asphalt_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay_2 (140,0,0,130,0)}
+  "gfx/roads/pool/road_district_conc_sw.png") {tmpl_underlay (140,0,0,130,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_1){
     3:road_urban_asphalt_so_def_conc;
@@ -10,13 +10,13 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_1){
   }
 //*Orange
   spriteset(road_urban_asphalt_so_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay (0,0,0,0,0)}
   spriteset(road_urban_asphalt_so_def_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay (0,0,0,130,0)}
   spriteset(road_urban_asphalt_so_def_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (140,0,0,260,0)}
+  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay (140,0,0,260,0)}
   spriteset(road_urban_asphalt_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay_2 (280,0,0,390,0)}
+  "gfx/roads/pool/road_urban_asphalt_so.png") {tmpl_underlay (280,0,0,390,0)}
 //
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main_2){
     1:road_urban_asphalt_so_def;
@@ -48,7 +48,7 @@ item(FEAT_ROADTYPES, road_urban_asphalt) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
-        catenary_back:power_poles_restricted;
+        catenary_back:power_poles;
         underlay: sw_road_urban_asphalt_so_main;
         // depots: depot_normal_road;
         bridge_surfaces: sw_bridge_2l_so;

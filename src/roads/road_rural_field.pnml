@@ -1,6 +1,6 @@
 //*Stone
   spriteset(sw_road_rural_field_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_rural_field_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  "gfx/roads/pool/road_rural_field_nm.png") {tmpl_underlay (0,0,0,0,0)}
   
 switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_stone_main,town_zone){
     1..4:sw_bridge_rural_stone_sw;
@@ -31,7 +31,7 @@ item(FEAT_ROADTYPES, road_rural_field) {
     }
   graphics {
         underlay: sw_road_rural_field_main;
-        catenary_front:deco_empty;
+        catenary_back:deco_empty;
         bridge_surfaces:sw_bridge_rural_stone_main;
     }
 }
