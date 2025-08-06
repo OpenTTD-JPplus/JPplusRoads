@@ -1,4 +1,4 @@
-item(FEAT_ROADTYPES, rd_IND_AUZ) {
+item(FEAT_ROADTYPES, rd_IND_AUZ,43) {
   property {
     sort_order: 43;
     label: "IND5";
@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, rd_IND_AUZ) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    gui:gfx_gui_industrial_auz;
     bridge_surfaces:gfx_IND_AUZ_bridge;
     underlay: gfx_IND_AUZ;
     catenary_back:deco_empty;

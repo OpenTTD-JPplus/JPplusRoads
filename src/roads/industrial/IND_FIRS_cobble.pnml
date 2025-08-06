@@ -1,4 +1,4 @@
-item(FEAT_ROADTYPES, rd_IND_FIRS_cobble) {
+item(FEAT_ROADTYPES, rd_IND_FIRS_cobble,41) {
   property {
     sort_order: 41;
     label: "IND3";
@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, rd_IND_FIRS_cobble) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    gui:gfx_gui_industrial_firs_cobble;
     bridge_surfaces:gfx_IND_FIRS_cobble_bridge;
     underlay: gfx_IND_FIRS_cobble;
     catenary_back:deco_empty;

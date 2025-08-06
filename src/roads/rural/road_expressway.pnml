@@ -16,7 +16,7 @@
   spriteset(bridge_expressway_red, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_expressway_red.png") {tmpl_bridge (0,0)}
 
-item(FEAT_ROADTYPES, road_expressway_dw) {
+item(FEAT_ROADTYPES, road_expressway_dw,11) {
     property {
         name: string(STR_ROAD_EXPRESS);
         label: "REX1";
@@ -35,6 +35,7 @@ item(FEAT_ROADTYPES, road_expressway_dw) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
+      gui:gfx_gui_road_shuto_dw;
         catenary_back:crash_barriers;
 
         underlay: sw_road_expressway_dw_main;
@@ -45,7 +46,7 @@ item(FEAT_ROADTYPES, road_expressway_dw) {
         // direction_markings: st_direction_markings;
     }
 }
-item(FEAT_ROADTYPES, road_expressway_sw) {
+item(FEAT_ROADTYPES, road_expressway_sw,12) {
     property {
         name: string(STR_ROAD_EXPRESS_S);
         label: "REX2";
@@ -64,6 +65,7 @@ item(FEAT_ROADTYPES, road_expressway_sw) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
+      gui:gfx_gui_road_shuto_sw;
         catenary_back:crash_barriers;
         underlay: sw_road_expressway_sw_main;
         // depots: depot_normal_road;
@@ -74,7 +76,7 @@ item(FEAT_ROADTYPES, road_expressway_sw) {
     }
 }
 
-item(FEAT_ROADTYPES, road_expressway_red) {
+item(FEAT_ROADTYPES, road_expressway_red,13) {
     property {
         name: string(STR_ROAD_EXPRESS_R);
         label: "REX3";
@@ -93,6 +95,7 @@ item(FEAT_ROADTYPES, road_expressway_red) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
+      gui:gfx_gui_road_shuto_slow;
         catenary_back:crash_barriers;
         underlay: sw_road_expressway_red_main;
         // depots: depot_normal_road;

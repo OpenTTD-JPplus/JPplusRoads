@@ -1,0 +1,46 @@
+//*Rural
+  spriteset(gfx_gui_road_field, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,0,0)}
+  spriteset(gfx_gui_road_dirt, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,25,0)}
+  spriteset(gfx_gui_road_gravel, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,50,0)}
+  spriteset(gfx_gui_road_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,75,0)}
+  spriteset(gfx_gui_road_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,100,0)}
+  spriteset(gfx_gui_road_narrow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,125,0)}
+  spriteset(gfx_gui_road_asphalt, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,150,0)}
+  spriteset(gfx_gui_road_asphalt_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,175,0)}
+  spriteset(gfx_gui_road_asphalt_new_wired, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,200,0)}
+  spriteset(gfx_gui_road_highway, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,225,0)}
+  spriteset(gfx_gui_road_shuto_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,250,0)}
+  spriteset(gfx_gui_road_shuto_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,275,0)}
+  spriteset(gfx_gui_road_shuto_slow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (0,300,0)}
+
+//*City */
+  spriteset(gfx_gui_street_dirt, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,0,0)}
+  spriteset(gfx_gui_street_gravel, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,25,0)}
+  spriteset(gfx_gui_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,50,0)}
+  spriteset(gfx_gui_street_stone_wired, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,75,0)}
+  spriteset(gfx_gui_street_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,100,0)}
+  spriteset(gfx_gui_street_concrete_wired, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,125,0)}
+  spriteset(gfx_gui_street_district_narrow, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,150,0)}
+  spriteset(gfx_gui_street_district, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,175,0)}
+  spriteset(gfx_gui_street_urban, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,200,0)}
+  spriteset(gfx_gui_street_urban_wired, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,225,0)}
+  spriteset(gfx_gui_street_urban_paved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,250,0)}
+  spriteset(gfx_gui_street_urban_paved_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,275,0)}
+  spriteset(gfx_gui_street_urban_paved_sakura, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,300,0)}
+  spriteset(gfx_gui_street_avenue_4l_1_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,325,0)}
+  spriteset(gfx_gui_street_avenue_4l_1_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,350,0)}
+  spriteset(gfx_gui_street_avenue_4l_2_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,375,0)}
+  spriteset(gfx_gui_street_avenue_4l_2_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,400,0)}
+  spriteset(gfx_gui_street_avenue_6l_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,425,0)}
+  spriteset(gfx_gui_street_avenue_6l_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,450,0)}
+  spriteset(gfx_gui_street_avenue_8l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,475,0)}
+  spriteset(gfx_gui_street_pedestrian_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,500,0)}
+  spriteset(gfx_gui_street_pedestrian_paved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,525,0)}
+  spriteset(gfx_gui_street_pedestrian_red_tile, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,550,0)}
+
+//*Industrial */
+spriteset(gfx_gui_industrial_dirt, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,100,0)}
+spriteset(gfx_gui_industrial_firs_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,125,0)}
+spriteset(gfx_gui_industrial_firs_cobble, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,150,0)}
+spriteset(gfx_gui_industrial_isr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,175,0)}
+spriteset(gfx_gui_industrial_auz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,200,0)}

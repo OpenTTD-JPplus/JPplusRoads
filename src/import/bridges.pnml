@@ -48,3 +48,8 @@ spriteset(gfx_IND_ISR_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/BRG_IND_ISR.png") {tmpl_bridge (0,0)}
 spriteset(gfx_IND_AUZ_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/BRG_IND_AUZ.png") {tmpl_bridge (0,0)}
+
+  switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_stone_main,town_zone){
+    1..4:sw_bridge_rural_stone_sw;
+    sw_bridge_rural_stone_nm;
+  }

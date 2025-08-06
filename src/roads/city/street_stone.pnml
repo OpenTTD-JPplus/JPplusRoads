@@ -18,12 +18,12 @@ switch(FEAT_ROADTYPES,SELF,sw_road_stone_main,town_zone){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_stone) {
+item(FEAT_ROADTYPES, road_stone,18) {
     property {
         name: string(STR_ROAD_STONE);
         label: "STR3";
         powered_roadtype_list: [REG_ROAD];
-        introduces_roadtype_list: [REG_ROAD];
+        ////introduces_roadtype_list: [REG_ROAD];
 
         introduction_date:date(1800,1,1);
         speed_limit:40 km/h;
@@ -38,6 +38,7 @@ item(FEAT_ROADTYPES, road_stone) {
         sort_order: 18;
     }
   graphics {
+    gui:gfx_gui_street_stone;
         underlay: sw_road_stone_main;
         catenary_front:deco_empty;
         bridge_surfaces:sw_bridge_stone_main;

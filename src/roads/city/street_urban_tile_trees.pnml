@@ -29,9 +29,9 @@ switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main,current_year){
     sw_road_urban_tile_trees_so_main_2;
   } 
 //
-item(FEAT_ROADTYPES, road_urban_tile_trees) {
+item(FEAT_ROADTYPES, road_urban_tile_trees,27) {
     property {
-        name: string(STR_ROAD_SAKURA);
+        name: string(STR_ROAD_GREEN);
         label: "ST11";
         sort_order: 27;
         powered_roadtype_list: [REG_ROAD];
@@ -48,6 +48,7 @@ item(FEAT_ROADTYPES, road_urban_tile_trees) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
     }
     graphics {
+      gui: gfx_gui_street_urban_paved_green;
         // track_overlay: road_overlays_red;
         underlay: sw_road_urban_tile_trees_so_main;
         catenary_front:gfx_cone_tree_spring_f;
@@ -59,9 +60,9 @@ item(FEAT_ROADTYPES, road_urban_tile_trees) {
         // direction_markings: st_direction_markings;
     }
 }
-item(FEAT_ROADTYPES, road_urban_tile_sakura) {
+item(FEAT_ROADTYPES, road_urban_tile_sakura,28) {
     property {
-        name: string(STR_ROAD_GREEN);
+        name: string(STR_ROAD_SAKURA);
         label: "ST12";
         sort_order: 28;
         powered_roadtype_list: [REG_ROAD];
@@ -78,6 +79,7 @@ item(FEAT_ROADTYPES, road_urban_tile_sakura) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
     }
     graphics {
+        gui: gfx_gui_street_urban_paved_sakura;
         // track_overlay: road_overlays_red;
         underlay: sw_road_urban_tile_trees_so_main;
         catenary_front:gfx_sakura_spring_f;
@@ -85,7 +87,6 @@ item(FEAT_ROADTYPES, road_urban_tile_sakura) {
         // depots: depot_normal_road;
         bridge_surfaces: sw_bridge_2l_so;
         // roadstops: roadstop_underlay_red;
-        // gui: gui_normal;
         // direction_markings: st_direction_markings;
     }
 }
