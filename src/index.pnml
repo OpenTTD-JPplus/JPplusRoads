@@ -9,6 +9,8 @@
 
 #include "import/gfx_decorations.pnml"
 #include "import/bridges.pnml"
+#include "import/gfx_arrows.pnml"
+#include "import/gfx_depots.pnml"
 
 
 #include "roads/rural/road_rural_field.pnml"

@@ -69,6 +69,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1,7) {
     gui:gfx_gui_road_asphalt;
         underlay: sw_road_rural_asphalt_1_main;
         catenary_front:gfx_light_poles_b;
+        direction_markings:gfx_arrows_2l;
         bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
     }
 }
@@ -96,5 +97,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2,8) {
         underlay: sw_road_rural_asphalt_2_main;
         catenary_back:gfx_light_poles_b;
         bridge_surfaces:sw_bridge_rural_asphalt_2_new_main;
+        direction_markings:gfx_arrows_2l;
+        depots:gfx_depot_reldred_choice;
     }
 }

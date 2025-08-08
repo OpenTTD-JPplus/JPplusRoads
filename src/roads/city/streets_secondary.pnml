@@ -84,5 +84,7 @@ item(FEAT_ROADTYPES, rd_urban_secondary,23) {
     underlay: sw_rd_secondary_main_gfx;
     catenary_back:power_poles;
     bridge_surfaces:sw_bridge_asph_sw_gfx_main;
+    direction_markings:gfx_arrows_2l;
+    depots:gfx_depot_reldred_choice;
   }
 }
