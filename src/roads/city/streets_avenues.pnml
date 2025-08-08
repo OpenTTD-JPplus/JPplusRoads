@@ -1,0 +1,113 @@
+//As[halt Sidewalk
+  spriteset(rd_avenue_asph_2_r_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_r.png") {tmpl_underlay (420,280,0,0,0)}
+  spriteset(rd_avenue_asph_2_l_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_l.png") {tmpl_underlay (420,280,0,0,0)}
+  spriteset(bridge_avenue_asph_2_r_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_r.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_asph_2_l_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_l.png") {tmpl_bridge (0,0)}
+  
+  spriteset(rd_avenue_asph_2_r_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_r.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(rd_avenue_asph_2_l_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_l.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(bridge_avenue_asph_2_r_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_r.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_asph_2_l_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_l.png") {tmpl_bridge (0,0)}
+  
+  spriteset(rd_avenue_asph_6l_tile_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_6l_tile_r.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(rd_avenue_asph_6l_tile_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_6l_tile_r.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(bridge_avenue_asph_6l_tile_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_r.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_asph_6l_tile_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/rd_avenue_asph_2_r.png") {tmpl_bridge (0,0)}
+
+  switch(FEAT_ROADTYPES,SELF,sw_rd_avenue_asph_6l_r_gfx_1,town_zone){
+    1..4:rd_avenue_asph_6l_tile_r;
+    rd_avenue_asph_2_r_dw;
+  } 
+  switch(FEAT_ROADTYPES,SELF,sw_rd_avenue_asph_6l_r_gfx,current_year){
+    0..1959:rd_avenue_asph_2_r_nm;
+    sw_rd_avenue_asph_6l_r_gfx_1;
+  } 
+  switch(FEAT_ROADTYPES,SELF,sw_bridge_avenue_asph_6l_r_gfx_1,town_zone){
+    1..4:bridge_avenue_asph_6l_tile_r;
+    bridge_avenue_asph_2_r_dw;
+  } 
+  switch(FEAT_ROADTYPES,SELF,sw_bridge_avenue_asph_6l_r_gfx,current_year){
+    0..1959:bridge_avenue_asph_2_r_nm;
+    sw_bridge_avenue_asph_6l_r_gfx_1;
+  } 
+  switch(FEAT_ROADTYPES,SELF,sw_rd_avenue_asph_6l_l_gfx_1,town_zone){
+    1..4:rd_avenue_asph_6l_tile_l;
+    rd_avenue_asph_2_l_dw;
+  } 
+  switch(FEAT_ROADTYPES,SELF,sw_rd_avenue_asph_6l_l_gfx,current_year){
+    0..1959:rd_avenue_asph_2_l_nm;
+    sw_rd_avenue_asph_6l_l_gfx_1;
+  } 
+  switch(FEAT_ROADTYPES,SELF,sw_bridge_avenue_asph_6l_l_gfx_1,town_zone){
+    1..4:bridge_avenue_asph_6l_tile_l;
+    bridge_avenue_asph_2_l_dw;
+  } 
+  switch(FEAT_ROADTYPES,SELF,sw_bridge_avenue_asph_6l_l_gfx,current_year){
+    0..1959:bridge_avenue_asph_2_l_nm;
+    sw_bridge_avenue_asph_6l_l_gfx_1;
+  } 
+
+item(FEAT_ROADTYPES, rd_urban_avenue_6l_r,33) {
+    property {
+        sort_order: 33;
+        label: "ST17";
+        powered_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:50 km/h;
+        map_colour:VAR_AVENUE;
+
+        name: string(STR_ROAD_AVENUE_6R);
+        toolbar_caption: string(STR_ROAD_AVENUE_6R);
+        menu_text: string(STR_ROAD_AVENUE_6R);
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+    }
+    graphics {
+        gui:gfx_gui_street_avenue_6l_r;
+        underlay: sw_rd_avenue_asph_6l_r_gfx;
+        catenary_front:gfx_cone_tree_right_spring_f;
+        catenary_back:gfx_cone_tree_right_spring_b;
+        bridge_surfaces:sw_bridge_avenue_asph_6l_r_gfx;
+    }
+}
+item(FEAT_ROADTYPES, road_avenue_6l_l,34) {
+    property {
+        name: string(STR_ROAD_AVENUE_6L);
+        label: "ST18";
+        sort_order: 34;
+        powered_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:50 km/h;
+        map_colour:VAR_AVENUE;
+
+        toolbar_caption: string(STR_ROAD_AVENUE_6L);
+        menu_text: string(STR_ROAD_AVENUE_6L);
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+    }
+    graphics {
+        gui:gfx_gui_street_avenue_6l_l;
+        underlay: sw_rd_avenue_asph_6l_l_gfx;
+        catenary_front:gfx_cone_tree_left_f;
+        catenary_back:gfx_cone_tree_left_b;
+        bridge_surfaces:sw_bridge_avenue_asph_6l_l_gfx;
+    }
+}

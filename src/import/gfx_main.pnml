@@ -1,3 +1,8 @@
+
+
+
+
+
 //*Industrial roads
   spriteset(gfx_IND_rh_FIRS_concrete_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
   "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay (0,0,0,0,0)}

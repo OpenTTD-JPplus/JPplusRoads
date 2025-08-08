@@ -26,8 +26,8 @@ STR_PARAM_JUNC_MARKINGS_1:Stop Lines
 STR_PARAM_JUNC_MARKINGS_2:No Markings
 
 STR_PARAM_PEDESTRIANS:Show Pedestrians
-STR_PARAM_SEASONS:Select Hemishere or fixed season
-STR_PARAM_SEASONS_1:Northern Hemishere
+STR_PARAM_SEASONS:Select Hemisphere or fixed season
+STR_PARAM_SEASONS_1:Northern Hemisphere
 STR_PARAM_SEASONS_2:Down Under
 STR_PARAM_SEASONS_3:Spring
 STR_PARAM_SEASONS_4:Summer
@@ -37,49 +37,55 @@ STR_PARAM_SEASONS_6:Winter (Depression)
 STR_PARAM_GRASS:Grass Style
 
 # Generic strings
-STR_GENERIC_BUILD_VEHICLE            :Build New Road Vehicles
-STR_GENERIC_AUTOREPLACE              :Road Vehicles
-STR_GENERIC_NEW_ENGINE               :road
+STR_BUILD_VEHICLE:Build New Road Vehicles
+STR_AUTOREPLACE_ROAD:Road Vehicles
+STR_NEW_ENGINE_ROAD:road
+STR_BUILD_TRAM:Build New Tram Vehicles
+STR_AUTOREPLACE_TRAM:Tram Vehicles
+STR_NEW_ENGINE_TRAM:tram
+STR_GEN_ROAD_MENU:{STRING} Road Costruction
+STR_GEN_STREET_MENU:{STRING} Street Costruction
+STR_GEN_CONSTRUCTION:{STRING} Costruction
+
+# Pavement types
+STR_ROAD_UNPAVED:Unpaved
+STR_ROAD_GRAVEL:Gravel
+STR_ROAD_STONE:Stone
+STR_ROAD_CONCRETE:Concrete
+STR_ROAD_ASPHALT:Asphalt
+STR_ROAD_TILE:Tiled Sidewalk
+STR_ROAD_TILE_RED:Red Tiled Sidewalk
+
+# Naming additions
+STR_ROAD_NARROW:Narrow {STRING}
+STR_ROAD_IMPROVED:Improved {STRING}
+STR_ROAD_CATENARY:{STRING} {PUSH_COLOUR}{GREEN}(catenary){POP_COLOUR}
 STR_NO_CROSSING:{STRING} {PUSH_COLOUR}{SILVER}{TRAIN}{POP_COLOUR}
-STR_NO_HOUSES:{STRING} {PUSH_COLOUR}{SILVER}{BUS}{POP_COLOUR}
+STR_NO_HOUSES:{STRING} {PUSH_COLOUR}{SILVER}{LORRY}{POP_COLOUR}
+
+# Road Naming
 STR_GEN_ROAD:{STRING} Road{YELLOW}
 STR_GEN_STREET:{STRING} Street{YELLOW}
 STR_GEN_STREET_PED:{STRING}Pedestrian Street{YELLOW}
-STR_GEN_ROAD_MENU:{STRING} Road Costruction
-STR_GEN_STREET_MENU:{STRING} Street Costruction
-STR_GEN_CONSTRUCTION:{STRING}Costruction
 
-# Road names
 STR_ROAD_FIELD:Field
-STR_ROAD_DIRT:Dirt
-STR_ROAD_GRAVEL:Gravel
-STR_ROAD_STONE:Stone
-STR_ROAD_CONCRETE:Concrete Rural
-STR_ROAD_N_RURAL:Narrow Rural
-STR_ROAD_RURAL:Rural
-STR_ROAD_I_RURAL:Improved Rural
 STR_ROAD_RURAL_HIGHWAY:Rural Highway
-STR_ROAD_EXPRESS:Expressway{YELLOW}
-STR_ROAD_EXPRESS_S:Expressway (Solid){YELLOW}
-STR_ROAD_EXPRESS_R:Expressway (Slow){YELLOW}
-STR_ROAD_SLIP_L:Slip Road L
-STR_ROAD_SLIP_R:Slip Road R
-STR_ROAD_STONE_E:Stone (catenary)
-STR_ROAD_CONCRETE_E:Concrete (catenary)
-STR_ROAD_DISTRICT:District
-STR_ROAD_URBAN:Urban
-STR_ROAD_URBAN_E:Urban (catenary)
-STR_ROAD_PAVED:Urban Tiled
-STR_ROAD_GREEN:Greenery
-STR_ROAD_SAKURA:Sakura
-STR_ROAD_STREET_4L:4L Street L (deco){YELLOW}
-STR_ROAD_STREET_4R:4L Street R (deco){YELLOW}
-STR_ROAD_AVENUE_4L:4L Avenue L{YELLOW}
-STR_ROAD_AVENUE_4R:4L Avenue R{YELLOW}
-STR_ROAD_AVENUE_6L:6L Avenue L{YELLOW}
-STR_ROAD_AVENUE_6R:6L Avenue R{YELLOW}
-STR_ROAD_B_TILES:Brown-Tile
-STR_ROAD_R_TILES:Red-Tile
+STR_ROAD_EXPRESS:Expressway
+STR_ROAD_EXPRESS_S:Expressway (Solid)
+STR_ROAD_EXPRESS_R:Expressway (Slow)
+
+STR_ROAD_SECONDARY:Secondary
+STR_ROAD_PRIMARY:Primary
+STR_ROAD_GREEN:Tall Green Tree Primary
+STR_ROAD_SAKURA:Sakura Tree Primary
+
+STR_ROAD_STREET_4R:4L Street R (deco)
+STR_ROAD_STREET_4L:4L Street L (deco)
+STR_ROAD_AVENUE_4R:4L Avenue R
+STR_ROAD_AVENUE_4L:4L Avenue L
+STR_ROAD_AVENUE_6R:6L Avenue R
+STR_ROAD_AVENUE_6L:6L Avenue L
+
 STR_ROAD_FIRS_DIRT:CHIPS Dirt
 STR_ROAD_FIRS_CONC:CHIPS Concrete
 STR_ROAD_FIRS_COBBLE:CHIPS Cobblestone
@@ -89,81 +95,12 @@ STR_ROAD_AUZ:AUZ Concrete
 STR_DECO_LIGHTS_RIGHT:Street Lights Right
 STR_DECO_LIGHTS_LEFT:Street Lights Left
 STR_DECO_POWER_POLES:Power Poles  
-STR_DECO_CONE_TREE:Green Cone Trees  
+STR_DECO_CONE_TREE:Tall Green Trees  
 STR_DECO_SAKURA:Sakura Trees
 STR_DECO_FENCE:Rural Fence
 STR_DECO_SAFETY_BARRIER:Pedestrian Safety Barrier
-STR_DECO_SHUTOKO_RIGHT:Sound Barrier Right
-STR_DECO_SHUTOKO_LEFT:Sound Barrier Left
+STR_DECO_SHUTOKO_RIGHT:Sound Barrier R
+STR_DECO_SHUTOKO_LEFT:Sound Barrier L
 STR_DECO_CRASH_BARRIER:Crash Barrier
-
-
-
-
-STR_OLD_TOWN_ROAD_NAME               :Old Town Road
-STR_OLD_TOWN_ROAD_TOOLBAR            :Old Town Road Construction
-STR_OLD_TOWN_ROAD_MENU               :Old Town Road construction
-
-STR_DIRT_ROAD_NAME                   :Dirt Road
-STR_DIRT_ROAD_TOOLBAR                :Dirt Road Construction
-STR_DIRT_ROAD_MENU                   :Dirt Road construction
-
-STR_DIRT_STREET_NAME                   :Dirt Street
-STR_DIRT_STREET_TOOLBAR                :Dirt Street Construction
-STR_DIRT_STREET_MENU                   :Dirt Street construction
-
-STR_STONE_ROAD_NAME          		:Cobblestone Road
-STR_STONE_ROAD_TOOLBAR       		:Cobblestone Road Construction
-STR_STONE_ROAD_MENU          		:Cobblestone Road construction
-
-STR_STONE_STREET_NAME         		 :Cobblestone Street
-STR_STONE_STREET_TOOLBAR      		 :Cobblestone Street Construction
-STR_STONE_STREET_MENU        		 :Cobblestone Street construction
-
-STR_BASIC_ASPHALT_ROAD_NAME          :Basic Asphalt Road
-STR_BASIC_ASPHALT_ROAD_TOOLBAR       :Basic Asphalt Road Construction
-STR_BASIC_ASPHALT_ROAD_MENU          :Basic Asphalt Road construction
-
-STR_IMPROVED_ASPHALT_ROAD_NAME       :Improved Asphalt Road
-STR_IMPROVED_ASPHALT_ROAD_TOOLBAR    :Improved Asphalt Road Construction
-STR_IMPROVED_ASPHALT_ROAD_MENU       :Improved Asphalt Road construction
-
-STR_MODERN_ASPHALT_ROAD_NAME         :Modern Asphalt Road
-STR_MODERN_ASPHALT_ROAD_TOOLBAR      :Modern Asphalt Road Construction
-STR_MODERN_ASPHALT_ROAD_MENU         :Modern Asphalt Road construction
-
-STR_HIGHWAY_ROAD_NAME                :Highway
-STR_HIGHWAY_ROAD_TOOLBAR             :Highway Construction
-STR_HIGHWAY_ROAD_MENU                :Highway construction
-
-
-
-STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_NAME          :Electrified Sett Paved Road
-STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_TOOLBAR       :Electrified Sett Paved Road Construction
-STR_SETT_PAVEMENT_ELECTRIFIED_ROAD_MENU          :Electrified Sett Paved Road construction
-
-STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Basic Asphalt Road
-STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Basic Asphalt Road Construction
-STR_BASIC_ASPHALT_ROAD_ELECTRIFIED_MENU    		 :Electrified Basic Asphalt Road construction
-
-STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Improved Asphalt Road
-STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Improved Asphalt Road Construction
-STR_IMPROVED_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified Improved Asphalt Road construction
-
-STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_NAME     	 :Electrified Modern Asphalt Road
-STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_TOOLBAR  	 :Electrified Modern Asphalt Road Construction
-STR_MODERN_ASPHALT_ROAD_ELECTRIFIED_MENU    	 :Electrified Modern Asphalt Road construction
-
-
-
-STR_TRAM_BUILD_VEHICLE             :Build New Tram Vehicles
-STR_TRAM_AUTOREPLACE               :Tram Vehicles
-STR_TRAM_NEW_ENGINE                :tram
-
-STR_TRAM_TRACK_NAME                :Tramway
-STR_TRAM_TRACK_TOOLBAR             :Tramway Construction
-STR_TRAM_TRACK_MENU                :Tramway construction
-
-STR_ELECTRIC_TRAM_TRACK_NAME       :Electric Tramway
-STR_ELECTRIC_TRAM_TRACK_TOOLBAR    :Electric Tramway Construction
-STR_ELECTRIC_TRAM_TRACK_MENU       :Electric Tramway construction
+STR_DECO_SLIP_R:Slip Road Overlap R
+STR_DECO_SLIP_L:Slip Road Overlap L

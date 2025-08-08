@@ -49,22 +49,21 @@ switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_main,current_year>1959){
 //
 item(FEAT_ROADTYPES, road_rural_asphalt_1,7) {
     property {
-        name: string(STR_ROAD_RURAL);
+        sort_order: 7;
         label: "RRA7";
         powered_roadtype_list: [REG_ROAD];
-        ////introduces_roadtype_list: [REG_ROAD];
 
         introduction_date:date(1930,1,1);
         speed_limit:60 km/h;
         map_colour:14;
 
-        toolbar_caption: string(STR_ROAD_RURAL);
-        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_RURAL));
-        build_window_caption: string(STR_ROAD_RURAL);
-        autoreplace_text: string(STR_ROAD_RURAL);
-        new_engine_text: string(STR_ROAD_RURAL);
+        name: string(STR_ROAD_ASPHALT);
+        toolbar_caption: string(STR_ROAD_ASPHALT);
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT));
+        build_window_caption: string(STR_ROAD_ASPHALT);
+        autoreplace_text: string(STR_ROAD_ASPHALT);
+        new_engine_text: string(STR_ROAD_ASPHALT);
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
-        sort_order: 7;
     }
   graphics {
     gui:gfx_gui_road_asphalt;
@@ -75,7 +74,6 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1,7) {
 }
 item(FEAT_ROADTYPES, road_rural_asphalt_2,8) {
     property {
-        name: string(STR_ROAD_I_RURAL);
         label: "RRA8";
         powered_roadtype_list: [REG_ROAD];
         ////introduces_roadtype_list: [REG_ROAD];
@@ -84,11 +82,12 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2,8) {
         speed_limit:80 km/h;
         map_colour:14;
 
-        toolbar_caption: string(STR_ROAD_I_RURAL);
-        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_I_RURAL));
-        build_window_caption: string(STR_ROAD_I_RURAL);
-        autoreplace_text: string(STR_ROAD_I_RURAL);
-        new_engine_text: string(STR_ROAD_I_RURAL);
+        name: string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT));
+        toolbar_caption: string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT));
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT)));
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 8;
     }
