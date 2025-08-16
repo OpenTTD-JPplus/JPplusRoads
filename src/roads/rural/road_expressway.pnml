@@ -35,13 +35,10 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-      gui:gfx_gui_road_shuto_dw;
+        gui:gfx_gui_road_shuto_dw;
         catenary_back:crash_barriers;
-
         underlay: sw_road_expressway_dw_main;
         bridge_surfaces: bridge_expressway_dw;
-        // roadstops: roadstop_underlay_red;
-        // gui: gui_normal;
         direction_markings:gfx_arrows_2l;
         depots:gfx_depot_reldred_choice;
     }
@@ -66,14 +63,11 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
     }
     graphics {
       gui:gfx_gui_road_shuto_sw;
-        catenary_back:crash_barriers;
-        underlay: sw_road_expressway_sw_main;
-        // depots: depot_normal_road;
-        bridge_surfaces: bridge_expressway_sw;
-        // roadstops: roadstop_underlay_red;
-        // gui: gui_normal;
-        direction_markings:gfx_arrows_2l;
-        depots:gfx_depot_reldred_choice;
+      catenary_back:crash_barriers;
+      underlay: sw_road_expressway_sw_main;
+      bridge_surfaces: bridge_expressway_sw;
+      direction_markings:gfx_arrows_2l;
+      depots:gfx_depot_reldred_choice;
     }
 }
 
@@ -97,13 +91,10 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
     }
     graphics {
       gui:gfx_gui_road_shuto_slow;
-        catenary_back:crash_barriers;
-        underlay: sw_road_expressway_red_main;
-        // depots: depot_normal_road;
-        bridge_surfaces: bridge_expressway_red;
-        // roadstops: roadstop_underlay_red;
-        // gui: gui_normal;
-        direction_markings:gfx_arrows_2l;
-        depots:gfx_depot_reldred_choice;
+      catenary_back:crash_barriers;
+      underlay: sw_road_expressway_red_main;
+      bridge_surfaces: bridge_expressway_red;
+      direction_markings:gfx_arrows_2l;
+      depots:gfx_depot_reldred_choice;
     }
 }

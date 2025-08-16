@@ -5,6 +5,23 @@
 //*Crash barriers
   spriteset(crash_barriers, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/crash_barriers.png") {tmpl_catenary (0,0,0,190,0)}
+//* Slip overlay */
+  spriteset(gfx_slip_chevron_r_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_r.png") {tmpl_catenary (0,0,0,0,0)}
+  spriteset(gfx_slip_chevron_r_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_r.png") {tmpl_catenary (0,280,0,0,0)}
+  switch (FEAT_TRAMTYPES,SELF,gfx_slip_chevron_r,(roadtype==8||roadtype==9||roadtype==10)) {
+    1:gfx_slip_chevron_r_diag;
+    gfx_slip_chevron_r_reg;
+  }
+  spriteset(gfx_slip_chevron_l_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_l.png") {tmpl_catenary (0,0,0,0,0)}
+  spriteset(gfx_slip_chevron_l_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_l.png") {tmpl_catenary (0,280,0,0,0)}
+  switch (FEAT_TRAMTYPES,SELF,gfx_slip_chevron_l,(roadtype==8||roadtype==9||roadtype==10)) {
+    1:gfx_slip_chevron_l_diag;
+    gfx_slip_chevron_l_reg;
+  }
 
 //*Power poles
   spriteset(power_poles_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
