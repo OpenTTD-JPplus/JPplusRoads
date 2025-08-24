@@ -13,9 +13,10 @@ item(FEAT_TRAMTYPES, deco_shutoko_right,60) {
         build_window_caption: string(STR_DECO_SHUTOKO_RIGHT);
         autoreplace_text: string(STR_DECO_SHUTOKO_RIGHT);
         new_engine_text: string(STR_DECO_SHUTOKO_RIGHT);
-        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
+      gui:gfx_gui_shutoko_r;
         catenary_front:gfx_shutoko_left_f;
         catenary_back:gfx_shutoko_left_b;
         underlay: deco_empty;
@@ -38,9 +39,10 @@ item(FEAT_TRAMTYPES, deco_shutoko_left,61) {
         build_window_caption: string(STR_DECO_SHUTOKO_LEFT);
         autoreplace_text: string(STR_DECO_SHUTOKO_LEFT);
         new_engine_text: string(STR_DECO_SHUTOKO_LEFT);
-        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
+      gui:gfx_gui_shutoko_l;
         catenary_front:gfx_shutoko_right_f;
         catenary_back:gfx_shutoko_right_b;
         underlay: deco_empty;

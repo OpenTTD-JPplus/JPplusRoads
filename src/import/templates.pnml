@@ -132,31 +132,31 @@
     [0, 0, 1, 1, 0, 0]//>
     [0, 0, 1, 1, 0, 0]//↖
   }
-  template tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack) {
-    [xFirstOffset,      0,   63*isFront+1, 50*isFront+1, -31, -20+y]//↗
-    [xFirstOffset+70,   0,   63*isBack+1, 50*isBack+1, -31, -20+y]//↖
+  template tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,x,y,isFront,isBack) {
+    [xFirstOffset,      0,   63*isFront+1, 50*isFront+1, -31+x, -20+y]//↗
+    [xFirstOffset+70,   0,   63*isBack+1, 50*isBack+1, -31+x, -20+y]//↖
 
     [0, 0, 1, 1, 0, 0]//X
 
-    [xSecondOffset,     250,  63*isFront+1, 50*isFront+1, -31,   -20+y]//◹
-    [xSecondOffset+70,  250,  63*isBack+1, 50*isBack+1, -31,   -20+y]//◸
-    [xSecondOffset+140, 250,  63*isFront+1, 50*isFront+1, -31,   -20+y]//◺
-    [xSecondOffset+210, 250,  63*isBack+1, 50*isBack+1, -31,   -20+y]//◿
+    [xSecondOffset,     250,  63*isFront+1, 50*isFront+1, -31+x,   -20+y]//◹
+    [xSecondOffset+70,  250,  63*isBack+1, 50*isBack+1, -31+x,   -20+y]//◸
+    [xSecondOffset+140, 250,  63*isFront+1, 50*isFront+1, -31+x,   -20+y]//◺
+    [xSecondOffset+210, 250,  63*isBack+1, 50*isBack+1, -31+x,   -20+y]//◿
 
-    [xSecondOffset+0,      130,  63*isBack+1, 50*isBack+1, -31,   -20+y]//⊃
-    [xSecondOffset+70,     130,  63*isBack+1, 50*isBack+1, -31,   -20+y]//◡
-    [xSecondOffset+140,    130,  63*isBack+1, 50*isBack+1, -31,   -20+y]//⊂
-    [xSecondOffset+210,    130,  63*isBack+1, 50*isBack+1, -31,   -20+y]//◠
+    [xSecondOffset+0,      130,  63*isBack+1, 50*isBack+1, -31+x,   -20+y]//⊃
+    [xSecondOffset+70,     130,  63*isBack+1, 50*isBack+1, -31+x,   -20+y]//◡
+    [xSecondOffset+140,    130,  63*isBack+1, 50*isBack+1, -31+x,   -20+y]//⊂
+    [xSecondOffset+210,    130,  63*isBack+1, 50*isBack+1, -31+x,   -20+y]//◠
 
-    [xSecondOffset,       60, 63*isBack+1, 58*isBack+1,   -31,   -28+y]//↗
-    [xSecondOffset+70,    60, 63*isFront+1, 42*isFront+1,   -31,   -20+y]//<
-    [xSecondOffset+140,   60, 63*isBack+1, 42*isBack+1,   -31,   -20+y]//>
-    [xSecondOffset+210,   60, 63*isFront+1, 58*isFront+1,   -31,   -28+y]//↖
+    [xSecondOffset,       60, 63*isBack+1, 58*isBack+1,   -31+x,   -28+y]//↗
+    [xSecondOffset+70,    60, 63*isFront+1, 42*isFront+1,   -31+x,   -20+y]//<
+    [xSecondOffset+140,   60, 63*isBack+1, 42*isBack+1,   -31+x,   -20+y]//>
+    [xSecondOffset+210,   60, 63*isFront+1, 58*isFront+1,   -31+x,   -28+y]//↖
 
-    [xSecondOffset+210,  190, 63*isBack+1, 50*isBack+1,   -31,   -20+y]//◿
-    [xSecondOffset,      190, 63*isFront+1, 50*isFront+1,   -31,   -20+y]//◹
-    [xSecondOffset+70,   190, 63*isBack+1, 50*isBack+1,   -31,   -20+y]//◸
-    [xSecondOffset+140,  190, 63*isFront+1, 50*isFront+1,   -31,   -20+y]//◺
+    [xSecondOffset+210,  190-single_side_offset, 63*isBack+1, 50*isBack+1,   -31+x,   -20+y]//◿
+    [xSecondOffset,      190-single_side_offset, 63*isFront+1, 50*isFront+1,   -31+x,   -20+y]//◹
+    [xSecondOffset+70,   190-single_side_offset, 63*isBack+1, 50*isBack+1,   -31+x,   -20+y]//◸
+    [xSecondOffset+140,  190-single_side_offset, 63*isFront+1, 50*isFront+1,   -31+x,   -20+y]//◺
 
     [0, 0, 1, 1, 0, 0]//◿
     [0, 0, 1, 1, 0, 0]//◿
@@ -164,19 +164,19 @@
     [0, 0, 1, 1, 0, 0]//◿
 
   }
-  template tmpl_catenary_single(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack) {
-    tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack)
+  template tmpl_catenary_single(xFirstOffset,xSecondOffset,cross_x,single_side_offset,x,y,isFront,isBack) {
+    tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,x,y,isFront,isBack)
 
-    [xFirstOffset,      0,   63+1, 51, -31, -20+y]//↗
-    [xFirstOffset+70,   0,   63+1, 51, -31, -20+y]//↖
+    [xFirstOffset,      0,   63+1, 51, -31+x, -20+y]//↗
+    [xFirstOffset+70,   0,   63+1, 51, -31+x, -20+y]//↖
 
-    [xSecondOffset,       60, 63*isBack+1,  58*isBack+1,   -31,   -28+y]//↗
-    [xSecondOffset+70,    60, 63*isFront+1, 42*isFront+1,   -31,   -20+y]//<
-    [xSecondOffset+140,   60, 63*isBack+1,  42*isBack+1,   -31,   -20+y]//>
-    [xSecondOffset+210,   60, 63*isFront+1, 58*isFront+1,   -31,   -28+y]//↖
+    [xSecondOffset,       60, 63*isBack+1,  58*isBack+1,   -31+x,   -28+y]//↗
+    [xSecondOffset+70,    60, 63*isFront+1, 42*isFront+1,   -31+x,   -20+y]//<
+    [xSecondOffset+140,   60, 63*isBack+1,  42*isBack+1,   -31+x,   -20+y]//>
+    [xSecondOffset+210,   60, 63*isFront+1, 58*isFront+1,   -31+x,   -28+y]//↖
   }
-  template tmpl_catenary_single_bridgeless(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack) {
-    tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack)
+  template tmpl_catenary_single_bridgeless(xFirstOffset,xSecondOffset,cross_x,single_side_offset,x,y,isFront,isBack) {
+    tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,x,y,isFront,isBack)
 
     [0, 0, 1, 1, 0, 0]//↗
     [0, 0, 1, 1, 0, 0]//↗

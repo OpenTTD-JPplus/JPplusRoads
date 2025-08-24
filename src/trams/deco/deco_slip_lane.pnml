@@ -13,9 +13,10 @@ item(FEAT_TRAMTYPES, deco_slip_lane_right,15) {
         build_window_caption: string(STR_DECO_SLIP_R);
         autoreplace_text: string(STR_DECO_SLIP_R);
         new_engine_text: string(STR_DECO_SLIP_R);
-        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
+      gui:gfx_gui_chevron_r;
         catenary_front:deco_empty;
         catenary_back:gfx_slip_chevron_r;
         underlay: deco_empty;
@@ -37,9 +38,10 @@ item(FEAT_TRAMTYPES, deco_slip_lane_left,16) {
         build_window_caption: string(STR_DECO_SLIP_L);
         autoreplace_text: string(STR_DECO_SLIP_L);
         new_engine_text: string(STR_DECO_SLIP_L);
-        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
+      gui:gfx_gui_chevron_l;
         catenary_front:deco_empty;
         catenary_back:gfx_slip_chevron_l;
         underlay: deco_empty;

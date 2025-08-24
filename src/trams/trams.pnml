@@ -1,0 +1,28 @@
+spriteset(gfx_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/trams/gfx_tram_ballast.png") {tmpl_underlay (0,0,0,0,0)}
+
+item(FEAT_TRAMTYPES, tr_tram_ballast,44) {
+    property {
+        name: string(STR_TRAM);
+        label: "ELRL";
+        sort_order: 44;
+        powered_tramtype_list: ["ELRL"];
+
+        introduction_date:date(1881,1,1);
+        speed_limit:80;
+        
+        toolbar_caption: string(STR_TRAM);
+        menu_text: string(STR_TRAM);
+        build_window_caption: string(STR_TRAM);
+        autoreplace_text: string(STR_TRAM);
+        new_engine_text: string(STR_TRAM);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_HOUSES);
+    }
+    graphics {
+      gui:gfx_gui_tram;
+        // catenary_front:gfx_light_poles_left_f;
+        // catenary_back:gfx_light_poles_left_b;
+        underlay: gfx_tram_ballast;
+        bridge_surfaces: deco_empty;
+    }
+}

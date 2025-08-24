@@ -1,0 +1,65 @@
+//As[halt Sidewalk
+  spriteset(gfx_street_4l_dw_asph_tact_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_street_4l_dw_asph_tact_r.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(gfx_street_4l_dw_asph_tact_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_street_4l_dw_asph_tact_l.png") {tmpl_underlay (0,0,0,0,0)}
+
+  spriteset(gfx_bridge_street_4l_dw_asph_tact_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_street_4l_dw_asph_tact_r.png") {tmpl_bridge (0,0)}
+  spriteset(gfx_bridge_street_4l_dw_asph_tact_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_street_4l_dw_asph_tact_l.png") {tmpl_bridge (0,0)}
+  
+item(FEAT_ROADTYPES, rd_street_4l_r,29) {
+    property {
+        sort_order: 29;
+        label: "ST13";
+        powered_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:50 km/h;
+        map_colour:VAR_AVENUE;
+
+        name: string(STR_ROAD_STREET_4R);
+        toolbar_caption: string(STR_ROAD_STREET_4R);
+        menu_text: string(STR_ROAD_STREET_4R);
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+    }
+    graphics {
+        gui:gfx_gui_street_4l_r;
+        underlay: gfx_street_4l_dw_asph_tact_r;
+      catenary_front:gfx_cone_tree_4l_right_f;
+        catenary_back:gfx_cone_tree_4l_right_b;
+        bridge_surfaces:gfx_bridge_street_4l_dw_asph_tact_r;
+        depots:gfx_depot_reldred_choice;
+    }
+}
+item(FEAT_ROADTYPES, rd_street_4l_l,30) {
+    property {
+        name: string(STR_ROAD_STREET_4L);
+        label: "ST14";
+        sort_order: 30;
+        powered_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:50 km/h;
+        map_colour:VAR_AVENUE;
+
+        toolbar_caption: string(STR_ROAD_STREET_4L);
+        menu_text: string(STR_ROAD_STREET_4L);
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+    }
+    graphics {
+      depots:gfx_depot_reldred_choice;
+        gui:gfx_gui_street_4l_l;
+        underlay: gfx_street_4l_dw_asph_tact_l;
+        catenary_front:gfx_cone_tree_4l_left_f;
+        catenary_back:gfx_cone_tree_4l_left_b;
+        bridge_surfaces:gfx_bridge_street_4l_dw_asph_tact_l;
+    }
+}
