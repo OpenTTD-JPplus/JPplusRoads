@@ -9,7 +9,7 @@ item(FEAT_TRAMTYPES, tr_tram_ballast,44) {
         powered_tramtype_list: ["ELRL"];
 
         introduction_date:date(1881,1,1);
-        speed_limit:80;
+        speed_limit:80 km/h;
         
         toolbar_caption: string(STR_TRAM);
         menu_text: string(STR_TRAM);
