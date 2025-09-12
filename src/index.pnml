@@ -8,6 +8,7 @@
 #include "import/gfx_main.pnml"
 
 #include "import/gfx_decorations.pnml"
+#include "import/gfx_catenary.pnml"
 #include "import/bridges.pnml"
 #include "import/gfx_arrows.pnml"
 #include "import/gfx_depots.pnml"
@@ -42,6 +43,7 @@ if (param_eyecandy_roadtypes==1){
 
 #include "trams/deco/deco_slip_lane.pnml"
 }
+
 
 #include "trams/trams.pnml"
 
