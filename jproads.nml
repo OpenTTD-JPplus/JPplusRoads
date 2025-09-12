@@ -3190,8 +3190,8 @@ switch (FEAT_TRAMTYPES,SELF,gfx_tram_overlay_main,roadtype) {
     deco_empty;
   }
 switch (FEAT_TRAMTYPES,SELF,gfx_bridge_tram_ballast_main,roadtype) {
-    0..63:gfx_tram_street;
-    gfx_tram_ballast;
+    0..63:gfx_bridge_tram_street;
+    gfx_bridge_tram_ballast;
   }
 
 item(FEAT_TRAMTYPES, tr_tram_ballast_ne,44) {
