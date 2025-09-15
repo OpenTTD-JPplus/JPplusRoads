@@ -1,4 +1,4 @@
-item(FEAT_ROADTYPES, rd_IND_AUZ,43) {
+item(FEAT_ROADTYPES, road_industrial_auz,43) {
   property {
     sort_order: 43;
     label: "IND5";
@@ -8,20 +8,22 @@ item(FEAT_ROADTYPES, rd_IND_AUZ,43) {
     speed_limit:40 km/h;
     map_colour:VAR_ALLEY;
 
-    name: string(STR_ROAD_AUZ);
-    toolbar_caption: string(STR_ROAD_AUZ);
+    name: string(STR_GEN_ROAD,string(STR_ROAD_AUZ));
+    toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_AUZ));
     menu_text: string(STR_GEN_ROAD,string(STR_ROAD_AUZ));
-    build_window_caption: string(STR_ROAD_AUZ);
-    autoreplace_text: string(STR_ROAD_AUZ);
-    new_engine_text: string(STR_ROAD_AUZ);
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    gui:gfx_gui_industrial_auz;
-    bridge_surfaces:gfx_IND_AUZ_bridge;
-    underlay: gfx_IND_AUZ;
     catenary_back:deco_empty;
+    underlay: gfx_IND_AUZ;
+    bridge_surfaces:gfx_IND_AUZ_bridge;
+    
     direction_markings:gfx_arrows_2l;
+    gui:gui_industrial_auz;
     depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_auz;
   }
 }

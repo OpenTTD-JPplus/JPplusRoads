@@ -17,25 +17,25 @@ switch (FEAT_TRAMTYPES,SELF,gfx_bridge_tram_ballast_main,roadtype) {
     gfx_bridge_tram_ballast;
   }
 
-item(FEAT_TRAMTYPES, tr_tram_ballast_ne,44) {
+item(FEAT_TRAMTYPES, tram_ballast_ne,44) {
     property {
-        name: string(STR_TRAM);
         label: "RAIL";
         sort_order: 44;
         powered_tramtype_list: ["RAIL","ELRL"];
 
-        introduction_date:date(1881,1,1);
+        introduction_date:date(0,1,1);
         speed_limit:80 km/h;
         
+        name: string(STR_TRAM);
         toolbar_caption: string(STR_TRAM);
         menu_text: string(STR_TRAM);
-        build_window_caption: string(STR_TRAM);
-        autoreplace_text: string(STR_TRAM);
-        new_engine_text: string(STR_TRAM);
+        build_window_caption: string(STR_BUILD_TRAM);
+        autoreplace_text: string(STR_AUTOREPLACE_TRAM);
+        new_engine_text: string(STR_NEW_ENGINE_TRAM);
         tramtype_flags: bitmask(TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-        gui:gfx_gui_tram_old;
+        gui:gui_tram_old;
         // catenary_front:gfx_catenary_tram_wood_f;
         // catenary_back:gfx_catenary_wood_b;
         track_overlay:gfx_tram_overlay_main;
@@ -43,9 +43,8 @@ item(FEAT_TRAMTYPES, tr_tram_ballast_ne,44) {
         bridge_surfaces: gfx_bridge_tram_ballast_main;
     }
 }
-item(FEAT_TRAMTYPES, tr_tram_ballast,45) {
+item(FEAT_TRAMTYPES, tram_ballast,45) {
     property {
-        name: string(STR_ROAD_CATENARY,string(STR_TRAM));
         label: "ELRL";
         sort_order: 45;
         powered_tramtype_list: ["ELRL"];
@@ -53,19 +52,20 @@ item(FEAT_TRAMTYPES, tr_tram_ballast,45) {
         introduction_date:date(1881,1,1);
         speed_limit:80 km/h;
         
+        name: string(STR_ROAD_CATENARY,string(STR_TRAM));
         toolbar_caption: string(STR_ROAD_CATENARY,string(STR_TRAM));
         menu_text: string(STR_ROAD_CATENARY,string(STR_TRAM));
-        build_window_caption: string(STR_ROAD_CATENARY,string(STR_TRAM));
-        autoreplace_text: string(STR_TRAM);
-        new_engine_text: string(STR_TRAM);
+        build_window_caption: string(STR_BUILD_TRAM);
+        autoreplace_text: string(STR_AUTOREPLACE_TRAM);
+        new_engine_text: string(STR_NEW_ENGINE_TRAM);
         tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-      gui:gfx_gui_tram;
-        catenary_front:gfx_catenary_tram_wood_f;
-        catenary_back:gfx_catenary_wood_b;
-        track_overlay:gfx_tram_overlay_main;
-        underlay: gfx_tram_ballast;
-        bridge_surfaces: gfx_bridge_tram_ballast_main;
+      catenary_front:sw_catenary_tram_f;
+      catenary_back:sw_catenary_tram_b;
+      track_overlay:gfx_tram_overlay_main;
+      underlay: gfx_tram_ballast;
+      bridge_surfaces: gfx_bridge_tram_ballast_main;
+      gui:gui_tram;
     }
 }

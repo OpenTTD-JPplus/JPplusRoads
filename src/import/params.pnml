@@ -102,3 +102,18 @@
   //       };
   //     }
   // }
+//*Catenary Style
+  param 8 { 
+    param_catenary_style {
+      type: int;
+      name: string(STR_PARAM_WIRE);
+      desc: string(STR_PARAM_WIRE_DESC);
+      min_value: 0;
+      max_value: 1;
+      def_value: 0;
+      names: {
+          0: string(STR_PARAM_WIRE_1);
+          1: string(STR_PARAM_WIRE_2);
+        };
+      }
+  }

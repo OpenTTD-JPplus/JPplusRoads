@@ -1,0 +1,88 @@
+item(FEAT_ROADTYPES, road_field_path,1) {
+  property {
+    label: "RD01";
+    sort_order: 1;
+    powered_roadtype_list: [REG_ROAD];
+
+    introduction_date:date(0,1,1);
+    speed_limit:20 km/h;
+    map_colour:VAR_ALLEY;
+
+    name: string(STR_ROAD_FIELD);
+    toolbar_caption: string(STR_ROAD_FIELD);
+    menu_text: string(STR_ROAD_FIELD);
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    catenary_back:deco_empty;
+    underlay: sw_road_rural_field_main;
+    bridge_surfaces:sw_bridge_rural_stone_nm;
+
+    gui:gui_road_field;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_stone;
+  }
+}
+
+item(FEAT_ROADTYPES, road_unpaved,2) {
+  property {
+    label: "RD02";
+    sort_order: 2;
+    powered_roadtype_list: [REG_ROAD];
+
+    introduction_date:date(0,1,1);
+    speed_limit:30 km/h;
+    map_colour:VAR_SECONDARY;
+
+    name: string(STR_GEN_ROAD,string(STR_ROAD_UNPAVED));
+    toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_UNPAVED));
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_UNPAVED));
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    catenary_back:deco_empty;
+    underlay: sw_road_rural_dirt_main;
+
+    bridge_surfaces:sw_bridge_rural_stone_nm;
+    gui:gui_road_dirt;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_stone;
+  }
+}
+
+item(FEAT_ROADTYPES, road_stone,4) {
+  property {
+    label: "RD04";
+    sort_order: 4;
+    powered_roadtype_list: [REG_ROAD];
+
+    introduction_date:date(1850,1,1);
+    speed_limit:40 km/h;
+    map_colour:VAR_ALLEY;
+
+    name: string(STR_ROAD_STONE);
+    toolbar_caption: string(STR_ROAD_STONE);
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_STONE));
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    catenary_front:sw_light_poles_gas_f_tz_restricted;
+    catenary_back:sw_light_poles_gas_b_tz_restricted;
+    underlay: sw_road_rural_stone_main;
+    bridge_surfaces:sw_bridge_rural_stone_nm;
+    
+    direction_markings:gfx_arrows_2l;
+    gui:gui_road_stone;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_stone;
+  }
+}

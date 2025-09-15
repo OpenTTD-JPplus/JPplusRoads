@@ -1,4 +1,4 @@
-item(FEAT_TRAMTYPES, deco_lights_right,53) {
+item(FEAT_TRAMTYPES, deco_lights_r,53) {
     property {
         name: string(STR_DECO_LIGHTS_RIGHT);
         label: "DEC1";
@@ -16,14 +16,14 @@ item(FEAT_TRAMTYPES, deco_lights_right,53) {
         tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-      gui:gfx_gui_lights_r;
+      gui:gui_lights_r;
         catenary_front:gfx_light_poles_left_f;
         catenary_back:gfx_light_poles_left_b;
         underlay: deco_empty;
         bridge_surfaces: deco_empty;
     }
 }
-item(FEAT_TRAMTYPES, deco_lights_left,54) {
+item(FEAT_TRAMTYPES, deco_lights_l,54) {
     property {
         name: string(STR_DECO_LIGHTS_LEFT);
         label: "DEC2";
@@ -42,7 +42,7 @@ item(FEAT_TRAMTYPES, deco_lights_left,54) {
         tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-      gui:gfx_gui_lights_l;
+      gui:gui_lights_l;
         catenary_front:gfx_light_poles_right_f;
         catenary_back:gfx_light_poles_right_b;
         underlay: deco_empty;

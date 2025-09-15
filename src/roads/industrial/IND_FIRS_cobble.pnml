@@ -1,4 +1,4 @@
-item(FEAT_ROADTYPES, rd_IND_FIRS_cobble,41) {
+item(FEAT_ROADTYPES, road_industrial_firs_cobble,41) {
   property {
     sort_order: 41;
     label: "IND3";
@@ -8,20 +8,22 @@ item(FEAT_ROADTYPES, rd_IND_FIRS_cobble,41) {
     speed_limit:40 km/h;
     map_colour:VAR_ALLEY;
 
-    name: string(STR_ROAD_FIRS_COBBLE);
-    toolbar_caption: string(STR_ROAD_FIRS_COBBLE);
+    name: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_COBBLE));
+    toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_COBBLE));
     menu_text: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_COBBLE));
-    build_window_caption: string(STR_ROAD_FIRS_COBBLE);
-    autoreplace_text: string(STR_ROAD_FIRS_COBBLE);
-    new_engine_text: string(STR_ROAD_FIRS_COBBLE);
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    gui:gfx_gui_industrial_firs_cobble;
-    bridge_surfaces:gfx_IND_FIRS_cobble_bridge;
-    underlay: gfx_IND_FIRS_cobble;
     catenary_back:deco_empty;
+    underlay: gfx_IND_FIRS_cobble;
+    bridge_surfaces:gfx_IND_FIRS_cobble_bridge;
+    
     direction_markings:gfx_arrows_2l;
+    gui:gui_industrial_firs_cobble;
     depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_firs_cobble;
   }
 }

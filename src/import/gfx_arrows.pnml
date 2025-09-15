@@ -1,5 +1,7 @@
 spriteset(gfx_arrows_2l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/arrows/arrows_2l.png") {tmpl_arrows (0)}
+spriteset(gfx_arrows_2l_wide, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/arrows/arrows_2l_wide.png") {tmpl_arrows (0)}
 
 spriteset(gfx_arrows_4l_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/arrows/arrows_4l.png") {tmpl_arrows (100)}

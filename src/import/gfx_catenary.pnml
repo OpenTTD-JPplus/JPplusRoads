@@ -1,6 +1,64 @@
-spriteset(gfx_catenary_tram_wood_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/catenary/CAT_tram_wood_f.png") {tmpl_catenary (0,0,0,190,0)}
-spriteset(gfx_catenary_trolley_wood_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/catenary/CAT_trolley_wood_f.png") {tmpl_catenary (0,0,0,190,0)}
 spriteset(gfx_catenary_wood_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/catenary/CAT_wood_b.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_conc_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_conc_b.png") {tmpl_catenary (0,0,0,190,0)}
+
+
+spriteset(gfx_catenary_tram_wood_black_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_tram_wood_black_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_trolley_wood_black_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_trolley_wood_black_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_tram_wood_white_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_tram_wood_white_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_trolley_wood_white_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_trolley_wood_white_f.png") {tmpl_catenary (0,0,0,190,0)}
+
+switch(FEAT_TRAMTYPES,SELF,sw_catenary_tram_wood_f,param_catenary_style){
+  0:gfx_catenary_tram_wood_black_f;
+  gfx_catenary_tram_wood_white_f;
+}
+switch(FEAT_ROADTYPES,SELF,sw_catenary_trolley_wood_f,param_catenary_style){
+  0:gfx_catenary_trolley_wood_black_f;
+  gfx_catenary_trolley_wood_white_f;
+}
+
+
+spriteset(gfx_catenary_tram_conc_black_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_tram_conc_black_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_trolley_conc_black_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_trolley_conc_black_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_tram_conc_white_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_tram_conc_white_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_trolley_conc_white_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_trolley_conc_white_f.png") {tmpl_catenary (0,0,0,190,0)}
+
+switch(FEAT_TRAMTYPES,SELF,sw_catenary_tram_b,current_year){
+  0..1950:gfx_catenary_wood_b;
+  gfx_catenary_conc_b;
+}
+
+switch(FEAT_ROADTYPES,SELF,sw_catenary_trolley_b,current_year){
+  0..1950:gfx_catenary_wood_b;
+  gfx_catenary_conc_b;
+}
+
+
+
+
+switch(FEAT_TRAMTYPES,SELF,sw_catenary_tram_conc_f,param_catenary_style){
+  0:gfx_catenary_tram_conc_black_f;
+  gfx_catenary_tram_conc_white_f;
+}
+switch(FEAT_ROADTYPES,SELF,sw_catenary_trolley_conc_f,param_catenary_style){
+  0:gfx_catenary_trolley_conc_black_f;
+  gfx_catenary_trolley_conc_white_f;
+}
+
+switch(FEAT_TRAMTYPES,SELF,sw_catenary_tram_f,current_year){
+  0..1950:sw_catenary_tram_wood_f;
+  sw_catenary_tram_conc_f;
+}
+switch(FEAT_ROADTYPES,SELF,sw_catenary_trolley_f,current_year){
+  0..1950:sw_catenary_trolley_wood_f;
+  sw_catenary_trolley_conc_f;
+}

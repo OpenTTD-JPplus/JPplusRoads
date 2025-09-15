@@ -1,27 +1,60 @@
-item(FEAT_ROADTYPES, rd_IND_FIRS_concrete,40) {
+item(FEAT_ROADTYPES, road_industrial_firs_concrete,39) {
   property {
-    sort_order: 40;
+    sort_order: 39;
     label: "IND2";
-    powered_roadtype_list: [INDUSTRIAL];
+    powered_roadtype_list: [REG_ROAD];
+    alternative_roadtype_list: ["HAUL"];
 
     introduction_date:date(0,1,1);
     speed_limit:40 km/h;
     map_colour:VAR_ALLEY;
 
-    name: string(STR_ROAD_FIRS_CONC);
-    toolbar_caption: string(STR_ROAD_FIRS_CONC);
+    name: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC));
+    toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC));
     menu_text: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC));
-    build_window_caption: string(STR_ROAD_FIRS_CONC);
-    autoreplace_text: string(STR_ROAD_FIRS_CONC);
-    new_engine_text: string(STR_ROAD_FIRS_CONC);
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    gui:gfx_gui_industrial_firs_concrete;
-    bridge_surfaces:gfx_IND_FIRS_concrete_bridge;
-    underlay: gfx_IND_FIRS_concrete;
     catenary_back:deco_empty;
+    underlay: gfx_IND_FIRS_concrete;
+    bridge_surfaces:gfx_IND_FIRS_concrete_bridge;
+    
     direction_markings:gfx_arrows_2l;
+    gui:gui_industrial_firs_concrete;
     depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_firs_concrete;
+  }
+}
+item(FEAT_ROADTYPES, road_industrial_firs_concrete_elec,40) {
+  property {
+    sort_order: 40;
+    label: "ID2E";
+    powered_roadtype_list: [EL_ROAD];
+
+    introduction_date:date(0,1,1);
+    speed_limit:40 km/h;
+    map_colour:VAR_ALLEY;
+
+    name: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC)));
+    toolbar_caption: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC)));
+    menu_text: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC)));
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    catenary_front:sw_catenary_trolley_wood_f;
+    catenary_back:gfx_catenary_wood_b;
+    underlay: gfx_IND_FIRS_concrete;
+    bridge_surfaces:gfx_IND_FIRS_concrete_bridge;
+    
+    direction_markings:gfx_arrows_2l;
+    gui:gui_industrial_firs_concrete_wired;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_firs_concrete;
   }
 }

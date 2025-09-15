@@ -1,51 +1,30 @@
-//*Concrete
-  spriteset(sw_road_rural_concrete_nm_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_rural_concrete_nm.png") {tmpl_underlay (0,0,0,0,0)}
-  
-  spriteset(sw_road_rural_concrete_dw_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_rural_concrete_dw.png") {tmpl_underlay (0,0,0,0,0)}
-  
-  spriteset(sw_road_rural_concrete_sw_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_rural_concrete_sw.png") {tmpl_underlay (0,0,0,0,0)}
+item(FEAT_ROADTYPES, road_concrete,5) {
+  property {
+    label: "RD05";
+    sort_order: 5;
+    powered_roadtype_list: [REG_ROAD];
 
-switch(FEAT_ROADTYPES,SELF,sw_road_rural_concrete_main,town_zone){
-    3..4:sw_road_rural_concrete_sw_gfx;
-    1..2:sw_road_rural_concrete_dw_gfx;
-    sw_road_rural_concrete_nm_gfx;
+    introduction_date:date(1920,1,1);
+    speed_limit:60 km/h;
+    map_colour:VAR_SECONDARY;
+
+    name: string(STR_GEN_ROAD,string(STR_ROAD_CONCRETE));
+    toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_CONCRETE));
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_CONCRETE));
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
-switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_concrete_main,town_zone){
-    1..4:sw_bridge_rural_concrete_sw;
-    sw_bridge_rural_concrete_nm;
-  }
-// switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
-    
-//   }
-//
-item(FEAT_ROADTYPES, road_rural_concrete,5) {
-    property {
-        name: string(STR_ROAD_CONCRETE);
-        label: "RRA5";
-        powered_roadtype_list: [REG_ROAD];
-        ////introduces_roadtype_list: [REG_ROAD];
-
-        introduction_date:date(1930,1,1);
-        speed_limit:60 km/h;
-        map_colour:14;
-
-        toolbar_caption: string(STR_ROAD_CONCRETE);
-        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_CONCRETE));
-        build_window_caption: string(STR_ROAD_CONCRETE);
-        autoreplace_text: string(STR_ROAD_CONCRETE);
-        new_engine_text: string(STR_ROAD_CONCRETE);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
-        sort_order: 5;
-    }
   graphics {
-    gui:gfx_gui_road_concrete;
-        underlay: sw_road_rural_concrete_main;
-        catenary_back:gfx_light_poles_b;
-        bridge_surfaces:sw_bridge_rural_concrete_main;
-        direction_markings:gfx_arrows_2l;
-        depots:gfx_depot_reldred_choice;
-    }
+    catenary_front:deco_empty;
+    catenary_back:sw_light_poles_metal_b_tz_restricted;
+    underlay: sw_road_rural_conc_main;
+    bridge_surfaces:sw_bridge_rural_concrete_nm;
+    
+    direction_markings:gfx_arrows_2l;
+    gui:gui_road_concrete;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_concrete;
+  }
 }
