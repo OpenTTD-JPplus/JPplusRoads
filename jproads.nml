@@ -8,7 +8,7 @@ grf {
   name: string(STR_GRF_NAME);
   desc: string(STR_GRF_DESC);
   url: string(STR_GRF_URL);
-  version :006;
+  version :007;
   min_compatible_version :002;
 # 1 "src/import/params.pnml" 1
 
