@@ -1,0 +1,27 @@
+spriteset(gfx_tunnel_underlay, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/tunnels/gfx_tunnel_underlay.png") {tmpl_tunnels (0,0)}
+
+replace tunnel_sprite_1(2390, "gfx/gfx_placeholder.png") {
+ [ 0,0, 1,1, 0, 0]
+}
+replace tunnel_sprite_2(2392, "gfx/gfx_placeholder.png") {
+ [ 0,0, 1,1, 0, 0]
+}
+replace tunnel_sprite_3(2394, "gfx/gfx_placeholder.png") {
+ [ 0,0, 1,1, 0, 0]
+}
+replace tunnel_sprite_4(2396, "gfx/gfx_placeholder.png") {
+ [ 0,0, 1,1, 0, 0]
+}
+alternative_sprites(tunnel_sprite_1,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunnels/gfx_tunnel_overlay.png") {
+ [0,  0,  64, 44, -31, -42]
+}
+alternative_sprites(tunnel_sprite_4,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunnels/gfx_tunnel_overlay.png") {
+ [70,  0,  64, 44, -31, -42]
+}
+alternative_sprites(tunnel_sprite_3,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunnels/gfx_tunnel_overlay.png") {
+ [140,  0,  64, 36, -31, -43]
+}
+alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunnels/gfx_tunnel_overlay.png") {
+ [210,  0,  64, 36, -31, -43]
+}

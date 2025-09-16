@@ -21,7 +21,7 @@ item(FEAT_ROADTYPES, street_primary_asph,24) {
     catenary_back:sw_power_poles_main;
     underlay: sw_street_primary_asph_so_main;
     bridge_surfaces: sw_bridge_street_asph_so_main;
-
+    tunnels:gfx_tunnel_underlay;
     direction_markings:gfx_arrows_2l;
     gui: gui_street_urban;
     depots: gfx_depot_reldred_choice;
@@ -51,7 +51,6 @@ item(FEAT_ROADTYPES, street_primary_asph_elec,25) {
     catenary_back:sw_catenary_trolley_b;
     underlay: sw_street_primary_asph_so_main;
     bridge_surfaces: sw_bridge_street_asph_so_main;
-
     direction_markings:gfx_arrows_2l;
     gui: gui_street_urban_wired;
     depots: gfx_depot_reldred_choice;
@@ -80,7 +79,6 @@ item(FEAT_ROADTYPES, street_primary_tile,26) {
     catenary_back:sw_power_poles_main;
     underlay: sw_street_primary_asph_tile_so_main;
     bridge_surfaces: sw_bridge_street_asph_tile_so_main;
-
     direction_markings:gfx_arrows_2l;
     gui: gui_street_urban_paved;
     depots:gfx_depot_reldred_choice;
@@ -140,7 +138,6 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_sakura,28) {
     catenary_back:sw_tree_sakura_b_lights_2l_main;
     underlay: sw_street_primary_asph_tile_so_main;
     bridge_surfaces: sw_bridge_street_asph_tile_so_main;
-
     direction_markings:gfx_arrows_2l;
     gui: gui_street_urban_paved_sakura;
     depots:gfx_depot_reldred_choice;

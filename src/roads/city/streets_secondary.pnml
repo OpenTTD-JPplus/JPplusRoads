@@ -20,7 +20,6 @@ item(FEAT_ROADTYPES, street_concrete,20) {
     catenary_back:sw_power_poles_secondary_main;
     underlay: sw_street_conc_sw_main;
     bridge_surfaces:sw_bridge_street_conc_sw_main;
-    // tunnels:;
     direction_markings:gfx_arrows_2l;
     gui:gui_street_concrete;
     depots:gfx_depot_reldred_choice;
@@ -49,7 +48,6 @@ item(FEAT_ROADTYPES, street_concrete_elec,21) {
     catenary_back:sw_power_poles_secondary_main;
     underlay: sw_street_conc_sw_main;
     bridge_surfaces:sw_bridge_street_conc_sw_main;
-    // tunnels:;
     direction_markings:gfx_arrows_2l;
     gui:gui_street_concrete_wired;
     depots:gfx_depot_reldred_choice;
@@ -78,7 +76,6 @@ item(FEAT_ROADTYPES, street_secondary,23) {
     catenary_back:sw_power_poles_secondary_main;
     underlay: sw_street_secondary_asph_sw_main;
     bridge_surfaces:sw_bridge_street_asph_sw_main;
-    // tunnels:;
     direction_markings:gfx_arrows_2l;
     gui:gui_street_district;
     depots:gfx_depot_reldred_choice;

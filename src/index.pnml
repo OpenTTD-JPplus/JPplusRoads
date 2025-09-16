@@ -13,6 +13,7 @@
 #include "import/gfx_arrows.pnml"
 #include "import/gfx_depots.pnml"
 #include "import/gfx_stops.pnml"
+#include "import/gfx_tunnels.pnml"
 
 #include "roads/city/streets_gfx.pnml"
 #include "roads/city/avenues_gfx.pnml"
