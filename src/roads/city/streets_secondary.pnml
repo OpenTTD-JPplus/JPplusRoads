@@ -45,7 +45,8 @@ item(FEAT_ROADTYPES, street_concrete_elec,21) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
-    catenary_back:sw_power_poles_secondary_main;
+    catenary_front:sw_catenary_trolley_f;
+    catenary_back:sw_catenary_trolley_b;
     underlay: sw_street_conc_sw_main;
     bridge_surfaces:sw_bridge_street_conc_sw_main;
     direction_markings:gfx_arrows_2l;
