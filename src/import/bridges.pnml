@@ -68,30 +68,30 @@ spriteset(sw_bridge_test, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     //
     //*6 Line Avenue */
       spriteset(gfx_bridge_avenue_6l_nm_stone_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_nm_stone_r.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_nm_stone_r.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_nm_asph_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_nm_asph_r.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_nm_asph_r.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_asph_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_asph_r.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_asph_r.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_asph_tact_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_asph_tact_r.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_asph_tact_r.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_tile_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_tile_r.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_tile_r.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_tile_tact_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_tile_tact_r.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_tile_tact_r.png") {tmpl_bridge (0,0)}
 
       spriteset(gfx_bridge_avenue_6l_nm_stone_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_nm_stone_l.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_nm_stone_l.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_nm_asph_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_nm_asph_l.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_nm_asph_l.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_asph_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_asph_l.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_asph_l.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_asph_tact_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_asph_tact_l.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_asph_tact_l.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_tile_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_tile_l.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_tile_l.png") {tmpl_bridge (0,0)}
       spriteset(gfx_bridge_avenue_6l_dw_tile_tact_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-      "gfx/roads/gfx_avenue_6l_dw_tile_tact_l.png") {tmpl_underlay (0,0,0,0,0)}
+      "gfx/roads/gfx_avenue_6l_dw_tile_tact_l.png") {tmpl_bridge (0,0)}
     //
   //
 
