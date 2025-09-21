@@ -6,7 +6,7 @@ item(FEAT_TRAMTYPES, deco_lights_r,53) {
         powered_tramtype_list: ["DEC1"];
 
         introduction_date:date(1950,1,1);
-        speed_limit:0;
+        speed_limit:SPEED_MODIFIER+0;
         
         toolbar_caption: string(STR_DECO_LIGHTS_RIGHT);
         menu_text: string(STR_DECO_LIGHTS_RIGHT);
@@ -31,7 +31,7 @@ item(FEAT_TRAMTYPES, deco_lights_l,54) {
         powered_tramtype_list: ["DEC2"];
 
         introduction_date:date(1950,1,1);
-        speed_limit:0;
+        speed_limit:SPEED_MODIFIER+0;
         // map_colour:VAR_AVENUE;
         
         toolbar_caption: string(STR_DECO_LIGHTS_LEFT);

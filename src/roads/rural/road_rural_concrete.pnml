@@ -5,7 +5,7 @@ item(FEAT_ROADTYPES, road_concrete,5) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1920,1,1);
-    speed_limit:60 km/h;
+    speed_limit:SPEED_MODIFIER+61 km/h;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_CONCRETE));

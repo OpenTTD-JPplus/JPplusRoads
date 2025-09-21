@@ -5,7 +5,7 @@ item(FEAT_ROADTYPES, road_industrial_isr,42) {
     powered_roadtype_list: [INDUSTRIAL];
 
     introduction_date:date(0,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_ALLEY;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_ISR));

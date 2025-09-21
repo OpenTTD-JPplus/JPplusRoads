@@ -5,7 +5,7 @@ item(FEAT_ROADTYPES, street_4l_r,29) {
         powered_roadtype_list: [DECO];
 
         introduction_date:date(1850,1,1);
-        speed_limit:50 km/h;
+        speed_limit:SPEED_MODIFIER+51 km/h;
         map_colour:VAR_AVENUE;
 
         name: string(STR_ROAD_STREET_4R);
@@ -35,7 +35,7 @@ item(FEAT_ROADTYPES, street_4l_l,30) {
         powered_roadtype_list: [DECO];
 
         introduction_date:date(1850,1,1);
-        speed_limit:50 km/h;
+        speed_limit:SPEED_MODIFIER+51 km/h;
         map_colour:VAR_AVENUE;
 
         toolbar_caption: string(STR_ROAD_STREET_4L);

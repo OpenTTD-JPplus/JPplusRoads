@@ -3,3 +3,7 @@
 # define VAR_PRIMARY 12
 # define VAR_AVENUE 51
 # define VAR_EXPRESSWAY 185
+
+if (param_speed == 0) {SPEED_MODIFIER = 0;}
+if (param_speed == 1) {SPEED_MODIFIER = 20;}
+if (param_speed == 2) {SPEED_MODIFIER = 50;}
