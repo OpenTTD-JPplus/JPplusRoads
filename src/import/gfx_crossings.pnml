@@ -244,3 +244,38 @@
       gfx_crossing_street_4l_l_rubber;
     }
 //
+//*6 line avenue
+  spriteset(gfx_crossing_avenue_6l_r_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_r.png") {tmpl_level_crossing (0)}
+  spriteset(gfx_crossing_avenue_6l_r_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_r.png") {tmpl_level_crossing (40)}
+  spriteset(gfx_crossing_avenue_6l_r_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_r.png") {tmpl_level_crossing (80)}
+  spriteset(gfx_crossing_avenue_6l_r_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_r.png") {tmpl_level_crossing (120)}
+  spriteset(gfx_crossing_avenue_6l_r_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_r.png") {tmpl_level_crossing (160)}
+  
+  spriteset(gfx_crossing_avenue_6l_l_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_l.png") {tmpl_level_crossing (0)}
+  spriteset(gfx_crossing_avenue_6l_l_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_l.png") {tmpl_level_crossing (40)}
+  spriteset(gfx_crossing_avenue_6l_l_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_l.png") {tmpl_level_crossing (80)}
+  spriteset(gfx_crossing_avenue_6l_l_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_l.png") {tmpl_level_crossing (120)}
+  spriteset(gfx_crossing_avenue_6l_l_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_crossing_avenue_6l_l.png") {tmpl_level_crossing (160)}
+  
+  switch(FEAT_ROADTYPES,SELF,sw_crossing_avenue_6l_r_main,town_zone){
+      3..4:gfx_crossing_avenue_6l_r_slab_green;
+      1..2:gfx_crossing_avenue_6l_r_slab;
+      gfx_crossing_avenue_6l_r_rubber;
+    }
+
+  switch(FEAT_ROADTYPES,SELF,sw_crossing_avenue_6l_l_main,town_zone){
+      3..4:gfx_crossing_avenue_6l_l_slab_green;
+      1..2:gfx_crossing_avenue_6l_l_slab;
+      gfx_crossing_avenue_6l_l_rubber;
+    }
+//
