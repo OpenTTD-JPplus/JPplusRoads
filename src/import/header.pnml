@@ -8,6 +8,10 @@ grf {
 #include "params.pnml"
 }
 
+if (grf_current_status("YZ\AA\02")!=1&&grf_future_status("YZ\AA\02")!=1){
+  error(WARNING, string(STR_JP_TRACKS));
+}
+
 replace trees_remove(4626, "gfx/gfx_placeholder.png") {
 	[ 0,0, 1,1, 0,  0]
 }
