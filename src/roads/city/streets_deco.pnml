@@ -14,7 +14,7 @@ item(FEAT_ROADTYPES, street_4l_r,29) {
         new_engine_text: string(STR_BUILD_VEHICLE);
         autoreplace_text: string(STR_AUTOREPLACE_ROAD);
         new_engine_text: string(STR_NEW_ENGINE_ROAD);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: param_eyecandy_roadtypes ? bitmask(ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
     }
     graphics {
       catenary_front:sw_tree_cone_f_lights_4l_right_main;
@@ -43,7 +43,7 @@ item(FEAT_ROADTYPES, street_4l_l,30) {
         new_engine_text: string(STR_BUILD_VEHICLE);
         autoreplace_text: string(STR_AUTOREPLACE_ROAD);
         new_engine_text: string(STR_NEW_ENGINE_ROAD);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: param_eyecandy_roadtypes ? bitmask(ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
     }
     graphics {
       catenary_front:sw_tree_cone_f_lights_4l_left_main;

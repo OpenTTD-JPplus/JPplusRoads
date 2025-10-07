@@ -1,0 +1,99 @@
+//*Sprites */
+  //Road
+    spriteset(gfx_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_ped_street_stone.png") {tmpl_underlay (0,0,0,0,0)}
+    spriteset(gfx_bridge_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_bridge_ped_street_stone.png") {tmpl_bridge (0,0)}
+
+    spriteset(gfx_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_ped_street_brown.png") {tmpl_underlay (0,0,0,0,0)}
+    spriteset(gfx_bridge_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_bridge_ped_street_brown.png") {tmpl_bridge (0,0)}
+
+  //Trees
+    spriteset(gfx_ped_street_trees_spring_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_spring.png") {tmpl_catenary_bridgeless (0,0,0,0,0)}
+    spriteset(gfx_ped_street_trees_spring_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_spring.png") {tmpl_catenary_bridgeless (140,0,70,0,0)}
+    spriteset(gfx_ped_street_trees_spring_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_spring.png") {tmpl_catenary_bridgeless (280,0,140,0,0)}
+    spriteset(gfx_ped_street_trees_spring_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_spring.png") {tmpl_catenary_bridgeless (420,0,210,0,0)}
+    random_switch(FEAT_ROADTYPES,SELF,gfx_ped_street_trees_spring){
+      1:gfx_ped_street_trees_spring_1;
+      1:gfx_ped_street_trees_spring_2;
+      1:gfx_ped_street_trees_spring_3;
+      1:gfx_ped_street_trees_spring_4;
+    }
+    spriteset(gfx_ped_street_trees_summer_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_summer.png") {tmpl_catenary_bridgeless (0,0,0,0,0)}
+    spriteset(gfx_ped_street_trees_summer_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_summer.png") {tmpl_catenary_bridgeless (140,0,70,0,0)}
+    spriteset(gfx_ped_street_trees_summer_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_summer.png") {tmpl_catenary_bridgeless (280,0,140,0,0)}
+    spriteset(gfx_ped_street_trees_summer_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_summer.png") {tmpl_catenary_bridgeless (420,0,210,0,0)}
+    random_switch(FEAT_ROADTYPES,SELF,gfx_ped_street_trees_summer){
+      1:gfx_ped_street_trees_summer_1;
+      1:gfx_ped_street_trees_summer_2;
+      1:gfx_ped_street_trees_summer_3;
+      1:gfx_ped_street_trees_summer_4;
+    }
+    spriteset(gfx_ped_street_trees_fall_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_fall.png") {tmpl_catenary_bridgeless (0,0,0,0,0)}
+    spriteset(gfx_ped_street_trees_fall_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_fall.png") {tmpl_catenary_bridgeless (140,0,70,0,0)}
+    spriteset(gfx_ped_street_trees_fall_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_fall.png") {tmpl_catenary_bridgeless (280,0,140,0,0)}
+    spriteset(gfx_ped_street_trees_fall_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_fall.png") {tmpl_catenary_bridgeless (420,0,210,0,0)}
+    random_switch(FEAT_ROADTYPES,SELF,gfx_ped_street_trees_fall){
+      1:gfx_ped_street_trees_fall_1;
+      1:gfx_ped_street_trees_fall_2;
+      1:gfx_ped_street_trees_fall_3;
+      1:gfx_ped_street_trees_fall_4;
+    }
+    spriteset(gfx_ped_street_trees_winter_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_winter.png") {tmpl_catenary_bridgeless (0,0,0,0,0)}
+    spriteset(gfx_ped_street_trees_winter_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_winter.png") {tmpl_catenary_bridgeless (140,0,70,0,0)}
+    spriteset(gfx_ped_street_trees_winter_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_winter.png") {tmpl_catenary_bridgeless (280,0,140,0,0)}
+    spriteset(gfx_ped_street_trees_winter_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/decorations/trees/DECO_pedestrian_road_winter.png") {tmpl_catenary_bridgeless (420,0,210,0,0)}
+    random_switch(FEAT_ROADTYPES,SELF,gfx_ped_street_trees_winter){
+      1:gfx_ped_street_trees_winter_1;
+      1:gfx_ped_street_trees_winter_2;
+      1:gfx_ped_street_trees_winter_3;
+      1:gfx_ped_street_trees_winter_4;
+    }
+
+//*Logic
+    switch(FEAT_ROADTYPES,SELF,sw_ped_street_trees_north, current_day_of_year){
+    71..117:gfx_ped_street_trees_spring;
+    118..304:gfx_ped_street_trees_summer;
+    305..330:gfx_ped_street_trees_fall;
+    gfx_ped_street_trees_winter;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_ped_street_trees_south, current_day_of_year){
+    71..117:gfx_ped_street_trees_fall;
+    118..304:gfx_ped_street_trees_winter;
+    305..330:gfx_ped_street_trees_spring;
+    gfx_ped_street_trees_summer;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_ped_street_trees, param_seasons){
+    1:sw_ped_street_trees_south;
+    2:gfx_ped_street_trees_spring;
+    3:gfx_ped_street_trees_summer;
+    4:gfx_ped_street_trees_fall;
+    5:gfx_ped_street_trees_winter;
+    sw_ped_street_trees_north;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_ped_street_trees_main_1, terrain_type){
+    TILETYPE_SNOW:gfx_ped_street_trees_winter;
+    sw_ped_street_trees;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_ped_street_trees_main,railtype<64||tramtype<64){
+    1:deco_empty;
+    sw_ped_street_trees_main_1;
+  }

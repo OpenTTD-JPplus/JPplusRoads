@@ -1,0 +1,58 @@
+item(FEAT_ROADTYPES, street_pedestrian_stone,35) {
+  property {
+    label: "PD01";
+    sort_order: 35;
+    powered_roadtype_list: [PEDESTRIAN];
+
+    introduction_date:date(1800,1,1);
+    speed_limit:0;
+    map_colour:VAR_ALLEY;
+    
+    name: string(STR_GEN_STREET_PED,string(STR_ROAD_STONE));
+    toolbar_caption: string(STR_GEN_STREET_PED,string(STR_ROAD_STONE));
+    menu_text: string(STR_GEN_STREET_PED,string(STR_ROAD_STONE));
+    new_engine_text: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+  }
+  graphics {
+    catenary_front:deco_empty;
+    catenary_back:sw_ped_street_trees_main;
+    underlay: gfx_ped_street_stone;
+    bridge_surfaces: gfx_bridge_ped_street_stone;
+    direction_markings:gfx_arrows_2l;
+    gui: gui_street_pedestrian_stone;
+    depots: gfx_depot_reldred_choice;
+    roadstops:gfx_stops_stone;
+  }
+}
+item(FEAT_ROADTYPES, street_pedestrian_brown,36) {
+  property {
+    label: "PD02";
+    sort_order: 36;
+    powered_roadtype_list: [PEDESTRIAN];
+
+    introduction_date:date(1950,1,1);
+    speed_limit:0;
+    map_colour:VAR_ALLEY;
+    
+    name: string(STR_GEN_STREET_PED,string(STR_ROAD_TILE));
+    toolbar_caption: string(STR_GEN_STREET_PED,string(STR_ROAD_TILE));
+    menu_text: string(STR_GEN_STREET_PED,string(STR_ROAD_TILE));
+    new_engine_text: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+  }
+  graphics {
+    catenary_front:deco_empty;
+    catenary_back:sw_ped_street_trees_main;
+    underlay: gfx_ped_street_brown;
+    bridge_surfaces: gfx_bridge_ped_street_brown;
+    direction_markings:gfx_arrows_2l;
+    gui: gui_street_pedestrian_paved;
+    depots: gfx_depot_reldred_choice;
+    roadstops:gfx_stops_stone;
+  }
+}
