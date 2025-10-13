@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, street_concrete,20) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:sw_power_poles_secondary_main;
     underlay: sw_street_conc_sw_main;
     bridge_surfaces:sw_bridge_street_conc_sw_main;
@@ -74,6 +75,7 @@ item(FEAT_ROADTYPES, street_secondary,23) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:sw_power_poles_secondary_main;
     underlay: sw_street_secondary_asph_sw_main;
     bridge_surfaces:sw_bridge_street_asph_sw_main;

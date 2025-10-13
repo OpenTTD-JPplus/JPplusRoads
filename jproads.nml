@@ -359,6 +359,7 @@ replace road_underlay_12(1347, "gfx/misc/gfx_grass_temp.png") {
 
     [0, 0, 1, 1, 0, 0]
     [0, 0, 1, 1, 0, 0]
+
     [0, 0, 1, 1, 0, 0]
     [0, 0, 1, 1, 0, 0]
     [0, 0, 1, 1, 0, 0]
@@ -575,8 +576,8 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
     "gfx/decorations/DECO_crashBarrier_l.png") {tmpl_catenary_single (0,0,0,0,0,0,1,1)}
 
   switch (FEAT_ROADTYPES,SELF,gfx_crash_barriers_0,tramtype) {
-    34:gfx_crash_barriers_l;
-    35:gfx_crash_barriers_r;
+    36:gfx_crash_barriers_l;
+    37:gfx_crash_barriers_r;
     crash_barriers;
   }
   switch (FEAT_ROADTYPES,SELF,gfx_crash_barriers,railtype<64) {
@@ -3782,6 +3783,7 @@ item(FEAT_ROADTYPES, road_field_path,1) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: sw_road_rural_field_main;
     bridge_surfaces:sw_bridge_rural_stone_nm;
@@ -3811,6 +3813,7 @@ item(FEAT_ROADTYPES, road_unpaved,2) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: sw_road_rural_dirt_main;
 
@@ -4190,6 +4193,7 @@ item(FEAT_ROADTYPES, street_concrete,20) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:sw_power_poles_secondary_main;
     underlay: sw_street_conc_sw_main;
     bridge_surfaces:sw_bridge_street_conc_sw_main;
@@ -4247,6 +4251,7 @@ item(FEAT_ROADTYPES, street_secondary,23) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:sw_power_poles_secondary_main;
     underlay: sw_street_secondary_asph_sw_main;
     bridge_surfaces:sw_bridge_street_asph_sw_main;
@@ -4335,6 +4340,7 @@ item(FEAT_ROADTYPES, street_primary_tile,26) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:sw_power_poles_main;
     underlay: sw_street_primary_asph_tile_so_main;
     bridge_surfaces: sw_bridge_street_asph_tile_so_main;
@@ -4662,6 +4668,7 @@ item(FEAT_ROADTYPES, road_industrial_firs_concrete,39) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: gfx_IND_FIRS_concrete;
     bridge_surfaces:gfx_IND_FIRS_concrete_bridge;
@@ -4723,6 +4730,7 @@ item(FEAT_ROADTYPES, road_industrial_firs_cobble,41) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: gfx_IND_FIRS_cobble;
     bridge_surfaces:gfx_IND_FIRS_cobble_bridge;
@@ -4754,6 +4762,7 @@ item(FEAT_ROADTYPES, road_industrial_isr,42) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: gfx_IND_ISR;
     bridge_surfaces:gfx_IND_ISR_bridge;
@@ -4785,6 +4794,7 @@ item(FEAT_ROADTYPES, road_industrial_auz,43) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: gfx_IND_AUZ;
     bridge_surfaces:gfx_IND_AUZ_bridge;
