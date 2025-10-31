@@ -109,7 +109,6 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_cone,27) {
     catenary_back:sw_tree_cone_b_lights_2l_main;
     underlay: sw_street_primary_asph_tile_so_main;
     bridge_surfaces: sw_bridge_street_asph_tile_so_main;
-
     direction_markings:gfx_arrows_2l;
     gui: gui_street_urban_paved_green;
     depots:gfx_depot_reldred_choice;
