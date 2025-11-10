@@ -715,7 +715,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1950:sw_light_poles_gas_b_main;
       gfx_light_poles_metal_b;
     }
-    switch (FEAT_ROADTYPES,SELF,sw_light_poles_metal_b_main,railtype<64||tramtype==1||tramtype==40){
+    switch (FEAT_ROADTYPES,SELF,sw_light_poles_metal_b_main,railtype<64||tramtype==1||tramtype==40||tramtype==34||tramtype==35){
       1:deco_empty;
       sw_light_poles_metal_b_1;
     }
@@ -2942,9 +2942,9 @@ alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunn
         spriteset(gfx_street_lh_primary_asph_tile_so_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (140,0,0,130,0)}
         spriteset(gfx_street_lh_primary_asph_tile_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (280,0,0,260,0)}
+        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (280,0,0,0,0)}
         spriteset(gfx_street_lh_primary_asph_tile_so_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (0,0,0,390,0)}
+        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (0,0,0,0,0)}
 
         spriteset(gfx_street_rh_primary_asph_tile_nm_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         "gfx/roads/gfx_street_primary_asph_tile_nm.png") {tmpl_underlay (0,0,40,0,70)}
@@ -2961,9 +2961,9 @@ alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunn
         spriteset(gfx_street_rh_primary_asph_tile_so_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (140,0,40,130,70)}
         spriteset(gfx_street_rh_primary_asph_tile_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (280,0,40,260,70)}
+        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (280,0,40,0,70)}
         spriteset(gfx_street_rh_primary_asph_tile_so_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (0,0,40,390,70)}
+        "gfx/roads/gfx_street_primary_asph_tile_so.png") {tmpl_underlay (0,0,40,0,70)}
 
         spriteset(gfx_street_nm_primary_asph_tile_nm_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         "gfx/roads/gfx_street_primary_asph_tile_nm.png") {tmpl_underlay (0,0,80,0,140)}
