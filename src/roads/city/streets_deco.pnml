@@ -1,0 +1,60 @@
+item(FEAT_ROADTYPES, street_4l_r,29) {
+    property {
+        sort_order: 29;
+        label: "ST14";
+        powered_roadtype_list: [DECO];
+
+        introduction_date:date(1850,1,1);
+        speed_limit:50 km/h;
+        map_colour:VAR_AVENUE;
+
+        name: string(STR_ROAD_STREET_4R);
+        toolbar_caption: string(STR_ROAD_STREET_4R);
+        menu_text: string(STR_ROAD_STREET_4R);
+        new_engine_text: string(STR_BUILD_VEHICLE);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_NEW_ENGINE_ROAD);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+    }
+    graphics {
+      catenary_front:sw_tree_cone_f_lights_4l_right_main;
+      catenary_back:sw_tree_cone_b_lights_4l_right_main;
+      underlay: sw_street_4l_r_main;
+      bridge_surfaces:gfx_bridge_street_4l_r_main;
+      // tunnels:;
+      direction_markings:gfx_arrows_4l_r;
+      gui:gui_street_4l_r;
+      depots:gfx_depot_reldred_choice;
+      roadstops:gfx_stops_asphalt;
+    }
+}
+item(FEAT_ROADTYPES, street_4l_l,30) {
+    property {
+        name: string(STR_ROAD_STREET_4L);
+        label: "ST15";
+        sort_order: 30;
+        powered_roadtype_list: [DECO];
+
+        introduction_date:date(1850,1,1);
+        speed_limit:50 km/h;
+        map_colour:VAR_AVENUE;
+
+        toolbar_caption: string(STR_ROAD_STREET_4L);
+        menu_text: string(STR_ROAD_STREET_4L);
+        new_engine_text: string(STR_BUILD_VEHICLE);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_NEW_ENGINE_ROAD);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+    }
+    graphics {
+      catenary_front:sw_tree_cone_f_lights_4l_left_main;
+      catenary_back:sw_tree_cone_b_lights_4l_left_main;
+      underlay: sw_street_4l_l_main;
+      bridge_surfaces:gfx_bridge_street_4l_l_main;
+      // tunnels:;
+      direction_markings:gfx_arrows_4l_l;
+      gui:gui_street_4l_l;
+      depots:gfx_depot_reldred_choice;
+      roadstops:gfx_stops_asphalt;
+    }
+}

@@ -1,30 +1,34 @@
   switch(FEAT_ROADTYPES,SELF,road_generic_rural_gfx,current_year){
     0..1849:sw_road_rural_dirt_main;
     1850..1934:sw_road_rural_stone_main;
-    1935..1959:sw_road_rural_concrete_main;
-    sw_road_rural_asphalt_1_main;
+    sw_road_rural_asph_main;
   }
   switch(FEAT_ROADTYPES,SELF,road_generic_city_gfx,current_year){
     0..1849:gfx_rd_unpaved;
-    1850..1934:sw_road_stone_main;
-    sw_rd_secondary_main_gfx;
+    1850..1934:gfx_street_stone_nm_def;
+    sw_street_secondary_asph_sw_main;
   }
   switch(FEAT_ROADTYPES,SELF,road_generic_main,town_zone){
     1..4:road_generic_city_gfx;
     road_generic_rural_gfx;
   }
+
   switch(FEAT_ROADTYPES,SELF,bridge_generic_rural_gfx,current_year){
-    0..1934:sw_bridge_rural_stone_main;
-    1935..1959:sw_bridge_rural_concrete_main;
-    sw_bridge_rural_asphalt_1_new_main;
+    0..1934:gfx_bridge_rural_stone_nm;
+    gfx_bridge_rural_stone_sw;
   }
   switch(FEAT_ROADTYPES,SELF,bridge_generic_city_gfx,current_year){
-    0..1934:sw_bridge_stone_nm;
-    sw_bridge_asph_sw_gfx_main;
+    0..1934:gfx_bridge_street_stone_nm;
+    sw_bridge_street_asph_sw_main;
   }
   switch(FEAT_ROADTYPES,SELF,sw_bridge_generic_main,town_zone){
     1..4:bridge_generic_rural_gfx;
     bridge_generic_city_gfx;
+  }
+
+  switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_tz_restricted_gen,current_year>1950){
+    1:deco_empty;
+    sw_light_poles_gas_f_tz_restricted;
   }
 
 item(FEAT_ROADTYPES, road_generic, 0) {
@@ -39,15 +43,18 @@ item(FEAT_ROADTYPES, road_generic, 0) {
         name: string(STR_GEN_STREET,string(STR_ROAD_STONE));
         toolbar_caption: string(STR_GEN_STREET,string(STR_ROAD_STONE));
         menu_text: string(STR_GEN_STREET,string(STR_ROAD_STONE));
-        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        build_window_caption: string(STR_BUILD_VEHICLE);
         autoreplace_text: string(STR_AUTOREPLACE_ROAD);
-        new_engine_text: string(STR_BUILD_VEHICLE);
+        new_engine_text: string(STR_NEW_ENGINE_ROAD);
         roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
         sort_order: 0;
     }
   graphics {
-        underlay: road_generic_main;
-        catenary_back:deco_empty;
-        bridge_surfaces:sw_bridge_generic_main;
+    catenary_front:sw_light_poles_gas_f_tz_restricted_gen;
+    catenary_back:sw_light_poles_metal_b_tz_restricted;
+    underlay: road_generic_main;
+    direction_markings:gfx_arrows_2l;
+    bridge_surfaces:sw_bridge_generic_main;
+    roadstops:gfx_stops_asphalt;
     }
 }

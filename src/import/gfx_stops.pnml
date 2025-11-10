@@ -1,0 +1,7 @@
+spriteset(gfx_stops_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_stone.png") {tmpl_stops (0,0)}
+spriteset(gfx_stops_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_concrete.png") {tmpl_stops (0,0)}
+spriteset(gfx_stops_asphalt, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_asphalt.png") {tmpl_stops (0,0)}
+spriteset(gfx_stops_firs_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_firs_concrete.png") {tmpl_stops (0,0)}
+spriteset(gfx_stops_firs_cobble, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_firs_cobble.png") {tmpl_stops (0,0)}
+spriteset(gfx_stops_isr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_isr.png") {tmpl_stops (0,0)}
+spriteset(gfx_stops_auz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_auz.png") {tmpl_stops (0,0)}

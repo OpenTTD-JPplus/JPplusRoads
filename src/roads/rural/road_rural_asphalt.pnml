@@ -1,103 +1,91 @@
-spriteset(sw_road_rural_asphalt_nm_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-"gfx/roads/pool/road_rural_asphalt_nm.png") {tmpl_underlay (0,0,0,0,0)}
-spriteset(sw_road_rural_asphalt_dw_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-"gfx/roads/pool/road_rural_asphalt_dw.png") {tmpl_underlay (0,0,0,0,0)}
-spriteset(sw_road_rural_asphalt_sw_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-"gfx/roads/pool/road_rural_asphalt_sw.png") {tmpl_underlay (0,0,0,0,0)}
-spriteset(sw_road_rural_asphalt_sw_1_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-"gfx/roads/pool/road_rural_asphalt_sw_1.png") {tmpl_underlay (0,0,0,0,0)}
+item(FEAT_ROADTYPES, road_asphalt,7) {
+  property {
+    sort_order: 7;
+    label: "RD07";
+    powered_roadtype_list: [REG_ROAD];
 
-//
-switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_1_old_main,town_zone){
-    3..4:sw_road_rural_concrete_sw_gfx;
-    sw_road_rural_concrete_dw_gfx;
-}
-switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_1_new_main,town_zone){
-    3..4:sw_road_rural_asphalt_sw_1_gfx;
-    sw_road_rural_asphalt_nm_gfx;
+    introduction_date:date(1920,1,1);
+    speed_limit:60 km/h;
+    map_colour:VAR_SECONDARY;
+
+    name: string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT));
+    toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT));
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT));
+    build_window_caption: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
-switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_1_main,current_year>1959){
-    1: sw_road_rural_asphalt_1_new_main;
-    sw_road_rural_asphalt_1_old_main;
-}
-//
-  switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_asphalt_1_new_main,current_year>1959){
-    1:sw_bridge_rural_asphalt_sw;
-    sw_bridge_rural_concrete_sw;
-  }
-//
-switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_old_main,town_zone){
-    3..4:sw_road_rural_concrete_sw_gfx;
-    sw_road_rural_concrete_dw_gfx;
-}
-switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_new_main,town_zone){
-    3..4:sw_road_rural_asphalt_sw_gfx;
-    sw_road_rural_asphalt_dw_gfx;
-  }
-switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_main,current_year>1959){
-    1: sw_road_rural_asphalt_2_new_main;
-    sw_road_rural_asphalt_2_old_main;
-}
-//
-  switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_asphalt_2_new_main,current_year>1959){
-    1:sw_bridge_rural_asphalt_sw;
-    sw_bridge_rural_concrete_sw;
-  }
-// switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
+  graphics {
+    catenary_front:deco_empty;
+    catenary_back:sw_light_poles_metal_b_tz_restricted;
+    underlay: gfx_road_rural_sw_asph;
+    bridge_surfaces:sw_bridge_rural_asphalt_sw;
     
-//   }
-//
-item(FEAT_ROADTYPES, road_rural_asphalt_1,7) {
-    property {
-        sort_order: 7;
-        label: "RRA7";
-        powered_roadtype_list: [REG_ROAD];
-
-        introduction_date:date(1930,1,1);
-        speed_limit:60 km/h;
-        map_colour:14;
-
-        name: string(STR_ROAD_ASPHALT);
-        toolbar_caption: string(STR_ROAD_ASPHALT);
-        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT));
-        build_window_caption: string(STR_ROAD_ASPHALT);
-        autoreplace_text: string(STR_ROAD_ASPHALT);
-        new_engine_text: string(STR_ROAD_ASPHALT);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
-    }
-  graphics {
-    gui:gfx_gui_road_asphalt;
-        underlay: sw_road_rural_asphalt_1_main;
-        catenary_front:gfx_light_poles_b;
-        direction_markings:gfx_arrows_2l;
-        bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    direction_markings:gfx_arrows_2l;
+    gui:gui_road_asphalt;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_asphalt;
     }
 }
-item(FEAT_ROADTYPES, road_rural_asphalt_2,8) {
-    property {
-        label: "RRA8";
-        powered_roadtype_list: [REG_ROAD];
-        ////introduces_roadtype_list: [REG_ROAD];
+item(FEAT_ROADTYPES, road_asphalt_elec,8) {
+  property {
+    sort_order: 8;
+    label: "RD08";
+    powered_roadtype_list: [EL_ROAD];
+    alternative_roadtype_list: ["ELRD"];
 
-        introduction_date:date(1930,1,1);
-        speed_limit:80 km/h;
-        map_colour:14;
+    introduction_date:date(1920,1,1);
+    speed_limit:60 km/h;
+    map_colour:VAR_SECONDARY;
 
-        name: string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT));
-        toolbar_caption: string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT));
-        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT)));
-        build_window_caption: string(STR_NEW_ENGINE_ROAD);
-        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
-        new_engine_text: string(STR_BUILD_VEHICLE);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
-        sort_order: 8;
-    }
+    name: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT)));
+    toolbar_caption: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT)));
+    menu_text: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT)));
+    new_engine_text: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
   graphics {
-    gui:gfx_gui_road_asphalt_new;
-        underlay: sw_road_rural_asphalt_2_main;
-        catenary_back:gfx_light_poles_b;
-        bridge_surfaces:sw_bridge_rural_asphalt_2_new_main;
-        direction_markings:gfx_arrows_2l;
-        depots:gfx_depot_reldred_choice;
-    }
+    catenary_front:sw_catenary_trolley_f;
+    catenary_back:sw_catenary_trolley_b;
+    underlay: gfx_road_rural_sw_asph;
+    bridge_surfaces:sw_bridge_rural_asphalt_sw;
+   
+    direction_markings:gfx_arrows_2l;
+    gui:gui_road_asphalt_wired;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_asphalt;
+  }
+}
+item(FEAT_ROADTYPES, road_asphalt_improved,9) {
+  property {
+    sort_order: 9;
+    label: "RD09";
+    powered_roadtype_list: [REG_ROAD];
+
+    introduction_date:date(1960,1,1);
+    speed_limit:80 km/h;
+    map_colour:VAR_PRIMARY;
+
+    name: string(STR_GEN_ROAD,string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT)));
+    toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT)));
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT)));
+    new_engine_text: string(STR_BUILD_VEHICLE);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_NEW_ENGINE_ROAD);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    catenary_front:deco_empty;
+    catenary_back:sw_light_poles_metal_b_main;
+    underlay: gfx_road_rural_sw_asph_new;
+    bridge_surfaces:gfx_bridge_rural_asphalt_sw_1;
+   
+    direction_markings:gfx_arrows_2l;
+    gui:gui_road_asphalt_new;
+    depots:gfx_depot_reldred_choice;
+    roadstops:gfx_stops_asphalt;
+  }
 }

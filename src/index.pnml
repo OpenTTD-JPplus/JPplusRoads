@@ -5,32 +5,36 @@
 // #include "import/setIds.pnml"
 
 #include "import/gfx_gui.pnml"
-#include "import/gfx_main.pnml"
-
 #include "import/gfx_decorations.pnml"
+#include "import/defines.pnml"
+#include "import/gfx_trees.pnml"
 #include "import/gfx_catenary.pnml"
 #include "import/bridges.pnml"
 #include "import/gfx_arrows.pnml"
 #include "import/gfx_depots.pnml"
+#include "import/gfx_stops.pnml"
 
+#include "roads/city/streets_gfx.pnml"
+#include "roads/city/avenues_gfx.pnml"
+#include "roads/rural/roads_gfx.pnml"
 
-#include "roads/rural/road_rural_field.pnml"
-#include "roads/rural/road_rural_dirt.pnml"
-#include "roads/rural/road_rural_stone.pnml"
+#include "roads/rural/road_rural_old.pnml"
 #include "roads/rural/road_rural_concrete.pnml"
 #include "roads/rural/road_rural_asphalt.pnml"
 
 #include "roads/rural/road_expressway.pnml"
 
+
 #include "roads/city/streets_old.pnml"
 #include "roads/city/streets_secondary.pnml"
 #include "roads/city/streets_primary.pnml"
 
-#include "roads/city/streets_4l_gfx.pnml"
 if (param_eyecandy_roadtypes==1){
-#include "roads/city/streets_4l.pnml"
+#include "roads/city/streets_deco.pnml"
 }
 #include "roads/city/streets_avenues.pnml"
+
+#include "roads/industrial/industrial_gfx.pnml"
 
 #include "roads/industrial/IND_FIRS_concrete.pnml"
 #include "roads/industrial/IND_FIRS_cobble.pnml"
