@@ -333,10 +333,10 @@ replace road_underlay_12(1347, "gfx/misc/gfx_grass_temp.png") {
     [xSecondOffset+70, 190-single_side_offset, 64, 51, -31, -20+y]
     [xSecondOffset+140, 190-single_side_offset, 64, 51, -31, -20+y]
 
-    [xSecondOffset+210, 190, 64, 51, -31, -20+y]
-    [xSecondOffset, 190, 64, 51, -31, -20+y]
-    [xSecondOffset+70, 190, 64, 51, -31, -20+y]
-    [xSecondOffset+140, 190, 64, 51, -31, -20+y]
+    [280, 190, 64, 51, -31, -20+y]
+    [280+70, 190, 64, 51, -31, -20+y]
+    [280+140, 190, 64, 51, -31, -20+y]
+    [280+210, 190, 64, 51, -31, -20+y]
   }
 
   template tmpl_catenary(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y) {
@@ -4277,7 +4277,6 @@ item(FEAT_ROADTYPES, street_primary_asph,24) {
     catenary_back:sw_power_poles_main;
     underlay: sw_street_primary_asph_so_main;
     bridge_surfaces: sw_bridge_street_asph_so_main;
-    tunnels:gfx_tunnel_underlay;
     direction_markings:gfx_arrows_2l;
     gui: gui_street_urban;
     depots: gfx_depot_reldred_choice;

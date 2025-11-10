@@ -130,10 +130,10 @@
     [xSecondOffset+70,   190-single_side_offset, 64, 51,   -31,   -20+y]//◸
     [xSecondOffset+140,  190-single_side_offset, 64, 51,   -31,   -20+y]//◺
 
-    [xSecondOffset+210,  190, 64, 51,   -31,   -20+y]//◿
-    [xSecondOffset,      190, 64, 51,   -31,   -20+y]//◹
-    [xSecondOffset+70,   190, 64, 51,   -31,   -20+y]//◸
-    [xSecondOffset+140,  190, 64, 51,   -31,   -20+y]//◺
+    [280,      190, 64, 51,   -31,   -20+y]//◹
+    [280+70,   190, 64, 51,   -31,   -20+y]//◸
+    [280+140,  190, 64, 51,   -31,   -20+y]//◺
+    [280+210,  190, 64, 51,   -31,   -20+y]//◿
   }
 
   template tmpl_catenary(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y) {

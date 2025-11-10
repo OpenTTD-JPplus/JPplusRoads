@@ -21,7 +21,6 @@ item(FEAT_ROADTYPES, street_primary_asph,24) {
     catenary_back:sw_power_poles_main;
     underlay: sw_street_primary_asph_so_main;
     bridge_surfaces: sw_bridge_street_asph_so_main;
-    tunnels:gfx_tunnel_underlay;
     direction_markings:gfx_arrows_2l;
     gui: gui_street_urban;
     depots: gfx_depot_reldred_choice;
