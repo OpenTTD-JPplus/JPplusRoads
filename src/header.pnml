@@ -1,0 +1,85 @@
+grf {
+		grfid: "JK\10\01";
+		name: string(STR_GRF_NAME);
+		desc: string(STR_GRF_DESC);
+		url: string(STR_GRF_URL);
+		version: 20; 
+		min_compatible_version: 20; 
+		param {
+			param_intro_year {
+				type:      int;
+				name:      string(STR_PARAM_1_NAME);
+				desc:      string(STR_PARAM_1_DESC);
+				min_value: 0;
+				max_value: 1;
+				def_value: 0;
+				names: {
+					0: string(STR_PARAM_INTRO_YEAR_DEF);
+					1: string(STR_PARAM_INTRO_YEAR_REMOVE);
+				};
+			}
+		}
+		param {
+			param_speed_units {
+				type:      int;
+				name:      string(STR_PARAM_2_NAME);
+				desc:      string(STR_PARAM_2_DESC);
+				min_value: 0;
+				max_value: 2;
+				def_value: 0;
+				names: {
+					0: string(STR_PARAM_UNITS_MPH);
+					1: string(STR_PARAM_UNITS_KMH);
+					2: string(STR_PARAM_UNITS_MPS);
+				};
+			}
+		}
+		param {
+			param_difficulty {
+				type:      int;
+				name:      string(STR_PARAM_3_NAME);
+				desc:      string(STR_PARAM_3_DESC);
+				min_value: 0;
+				max_value: 3;
+				def_value: 0;
+				names: {
+					0: string(STR_PARAM_DIFFICULTY_DEF);
+					1: string(STR_PARAM_DIFFICULTY_HARD);
+					2: string(STR_PARAM_DIFFICULTY_HARDER);
+					3: string(STR_PARAM_DIFFICULTY_NONE);
+				};
+			}
+		}
+		param {
+			param_road_style {
+				type:      int;
+				name:      string(STR_PARAM_4_NAME);
+				desc:      string(STR_PARAM_4_DESC);
+				min_value: 0;
+				max_value: 1;
+				def_value: 0;
+				names: {
+					0: string(STR_PARAM_ROAD_STYLE_1);
+					1: string(STR_PARAM_ROAD_STYLE_2);
+				};
+			}
+		}
+		param {
+			param_electric_roads {
+				type:      bool;
+				name:      string(STR_PARAM_5_NAME);
+				desc:      string(STR_PARAM_5_DESC);
+			}
+		}
+		param {
+			param_houses {
+				type:      bool;
+				name:      string(STR_PARAM_6_NAME);
+				desc:      string(STR_PARAM_6_DESC);
+			}
+		}
+	}
+
+if (ttd_platform != PLATFORM_OPENTTD || (openttd_version < version_openttd(1, 10, 0, 0))) {
+	error(FATAL, REQUIRES_OPENTTD, string(STR_MIN_OPENTTD_VERSION));
+}
