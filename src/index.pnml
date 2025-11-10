@@ -24,6 +24,7 @@
 #include "roads/city/streets_old.pnml"
 #include "roads/city/streets_secondary.pnml"
 #include "roads/city/streets_primary.pnml"
+#include "roads/city/streets_4l.pnml"
 #include "roads/city/streets_avenues.pnml"
 
 #include "roads/industrial/IND_FIRS_concrete.pnml"
@@ -35,5 +36,7 @@
 #include "trams/deco/deco_shutoko.pnml"
 
 #include "trams/deco/deco_slip_lane.pnml"
+
+#include "trams/trams.pnml"
 
 #include "roads/road_generic.pnml"

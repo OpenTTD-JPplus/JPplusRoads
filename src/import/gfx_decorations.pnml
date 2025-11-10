@@ -38,9 +38,9 @@
     }
 //*Shutoko */
 spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,0,0,190,0,1,0)}
+    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,0,0,190,0,0,1,0)}
   spriteset(gfx_shutoko_right_f_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,280,0,190,0,1,0)}
+    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,280,0,190,0,0,1,0)}
   switch (FEAT_TRAMTYPES,SELF,gfx_shutoko_right_f_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_shutoko_right_f_diag;
     gfx_shutoko_right_f_reg;
@@ -48,9 +48,9 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   switch (FEAT_TRAMTYPES,SELF,gfx_shutoko_right_f,railtype) {0..63:deco_empty;gfx_shutoko_right_f_1;}
 
   spriteset(gfx_shutoko_right_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,0,0,190,0,0,1)}
+    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,0,0,190,0,0,0,1)}
   spriteset(gfx_shutoko_right_b_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,280,0,190,0,0,1)}
+    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,280,0,190,0,0,0,1)}
   switch (FEAT_TRAMTYPES,SELF,gfx_shutoko_right_b_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_shutoko_right_b_diag;
     gfx_shutoko_right_b_reg;
@@ -58,9 +58,9 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   switch (FEAT_TRAMTYPES,SELF,gfx_shutoko_right_b,railtype) {0..63:deco_empty;gfx_shutoko_right_b_1;}
 
   spriteset(gfx_shutoko_left_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,0,0,190,0,0,1)}
+    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,0,0,190,0,0,0,1)}
   spriteset(gfx_shutoko_left_f_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,280,0,190,0,0,1)}
+    "gfx/decorations/DECO_shutoko_f.png") {tmpl_catenary_single (0,280,0,190,0,0,0,1)}
   switch (FEAT_TRAMTYPES,SELF,gfx_shutoko_left_f_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_shutoko_left_f_diag;
     gfx_shutoko_left_f_reg;
@@ -68,9 +68,9 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   switch (FEAT_TRAMTYPES,SELF,gfx_shutoko_left_f,railtype) {0..63:deco_empty;gfx_shutoko_left_f_1;}
 
   spriteset(gfx_shutoko_left_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,0,0,190,0,1,0)}
+    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,0,0,190,0,0,1,0)}
   spriteset(gfx_shutoko_left_b_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,280,0,190,0,1,0)}
+    "gfx/decorations/DECO_shutoko_b.png") {tmpl_catenary_single (0,280,0,190,0,0,1,0)}
   switch (FEAT_TRAMTYPES,SELF,gfx_shutoko_left_b_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_shutoko_left_b_diag;
     gfx_shutoko_left_b_reg;
@@ -84,9 +84,9 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   switch (FEAT_ROADTYPES,SELF,gfx_light_poles_b,railtype) {0..63:deco_empty;gfx_light_poles_b_1;}
 
   spriteset(gfx_light_poles_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
   spriteset(gfx_light_poles_right_f_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,1,0)}
+    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,0,1,0)}
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_light_poles_right_f_diag;
     gfx_light_poles_right_f_reg;
@@ -94,9 +94,9 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f,railtype) {0..63:deco_empty;gfx_light_poles_right_f_1;}
 
   spriteset(gfx_light_poles_right_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
   spriteset(gfx_light_poles_right_b_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,0,1)}
+    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,0,0,1)}
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_light_poles_right_b_diag;
     gfx_light_poles_right_b_reg;
@@ -104,9 +104,9 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b,railtype) {0..63:deco_empty;gfx_light_poles_right_b_1;}
 
   spriteset(gfx_light_poles_left_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
   spriteset(gfx_light_poles_left_f_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,0,1)}
+    "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,0,0,1)}
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_light_poles_left_f_diag;
     gfx_light_poles_left_f_reg;
@@ -114,9 +114,9 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f,railtype) {0..63:deco_empty;gfx_light_poles_left_f_1;}
 
   spriteset(gfx_light_poles_left_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
   spriteset(gfx_light_poles_left_b_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,1,0)}
+    "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,280,0,190,0,0,1,0)}
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_b_1,roadtype==8||roadtype==9||roadtype==10) {
     1:gfx_light_poles_left_b_diag;
     gfx_light_poles_left_b_reg;
@@ -305,76 +305,76 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         //sprites
           //spring
             spriteset(gfx_cone_tree_right_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
 
             spriteset(gfx_cone_tree_right_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
           //summer
             spriteset(gfx_cone_tree_right_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
 
             spriteset(gfx_cone_tree_right_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
           //fall
             spriteset(gfx_cone_tree_right_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_right_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
 
             spriteset(gfx_cone_tree_right_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_right_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
           //winter
           spriteset(gfx_cone_tree_right_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
           spriteset(gfx_cone_tree_right_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
           spriteset(gfx_cone_tree_right_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
           spriteset(gfx_cone_tree_right_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
 
           spriteset(gfx_cone_tree_right_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
           spriteset(gfx_cone_tree_right_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
           spriteset(gfx_cone_tree_right_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
           spriteset(gfx_cone_tree_right_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
         //
         //front
           switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_right_spring_f_1_north, current_day_of_year){
@@ -468,11 +468,11 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
             gfx_cone_tree_right_spring_b_4_north;
           }
         //
-        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_right_spring_f) {
+        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_right_f) {
           1:gfx_cone_tree_right_spring_f_1;1:gfx_cone_tree_right_spring_f_2;
           1:gfx_cone_tree_right_spring_f_3;1:gfx_cone_tree_right_spring_f_4;
         }
-        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_right_spring_b) {
+        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_right_b) {
           1:gfx_cone_tree_right_spring_b_1;1:gfx_cone_tree_right_spring_b_2;
           1:gfx_cone_tree_right_spring_b_3;1:gfx_cone_tree_right_spring_b_4;
         }
@@ -481,76 +481,76 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         //sprites
           //spring
             spriteset(gfx_cone_tree_left_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
 
             spriteset(gfx_cone_tree_left_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
           //summer
             spriteset(gfx_cone_tree_left_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
 
             spriteset(gfx_cone_tree_left_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
           //fall
             spriteset(gfx_cone_tree_left_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
 
             spriteset(gfx_cone_tree_left_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
             spriteset(gfx_cone_tree_left_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
           //winter
             spriteset(gfx_cone_tree_left_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,1,0)}
+              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1,0)}
             spriteset(gfx_cone_tree_left_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,1,0)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1,0)}
 
           spriteset(gfx_cone_tree_left_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
           spriteset(gfx_cone_tree_left_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,0,0,0,1)}
           spriteset(gfx_cone_tree_left_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,0,0,0,1)}
           spriteset(gfx_cone_tree_left_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,1)}
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,0,0,0,1)}
         //
         //front
           //lights
@@ -652,6 +652,360 @@ spriteset(gfx_shutoko_right_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
         random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_left_b) {
           1:gfx_cone_tree_left_spring_b_1;1:gfx_cone_tree_left_spring_b_2;
           1:gfx_cone_tree_left_spring_b_3;1:gfx_cone_tree_left_spring_b_4;
+        }
+    //
+  //*4 LINE */
+  //*Right
+        //sprites
+          //spring
+            spriteset(gfx_cone_tree_4l_right_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-6,-4,0,1)}
+
+            spriteset(gfx_cone_tree_4l_right_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-7,3,1,0)}
+          //summer
+            spriteset(gfx_cone_tree_4l_right_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-6,-4,0,1)}
+
+            spriteset(gfx_cone_tree_4l_right_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-7,3,1,0)}
+          //fall
+            spriteset(gfx_cone_tree_4l_right_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-6,-4,0,1)}
+            spriteset(gfx_cone_tree_4l_right_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-6,-4,0,1)}
+
+            spriteset(gfx_cone_tree_4l_right_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-7,3,1,0)}
+            spriteset(gfx_cone_tree_4l_right_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-7,3,1,0)}
+          //winter
+          spriteset(gfx_cone_tree_4l_right_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-6,-4,0,1)}
+          spriteset(gfx_cone_tree_4l_right_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-6,-4,0,1)}
+          spriteset(gfx_cone_tree_4l_right_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-6,-4,0,1)}
+          spriteset(gfx_cone_tree_4l_right_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-6,-4,0,1)}
+
+          spriteset(gfx_cone_tree_4l_right_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,-7,3,1,0)}
+          spriteset(gfx_cone_tree_4l_right_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,-7,3,1,0)}
+          spriteset(gfx_cone_tree_4l_right_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,-7,3,1,0)}
+          spriteset(gfx_cone_tree_4l_right_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,-7,3,1,0)}
+        //
+        //front
+          switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_1_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_1_f;118..304:gfx_cone_tree_4l_right_summer_1_f;305..330:gfx_cone_tree_4l_right_fall_1_f;gfx_cone_tree_4l_right_winter_1_f;
+          }
+          switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_1_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_1_f;118..304:gfx_cone_tree_4l_right_winter_1_f;305..330:gfx_cone_tree_4l_right_spring_1_f;gfx_cone_tree_4l_right_summer_1_f;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_1,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_f_1_south;
+            2:gfx_cone_tree_4l_right_spring_1_f;3:gfx_cone_tree_4l_right_summer_1_f;4:gfx_cone_tree_4l_right_fall_1_f;5:gfx_cone_tree_4l_right_winter_1_f;
+            gfx_cone_tree_4l_right_spring_f_1_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_2_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_2_f;118..304:gfx_cone_tree_4l_right_summer_2_f;305..330:gfx_cone_tree_4l_right_fall_2_f;gfx_cone_tree_4l_right_winter_2_f;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_2_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_2_f;118..304:gfx_cone_tree_4l_right_winter_2_f;305..330:gfx_cone_tree_4l_right_spring_2_f;gfx_cone_tree_4l_right_summer_2_f;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_2,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_f_2_south;
+            2:gfx_cone_tree_4l_right_spring_2_f;3:gfx_cone_tree_4l_right_summer_2_f;4:gfx_cone_tree_4l_right_fall_2_f;5:gfx_cone_tree_4l_right_winter_2_f;
+            gfx_cone_tree_4l_right_spring_f_2_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_3_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_3_f;118..304:gfx_cone_tree_4l_right_summer_3_f;305..330:gfx_cone_tree_4l_right_fall_3_f;gfx_cone_tree_4l_right_winter_3_f;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_3_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_3_f;118..304:gfx_cone_tree_4l_right_winter_3_f;305..330:gfx_cone_tree_4l_right_spring_3_f;gfx_cone_tree_4l_right_summer_3_f;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_3,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_f_3_south;
+            2:gfx_cone_tree_4l_right_spring_3_f;3:gfx_cone_tree_4l_right_summer_3_f;4:gfx_cone_tree_4l_right_fall_3_f;5:gfx_cone_tree_4l_right_winter_3_f;
+            gfx_cone_tree_4l_right_spring_f_3_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_4_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_4_f;118..304:gfx_cone_tree_4l_right_summer_4_f;305..330:gfx_cone_tree_4l_right_fall_4_f;gfx_cone_tree_4l_right_winter_4_f;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_4_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_4_f;118..304:gfx_cone_tree_4l_right_winter_4_f;305..330:gfx_cone_tree_4l_right_spring_4_f;gfx_cone_tree_4l_right_summer_4_f;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_f_4,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_f_4_south;
+            2:gfx_cone_tree_4l_right_spring_4_f;3:gfx_cone_tree_4l_right_summer_4_f;4:gfx_cone_tree_4l_right_fall_4_f;5:gfx_cone_tree_4l_right_winter_4_f;
+            gfx_cone_tree_4l_right_spring_f_4_north;
+          }
+        //
+        //back
+          switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_1_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_1_b;118..304:gfx_cone_tree_4l_right_summer_1_b;305..330:gfx_cone_tree_4l_right_fall_1_b;gfx_cone_tree_4l_right_winter_1_b;
+          }
+          switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_1_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_1_b;118..304:gfx_cone_tree_4l_right_winter_1_b;305..330:gfx_cone_tree_4l_right_spring_1_b;gfx_cone_tree_4l_right_summer_1_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_1,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_b_1_south;
+            2:gfx_cone_tree_4l_right_spring_1_b;3:gfx_cone_tree_4l_right_summer_1_b;4:gfx_cone_tree_4l_right_fall_1_b;5:gfx_cone_tree_4l_right_winter_1_b;
+            gfx_cone_tree_4l_right_spring_b_1_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_2_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_2_b;118..304:gfx_cone_tree_4l_right_summer_2_b;305..330:gfx_cone_tree_4l_right_fall_2_b;gfx_cone_tree_4l_right_winter_2_b;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_2_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_2_b;118..304:gfx_cone_tree_4l_right_winter_2_b;305..330:gfx_cone_tree_4l_right_spring_2_b;gfx_cone_tree_4l_right_summer_2_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_2,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_b_2_south;
+            2:gfx_cone_tree_4l_right_spring_2_b;3:gfx_cone_tree_4l_right_summer_2_b;4:gfx_cone_tree_4l_right_fall_2_b;5:gfx_cone_tree_4l_right_winter_2_b;
+            gfx_cone_tree_4l_right_spring_b_2_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_3_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_3_b;118..304:gfx_cone_tree_4l_right_summer_3_b;305..330:gfx_cone_tree_4l_right_fall_3_b;gfx_cone_tree_4l_right_winter_3_b;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_3_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_3_b;118..304:gfx_cone_tree_4l_right_winter_3_b;305..330:gfx_cone_tree_4l_right_spring_3_b;gfx_cone_tree_4l_right_summer_3_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_3,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_b_3_south;
+            2:gfx_cone_tree_4l_right_spring_3_b;3:gfx_cone_tree_4l_right_summer_3_b;4:gfx_cone_tree_4l_right_fall_3_b;5:gfx_cone_tree_4l_right_winter_3_b;
+            gfx_cone_tree_4l_right_spring_b_3_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_4_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_spring_4_b;118..304:gfx_cone_tree_4l_right_summer_4_b;305..330:gfx_cone_tree_4l_right_fall_4_b;gfx_cone_tree_4l_right_winter_4_b;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_4_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_right_fall_4_b;118..304:gfx_cone_tree_4l_right_winter_4_b;305..330:gfx_cone_tree_4l_right_spring_4_b;gfx_cone_tree_4l_right_summer_4_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_spring_b_4,param_seasons) {
+            1:gfx_cone_tree_4l_right_spring_b_4_south;
+            2:gfx_cone_tree_4l_right_spring_4_b;3:gfx_cone_tree_4l_right_summer_4_b;4:gfx_cone_tree_4l_right_fall_4_b;5:gfx_cone_tree_4l_right_winter_4_b;
+            gfx_cone_tree_4l_right_spring_b_4_north;
+          }
+        //
+        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_f) {
+          1:gfx_cone_tree_4l_right_spring_f_1;1:gfx_cone_tree_4l_right_spring_f_2;
+          1:gfx_cone_tree_4l_right_spring_f_3;1:gfx_cone_tree_4l_right_spring_f_4;
+        }
+        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_right_b) {
+          1:gfx_cone_tree_4l_right_spring_b_1;1:gfx_cone_tree_4l_right_spring_b_2;
+          1:gfx_cone_tree_4l_right_spring_b_3;1:gfx_cone_tree_4l_right_spring_b_4;
+        }
+      //
+  //*Left
+        //sprites
+          //spring
+            spriteset(gfx_cone_tree_4l_left_spring_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_spring_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_spring_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_spring_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,8,-3,1,0)}
+
+            spriteset(gfx_cone_tree_4l_left_spring_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_spring_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_spring_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_spring_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_spring_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,7,3,0,1)}
+          //summer
+            spriteset(gfx_cone_tree_4l_left_summer_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_summer_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_summer_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_summer_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,8,-3,1,0)}
+
+            spriteset(gfx_cone_tree_4l_left_summer_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_summer_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_summer_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_summer_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_summer_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,7,3,0,1)}
+          //fall
+            spriteset(gfx_cone_tree_4l_left_fall_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_fall_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_fall_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_fall_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,8,-3,1,0)}
+
+            spriteset(gfx_cone_tree_4l_left_fall_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_fall_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_fall_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,7,3,0,1)}
+            spriteset(gfx_cone_tree_4l_left_fall_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_fall_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,7,3,0,1)}
+          //winter
+            spriteset(gfx_cone_tree_4l_left_winter_1_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_winter_2_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (140,0,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_winter_3_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+              "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (280,280,0,190,8,-3,1,0)}
+            spriteset(gfx_cone_tree_4l_left_winter_4_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_f.png") {tmpl_catenary_single_bridgeless (420,280,0,190,8,-3,1,0)}
+
+          spriteset(gfx_cone_tree_4l_left_winter_1_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,7,3,0,1)}
+          spriteset(gfx_cone_tree_4l_left_winter_2_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (140,0,0,190,7,3,0,1)}
+          spriteset(gfx_cone_tree_4l_left_winter_3_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (280,280,0,190,7,3,0,1)}
+          spriteset(gfx_cone_tree_4l_left_winter_4_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+            "gfx/decorations/trees/DECO_cone_tree_winter_b.png") {tmpl_catenary_single_bridgeless (420,280,0,190,7,3,0,1)}
+        //
+        //front
+          //lights
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_1_north, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_spring_1_f;118..304:gfx_cone_tree_4l_left_summer_1_f;305..330:gfx_cone_tree_4l_left_fall_1_f;gfx_cone_tree_4l_left_winter_1_f;
+            }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_1_south, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_fall_1_f;118..304:gfx_cone_tree_4l_left_winter_1_f;305..330:gfx_cone_tree_4l_left_spring_1_f;gfx_cone_tree_4l_left_summer_1_f;
+            }
+            switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_1,param_seasons) {
+              1:gfx_cone_tree_4l_left_spring_f_1_south;
+              2:gfx_cone_tree_4l_left_spring_1_f;3:gfx_cone_tree_4l_left_summer_1_f;4:gfx_cone_tree_4l_left_fall_1_f;5:gfx_cone_tree_4l_left_winter_1_f;
+              gfx_cone_tree_4l_left_spring_f_1_north;
+            }
+              switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_2_north, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_spring_2_f;118..304:gfx_cone_tree_4l_left_summer_2_f;305..330:gfx_cone_tree_4l_left_fall_2_f;gfx_cone_tree_4l_left_winter_2_f;
+            }
+              switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_2_south, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_fall_2_f;118..304:gfx_cone_tree_4l_left_winter_2_f;305..330:gfx_cone_tree_4l_left_spring_2_f;gfx_cone_tree_4l_left_summer_2_f;
+            }
+            switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_2,param_seasons) {
+              1:gfx_cone_tree_4l_left_spring_f_2_south;
+              2:gfx_cone_tree_4l_left_spring_2_f;3:gfx_cone_tree_4l_left_summer_2_f;4:gfx_cone_tree_4l_left_fall_2_f;5:gfx_cone_tree_4l_left_winter_2_f;
+              gfx_cone_tree_4l_left_spring_f_2_north;
+            }
+              switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_3_north, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_spring_3_f;118..304:gfx_cone_tree_4l_left_summer_3_f;305..330:gfx_cone_tree_4l_left_fall_3_f;gfx_cone_tree_4l_left_winter_3_f;
+            }
+              switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_3_south, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_fall_3_f;118..304:gfx_cone_tree_4l_left_winter_3_f;305..330:gfx_cone_tree_4l_left_spring_3_f;gfx_cone_tree_4l_left_summer_3_f;
+            }
+            switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_3,param_seasons) {
+              1:gfx_cone_tree_4l_left_spring_f_3_south;
+              2:gfx_cone_tree_4l_left_spring_3_f;3:gfx_cone_tree_4l_left_summer_3_f;4:gfx_cone_tree_4l_left_fall_3_f;5:gfx_cone_tree_4l_left_winter_3_f;
+              gfx_cone_tree_4l_left_spring_f_3_north;
+            }
+              switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_4_north, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_spring_4_f;118..304:gfx_cone_tree_4l_left_summer_4_f;305..330:gfx_cone_tree_4l_left_fall_4_f;gfx_cone_tree_4l_left_winter_4_f;
+            }
+              switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_4_south, current_day_of_year){
+              97..117:gfx_cone_tree_4l_left_fall_4_f;118..304:gfx_cone_tree_4l_left_winter_4_f;305..330:gfx_cone_tree_4l_left_spring_4_f;gfx_cone_tree_4l_left_summer_4_f;
+            }
+            switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_f_4,param_seasons) {
+              1:gfx_cone_tree_4l_left_spring_f_4_south;
+              2:gfx_cone_tree_4l_left_spring_4_f;3:gfx_cone_tree_4l_left_summer_4_f;4:gfx_cone_tree_4l_left_fall_4_f;5:gfx_cone_tree_4l_left_winter_4_f;
+              gfx_cone_tree_4l_left_spring_f_4_north;
+            }
+        //
+        //back
+          switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_1_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_spring_1_b;118..304:gfx_cone_tree_4l_left_summer_1_b;305..330:gfx_cone_tree_4l_left_fall_1_b;gfx_cone_tree_4l_left_winter_1_b;
+          }
+          switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_1_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_fall_1_b;118..304:gfx_cone_tree_4l_left_winter_1_b;305..330:gfx_cone_tree_4l_left_spring_1_b;gfx_cone_tree_4l_left_summer_1_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_1,param_seasons) {
+            1:gfx_cone_tree_4l_left_spring_b_1_south;
+            2:gfx_cone_tree_4l_left_spring_1_b;3:gfx_cone_tree_4l_left_summer_1_b;4:gfx_cone_tree_4l_left_fall_1_b;5:gfx_cone_tree_4l_left_winter_1_b;
+            gfx_cone_tree_4l_left_spring_b_1_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_2_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_spring_2_b;118..304:gfx_cone_tree_4l_left_summer_2_b;305..330:gfx_cone_tree_4l_left_fall_2_b;gfx_cone_tree_4l_left_winter_2_b;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_2_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_fall_2_b;118..304:gfx_cone_tree_4l_left_winter_2_b;305..330:gfx_cone_tree_4l_left_spring_2_b;gfx_cone_tree_4l_left_summer_2_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_2,param_seasons) {
+            1:gfx_cone_tree_4l_left_spring_b_2_south;
+            2:gfx_cone_tree_4l_left_spring_2_b;3:gfx_cone_tree_4l_left_summer_2_b;4:gfx_cone_tree_4l_left_fall_2_b;5:gfx_cone_tree_4l_left_winter_2_b;
+            gfx_cone_tree_4l_left_spring_b_2_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_3_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_spring_3_b;118..304:gfx_cone_tree_4l_left_summer_3_b;305..330:gfx_cone_tree_4l_left_fall_3_b;gfx_cone_tree_4l_left_winter_3_b;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_3_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_fall_3_b;118..304:gfx_cone_tree_4l_left_winter_3_b;305..330:gfx_cone_tree_4l_left_spring_3_b;gfx_cone_tree_4l_left_summer_3_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_3,param_seasons) {
+            1:gfx_cone_tree_4l_left_spring_b_3_south;
+            2:gfx_cone_tree_4l_left_spring_3_b;3:gfx_cone_tree_4l_left_summer_3_b;4:gfx_cone_tree_4l_left_fall_3_b;5:gfx_cone_tree_4l_left_winter_3_b;
+            gfx_cone_tree_4l_left_spring_b_3_north;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_4_north, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_spring_4_b;118..304:gfx_cone_tree_4l_left_summer_4_b;305..330:gfx_cone_tree_4l_left_fall_4_b;gfx_cone_tree_4l_left_winter_4_b;
+          }
+            switch(FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_4_south, current_day_of_year){
+            97..117:gfx_cone_tree_4l_left_fall_4_b;118..304:gfx_cone_tree_4l_left_winter_4_b;305..330:gfx_cone_tree_4l_left_spring_4_b;gfx_cone_tree_4l_left_summer_4_b;
+          }
+          switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_spring_b_4,param_seasons) {
+            1:gfx_cone_tree_4l_left_spring_b_4_south;
+            2:gfx_cone_tree_4l_left_spring_4_b;3:gfx_cone_tree_4l_left_summer_4_b;4:gfx_cone_tree_4l_left_fall_4_b;5:gfx_cone_tree_4l_left_winter_4_b;
+            gfx_cone_tree_4l_left_spring_b_4_north;
+          }
+        //
+        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_f) {
+          1:gfx_cone_tree_4l_left_spring_f_1;1:gfx_cone_tree_4l_left_spring_f_2;
+          1:gfx_cone_tree_4l_left_spring_f_3;1:gfx_cone_tree_4l_left_spring_f_4;
+        }
+        random_switch (FEAT_ROADTYPES,SELF,gfx_cone_tree_4l_left_b) {
+          1:gfx_cone_tree_4l_left_spring_b_1;1:gfx_cone_tree_4l_left_spring_b_2;
+          1:gfx_cone_tree_4l_left_spring_b_3;1:gfx_cone_tree_4l_left_spring_b_4;
         }
     //
   //*Sakura */

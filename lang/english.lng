@@ -104,3 +104,8 @@ STR_DECO_SHUTOKO_LEFT:Sound Barrier L
 STR_DECO_CRASH_BARRIER:Crash Barrier
 STR_DECO_SLIP_R:Slip Road Overlap R
 STR_DECO_SLIP_L:Slip Road Overlap L
+
+# Trams
+STR_TRAM:Tram 
+STR_MONO:Monorail
+STR_SUSMON:Suspended Monorail

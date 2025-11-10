@@ -27,8 +27,8 @@
   spriteset(gfx_gui_street_urban_paved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,250,0)}
   spriteset(gfx_gui_street_urban_paved_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,275,0)}
   spriteset(gfx_gui_street_urban_paved_sakura, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,300,0)}
-  spriteset(gfx_gui_street_avenue_4l_1_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,325,0)}
-  spriteset(gfx_gui_street_avenue_4l_1_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,350,0)}
+  spriteset(gfx_gui_street_4l_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,325,0)}
+  spriteset(gfx_gui_street_4l_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,350,0)}
   spriteset(gfx_gui_street_avenue_4l_2_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,375,0)}
   spriteset(gfx_gui_street_avenue_4l_2_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,400,0)}
   spriteset(gfx_gui_street_avenue_6l_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (85,425,0)}
@@ -44,3 +44,27 @@ spriteset(gfx_gui_industrial_firs_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"
 spriteset(gfx_gui_industrial_firs_cobble, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,150,0)}
 spriteset(gfx_gui_industrial_isr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,175,0)}
 spriteset(gfx_gui_industrial_auz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (170,200,0)}
+
+//*Trams */
+spriteset(gfx_gui_tram_old, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,100,0)}
+spriteset(gfx_gui_tram, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,125,0)}
+spriteset(gfx_gui_tram_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,150,0)}
+spriteset(gfx_gui_mono, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,175,0)}
+spriteset(gfx_gui_sus_mono, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,200,0)}
+spriteset(gfx_gui_linimo, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,225,0)}
+spriteset(gfx_gui_guideway, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,250,0)}
+spriteset(gfx_gui_cable, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,275,0)}
+spriteset(gfx_gui_pipe, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (255,300,0)}
+
+spriteset(gfx_gui_lights_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,100,0)}
+spriteset(gfx_gui_lights_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,125,0)}
+spriteset(gfx_gui_power, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,150,0)}
+spriteset(gfx_gui_sakura, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,175,0)}
+spriteset(gfx_gui_tall_cone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,200,0)}
+spriteset(gfx_gui_fence, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,225,0)}
+spriteset(gfx_gui_safety, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,250,0)}
+spriteset(gfx_gui_shutoko_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,275,0)}
+spriteset(gfx_gui_shutoko_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,300,0)}
+spriteset(gfx_gui_chevron_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,325,0)}
+spriteset(gfx_gui_chevron_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,350,0)}
+spriteset(gfx_gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,375,0)}
