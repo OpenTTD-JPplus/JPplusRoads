@@ -1,7 +1,7 @@
 item(FEAT_ROADTYPES, rd_street_4l_r,29) {
     property {
         sort_order: 29;
-        label: "ST13";
+        label: "ST14";
         powered_roadtype_list: [REG_ROAD];
 
         introduction_date:date(1950,1,1);
@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, rd_street_4l_r,29) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
+      direction_markings:gfx_arrows_4l_r;
         gui:gfx_gui_street_4l_r;
         underlay: gfx_street_4l_r_main;
       catenary_front:gfx_cone_tree_4l_right_f;
@@ -28,7 +29,7 @@ item(FEAT_ROADTYPES, rd_street_4l_r,29) {
 item(FEAT_ROADTYPES, rd_street_4l_l,30) {
     property {
         name: string(STR_ROAD_STREET_4L);
-        label: "ST14";
+        label: "ST15";
         sort_order: 30;
         powered_roadtype_list: [REG_ROAD];
 
@@ -44,6 +45,7 @@ item(FEAT_ROADTYPES, rd_street_4l_l,30) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
+      direction_markings:gfx_arrows_4l_l;
       depots:gfx_depot_reldred_choice;
         gui:gfx_gui_street_4l_l;
         underlay: gfx_street_4l_l_main;

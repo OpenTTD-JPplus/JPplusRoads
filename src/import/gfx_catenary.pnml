@@ -1,0 +1,6 @@
+spriteset(gfx_catenary_tram_wood_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_tram_wood_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_trolley_wood_f, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_trolley_wood_f.png") {tmpl_catenary (0,0,0,190,0)}
+spriteset(gfx_catenary_wood_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/catenary/CAT_wood_b.png") {tmpl_catenary (0,0,0,190,0)}

@@ -1,2 +1,12 @@
 spriteset(gfx_arrows_2l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/arrows/arrows_2l.png") {tmpl_arrows ()}
+    "gfx/arrows/arrows_2l.png") {tmpl_arrows (0)}
+
+spriteset(gfx_arrows_4l_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/arrows/arrows_4l.png") {tmpl_arrows (100)}
+spriteset(gfx_arrows_4l_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/arrows/arrows_4l.png") {tmpl_arrows (0)}
+
+spriteset(gfx_arrows_6l_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/arrows/arrows_6l.png") {tmpl_arrows (0)}
+spriteset(gfx_arrows_6l_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/arrows/arrows_6l.png") {tmpl_arrows (100)}

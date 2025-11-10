@@ -103,10 +103,40 @@ item(FEAT_ROADTYPES, road_urban_asphalt,24) {
     // gui: gui_normal;
   }
 }
+item(FEAT_ROADTYPES, road_urban_asphalt_elec,25) {
+  property {
+    name: string(STR_ROAD_CATENARY,string(STR_ROAD_PRIMARY));
+    label: "ST10";
+    sort_order: 25;
+    powered_roadtype_list: [REG_ROAD];
+
+    introduction_date:date(1950,1,1);
+    speed_limit:40 km/h;
+    map_colour:VAR_PRIMARY;
+    
+    toolbar_caption: string(STR_ROAD_CATENARY,string(STR_ROAD_PRIMARY));
+    menu_text: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_PRIMARY)));
+    build_window_caption: string(STR_NEW_ENGINE_ROAD);
+    autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+    new_engine_text: string(STR_BUILD_VEHICLE);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+  }
+  graphics {
+    gui: gfx_gui_street_urban;
+    catenary_front:gfx_catenary_trolley_wood_f;
+    catenary_back:gfx_catenary_wood_b;
+    underlay: sw_rd_primary_asph_so_gfx;
+    bridge_surfaces: sw_bridge_asph_so_gfx_main;
+    direction_markings:gfx_arrows_2l;
+    depots: gfx_depot_reldred_choice;
+    // roadstops: roadstop_underlay_red;
+    // gui: gui_normal;
+  }
+}
 item(FEAT_ROADTYPES, rd_urban_primary_tile,26) {
   property {
     sort_order: 26;
-    label: "ST10";
+    label: "ST11";
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1950,1,1);
@@ -133,7 +163,7 @@ item(FEAT_ROADTYPES, rd_urban_primary_tile,26) {
 item(FEAT_ROADTYPES, rd_urban_primary_tile_tree,27) {
   property {
     sort_order: 27;
-    label: "ST11";
+    label: "ST12";
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1930,1,1);
@@ -161,7 +191,7 @@ item(FEAT_ROADTYPES, rd_urban_primary_tile_tree,27) {
 item(FEAT_ROADTYPES, rd_urban_primary_tile_sakura,28) {
   property {
     sort_order: 28;
-    label: "ST12";
+    label: "ST13";
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1930,1,1);
