@@ -5,10 +5,9 @@
     sw_road_rural_asphalt_1_main;
   }
   switch(FEAT_ROADTYPES,SELF,road_generic_city_gfx,current_year){
-    0..1849:sw_road_dirt_main;
+    0..1849:gfx_rd_unpaved;
     1850..1934:sw_road_stone_main;
-    1935..1959:sw_road_district_main;
-    sw_road_district_main;
+    sw_rd_secondary_main_gfx;
   }
   switch(FEAT_ROADTYPES,SELF,road_generic_main,town_zone){
     1..4:road_generic_city_gfx;
@@ -20,35 +19,29 @@
     sw_bridge_rural_asphalt_1_new_main;
   }
   switch(FEAT_ROADTYPES,SELF,bridge_generic_city_gfx,current_year){
-    0..1934:sw_bridge_stone_main;
-    1935..1959:sw_bridge_district_main;
-    sw_bridge_district_main;
+    0..1934:sw_bridge_stone_nm;
+    sw_bridge_asph_sw_gfx_main;
   }
   switch(FEAT_ROADTYPES,SELF,sw_bridge_generic_main,town_zone){
     1..4:bridge_generic_rural_gfx;
     bridge_generic_city_gfx;
   }
 
-// switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
-    
-//   }
-//
 item(FEAT_ROADTYPES, road_generic, 0) {
     property {
-        name: string(STR_ROAD_DIRT);
         label: "ROAD";
         powered_roadtype_list: [REG_ROAD];
-        //introduces_roadtype_list: [REG_ROAD];
 
         introduction_date:date(0,1,1);
         speed_limit:50 km/h;
-        map_colour:14;
+        map_colour:VAR_ALLEY;
 
-        toolbar_caption: string(STR_ROAD_DIRT);
-        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_DIRT));
-        build_window_caption: string(STR_ROAD_DIRT);
-        autoreplace_text: string(STR_ROAD_DIRT);
-        new_engine_text: string(STR_ROAD_DIRT);
+        name: string(STR_GEN_STREET,string(STR_ROAD_STONE));
+        toolbar_caption: string(STR_GEN_STREET,string(STR_ROAD_STONE));
+        menu_text: string(STR_GEN_STREET,string(STR_ROAD_STONE));
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
         roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
         sort_order: 0;
     }

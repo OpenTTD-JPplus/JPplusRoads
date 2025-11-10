@@ -8,7 +8,7 @@
 //
 item(FEAT_ROADTYPES, road_rural_dirt,2) {
     property {
-        name: string(STR_ROAD_DIRT);
+        name: string(STR_ROAD_UNPAVED);
         label: "RRA2";
         powered_roadtype_list: [REG_ROAD];
         ////introduces_roadtype_list: [REG_ROAD];
@@ -17,11 +17,11 @@ item(FEAT_ROADTYPES, road_rural_dirt,2) {
         speed_limit:30 km/h;
         map_colour:14;
 
-        toolbar_caption: string(STR_ROAD_DIRT);
-        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_DIRT));
-        build_window_caption: string(STR_ROAD_DIRT);
-        autoreplace_text: string(STR_ROAD_DIRT);
-        new_engine_text: string(STR_ROAD_DIRT);
+        toolbar_caption: string(STR_GEN_ROAD,string(STR_ROAD_UNPAVED));
+        menu_text: string(STR_GEN_ROAD,string(STR_ROAD_UNPAVED));
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 2;
     }

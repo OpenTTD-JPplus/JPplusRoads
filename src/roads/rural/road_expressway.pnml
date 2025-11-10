@@ -29,9 +29,9 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
         
         toolbar_caption: string(STR_ROAD_EXPRESS);
         menu_text: string(STR_ROAD_EXPRESS);
-        build_window_caption: string(STR_ROAD_EXPRESS);
-        autoreplace_text: string(STR_ROAD_EXPRESS);
-        new_engine_text: string(STR_ROAD_EXPRESS);
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {

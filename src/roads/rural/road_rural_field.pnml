@@ -17,9 +17,9 @@ item(FEAT_ROADTYPES, road_rural_field,1) {
 
         toolbar_caption: string(STR_ROAD_FIELD);
         menu_text: string(STR_GEN_ROAD,string(STR_ROAD_FIELD));
-        build_window_caption: string(STR_ROAD_FIELD);
-        autoreplace_text: string(STR_ROAD_FIELD);
-        new_engine_text: string(STR_ROAD_FIELD);
+        build_window_caption: string(STR_NEW_ENGINE_ROAD);
+        autoreplace_text: string(STR_AUTOREPLACE_ROAD);
+        new_engine_text: string(STR_BUILD_VEHICLE);
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
         sort_order: 1;
     }
