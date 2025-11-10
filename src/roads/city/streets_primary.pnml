@@ -18,6 +18,7 @@ item(FEAT_ROADTYPES, street_primary_asph,24) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:sw_power_poles_main;
     underlay: sw_street_primary_asph_so_main;
     bridge_surfaces: sw_bridge_street_asph_so_main;
