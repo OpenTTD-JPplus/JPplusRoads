@@ -14,6 +14,7 @@
 #include "import/gfx_depots.pnml"
 #include "import/gfx_stops.pnml"
 #include "import/gfx_tunnels.pnml"
+#include "import/gfx_crossings.pnml"
 
 #include "roads/city/streets_gfx.pnml"
 #include "roads/city/avenues_gfx.pnml"

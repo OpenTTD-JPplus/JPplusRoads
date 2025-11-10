@@ -80,7 +80,7 @@ item(FEAT_ROADTYPES, road_asphalt_improved,9) {
   graphics {
     catenary_front:deco_empty;
     catenary_back:sw_light_poles_metal_b_main;
-    underlay: gfx_road_rural_sw_asph_new;
+    underlay: sw_road_rural_sw_asph_new;
     bridge_surfaces:gfx_bridge_rural_asphalt_sw_1;
    
     direction_markings:gfx_arrows_2l;

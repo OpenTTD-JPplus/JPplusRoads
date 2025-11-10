@@ -1,10 +1,20 @@
 //*Sprites */
   //*Field
-    spriteset(sw_road_rural_field_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_road_unpaved_path, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/pool/road_rural_field_nm.png") {tmpl_underlay (0,0,0,0,0)}
+
+    switch (FEAT_ROADTYPES,SELF,sw_road_rural_field_main,railtype<64) {
+      1:sw_crossing_road_unpaved_path;
+      gfx_road_unpaved_path;
+    }
   //*Dirt
-    spriteset(sw_road_rural_dirt_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(sw_road_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/pool/road_rural_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
+    
+    switch (FEAT_ROADTYPES,SELF,sw_road_rural_dirt_main,railtype<64) {
+      1:sw_crossing_road_unpaved;
+      sw_road_unpaved;
+    }
   //
   //*Stone
     //Left Hand
@@ -178,11 +188,16 @@
       1..2:gfx_road_rural_dw_stone;
       gfx_road_rural_nm_stone;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_road_rural_stone_main,current_year){
+    switch(FEAT_ROADTYPES,SELF,sw_road_rural_stone_main_road,current_year){
       0..1965:gfx_road_nm_rural_nm_stone;
       1966..1986:sw_road_rural_dw_stone_tz_1;
       sw_road_rural_dw_stone_tz_2;
     }
+    switch (FEAT_ROADTYPES,SELF,sw_road_rural_stone_main,railtype<64) {
+      1:sw_crossing_road_stone_main;
+      sw_road_rural_stone_main_road;
+    }
+    
   //*Concrete */
     switch(FEAT_ROADTYPES,SELF,sw_road_rural_dw_conc_tz_1,town_zone){
       0:gfx_road_rural_nm_conc;
@@ -193,10 +208,14 @@
       1..2:gfx_road_rural_dw_conc;
       gfx_road_rural_nm_conc;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_road_rural_conc_main,current_year){
+    switch(FEAT_ROADTYPES,SELF,sw_road_rural_conc_main_road,current_year){
       0..1962:gfx_road_nm_rural_nm_conc;
       1963..1985:sw_road_rural_dw_conc_tz_1;
       sw_road_rural_dw_conc_tz_2;
+    }
+    switch (FEAT_ROADTYPES,SELF,sw_road_rural_conc_main,railtype<64) {
+      1:sw_crossing_road_conc_main;
+      sw_road_rural_conc_main_road;
     }
   //*Asphalt */
     switch(FEAT_ROADTYPES,SELF,sw_road_rural_dw_asph_tz_1,town_zone){
@@ -208,11 +227,18 @@
       1:gfx_road_rural_dw_asph;
       gfx_road_rural_nm_asph;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_road_rural_asph_main,current_year){
+    switch(FEAT_ROADTYPES,SELF,sw_road_rural_asph_main_road,current_year){
       0..1959:gfx_road_nm_rural_nm_asph;
       1960..1984:sw_road_rural_dw_asph_tz_1;
       sw_road_rural_dw_asph_tz_2;
     }
+    switch (FEAT_ROADTYPES,SELF,sw_road_rural_asph_main,railtype<64) {
+      1:sw_crossing_road_asph_main;
+      sw_road_rural_asph_main_road;
+    }
+    //Modern
+    switch (FEAT_ROADTYPES,SELF,sw_road_rural_sw_asph_new,railtype<64) {
+      1:sw_crossing_road_asph_new_main;
+      gfx_road_rural_sw_asph_new;
+    }
 //
-
-  

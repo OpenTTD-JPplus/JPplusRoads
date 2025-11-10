@@ -19,7 +19,7 @@ item(FEAT_ROADTYPES, street_unpaved,16) {
   graphics {
     catenary_front:sw_light_poles_gas_f_main;
     catenary_back:sw_light_poles_gas_b_main;
-    underlay: gfx_rd_unpaved;
+    underlay: sw_street_unpaved;
     bridge_surfaces:gfx_bridge_street_stone_nm;
     direction_markings:gfx_arrows_2l;
     gui:gui_street_dirt;
@@ -48,7 +48,7 @@ item(FEAT_ROADTYPES, street_stone,18) {
   graphics {
     catenary_front:sw_light_poles_gas_f_main;
     catenary_back:sw_light_poles_gas_b_main;
-    underlay: gfx_street_stone_nm_def;
+    underlay: sw_street_stone;
     bridge_surfaces:gfx_bridge_street_stone_nm;
     direction_markings:gfx_arrows_2l;
     gui:gui_street_stone;
@@ -77,7 +77,7 @@ item(FEAT_ROADTYPES, street_stone_elec,19) {
   graphics {
     catenary_front:sw_catenary_trolley_wood_f;
     catenary_back:gfx_catenary_wood_b;
-    underlay: gfx_street_stone_nm_def;
+    underlay: sw_street_stone;
     bridge_surfaces:gfx_bridge_street_stone_nm;
 
     direction_markings:gfx_arrows_2l;
