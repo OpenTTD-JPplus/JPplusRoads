@@ -379,7 +379,7 @@
   //
   //*Old */
     spriteset(gfx_def_rd_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/pool/road_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
+    "gfx/roads/road_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
     spriteset(gfx_snow_rd_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/road_snow_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
     switch(FEAT_ROADTYPES,SELF,gfx_rd_unpaved,terrain_type){

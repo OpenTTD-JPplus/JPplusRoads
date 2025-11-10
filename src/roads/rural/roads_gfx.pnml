@@ -1,7 +1,7 @@
 //*Sprites */
   //*Field
     spriteset(gfx_def_road_unpaved_path, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/pool/road_rural_field_nm.png") {tmpl_underlay (0,0,0,0,0)}
+    "gfx/roads/road_rural_field_nm.png") {tmpl_underlay (0,0,0,0,0)}
     spriteset(gfx_snow_road_unpaved_path, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/road_snow_rural_field_nm.png") {tmpl_underlay (0,0,0,0,0)}
     switch(FEAT_ROADTYPES,SELF,gfx_road_unpaved_path,terrain_type){
@@ -14,7 +14,7 @@
     }
   //*Dirt
     spriteset(gfx_road_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/pool/road_rural_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
+    "gfx/roads/road_rural_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
     spriteset(gfx_snow_road_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/road_snow_rural_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
     switch(FEAT_ROADTYPES,SELF,sw_road_unpaved,terrain_type){

@@ -20,71 +20,283 @@ replace lights_remove(1406  , "gfx/gfx_placeholder.png") {
 	[ 0,0, 1,1, 0,  0]
 }
 
-replace road_underlay_1(1313, "gfx/misc/gfx_grass_temp.png") {
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-  //*X/TCrossings 1315
-	[ 0,0, 64,31, -31,  0] //X
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0] 
-	[ 0,0, 64,31, -31,  0] 
-  
-  //*Curves 1320
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-}
-replace road_underlay_2(1324, "gfx/misc/gfx_grass_temp.png") {
-	[ 130,0, 64,39, -31,  -8]}
-replace road_underlay_3(1325, "gfx/misc/gfx_grass_temp.png") {
-	[ 0,59, 64,23, -33,  0]}
-replace road_underlay_4(1326, "gfx/misc/gfx_grass_temp.png") {
-	[ 65,59, 64,23, -33,  0]}
-replace road_underlay_5(1327, "gfx/misc/gfx_grass_temp.png") {
-	[ 65,0, 64,39, -31,  -8]}
+if(param_grass_style==0){
+  replace road_underlay_1(1313, "gfx/misc/gfx_grass_temp.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1315
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1320
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay_2(1324, "gfx/misc/gfx_grass_temp.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay_3(1325, "gfx/misc/gfx_grass_temp.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay_4(1326, "gfx/misc/gfx_grass_temp.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay_5(1327, "gfx/misc/gfx_grass_temp.png") {
+    [ 65,0, 64,39, -31,  -8]}
 
-replace road_underlay_6(1328, "gfx/misc/gfx_grass_temp.png") {
-  //*Dead ends 1328
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-}
-//*Urban
-replace road_underlay_7(1329, "gfx/misc/gfx_grass_temp.png") {
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-  //*X/TCrossings 1331
-	[ 0,0, 64,31, -31,  0] //X
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0] 
-	[ 0,0, 64,31, -31,  0] 
-  
-  //*Curves 1336
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-}
-replace road_underlay_8(1343, "gfx/misc/gfx_grass_temp.png") {
-	[ 130,0, 64,39, -31,  -8]}
-replace road_underlay_9(1344, "gfx/misc/gfx_grass_temp.png") {
-	[ 0,59, 64,23, -33,  0]}
-replace road_underlay_10(1345, "gfx/misc/gfx_grass_temp.png") {
-	[ 65,59, 64,23, -33,  0]}
-replace road_underlay_11(1346, "gfx/misc/gfx_grass_temp.png") {
-	[ 65,0, 64,39, -31,  -8]}
+  replace road_underlay_6(1328, "gfx/misc/gfx_grass_temp.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  //*Urban
+  replace road_underlay_7(1329, "gfx/misc/gfx_grass_temp.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1331
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1336
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay_8(1343, "gfx/misc/gfx_grass_temp.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay_9(1344, "gfx/misc/gfx_grass_temp.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay_10(1345, "gfx/misc/gfx_grass_temp.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay_11(1346, "gfx/misc/gfx_grass_temp.png") {
+    [ 65,0, 64,39, -31,  -8]}
 
-replace road_underlay_12(1347, "gfx/misc/gfx_grass_temp.png") {
-  //*Dead ends 1328
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
-	[ 0,0, 64,31, -31,  0]
+  replace road_underlay_12(1347, "gfx/misc/gfx_grass_temp.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+}
+if(param_grass_style==1){
+  replace road_underlay_1_1(1313, "gfx/misc/gfx_grass_trop.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1315
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1320
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay_1_2(1324, "gfx/misc/gfx_grass_trop.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay_1_3(1325, "gfx/misc/gfx_grass_trop.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay_1_4(1326, "gfx/misc/gfx_grass_trop.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay_1_5(1327, "gfx/misc/gfx_grass_trop.png") {
+    [ 65,0, 64,39, -31,  -8]}
+
+  replace road_underlay_1_6(1328, "gfx/misc/gfx_grass_trop.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  //*Urban
+  replace road_underlay_1_7(1329, "gfx/misc/gfx_grass_trop.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1331
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1336
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay_1_8(1343, "gfx/misc/gfx_grass_trop.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay_1_9(1344, "gfx/misc/gfx_grass_trop.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay_1_10(1345, "gfx/misc/gfx_grass_trop.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay_1_11(1346, "gfx/misc/gfx_grass_trop.png") {
+    [ 65,0, 64,39, -31,  -8]}
+
+  replace road_underlay_1_12(1347, "gfx/misc/gfx_grass_trop.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+}
+if(param_grass_style==2){
+  replace road_underlay2__1(1313, "gfx/misc/gfx_grass_arctic.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1315
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1320
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay2__2(1324, "gfx/misc/gfx_grass_arctic.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay2__3(1325, "gfx/misc/gfx_grass_arctic.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay2__4(1326, "gfx/misc/gfx_grass_arctic.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay2__5(1327, "gfx/misc/gfx_grass_arctic.png") {
+    [ 65,0, 64,39, -31,  -8]}
+
+  replace road_underlay2__6(1328, "gfx/misc/gfx_grass_arctic.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  //*Urban
+  replace road_underlay2__7(1329, "gfx/misc/gfx_grass_arctic.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1331
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1336
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay2__8(1343, "gfx/misc/gfx_grass_arctic.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay2__9(1344, "gfx/misc/gfx_grass_arctic.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay2__10(1345, "gfx/misc/gfx_grass_arctic.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay2__11(1346, "gfx/misc/gfx_grass_arctic.png") {
+    [ 65,0, 64,39, -31,  -8]}
+
+  replace road_underlay2__12(1347, "gfx/misc/gfx_grass_arctic.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+}
+if(param_grass_style==3){
+  replace road_underlay_3_1(1313, "gfx/misc/gfx_grass_japanset.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1315
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1320
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay_3_2(1324, "gfx/misc/gfx_grass_japanset.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay_3_3(1325, "gfx/misc/gfx_grass_japanset.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay_3_4(1326, "gfx/misc/gfx_grass_japanset.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay_3_5(1327, "gfx/misc/gfx_grass_japanset.png") {
+    [ 65,0, 64,39, -31,  -8]}
+
+  replace road_underlay_3_6(1328, "gfx/misc/gfx_grass_japanset.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  //*Urban
+  replace road_underlay_3_7(1329, "gfx/misc/gfx_grass_japanset.png") {
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    //*X/TCrossings 1331
+    [ 0,0, 64,31, -31,  0] //X
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0] 
+    [ 0,0, 64,31, -31,  0] 
+    
+    //*Curves 1336
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
+  replace road_underlay_3_8(1343, "gfx/misc/gfx_grass_japanset.png") {
+    [ 130,0, 64,39, -31,  -8]}
+  replace road_underlay_3_9(1344, "gfx/misc/gfx_grass_japanset.png") {
+    [ 0,59, 64,23, -31,  0]}
+  replace road_underlay_3_10(1345, "gfx/misc/gfx_grass_japanset.png") {
+    [ 65,59, 64,23, -31,  0]}
+  replace road_underlay_3_11(1346, "gfx/misc/gfx_grass_japanset.png") {
+    [ 65,0, 64,39, -31,  -8]}
+
+  replace road_underlay_3_12(1347, "gfx/misc/gfx_grass_japanset.png") {
+    //*Dead ends 1328
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+    [ 0,0, 64,31, -31,  0]
+  }
 }

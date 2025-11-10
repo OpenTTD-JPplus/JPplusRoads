@@ -84,41 +84,23 @@
         };
       }
   }
-//*Grass */
-  // param 7 { 
-  //   param_grass_style {
-  //     type: int;
-  //     name: string(STR_PARAM_GRASS);
-  //     desc: string(STR_PARAM_GRASS);
-  //     min_value: 0;
-  //     max_value: 4;
-  //     def_value: 2;
-  //     names: {
-  //         0: string(STR_PARAM_GRASS_1);
-  //         1: string(STR_PARAM_GRASS_2);
-  //         2: string(STR_PARAM_GRASS_3);
-  //         3: string(STR_PARAM_GRASS_4);
-  //         4: string(STR_PARAM_GRASS_5);
-  //       };
-  //     }
-  // }
-  // param 8 { HOKKAIDO/KANTO snow overlay type
-  //   param_snow_style {
-  //     type: int;
-  //     name: string(STR_PARAM_GRASS);
-  //     desc: string(STR_PARAM_GRASS);
-  //     min_value: 0;
-  //     max_value: 4;
-  //     def_value: 2;
-  //     names: {
-  //         0: string(STR_PARAM_GRASS_1);
-  //         1: string(STR_PARAM_GRASS_2);
-  //         2: string(STR_PARAM_GRASS_3);
-  //         3: string(STR_PARAM_GRASS_4);
-  //         4: string(STR_PARAM_GRASS_5);
-  //       };
-  //     }
-  // }
+// *Grass */
+  param 7 { 
+    param_grass_style {
+      type: int;
+      name: string(STR_PARAM_GRASS);
+      desc: string(STR_PARAM_GRASS);
+      min_value: 0;
+      max_value: 3;
+      def_value: 2;
+      names: {
+          0: string(STR_PARAM_GRASS_1);
+          1: string(STR_PARAM_GRASS_2);
+          2: string(STR_PARAM_GRASS_3);
+          3: string(STR_PARAM_GRASS_4);
+        };
+      }
+  }
 //*Catenary Style
   param 8 { 
     param_catenary_style {

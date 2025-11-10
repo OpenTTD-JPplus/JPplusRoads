@@ -37,6 +37,10 @@ STR_PARAM_SEASONS_5:Fall
 STR_PARAM_SEASONS_6:Winter (Depression)
 
 STR_PARAM_GRASS:Grass Style
+STR_PARAM_GRASS_1:OpenGFX2 Temperate
+STR_PARAM_GRASS_2:OpenGFX2 Tropical
+STR_PARAM_GRASS_3:OpenGFX2 Arctic
+STR_PARAM_GRASS_4:JapanSet
 
 STR_PARAM_WIRE:Select Catenary Style
 STR_PARAM_WIRE_DESC:Select "White" for the default OTTD look, or black for a more modern look.
