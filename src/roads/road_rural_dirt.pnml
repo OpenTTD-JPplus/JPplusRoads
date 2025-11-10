@@ -27,7 +27,7 @@ item(FEAT_ROADTYPES, road_rural_dirt, 2) {
     }
   graphics {
         underlay: sw_road_rural_dirt_main;
-        catenary_front:deco_empty;
+        catenary_back:light_poles;
         bridge_surfaces:sw_bridge_rural_stone_main;
     }
 }

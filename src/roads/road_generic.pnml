@@ -7,7 +7,6 @@
   switch(FEAT_ROADTYPES,SELF,road_generic_city_gfx,current_year){
     0..1849:sw_road_dirt_main;
     1850..1934:sw_road_stone_main;
-    // 1935..1959:sw_road_concrete_main;
     1935..1959:sw_road_district_main;
     sw_road_district_main;
   }
@@ -50,12 +49,12 @@ item(FEAT_ROADTYPES, road_generic, 0) {
         build_window_caption: string(STR_ROAD_DIRT);
         autoreplace_text: string(STR_ROAD_DIRT);
         new_engine_text: string(STR_ROAD_DIRT);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
         sort_order: 0;
     }
   graphics {
         underlay: road_generic_main;
-        catenary_front:deco_empty;
+        catenary_back:deco_empty;
         bridge_surfaces:sw_bridge_generic_main;
     }
 }

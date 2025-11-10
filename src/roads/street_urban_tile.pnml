@@ -2,7 +2,7 @@
   spriteset(road_urban_tile_so_def_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (0,0,0,0,0)}
   spriteset(road_urban_tile_so_def_conc_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_urban_tile_conc_so.png") {tmpl_underlay_2 (140,0,0,130,0)}
 
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_1){
     3:road_urban_tile_so_def_conc;
@@ -14,9 +14,9 @@ random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_1){
   spriteset(road_urban_tile_so_def_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (0,0,0,130,0)}
   spriteset(road_urban_tile_so_def_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (0,0,0,260,0)}
+  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (140,0,0,260,0)}
   spriteset(road_urban_tile_so_speed, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (140,0,0,390,0)}
+  "gfx/roads/pool/road_urban_tile_so.png") {tmpl_underlay_2 (280,0,0,390,0)}
 //
 random_switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main_2){
     1:road_urban_tile_so_def;
@@ -48,13 +48,13 @@ item(FEAT_ROADTYPES, road_urban_tile, 26) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
-        catenary_front:deco_empty;
+        catenary_back:power_poles_restricted;
         underlay: sw_road_urban_tile_so_main;
         // depots: depot_normal_road;
         bridge_surfaces: sw_bridge_2l_so;
         // roadstops: roadstop_underlay_red;
         // gui: gui_normal;
-        // catenary_back:power_poles;
+        // catenary_back:power_poles_restricted;
         // direction_markings: st_direction_markings;
     }
 }
