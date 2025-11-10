@@ -1,3 +1,4 @@
-
-*.cache
-*.cacheindex
+nmlc.exe
+pybuild.bat
+.nmlcache/
+misc/

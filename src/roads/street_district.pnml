@@ -1,0 +1,76 @@
+//*No Markings
+  spriteset(road_district_nm_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_district_nm_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_nm.png") {tmpl_underlay_2 (140,0,0,0,0)}
+  spriteset(road_district_nm_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_nm.png") {tmpl_underlay_2 (280,0,0,0,0)}
+
+random_switch(FEAT_ROADTYPES,SELF,sw_road_district_no_markings_gfx){
+    2:road_district_nm_def;
+    1:road_district_nm_diamond;
+    1:road_district_nm_manhole;
+  }
+//
+//*Dashed White
+  spriteset(road_district_dw_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_dw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_district_dw_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_dw.png") {tmpl_underlay_2 (140,0,0,0,0)}
+  spriteset(road_district_dw_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_dw.png") {tmpl_underlay_2 (280,0,0,0,0)}
+
+  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_dashed_white_gfx){
+    2:road_district_dw_def;
+    1:road_district_dw_manhole;
+    1:road_district_dw_diamond;
+  }
+//
+//*Solid White
+  spriteset(road_district_sw_def, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_district_sw_manhole, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_sw.png") {tmpl_underlay_2 (140,0,0,0,0)}
+  spriteset(road_district_sw_diamond, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_district_sw.png") {tmpl_underlay_2 (280,0,0,0,0)}
+
+  random_switch(FEAT_ROADTYPES,SELF,sw_road_district_solid_white_gfx){
+    2:road_district_sw_def;
+    1:road_district_sw_manhole;
+    1:road_district_sw_diamond;
+  }
+//
+switch(FEAT_ROADTYPES,SELF,sw_road_district_main,town_zone){
+    3..4:sw_road_district_solid_white_gfx;
+    1..2:sw_road_district_dashed_white_gfx;
+    sw_road_district_no_markings_gfx;
+  }
+// switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
+    
+//   }
+//
+item(FEAT_ROADTYPES, road_district, 23) {
+    property {
+        name: string(STR_ROAD_DISTRICT);
+        label: "ROAD";//SDS2
+        sort_order: 32;
+        powered_roadtype_list: [REG_ROAD];
+        introduces_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:40 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_DISTRICT);
+        menu_text: string(STR_GEN_STREET,string(STR_ROAD_DISTRICT));
+        build_window_caption: string(STR_ROAD_DISTRICT);
+        autoreplace_text: string(STR_ROAD_DISTRICT);
+        new_engine_text: string(STR_ROAD_DISTRICT);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 23;
+    }
+  graphics {
+        underlay: sw_road_district_main;
+        catenary_front:deco_empty;
+    }
+}

@@ -1,0 +1,13 @@
+#include "import/header.pnml"
+#include "import/templates.pnml"
+#include "import/roadTable.pnml"
+// #include "import/gui.pnml"
+
+#include "import/trees.pnml"
+#include "import/bridges.pnml"
+
+#include "roads/street_district.pnml"
+#include "roads/street_urban.pnml"
+#include "roads/street_urban_tile.pnml"
+#include "roads/street_urban_tile_trees.pnml"
+#include "roads/street_6L_avenue.pnml"
