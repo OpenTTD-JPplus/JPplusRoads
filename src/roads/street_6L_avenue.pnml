@@ -1,30 +1,103 @@
-//White, Dashed
-  spriteset(road_avenue_6l_r_g_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+//def
+  spriteset(road_avenue_6l_2_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  
+  spriteset(road_avenue_6l_2_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (0,0,0,130,0)}
-  spriteset(road_avenue_6l_r_g_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (0,0,0,260,0)}
-  random_switch(FEAT_ROADTYPES,SELF,road_avenue_6l_r_g){
-    1:road_avenue_6l_r_g_1;
-    1:road_avenue_6l_r_g_2;
-  }
-  // spriteset(road_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  // "gfx/roads/pool/road_avenue_6l_asphalt_1_l.png") {tmpl_underlay_2 (0,0,0,0,0)}
-  // spriteset(road_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  // "gfx/roads/pool/road_avenue_6l_asphalt_2_l.png") {tmpl_underlay_2 (0,0,0,0,0)}
-  spriteset(road_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_underlay_2 (0,0,0,0,0)}
-
 //Bridges
-  spriteset(bridge_avenue_6l_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(bridge_avenue_6l_2_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r_conc.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_r_conc.png") {tmpl_bridge (0,0)}
+
+  spriteset(bridge_avenue_6l_2_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_bridge (0,0)}
-  spriteset(bridge_avenue_6l_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+
+
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_2_r_main,current_year){
+    0..1959:bridge_avenue_6l_2_r_g_conc;
+    bridge_avenue_6l_2_r_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_3_r_main,current_year){
+    0..1959:bridge_avenue_6l_3_r_g_conc;
+    bridge_avenue_6l_3_r_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_r_main,town_zone){
+    1..4:bridge_avenue_6l_3_r_main;
+    bridge_avenue_6l_2_r_main;
+  } 
+
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_2_r_main,current_year){
+    0..1959:road_avenue_6l_2_r_g_conc;
+    road_avenue_6l_2_r_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_3_r_main,current_year){
+    0..1959:road_avenue_6l_3_r_g_conc;
+    road_avenue_6l_3_r_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_r_main,town_zone){
+    1..4:road_avenue_6l_3_r_main;
+    road_avenue_6l_2_r_main;
+  } 
+//def
+  spriteset(road_avenue_6l_2_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  
+  spriteset(road_avenue_6l_2_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  spriteset(road_avenue_6l_3_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_underlay_2 (0,0,0,130,0)}
+//Bridges
+  spriteset(bridge_avenue_6l_2_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l_conc.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_l_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_tile_l_conc.png") {tmpl_bridge (0,0)}
+
+  spriteset(bridge_avenue_6l_2_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_l.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_avenue_6l_3_l_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_avenue_6l_tile_l.png") {tmpl_bridge (0,0)}
+
+
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_2_l_main,current_year){
+    0..1959:bridge_avenue_6l_2_l_g_conc;
+    bridge_avenue_6l_2_l_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_3_l_main,current_year){
+    0..1959:bridge_avenue_6l_3_l_g_conc;
+    bridge_avenue_6l_3_l_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,bridge_avenue_6l_l_main,town_zone){
+    1..4:bridge_avenue_6l_3_l_main;
+    bridge_avenue_6l_2_l_main;
+  } 
+
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_2_l_main,current_year){
+    0..1959:road_avenue_6l_2_l_g_conc;
+    road_avenue_6l_2_l_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_3_l_main,current_year){
+    0..1959:road_avenue_6l_3_l_g_conc;
+    road_avenue_6l_3_l_g;
+  } 
+  switch(FEAT_ROADTYPES,SELF,road_avenue_6l_l_main,town_zone){
+    1..4:road_avenue_6l_3_l_main;
+    road_avenue_6l_2_l_main;
+  } 
 
 
 item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
     property {
         name: string(STR_ROAD_AVENUE_6R);
-        label: "AV6R";
+        label: "ST17";
         powered_roadtype_list: [REG_ROAD];
         sort_order: 33;
 
@@ -40,16 +113,16 @@ item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
         new_engine_text: string(STR_ROAD_AVENUE_6R);
     }
     graphics {
-        underlay: road_avenue_6l_r_g;
+        underlay: road_avenue_6l_r_main;
         catenary_front:sw_trees_right_f;
         catenary_back:sw_trees_right_b;
-        bridge_surfaces:bridge_avenue_6l_r_g;
+        bridge_surfaces:bridge_avenue_6l_r_main;
     }
 }
 item(FEAT_ROADTYPES, road_avenue_6l_l, 34) {
     property {
         name: string(STR_ROAD_AVENUE_6L);
-        label: "AV6L";
+        label: "ST18";
         sort_order: 34;
         powered_roadtype_list: ["ROAD", "ELRD", "DORI","AV6R"];
 
@@ -65,9 +138,9 @@ item(FEAT_ROADTYPES, road_avenue_6l_l, 34) {
         new_engine_text: string(STR_ROAD_AVENUE_6L);
     }
     graphics {
-        underlay: road_avenue_6l_l_g;
+        underlay: road_avenue_6l_l_main;
         catenary_front:sw_trees_left_f;
         catenary_back:sw_trees_left_b;
-        bridge_surfaces:bridge_avenue_6l_l_g;
+        bridge_surfaces:bridge_avenue_6l_l_main;
     }
 }

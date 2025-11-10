@@ -1,0 +1,37 @@
+//*Stone
+  spriteset(sw_road_dirt_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_dirt_nm.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  
+switch(FEAT_ROADTYPES,SELF,sw_bridge_stone_main,town_zone){
+    1..4:sw_bridge_stone_sw;
+    sw_bridge_stone_nm;
+  }
+// switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
+    
+//   }
+//
+item(FEAT_ROADTYPES, road_dirt, 16) {
+    property {
+        name: string(STR_ROAD_DIRT);
+        label: "STR1";
+        powered_roadtype_list: [REG_ROAD];
+        introduces_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1800,1,1);
+        speed_limit:30 km/h;
+        map_colour:14;
+
+        toolbar_caption: string(STR_ROAD_DIRT);
+        menu_text: string(STR_GEN_STREET,string(STR_ROAD_DIRT));
+        build_window_caption: string(STR_ROAD_DIRT);
+        autoreplace_text: string(STR_ROAD_DIRT);
+        new_engine_text: string(STR_ROAD_DIRT);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        sort_order: 16;
+    }
+  graphics {
+        underlay: sw_road_dirt_main;
+        catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_stone_main;
+    }
+}

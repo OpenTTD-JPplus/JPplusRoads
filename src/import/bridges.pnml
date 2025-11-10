@@ -1,4 +1,9 @@
 //*Rural
+spriteset(sw_bridge_rural_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_rural_stone_nm.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_rural_stone_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_rural_stone_sw.png") {tmpl_bridge (0,0)}
+
 spriteset(sw_bridge_rural_concrete_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_rural_concrete_nm.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -6,9 +11,28 @@ spriteset(sw_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
 spriteset(sw_bridge_rural_asphalt_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_rural_asphalt_sw.png") {tmpl_bridge (0,0)}
 //*City
-spriteset(sw_bridge_2l_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(sw_bridge_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_stone_nm.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_stone_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_stone_sw.png") {tmpl_bridge (0,0)}
+
+spriteset(sw_bridge_2l_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_2l_nm_conc.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_2l_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_2l_sw_conc.png") {tmpl_bridge (0,0)}
+
+spriteset(sw_bridge_2l_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_nm.png") {tmpl_bridge (0,0)}
-spriteset(sw_bridge_2l_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(sw_bridge_2l_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_sw.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_2l_so, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_so.png") {tmpl_bridge (0,0)}
+
+switch(FEAT_ROADTYPES,SELF,sw_bridge_2l_nm,current_year){
+  0..1959:sw_bridge_2l_nm_conc;
+  sw_bridge_2l_nm_asph;
+} 
+switch(FEAT_ROADTYPES,SELF,sw_bridge_2l_sw,current_year){
+  0..1959:sw_bridge_2l_sw_conc;
+  sw_bridge_2l_sw_asph;
+} 

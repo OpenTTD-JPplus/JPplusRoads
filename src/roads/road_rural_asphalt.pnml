@@ -27,8 +27,8 @@ switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_1_main,current_year>1959){
   }
 //
 switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_old_main,town_zone){
-    3..4:sw_road_rural_asphalt_sw_gfx;
-    sw_road_rural_asphalt_dw_gfx;
+    3..4:sw_road_rural_concrete_sw_gfx;
+    sw_road_rural_concrete_dw_gfx;
 }
 switch(FEAT_ROADTYPES,SELF,sw_road_rural_asphalt_2_new_main,town_zone){
     3..4:sw_road_rural_asphalt_sw_gfx;
