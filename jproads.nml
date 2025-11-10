@@ -952,8 +952,8 @@ item(FEAT_ROADTYPES, road_rural_concrete, 5) {
     property {
         name: string(STR_ROAD_CONCRETE);
         label: "RRA5";
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1930,1,1);
         speed_limit:60 km/h;
@@ -1028,8 +1028,8 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1, 7) {
     property {
         name: string(STR_ROAD_RURAL);
         label: "RRA7";
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1930,1,1);
         speed_limit:60 km/h;
@@ -1053,8 +1053,8 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2, 8) {
     property {
         name: string(STR_ROAD_I_RURAL);
         label: "RRA8";
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1930,1,1);
         speed_limit:80 km/h;
@@ -1104,7 +1104,7 @@ item(FEAT_ROADTYPES, road_expressway_dw, 11) {
         name: string(STR_ROAD_EXPRESS);
         label: "REX1";
         sort_order: 11;
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
@@ -1132,7 +1132,7 @@ item(FEAT_ROADTYPES, road_expressway_sw, 12) {
         name: string(STR_ROAD_EXPRESS_S);
         label: "REX2";
         sort_order: 12;
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
@@ -1160,7 +1160,7 @@ item(FEAT_ROADTYPES, road_expressway_red, 13) {
         name: string(STR_ROAD_EXPRESS_R);
         label: "REX3";
         sort_order: 13;
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1963,7,16);
         speed_limit:60 km/h;
@@ -1246,8 +1246,8 @@ item(FEAT_ROADTYPES, road_district, 23) {
         name: string(STR_ROAD_DISTRICT);
         label: "ROAD";
         sort_order: 32;
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
-        introduces_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        introduces_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1291,7 +1291,7 @@ item(FEAT_ROADTYPES, road_urban_asphalt, 24) {
         name: string(STR_ROAD_URBAN);
         label: "STU1";
         sort_order: 24;
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1338,7 +1338,7 @@ item(FEAT_ROADTYPES, road_urban_tile, 26) {
         name: string(STR_ROAD_PAVED);
         label: "STU3";
         sort_order: 26;
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1386,7 +1386,7 @@ item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
         name: string(STR_ROAD_GREEN);
         label: "STU4";
         sort_order: 27;
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
 
         introduction_date:date(1950,1,1);
         speed_limit:40 km/h;
@@ -1440,7 +1440,7 @@ item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
     property {
         name: string(STR_ROAD_AVENUE_6R);
         label: "AV6R";
-        powered_roadtype_list: ["ROAD","ELRD","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
+        powered_roadtype_list: ["ROAD","RRA1","RRA2","RRA3","RRA4","RRA5","RRA6","RRA7","RRA8","REX1","STD1","STD2","STU1","STU2","STU3","STU4","AV6R","AV6L"];
         sort_order: 33;
 
         introduction_date:date(1950,1,1);
