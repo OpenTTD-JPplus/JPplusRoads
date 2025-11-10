@@ -1,4 +1,11 @@
-
+//*Rural
+spriteset(sw_bridge_rural_concrete_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_rural_concrete_nm.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_rural_concrete_sw.png") {tmpl_bridge (0,0)}
+spriteset(sw_bridge_rural_asphalt_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_rural_asphalt_sw.png") {tmpl_bridge (0,0)}
+//*City
 spriteset(sw_bridge_2l_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_nm.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_2l_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
