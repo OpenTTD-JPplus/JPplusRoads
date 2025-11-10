@@ -36,7 +36,8 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
     }
     graphics {
         gui:gfx_gui_road_shuto_dw;
-        catenary_back:crash_barriers;
+        catenary_back:gfx_crash_barriers;
+        catenary_front:deco_empty;
         underlay: sw_road_expressway_dw_main;
         bridge_surfaces: bridge_expressway_dw;
         direction_markings:gfx_arrows_2l;
@@ -63,7 +64,8 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
     }
     graphics {
       gui:gfx_gui_road_shuto_sw;
-      catenary_back:crash_barriers;
+      catenary_back:gfx_crash_barriers;
+      catenary_front:deco_empty;
       underlay: sw_road_expressway_sw_main;
       bridge_surfaces: bridge_expressway_sw;
       direction_markings:gfx_arrows_2l;
@@ -91,7 +93,8 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
     }
     graphics {
       gui:gfx_gui_road_shuto_slow;
-      catenary_back:crash_barriers;
+      catenary_back:gfx_crash_barriers;
+      catenary_front:deco_empty;
       underlay: sw_road_expressway_red_main;
       bridge_surfaces: bridge_expressway_red;
       direction_markings:gfx_arrows_2l;
