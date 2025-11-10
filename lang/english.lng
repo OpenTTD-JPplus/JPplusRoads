@@ -86,6 +86,16 @@ STR_ROAD_FIRS_COBBLE:CHIPS Cobblestone
 STR_ROAD_ISR:ISR Concrete
 STR_ROAD_AUZ:AUZ Concrete
 
+STR_DECO_LIGHTS_RIGHT:Street Lights Right
+STR_DECO_LIGHTS_LEFT:Street Lights Left
+STR_DECO_POWER_POLES:Power Poles  
+STR_DECO_CONE_TREE:Green Cone Trees  
+STR_DECO_SAKURA:Sakura Trees
+STR_DECO_FENCE:Rural Fence
+STR_DECO_SAFETY_BARRIER:Pedestrian Safety Barrier
+STR_DECO_SHUTOKO_RIGHT:Sound Barrier Right
+STR_DECO_SHUTOKO_LEFT:Sound Barrier Left
+STR_DECO_CRASH_BARRIER:Crash Barrier
 
 
 

@@ -68,7 +68,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_1) {
     }
   graphics {
         underlay: sw_road_rural_asphalt_1_main;
-        catenary_front:light_poles;
+        catenary_front:gfx_light_poles_b;
         bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
     }
 }
@@ -93,7 +93,7 @@ item(FEAT_ROADTYPES, road_rural_asphalt_2) {
     }
   graphics {
         underlay: sw_road_rural_asphalt_2_main;
-        catenary_back:light_poles;
+        catenary_back:gfx_light_poles_b;
         bridge_surfaces:sw_bridge_rural_asphalt_2_new_main;
     }
 }

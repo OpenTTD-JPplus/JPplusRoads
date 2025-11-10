@@ -1,0 +1,49 @@
+item(FEAT_TRAMTYPES, deco_lights_right) {
+    property {
+        name: string(STR_DECO_LIGHTS_RIGHT);
+        label: "DEC1";
+        sort_order: 53;
+        powered_tramtype_list: ["DEC1"];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:0;
+        
+        toolbar_caption: string(STR_DECO_LIGHTS_RIGHT);
+        menu_text: string(STR_DECO_LIGHTS_RIGHT);
+        build_window_caption: string(STR_DECO_LIGHTS_RIGHT);
+        autoreplace_text: string(STR_DECO_LIGHTS_RIGHT);
+        new_engine_text: string(STR_DECO_LIGHTS_RIGHT);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY);
+    }
+    graphics {
+        catenary_front:gfx_light_poles_left_f;
+        catenary_back:gfx_light_poles_left_b;
+        underlay: deco_empty;
+        bridge_surfaces: deco_empty;
+    }
+}
+item(FEAT_TRAMTYPES, deco_lights_left) {
+    property {
+        name: string(STR_DECO_LIGHTS_LEFT);
+        label: "DEC2";
+        sort_order: 54;
+        powered_tramtype_list: ["DEC2"];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:0;
+        // map_colour:VAR_AVENUE;
+        
+        toolbar_caption: string(STR_DECO_LIGHTS_LEFT);
+        menu_text: string(STR_DECO_LIGHTS_LEFT);
+        build_window_caption: string(STR_DECO_LIGHTS_LEFT);
+        autoreplace_text: string(STR_DECO_LIGHTS_LEFT);
+        new_engine_text: string(STR_DECO_LIGHTS_LEFT);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY);
+    }
+    graphics {
+        catenary_front:gfx_light_poles_right_f;
+        catenary_back:gfx_light_poles_right_b;
+        underlay: deco_empty;
+        bridge_surfaces: deco_empty;
+    }
+}
