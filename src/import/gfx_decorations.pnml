@@ -59,7 +59,7 @@
     0..1944:gfx_power_poles_wood;
     sw_power_poles_conc_r;
   }   
-  switch(FEAT_ROADTYPES,SELF,sw_power_poles_main,railtype<64||tramtype==1||tramtype==34){
+  switch(FEAT_ROADTYPES,SELF,sw_power_poles_main,railtype<64||tramtype==1||tramtype==40){
     1:deco_empty;
     sw_power_poles_timed;
   }
@@ -68,7 +68,7 @@
     0..1944:deco_empty;
     sw_power_poles_conc_r;
   }   
-  switch(FEAT_ROADTYPES,SELF,sw_power_poles_secondary_main,railtype<64||tramtype==1||tramtype==34){
+  switch(FEAT_ROADTYPES,SELF,sw_power_poles_secondary_main,railtype<64||tramtype==1||tramtype==40){
     1:deco_empty;
     sw_power_poles_secondary_1;
   }   
@@ -127,11 +127,11 @@
       "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_bridgeless (0,0,0,190,0)}
   //
   //*Gas */
-    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_main,railtype<64||tramtype==1||tramtype==34||tramtype==28||tramtype==29){
+    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_main,railtype<64||tramtype==1||tramtype==40||tramtype==34||tramtype==35){
       1:deco_empty;
       gfx_light_poles_gas_f;
     }
-    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_b_main,railtype<64||tramtype==1||tramtype==34||tramtype==28||tramtype==29){
+    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_b_main,railtype<64||tramtype==1||tramtype==40||tramtype==34||tramtype==35){
       1:deco_empty;
       gfx_light_poles_gas_b;
     }
@@ -153,7 +153,7 @@
       0..1950:sw_light_poles_gas_b_main;
       gfx_light_poles_metal_b;
     }
-    switch (FEAT_ROADTYPES,SELF,sw_light_poles_metal_b_main,railtype<64||tramtype==1||tramtype==34||tramtype==28||tramtype==29){
+    switch (FEAT_ROADTYPES,SELF,sw_light_poles_metal_b_main,railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_light_poles_metal_b_1;
     }
@@ -169,7 +169,7 @@
   
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f_1,roadtype) {
     9..11:gfx_light_poles_right_f_diag;gfx_light_poles_right_f_reg;}
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_right_f_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_right_f_1;}
 
   spriteset(gfx_light_poles_right_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
@@ -178,7 +178,7 @@
 
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b_1,roadtype) {
     9..11:gfx_light_poles_right_b_diag;gfx_light_poles_right_b_reg;}
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_right_b_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_right_b_1;}
 
   spriteset(gfx_light_poles_left_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
@@ -187,7 +187,7 @@
 
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f_1,roadtype) {
     9..11:gfx_light_poles_left_f_diag;gfx_light_poles_left_f_reg;}
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_left_f_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_left_f_1;}
   
   spriteset(gfx_light_poles_left_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
@@ -197,5 +197,5 @@
     9..11:gfx_light_poles_left_b_diag;
     gfx_light_poles_left_b_reg;
   }
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_b,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_left_b_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_b,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_left_b_1;}
 //

@@ -621,7 +621,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
     0..1944:gfx_power_poles_wood;
     sw_power_poles_conc_r;
   }
-  switch(FEAT_ROADTYPES,SELF,sw_power_poles_main,railtype<64||tramtype==1||tramtype==34){
+  switch(FEAT_ROADTYPES,SELF,sw_power_poles_main,railtype<64||tramtype==1||tramtype==40){
     1:deco_empty;
     sw_power_poles_timed;
   }
@@ -630,7 +630,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
     0..1944:deco_empty;
     sw_power_poles_conc_r;
   }
-  switch(FEAT_ROADTYPES,SELF,sw_power_poles_secondary_main,railtype<64||tramtype==1||tramtype==34){
+  switch(FEAT_ROADTYPES,SELF,sw_power_poles_secondary_main,railtype<64||tramtype==1||tramtype==40){
     1:deco_empty;
     sw_power_poles_secondary_1;
   }
@@ -689,11 +689,11 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_bridgeless (0,0,0,190,0)}
 
 
-    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_main,railtype<64||tramtype==1||tramtype==34||tramtype==28||tramtype==29){
+    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_main,railtype<64||tramtype==1||tramtype==40||tramtype==34||tramtype==35){
       1:deco_empty;
       gfx_light_poles_gas_f;
     }
-    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_b_main,railtype<64||tramtype==1||tramtype==34||tramtype==28||tramtype==29){
+    switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_b_main,railtype<64||tramtype==1||tramtype==40||tramtype==34||tramtype==35){
       1:deco_empty;
       gfx_light_poles_gas_b;
     }
@@ -715,7 +715,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1950:sw_light_poles_gas_b_main;
       gfx_light_poles_metal_b;
     }
-    switch (FEAT_ROADTYPES,SELF,sw_light_poles_metal_b_main,railtype<64||tramtype==1||tramtype==34||tramtype==28||tramtype==29){
+    switch (FEAT_ROADTYPES,SELF,sw_light_poles_metal_b_main,railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_light_poles_metal_b_1;
     }
@@ -731,7 +731,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
 
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f_1,roadtype) {
     9..11:gfx_light_poles_right_f_diag;gfx_light_poles_right_f_reg;}
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_right_f_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_f,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_right_f_1;}
 
   spriteset(gfx_light_poles_right_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
@@ -740,7 +740,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
 
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b_1,roadtype) {
     9..11:gfx_light_poles_right_b_diag;gfx_light_poles_right_b_reg;}
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_right_b_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_right_b,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_right_b_1;}
 
   spriteset(gfx_light_poles_left_f_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/DECO_lights_metal_f.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,0,1)}
@@ -749,7 +749,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
 
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f_1,roadtype) {
     9..11:gfx_light_poles_left_f_diag;gfx_light_poles_left_f_reg;}
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_left_f_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_f,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_left_f_1;}
 
   spriteset(gfx_light_poles_left_b_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/DECO_lights_metal_b.png") {tmpl_catenary_single_bridgeless (0,0,0,190,0,0,1,0)}
@@ -759,7 +759,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
     9..11:gfx_light_poles_left_b_diag;
     gfx_light_poles_left_b_reg;
   }
-  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_b,railtype<64||tramtype==1||tramtype==34) {1:deco_empty;gfx_light_poles_left_b_1;}
+  switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_b,railtype<64||tramtype==1||tramtype==40) {1:deco_empty;gfx_light_poles_left_b_1;}
 # 9 "src/index.pnml" 2
 # 1 "src/import/defines.pnml" 1
 # 10 "src/index.pnml" 2
@@ -2142,7 +2142,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_4l_right_f_main;
       sw_tree_cone_br_4l_right_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_right_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_right_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_f_lights_4l_right_main_2;
     }
@@ -2151,7 +2151,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_4l_right_b_main;
       sw_tree_cone_br_4l_right_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_right_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_right_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_b_lights_4l_right_main_2;
     }
@@ -2160,7 +2160,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_4l_left_f_main;
       sw_tree_cone_br_4l_left_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_left_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_left_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_f_lights_4l_left_main_2;
     }
@@ -2169,7 +2169,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_4l_left_b_main;
       sw_tree_cone_br_4l_left_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_left_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_left_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_b_lights_4l_left_main_2;
     }
@@ -2198,7 +2198,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_6l_right_f_main;
       sw_tree_cone_br_6l_right_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_right_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_right_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_f_lights_6l_right_main_2;
     }
@@ -2207,7 +2207,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_6l_right_b_main;
       sw_tree_cone_br_6l_right_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_right_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_right_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_b_lights_6l_right_main_2;
     }
@@ -2216,7 +2216,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_6l_left_f_main;
       sw_tree_cone_br_6l_left_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_left_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_left_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_f_lights_6l_left_main_2;
     }
@@ -2225,7 +2225,7 @@ spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui
       0..1959:sw_tree_cone_gs_6l_left_b_main;
       sw_tree_cone_br_6l_left_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_left_main, railtype<64||tramtype==1||tramtype==38){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_left_main, railtype<64||tramtype==1||tramtype==40){
       1:deco_empty;
       sw_tree_cone_b_lights_6l_left_main_2;
     }
