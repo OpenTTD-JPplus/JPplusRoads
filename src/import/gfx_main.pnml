@@ -5,9 +5,9 @@
   "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (140,0,0,0,0)}
   
   spriteset(gfx_IND_lh_FIRS_concrete_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_FIRS_concrete_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_concrete.png") {tmpl_underlay_2 (140,0,40,0,70)}
 
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_FIRS_concrete_r) {2:gfx_IND_rh_FIRS_concrete_1;1:gfx_IND_rh_FIRS_concrete_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_FIRS_concrete_r) {2:gfx_IND_lh_FIRS_concrete_1;1:gfx_IND_lh_FIRS_concrete_2;}
@@ -22,9 +22,9 @@
   "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (140,0,0,0,0)}
   
   spriteset(gfx_IND_lh_FIRS_cobble_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_FIRS_cobble_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_FIRS_cobble.png") {tmpl_underlay_2 (140,0,40,0,70)}
   
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_FIRS_cobble_r) {2:gfx_IND_rh_FIRS_cobble_1;1:gfx_IND_rh_FIRS_cobble_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_FIRS_cobble_r) {2:gfx_IND_lh_FIRS_cobble_1;1:gfx_IND_lh_FIRS_cobble_2;}
@@ -39,9 +39,9 @@
   "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (140,0,0,0,0)}
   
   spriteset(gfx_IND_lh_ISR_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_ISR_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_ISR.png") {tmpl_underlay_2 (140,0,40,0,70)}
   
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_ISR_r) {2:gfx_IND_rh_ISR_1;1:gfx_IND_rh_ISR_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_ISR_r) {2:gfx_IND_lh_ISR_1;1:gfx_IND_lh_ISR_2;}
@@ -56,9 +56,9 @@
   "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (140,0,0,0,0)}
   
   spriteset(gfx_IND_lh_AUZ_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (0,0,40,0,0)}
+  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (0,0,40,0,70)}
   spriteset(gfx_IND_lh_AUZ_2,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
-  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (140,0,40,0,0)}
+  "gfx/roads/pool/IND_AUZ.png") {tmpl_underlay_2 (140,0,40,0,70)}
   
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_rh_AUZ_r) {2:gfx_IND_rh_AUZ_1;1:gfx_IND_rh_AUZ_2;}
   random_switch (FEAT_ROADTYPES,SELF,gfx_IND_lh_AUZ_r) {2:gfx_IND_lh_AUZ_1;1:gfx_IND_lh_AUZ_2;}

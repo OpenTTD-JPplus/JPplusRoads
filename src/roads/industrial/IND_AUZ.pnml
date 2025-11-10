@@ -17,7 +17,7 @@ item(FEAT_ROADTYPES, rd_IND_AUZ) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
-    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    bridge_surfaces:gfx_IND_AUZ_bridge;
     underlay: gfx_IND_AUZ;
     catenary_back:deco_empty;
   }
