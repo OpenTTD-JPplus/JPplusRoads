@@ -48,9 +48,13 @@ STR_DIRT_ROAD_NAME                   :Dirt Road
 STR_DIRT_ROAD_TOOLBAR                :Dirt Road Construction
 STR_DIRT_ROAD_MENU                   :Dirt Road construction
 
-STR_SETT_PAVEMENT_ROAD_NAME          :Sett Paved Road
-STR_SETT_PAVEMENT_ROAD_TOOLBAR       :Sett Paved Road Construction
-STR_SETT_PAVEMENT_ROAD_MENU          :Sett Paved Road construction
+STR_STONE_ROAD_NAME          		:Cobblestone Road
+STR_STONE_ROAD_TOOLBAR       		:Cobblestone Road Construction
+STR_STONE_ROAD_MENU          		:Cobblestone Road construction
+
+STR_STONE_STREET_NAME         		 :Cobblestone Street
+STR_STONE_STREET_TOOLBAR      		 :Cobblestone Street Construction
+STR_STONE_STREET_MENU        		 :Cobblestone Street construction
 
 STR_BASIC_ASPHALT_ROAD_NAME          :Basic Asphalt Road
 STR_BASIC_ASPHALT_ROAD_TOOLBAR       :Basic Asphalt Road Construction
