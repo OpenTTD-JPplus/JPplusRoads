@@ -3439,7 +3439,7 @@ item(FEAT_ROADTYPES, road_asphalt,7) {
   graphics {
     catenary_front:deco_empty;
     catenary_back:sw_light_poles_metal_b_tz_restricted;
-    underlay: gfx_road_rural_sw_asph;
+    underlay: sw_road_rural_asph_main;
     bridge_surfaces:sw_bridge_rural_asphalt_sw;
 
     direction_markings:gfx_arrows_2l;
@@ -3470,7 +3470,7 @@ item(FEAT_ROADTYPES, road_asphalt_elec,8) {
   graphics {
     catenary_front:sw_catenary_trolley_f;
     catenary_back:sw_catenary_trolley_b;
-    underlay: gfx_road_rural_sw_asph;
+    underlay: sw_road_rural_asph_main;
     bridge_surfaces:sw_bridge_rural_asphalt_sw;
 
     direction_markings:gfx_arrows_2l;
