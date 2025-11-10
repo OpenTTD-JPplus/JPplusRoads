@@ -2,22 +2,64 @@ spriteset(sw_bridge_test, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/misc/bridge_test.png") {tmpl_bridge (0,0)}
 //*Sprites */
   //*Rural
-    spriteset(gfx_bridge_rural_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_bridge_rural_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/gfx_bridge_rural_stone_nm.png") {tmpl_bridge (0,0)}
-    spriteset(gfx_bridge_rural_stone_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_bridge_rural_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/roads/gfx_bridge_snow_rural_stone_nm.png") {tmpl_bridge (0,0)}
+    spriteset(gfx_def_bridge_rural_stone_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/gfx_bridge_rural_stone_sw.png") {tmpl_bridge (0,0)}
-
-    spriteset(gfx_bridge_rural_concrete_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_bridge_rural_stone_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/roads/gfx_bridge_snow_rural_stone_sw.png") {tmpl_bridge (0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_rural_stone_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_rural_stone_nm;
+      gfx_def_bridge_rural_stone_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_rural_stone_sw,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_rural_stone_sw;
+      gfx_def_bridge_rural_stone_sw;
+    }
+    
+    spriteset(gfx_def_bridge_rural_concrete_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_bridge_rural_concrete_nm.png") {tmpl_bridge (0,0)}
-    spriteset(gfx_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_bridge_rural_concrete_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_bridge_snow_rural_concrete_nm.png") {tmpl_bridge (0,0)}
+    spriteset(gfx_def_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_bridge_rural_concrete_sw.png") {tmpl_bridge (0,0)}
+    spriteset(gfx_snow_bridge_rural_concrete_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_bridge_snow_rural_concrete_sw.png") {tmpl_bridge (0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_rural_concrete_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_rural_concrete_nm;
+      gfx_def_bridge_rural_concrete_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_rural_concrete_sw,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_rural_concrete_sw;
+      gfx_def_bridge_rural_concrete_sw;
+    }
 
-    spriteset(gfx_bridge_rural_asphalt_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_bridge_rural_asphalt_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_bridge_rural_asphalt_nm.png") {tmpl_bridge (0,0)}
-    spriteset(gfx_bridge_rural_asphalt_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_bridge_rural_asphalt_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_bridge_snow_rural_asphalt_nm.png") {tmpl_bridge (0,0)}
+    spriteset(gfx_def_bridge_rural_asphalt_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_bridge_rural_asphalt_sw.png") {tmpl_bridge (0,0)}
-    spriteset(gfx_bridge_rural_asphalt_sw_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_bridge_rural_asphalt_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_bridge_snow_rural_asphalt_sw.png") {tmpl_bridge (0,0)}
+    spriteset(gfx_def_bridge_rural_asphalt_sw_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_bridge_rural_asphalt_sw_1.png") {tmpl_bridge (0,0)}
+    spriteset(gfx_snow_bridge_rural_asphalt_sw_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_bridge_snow_rural_asphalt_sw_1.png") {tmpl_bridge (0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_rural_asphalt_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_rural_asphalt_nm;
+      gfx_def_bridge_rural_asphalt_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_rural_asphalt_sw,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_rural_asphalt_sw;
+      gfx_def_bridge_rural_asphalt_sw;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_rural_asphalt_sw_1,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_rural_asphalt_sw_1;
+      gfx_def_bridge_rural_asphalt_sw_1;
+    }
   //
   //*City
     spriteset(gfx_bridge_def_street_stone_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,

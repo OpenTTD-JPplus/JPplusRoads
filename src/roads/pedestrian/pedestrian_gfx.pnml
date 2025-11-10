@@ -1,15 +1,38 @@
 //*Sprites */
   //Road
-    spriteset(gfx_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_ped_street_stone.png") {tmpl_underlay (0,0,0,0,0)}
-    spriteset(gfx_bridge_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_ped_street_stone.png") {tmpl_underlay (0,0,0,0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_ped_street_stone,terrain_type){
+      TILETYPE_SNOW:gfx_snow_ped_street_stone;
+      gfx_def_ped_street_stone;
+    }
+    spriteset(gfx_def_bridge_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_bridge_ped_street_stone.png") {tmpl_bridge (0,0)}
+    spriteset(gfx_snow_bridge_ped_street_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_bridge_ped_street_stone.png") {tmpl_bridge (0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_bridge_ped_street_stone,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_ped_street_stone;
+      gfx_def_bridge_ped_street_stone;
+    }
 
-    spriteset(gfx_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_ped_street_brown.png") {tmpl_underlay (0,0,0,0,0)}
-    spriteset(gfx_bridge_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_ped_street_brown.png") {tmpl_underlay (0,0,0,0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_ped_street_brown,terrain_type){
+      TILETYPE_SNOW:gfx_snow_ped_street_brown;
+      gfx_def_ped_street_brown;
+    }
+    spriteset(gfx_def_bridge_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_bridge_ped_street_brown.png") {tmpl_bridge (0,0)}
-
+    spriteset(gfx_snow_bridge_ped_street_brown, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_bridge_ped_street_brown.png") {tmpl_bridge (0,0)}
+     switch(FEAT_ROADTYPES,SELF,gfx_bridge_ped_street_brown,terrain_type){
+      TILETYPE_SNOW:gfx_snow_bridge_ped_street_brown;
+      gfx_def_bridge_ped_street_brown;
+    }
   //Trees
     spriteset(gfx_ped_street_trees_spring_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/decorations/trees/DECO_pedestrian_road_spring.png") {tmpl_catenary_bridgeless (0,0,0,0,0)}
