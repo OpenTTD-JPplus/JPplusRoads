@@ -2,13 +2,27 @@
   spriteset(sw_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_expressway_dw.png") {tmpl_underlay_2 (0,0,0,0,0)}
 //
+  spriteset(sw_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_expressway_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+//
+  spriteset(sw_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_expressway_red.png") {tmpl_underlay_2 (0,0,0,0,0)}
+//
 //Bridges
   spriteset(bridge_expressway_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_expressway_dw.png") {tmpl_bridge (0,0)}
+  "gfx/roads/pool/bridge_expressway_dw.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_expressway_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_expressway_sw.png") {tmpl_bridge (0,0)}
+  spriteset(bridge_expressway_red, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/bridge_expressway_red.png") {tmpl_bridge (0,0)}
+
+
+
+
 
 item(FEAT_ROADTYPES, road_expressway_dw, 11) {
     property {
-        name: string(STR_ROAD_URBAN);
+        name: string(STR_ROAD_EXPRESS);
         label: "REX1";
         sort_order: 11;
         powered_roadtype_list: [REG_ROAD];
@@ -17,18 +31,74 @@ item(FEAT_ROADTYPES, road_expressway_dw, 11) {
         speed_limit:100 km/h;
         map_colour:69;
         
-        toolbar_caption: string(STR_ROAD_URBAN);
-        menu_text: string(STR_GEN_STREET,string(STR_ROAD_URBAN));
-        build_window_caption: string(STR_ROAD_URBAN);
-        autoreplace_text: string(STR_ROAD_URBAN);
-        new_engine_text: string(STR_ROAD_URBAN);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
+        toolbar_caption: string(STR_ROAD_EXPRESS);
+        menu_text: string(STR_ROAD_EXPRESS);
+        build_window_caption: string(STR_ROAD_EXPRESS);
+        autoreplace_text: string(STR_ROAD_EXPRESS);
+        new_engine_text: string(STR_ROAD_EXPRESS);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
     }
     graphics {
         catenary_front:crash_barriers;
         underlay: sw_road_expressway_dw_main;
         // depots: depot_normal_road;
         bridge_surfaces: bridge_expressway_dw;
+        // roadstops: roadstop_underlay_red;
+        // gui: gui_normal;
+        // direction_markings: st_direction_markings;
+    }
+}
+item(FEAT_ROADTYPES, road_expressway_sw, 12) {
+    property {
+        name: string(STR_ROAD_EXPRESS_S);
+        label: "REX2";
+        sort_order: 12;
+        powered_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:100 km/h;
+        map_colour:69;
+        
+        toolbar_caption: string(STR_ROAD_EXPRESS_S);
+        menu_text: string(STR_ROAD_EXPRESS_S);
+        build_window_caption: string(STR_ROAD_EXPRESS_S);
+        autoreplace_text: string(STR_ROAD_EXPRESS_S);
+        new_engine_text: string(STR_ROAD_EXPRESS_S);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+        catenary_front:crash_barriers;
+        underlay: sw_road_expressway_sw_main;
+        // depots: depot_normal_road;
+        bridge_surfaces: bridge_expressway_sw;
+        // roadstops: roadstop_underlay_red;
+        // gui: gui_normal;
+        // direction_markings: st_direction_markings;
+    }
+}
+item(FEAT_ROADTYPES, road_expressway_red, 13) {
+    property {
+        name: string(STR_ROAD_EXPRESS_R);
+        label: "REX3";
+        sort_order: 13;
+        powered_roadtype_list: [REG_ROAD];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:60 km/h;
+        map_colour:69;
+        
+        toolbar_caption: string(STR_ROAD_EXPRESS_R);
+        menu_text: string(STR_ROAD_EXPRESS_R);
+        build_window_caption: string(STR_ROAD_EXPRESS_R);
+        autoreplace_text: string(STR_ROAD_EXPRESS_R);
+        new_engine_text: string(STR_ROAD_EXPRESS_R);
+        roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+        catenary_front:crash_barriers;
+        underlay: sw_road_expressway_red_main;
+        // depots: depot_normal_road;
+        bridge_surfaces: bridge_expressway_red;
         // roadstops: roadstop_underlay_red;
         // gui: gui_normal;
         // direction_markings: st_direction_markings;

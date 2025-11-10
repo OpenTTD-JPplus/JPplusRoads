@@ -64,9 +64,9 @@ STR_ROAD_N_RURAL:Narrow Rural
 STR_ROAD_RURAL:Rural
 STR_ROAD_I_RURAL:Improved Rural
 STR_ROAD_RURAL_HIGHWAY:Rural Highway
-STR_ROAD_EXPRESS:Expressway
-STR_ROAD_EXPRESS_S:Expressway (solid lines)
-STR_ROAD_EXPRESS_R:Expressway (red surface)
+STR_ROAD_EXPRESS:Expressway{WHITE}
+STR_ROAD_EXPRESS_S:Expressway (Solid){WHITE}
+STR_ROAD_EXPRESS_R:Expressway (Slow){WHITE}
 STR_ROAD_SLIP_L:Slip Road L
 STR_ROAD_SLIP_R:Slip Road R
 STR_ROAD_STONE_E:Stone (catenary)
