@@ -191,8 +191,8 @@ replace road_underlay(1313, "gfx/misc/gfx_grass_temp.png") {
     [180+32, yDepotOffset, 20, 20, 0, 0]
     [180+64, yDepotOffset, 20, 20, 0, 0]
 
-    [270, 0, 48, 36, 0, 0]
-    [270+64, 0, 48, 36, 0, 0]
+    [270, 0, 48, 36, -19, -9]
+    [270+64, 0, 48, 36, -19, -9]
     [270+128, 0, 32, 32, 0, 0]
     [270+172, 0, 32, 32, 0, 0]
     [270+216, 0, 32, 32, 0, 0]
@@ -517,6 +517,23 @@ spriteset(gfx_gui_industrial_auz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.pn
 
   spriteset(crash_barriers, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/decorations/crash_barriers.png") {tmpl_catenary (0,0,0,190,0)}
+
+  spriteset(gfx_slip_chevron_r_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_r.png") {tmpl_catenary (0,0,0,0,0)}
+  spriteset(gfx_slip_chevron_r_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_r.png") {tmpl_catenary (0,280,0,0,0)}
+  switch (FEAT_TRAMTYPES,SELF,gfx_slip_chevron_r,(roadtype==8||roadtype==9||roadtype==10)) {
+    1:gfx_slip_chevron_r_diag;
+    gfx_slip_chevron_r_reg;
+  }
+  spriteset(gfx_slip_chevron_l_reg, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_l.png") {tmpl_catenary (0,0,0,0,0)}
+  spriteset(gfx_slip_chevron_l_diag, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/decorations/DECO_slip_chevron_l.png") {tmpl_catenary (0,280,0,0,0)}
+  switch (FEAT_TRAMTYPES,SELF,gfx_slip_chevron_l,(roadtype==8||roadtype==9||roadtype==10)) {
+    1:gfx_slip_chevron_l_diag;
+    gfx_slip_chevron_l_reg;
+  }
 
 
   spriteset(power_poles_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -1703,13 +1720,10 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_LEVEL_CROSSING,ROADTYPE_FLAG_NO_HOUSES);
     }
     graphics {
-      gui:gfx_gui_road_shuto_dw;
+        gui:gfx_gui_road_shuto_dw;
         catenary_back:crash_barriers;
-
         underlay: sw_road_expressway_dw_main;
         bridge_surfaces: bridge_expressway_dw;
-
-
         direction_markings:gfx_arrows_2l;
         depots:gfx_depot_reldred_choice;
     }
@@ -1734,14 +1748,11 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
     }
     graphics {
       gui:gfx_gui_road_shuto_sw;
-        catenary_back:crash_barriers;
-        underlay: sw_road_expressway_sw_main;
-
-        bridge_surfaces: bridge_expressway_sw;
-
-
-        direction_markings:gfx_arrows_2l;
-        depots:gfx_depot_reldred_choice;
+      catenary_back:crash_barriers;
+      underlay: sw_road_expressway_sw_main;
+      bridge_surfaces: bridge_expressway_sw;
+      direction_markings:gfx_arrows_2l;
+      depots:gfx_depot_reldred_choice;
     }
 }
 
@@ -1765,14 +1776,11 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
     }
     graphics {
       gui:gfx_gui_road_shuto_slow;
-        catenary_back:crash_barriers;
-        underlay: sw_road_expressway_red_main;
-
-        bridge_surfaces: bridge_expressway_red;
-
-
-        direction_markings:gfx_arrows_2l;
-        depots:gfx_depot_reldred_choice;
+      catenary_back:crash_barriers;
+      underlay: sw_road_expressway_red_main;
+      bridge_surfaces: bridge_expressway_red;
+      direction_markings:gfx_arrows_2l;
+      depots:gfx_depot_reldred_choice;
     }
 }
 # 23 "src/index.pnml" 2
@@ -2484,6 +2492,57 @@ item(FEAT_TRAMTYPES, deco_shutoko_left,61) {
 }
 # 36 "src/index.pnml" 2
 
+# 1 "src/trams/deco/deco_slip_lane.pnml" 1
+item(FEAT_TRAMTYPES, deco_slip_lane_right,15) {
+    property {
+        name: string(STR_DECO_SLIP_R);
+        label: "DE11";
+        sort_order: 65;
+        powered_tramtype_list: ["DE11"];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:0;
+
+        toolbar_caption: string(STR_DECO_SLIP_R);
+        menu_text: string(STR_DECO_SLIP_R);
+        build_window_caption: string(STR_DECO_SLIP_R);
+        autoreplace_text: string(STR_DECO_SLIP_R);
+        new_engine_text: string(STR_DECO_SLIP_R);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+        catenary_front:deco_empty;
+        catenary_back:gfx_slip_chevron_r;
+        underlay: deco_empty;
+        bridge_surfaces: deco_empty;
+    }
+}
+item(FEAT_TRAMTYPES, deco_slip_lane_left,16) {
+    property {
+        name: string(STR_DECO_SLIP_L);
+        label: "DE12";
+        sort_order: 66;
+        powered_tramtype_list: ["DE12"];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:0;
+
+        toolbar_caption: string(STR_DECO_SLIP_L);
+        menu_text: string(STR_DECO_SLIP_L);
+        build_window_caption: string(STR_DECO_SLIP_L);
+        autoreplace_text: string(STR_DECO_SLIP_L);
+        new_engine_text: string(STR_DECO_SLIP_L);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+        catenary_front:deco_empty;
+        catenary_back:gfx_slip_chevron_l;
+        underlay: deco_empty;
+        bridge_surfaces: deco_empty;
+    }
+}
+# 38 "src/index.pnml" 2
+
 # 1 "src/roads/road_generic.pnml" 1
   switch(FEAT_ROADTYPES,SELF,road_generic_rural_gfx,current_year){
     0..1849:sw_road_rural_dirt_main;
@@ -2538,4 +2597,4 @@ item(FEAT_ROADTYPES, road_generic, 0) {
         bridge_surfaces:sw_bridge_generic_main;
     }
 }
-# 38 "src/index.pnml" 2
+# 40 "src/index.pnml" 2

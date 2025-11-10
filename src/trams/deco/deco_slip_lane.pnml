@@ -1,0 +1,48 @@
+item(FEAT_TRAMTYPES, deco_slip_lane_right,15) {
+    property {
+        name: string(STR_DECO_SLIP_R);
+        label: "DE11";
+        sort_order: 65;
+        powered_tramtype_list: ["DE11"];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:0;
+        
+        toolbar_caption: string(STR_DECO_SLIP_R);
+        menu_text: string(STR_DECO_SLIP_R);
+        build_window_caption: string(STR_DECO_SLIP_R);
+        autoreplace_text: string(STR_DECO_SLIP_R);
+        new_engine_text: string(STR_DECO_SLIP_R);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+        catenary_front:deco_empty;
+        catenary_back:gfx_slip_chevron_r;
+        underlay: deco_empty;
+        bridge_surfaces: deco_empty;
+    }
+}
+item(FEAT_TRAMTYPES, deco_slip_lane_left,16) {
+    property {
+        name: string(STR_DECO_SLIP_L);
+        label: "DE12";
+        sort_order: 66;
+        powered_tramtype_list: ["DE12"];
+
+        introduction_date:date(1950,1,1);
+        speed_limit:0;
+        
+        toolbar_caption: string(STR_DECO_SLIP_L);
+        menu_text: string(STR_DECO_SLIP_L);
+        build_window_caption: string(STR_DECO_SLIP_L);
+        autoreplace_text: string(STR_DECO_SLIP_L);
+        new_engine_text: string(STR_DECO_SLIP_L);
+        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+    graphics {
+        catenary_front:deco_empty;
+        catenary_back:gfx_slip_chevron_l;
+        underlay: deco_empty;
+        bridge_surfaces: deco_empty;
+    }
+}

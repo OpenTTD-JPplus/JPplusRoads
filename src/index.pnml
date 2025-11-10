@@ -34,4 +34,6 @@
 #include "trams/deco/deco_lights.pnml"
 #include "trams/deco/deco_shutoko.pnml"
 
+#include "trams/deco/deco_slip_lane.pnml"
+
 #include "roads/road_generic.pnml"
