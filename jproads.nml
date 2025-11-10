@@ -2504,13 +2504,13 @@ spriteset(sw_bridge_test, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
 
 
   spriteset(gfx_IND_FIRS_concrete_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/gfx_ind_FIRS_concrete.png") {tmpl_bridge (0,0)}
+    "gfx/roads/gfx_bridge_ind_FIRS_concrete.png") {tmpl_bridge (0,0)}
   spriteset(gfx_IND_FIRS_cobble_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/gfx_ind_FIRS_cobble.png") {tmpl_bridge (0,0)}
+    "gfx/roads/gfx_bridge_ind_FIRS_cobble.png") {tmpl_bridge (0,0)}
   spriteset(gfx_IND_ISR_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/gfx_ind_ISR.png") {tmpl_bridge (0,0)}
+    "gfx/roads/gfx_bridge_ind_ISR.png") {tmpl_bridge (0,0)}
   spriteset(gfx_IND_AUZ_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/gfx_ind_AUZ.png") {tmpl_bridge (0,0)}
+    "gfx/roads/gfx_bridge_ind_AUZ.png") {tmpl_bridge (0,0)}
 # 13 "src/index.pnml" 2
 # 1 "src/import/gfx_arrows.pnml" 1
 spriteset(gfx_arrows_2l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
