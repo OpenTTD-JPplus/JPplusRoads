@@ -13,7 +13,7 @@ item(FEAT_TRAMTYPES, deco_lights_r,53) {
         build_window_caption: string(STR_DECO_LIGHTS_RIGHT);
         autoreplace_text: string(STR_DECO_LIGHTS_RIGHT);
         new_engine_text: string(STR_DECO_LIGHTS_RIGHT);
-        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
+        tramtype_flags: param_eyecandy_roadtypes ? bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES) : bitmask(ROADTYPE_FLAG_HIDDEN,TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
       gui:gui_lights_r;
@@ -39,7 +39,7 @@ item(FEAT_TRAMTYPES, deco_lights_l,54) {
         build_window_caption: string(STR_DECO_LIGHTS_LEFT);
         autoreplace_text: string(STR_DECO_LIGHTS_LEFT);
         new_engine_text: string(STR_DECO_LIGHTS_LEFT);
-        tramtype_flags: bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
+        tramtype_flags: param_eyecandy_roadtypes ? bitmask(TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES) : bitmask(ROADTYPE_FLAG_HIDDEN,TRAMTYPE_FLAG_CATENARY,TRAMTYPE_FLAG_NO_LEVEL_CROSSING,TRAMTYPE_FLAG_NO_HOUSES);
     }
     graphics {
       gui:gui_lights_l;

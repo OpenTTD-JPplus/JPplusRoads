@@ -31,9 +31,8 @@
 #include "roads/city/streets_secondary.pnml"
 #include "roads/city/streets_primary.pnml"
 
-if (param_eyecandy_roadtypes==1){
 #include "roads/city/streets_deco.pnml"
-}
+
 #include "roads/city/streets_avenues.pnml"
 
 #include "roads/industrial/industrial_gfx.pnml"
@@ -43,12 +42,13 @@ if (param_eyecandy_roadtypes==1){
 #include "roads/industrial/IND_ISR.pnml"
 #include "roads/industrial/IND_AUZ.pnml"
 
-if (param_eyecandy_roadtypes==1){
+#include "roads/pedestrian/pedestrian_gfx.pnml"
+#include "roads/pedestrian/pedestrian_streets.pnml"
+
 #include "trams/deco/deco_lights.pnml"
 #include "trams/deco/deco_shutoko.pnml"
 
 #include "trams/deco/deco_slip_lane.pnml"
-}
 
 
 #include "trams/trams.pnml"
