@@ -6,7 +6,7 @@ item(FEAT_ROADTYPES, street_primary_asph,24) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1850,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_PRIMARY;
     
     name: string(STR_GEN_STREET,string(STR_ROAD_PRIMARY));
@@ -35,7 +35,7 @@ item(FEAT_ROADTYPES, street_primary_asph_elec,25) {
     powered_roadtype_list: [EL_ROAD];
 
     introduction_date:date(1920,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_PRIMARY;
     
     name: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_PRIMARY)));
@@ -64,7 +64,7 @@ item(FEAT_ROADTYPES, street_primary_tile,26) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1930,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_PRIMARY;
     
     name: string(STR_GEN_STREET,string(STR_ROAD_TILE));
@@ -92,7 +92,7 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_cone,27) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1850,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_PRIMARY;
     
     name:string(STR_GEN_STREET,string(STR_ROAD_GREEN));
@@ -122,7 +122,7 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_sakura,28) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1850,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_PRIMARY;
     
     name:string(STR_GEN_STREET,string(STR_ROAD_SAKURA));

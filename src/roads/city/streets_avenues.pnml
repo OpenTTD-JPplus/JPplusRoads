@@ -5,7 +5,7 @@ item(FEAT_ROADTYPES, avenue_6l_r,33) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1850,1,1);
-    speed_limit:50 km/h;
+    speed_limit:SPEED_MODIFIER+51 km/h;
     map_colour:VAR_AVENUE;
 
     name: string(STR_ROAD_AVENUE_6R);
@@ -34,7 +34,7 @@ item(FEAT_ROADTYPES, avenue_6l_l,34) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1850,1,1);
-    speed_limit:50 km/h;
+    speed_limit:SPEED_MODIFIER+51 km/h;
     map_colour:VAR_AVENUE;
 
     name: string(STR_ROAD_AVENUE_6L);

@@ -5,7 +5,7 @@ item(FEAT_ROADTYPES, street_concrete,20) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1920,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_CONCRETE));
@@ -33,7 +33,7 @@ item(FEAT_ROADTYPES, street_concrete_elec,21) {
     powered_roadtype_list: [EL_ROAD];
 
     introduction_date:date(1920,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_CONCRETE)));
@@ -62,7 +62,7 @@ item(FEAT_ROADTYPES, street_secondary,23) {
     powered_roadtype_list: [REG_ROAD];
 
     introduction_date:date(1850,1,1);
-    speed_limit:40 km/h;
+    speed_limit:SPEED_MODIFIER+40 km/h;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_SECONDARY));

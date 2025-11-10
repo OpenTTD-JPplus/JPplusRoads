@@ -37,24 +37,26 @@ item(FEAT_ROADTYPES, road_generic, 0) {
         powered_roadtype_list: [REG_ROAD];
 
         introduction_date:date(0,1,1);
-        speed_limit:50 km/h;
+        speed_limit:SPEED_MODIFIER+51 km/h;
         map_colour:VAR_ALLEY;
 
-        name: string(STR_GEN_STREET,string(STR_ROAD_STONE));
-        toolbar_caption: string(STR_GEN_STREET,string(STR_ROAD_STONE));
-        menu_text: string(STR_GEN_STREET,string(STR_ROAD_STONE));
+        name: string(STR_GEN_STREET,string(STR_ROAD_GEN));
+        toolbar_caption: string(STR_GEN_STREET,string(STR_ROAD_GEN));
+        menu_text: string(STR_GEN_STREET,string(STR_ROAD_GEN));
         build_window_caption: string(STR_BUILD_VEHICLE);
         autoreplace_text: string(STR_AUTOREPLACE_ROAD);
         new_engine_text: string(STR_NEW_ENGINE_ROAD);
-        roadtype_flags: bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
+        roadtype_flags: param_show_generic_road ? bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_CATENARY) : bitmask(ROADTYPE_FLAG_TOWN_BUILD,ROADTYPE_FLAG_HIDDEN,ROADTYPE_FLAG_CATENARY);
         sort_order: 0;
     }
   graphics {
     catenary_front:sw_light_poles_gas_f_tz_restricted_gen;
     catenary_back:sw_light_poles_metal_b_tz_restricted;
     underlay: road_generic_main;
-    direction_markings:gfx_arrows_2l;
     bridge_surfaces:sw_bridge_generic_main;
+    direction_markings:gfx_arrows_2l;
+    gui:gui_street_district;
+    depots:gfx_depot_reldred_choice;
     roadstops:gfx_stops_asphalt;
     }
 }
