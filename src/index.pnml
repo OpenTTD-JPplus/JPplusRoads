@@ -5,6 +5,7 @@
 // #include "import/setIds.pnml"
 
 #include "import/gfx_gui.pnml"
+#include "import/gfx_overlay.pnml"
 #include "import/gfx_decorations.pnml"
 #include "import/defines.pnml"
 #include "import/gfx_trees.pnml"
