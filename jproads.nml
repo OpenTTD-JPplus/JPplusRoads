@@ -2171,9 +2171,9 @@ item(FEAT_ROADTYPES, rd_urban_primary_tile_sakura,28) {
   spriteset(rd_avenue_asph_6l_tile_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/rd_avenue_asph_6l_tile_l.png") {tmpl_underlay (0,0,0,0,0)}
   spriteset(bridge_avenue_asph_6l_tile_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/rd_avenue_asph_2_r.png") {tmpl_bridge (0,0)}
+  "gfx/roads/rd_avenue_asph_6l_tile_r.png") {tmpl_bridge (0,0)}
   spriteset(bridge_avenue_asph_6l_tile_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/rd_avenue_asph_2_l.png") {tmpl_bridge (0,0)}
+  "gfx/roads/rd_avenue_asph_6l_tile_l.png") {tmpl_bridge (0,0)}
 
   switch(FEAT_ROADTYPES,SELF,sw_rd_avenue_asph_6l_r_gfx_1,town_zone){
     1..4:rd_avenue_asph_6l_tile_r;
