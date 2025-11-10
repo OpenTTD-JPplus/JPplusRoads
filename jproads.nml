@@ -12,6 +12,27 @@ grf {
   min_compatible_version :001;
 
 }
+
+replace road_underlay(1313, "gfx/gfx_placeholder.png") {
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+ [ 1,1, 1,1, 0, 0]
+}
 # 2 "src/index.pnml" 2
 # 1 "src/import/templates.pnml" 1
 
@@ -244,40 +265,40 @@ grf {
   }
 
     template tmpl_underlay_2(quad,doub,y,cross_x,cross_y) {
-    [quad, 0, 64, 31, -31, 0]
-    [quad+70, 0, 64, 31, -31, 0]
+    [quad, 20+0, 64, 31, -31, 0]
+    [quad+70, 20+0, 64, 31, -31, 0]
 
-    [cross_x, 290+cross_y, 128, 64, -63, -33]
+    [cross_x, 20+290+cross_y, 128, 64, -63, -33]
 
-    [doub, 130+y, 64, 31, -31, 0]
-    [doub+70, 130+y, 64, 31, -31, 0]
-    [doub+140, 130+y, 64, 31, -31, 0]
-    [doub+210, 130+y, 64, 31, -31, 0]
+    [doub, 20+130+y, 64, 31, -31, 0]
+    [doub+70, 20+130+y, 64, 31, -31, 0]
+    [doub+140, 20+130+y, 64, 31, -31, 0]
+    [doub+210, 20+130+y, 64, 31, -31, 0]
 
-    [doub+0, 90, 64, 31, -31, 0]
-    [doub+70, 90, 64, 31, -31, 0]
-    [doub+140, 90, 64, 31, -31, 0]
-    [doub+210, 90, 64, 31, -31, 0]
+    [doub+0, 20+90, 64, 31, -31, 0]
+    [doub+70, 20+90, 64, 31, -31, 0]
+    [doub+140, 20+90, 64, 31, -31, 0]
+    [doub+210, 20+90, 64, 31, -31, 0]
 
-    [doub, 40, 64, 39, -31, -8]
-    [doub+70, 40, 64, 23, -31, 0]
-    [doub+140, 40, 64, 23, -31, 0]
-    [doub+210, 40, 64, 39, -31, -8]
+    [doub, 20+40, 64, 39, -31, -8]
+    [doub+70, 20+40, 64, 23, -31, 0]
+    [doub+140, 20+40, 64, 23, -31, 0]
+    [doub+210, 20+40, 64, 39, -31, -8]
 
-    [doub+210, 250, 64, 31, -31, 0]
-    [doub, 250, 64, 31, -31, 0]
-    [doub+70, 250, 64, 31, -31, 0]
-    [doub+140, 250, 64, 31, -31, 0]
+    [doub+210, 20+250, 64, 31, -31, 0]
+    [doub, 20+250, 64, 31, -31, 0]
+    [doub+70, 20+250, 64, 31, -31, 0]
+    [doub+140, 20+250, 64, 31, -31, 0]
 }
 
 template tmpl_bridge(x,y) {
-    [x, 0, 64, 31, -31, 0]
-    [x+70, 0, 64, 31, -31, 0]
+    [x, 20+0, 64, 31, -31, 0]
+    [x+70, 20+0, 64, 31, -31, 0]
 
-    [0, 40, 64, 39, -31, -8]
-    [70, 40, 64, 23, -31, 0]
-    [140, 40, 64, 23, -31, 0]
-    [210, 40, 64, 39, -31, -8]
+    [0, 20+40, 64, 39, -31, -8]
+    [70, 20+40, 64, 23, -31, 0]
+    [140, 20+40, 64, 23, -31, 0]
+    [210, 20+40, 64, 39, -31, -8]
 }
 # 3 "src/index.pnml" 2
 # 1 "src/import/roadTable.pnml" 1
@@ -866,8 +887,6 @@ template tmpl_bridge(x,y) {
 
 spriteset(sw_bridge_2l_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_nm.png") {tmpl_bridge (0,0)}
-spriteset(sw_bridge_2l_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/bridge_2l_dw.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_2l_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_sw.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_2l_so, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -1032,8 +1051,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_district_main,town_zone){
     sw_road_district_no_markings_gfx;
   }
 switch(FEAT_ROADTYPES,SELF,sw_bridge_district_main,town_zone){
-    3..4:sw_bridge_2l_sw;
-    1..2:sw_bridge_2l_dw;
+    1..4:sw_bridge_2l_sw;
     sw_bridge_2l_nm;
   }
 

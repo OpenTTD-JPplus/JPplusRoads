@@ -1,8 +1,6 @@
 
 spriteset(sw_bridge_2l_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_nm.png") {tmpl_bridge (0,0)}
-spriteset(sw_bridge_2l_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/bridge_2l_dw.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_2l_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/bridge_2l_sw.png") {tmpl_bridge (0,0)}
 spriteset(sw_bridge_2l_so, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
