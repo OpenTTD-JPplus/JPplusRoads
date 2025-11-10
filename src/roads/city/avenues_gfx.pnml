@@ -16,6 +16,8 @@
     "gfx/roads/gfx_street_4l_dw_tile_tact_r.png") {tmpl_underlay (0,0,0,130,0)}
     spriteset(gfx_street_4l_dw_tile_tact_r_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/gfx_street_4l_dw_tile_tact_r.png") {tmpl_underlay (0,0,0,260,0)}
+    spriteset(gfx_street_4l_dw_tile_tact_r_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/roads/gfx_street_4l_dw_tile_tact_r.png") {tmpl_underlay (0,0,0,390,0)}
 
     spriteset(gfx_street_4l_nm_stone_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/gfx_street_4l_nm_stone_l.png") {tmpl_underlay (0,0,0,0,0)}
@@ -65,9 +67,10 @@
 //*Logic */
   //*4 Line Street */
     random_switch(FEAT_ROADTYPES,SELF,sw_street_4l_tile_random){
-      2:gfx_street_4l_dw_tile_tact_r_1;
+      1:gfx_street_4l_dw_tile_tact_r_1;
       1:gfx_street_4l_dw_tile_tact_r_2;
       1:gfx_street_4l_dw_tile_tact_r_3;
+      1:gfx_street_4l_dw_tile_tact_r_4;
     }
     switch(FEAT_ROADTYPES,SELF,sw_street_4l_tile_1,town_zone){
       3..4:gfx_street_4l_dw_tile_r;
