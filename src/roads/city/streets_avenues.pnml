@@ -21,7 +21,6 @@ item(FEAT_ROADTYPES, avenue_6l_r,33) {
     catenary_back:sw_tree_cone_b_lights_6l_right_main;
     underlay: sw_avenue_6l_r_main;
     bridge_surfaces:sw_bridge_avenue_6l_r_main;
-    // tunnels:;
     direction_markings:gfx_arrows_6l_r;
     gui:gui_street_avenue_6l_r;
     depots:gfx_depot_reldred_choice;
@@ -51,7 +50,6 @@ item(FEAT_ROADTYPES, avenue_6l_l,34) {
     catenary_back:sw_tree_cone_b_lights_6l_left_main;
     underlay: sw_avenue_6l_l_main;
     bridge_surfaces:sw_bridge_avenue_6l_l_main;
-    // tunnels:;
     direction_markings:gfx_arrows_6l_l;
     gui:gui_street_avenue_6l_l;
     depots:gfx_depot_reldred_choice;

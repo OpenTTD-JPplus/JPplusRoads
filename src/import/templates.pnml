@@ -224,6 +224,14 @@ template tmpl_arrows(y) {
   [350,      y+76,    64, 23, -31, -12]
 }
 
+// template ground_tile(x, y) {  }
+template tmpl_tunnels(x, y) {
+  [x+70, y, 64, 39, -31, -5]
+  [x+70, y, 64, 31, -31, -5]
+  [x+140, y, 64, 31, -31, -5]
+  [x+210, y, 64, 39, -31, -5]
+}
+
 template tmpl_stops(x,y) {
   [x,         0,    64, 31, -25, 0]//↗
   [x+70,      0,    64, 31, -25, 0]//↖

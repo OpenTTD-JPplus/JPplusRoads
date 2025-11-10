@@ -21,7 +21,6 @@ item(FEAT_ROADTYPES, street_unpaved,16) {
     catenary_back:sw_light_poles_gas_b_main;
     underlay: gfx_rd_unpaved;
     bridge_surfaces:gfx_bridge_street_stone_nm;
-
     direction_markings:gfx_arrows_2l;
     gui:gui_street_dirt;
     depots:gfx_depot_reldred_choice;
@@ -51,7 +50,6 @@ item(FEAT_ROADTYPES, street_stone,18) {
     catenary_back:sw_light_poles_gas_b_main;
     underlay: gfx_street_stone_nm_def;
     bridge_surfaces:gfx_bridge_street_stone_nm;
-    // tunnels:;
     direction_markings:gfx_arrows_2l;
     gui:gui_street_stone;
     depots:gfx_depot_reldred_choice;
