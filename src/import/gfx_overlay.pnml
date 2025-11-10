@@ -1,0 +1,40 @@
+spriteset(gfx_overlay_people_1_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (0,0,0)}
+spriteset(gfx_overlay_people_1_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (140,0,130)}
+spriteset(gfx_overlay_people_1_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (280,280,260)}
+spriteset(gfx_overlay_people_1_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (420,280,390)}
+spriteset(gfx_overlay_people_2_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (0,0,0)}
+spriteset(gfx_overlay_people_2_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (140,0,130)}
+spriteset(gfx_overlay_people_2_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (280,280,260)}
+spriteset(gfx_overlay_people_2_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (420,280,390)}
+spriteset(gfx_overlay_people_3_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (0,0,0)}
+spriteset(gfx_overlay_people_3_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (140,0,130)}
+spriteset(gfx_overlay_people_3_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (280,280,260)}
+spriteset(gfx_overlay_people_3_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (420,280,390)}
+
+random_switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_1){
+  1:gfx_overlay_people_1_1;
+  1:gfx_overlay_people_1_2;
+  1:gfx_overlay_people_1_3;
+  1:gfx_overlay_people_1_4;
+}
+random_switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2){
+  1:gfx_overlay_people_2_1;
+  1:gfx_overlay_people_2_2;
+  1:gfx_overlay_people_2_3;
+  1:gfx_overlay_people_2_4;
+}
+random_switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_3){
+  1:gfx_overlay_people_3_1;
+  1:gfx_overlay_people_3_2;
+  1:gfx_overlay_people_3_3;
+  1:gfx_overlay_people_3_4;
+}
+switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2l_primary,town_zone){
+  3..4:gfx_overlay_people_3;
+  1..2:gfx_overlay_people_2;
+  gfx_overlay_people_1;
+}
+switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2l_secondary,town_zone){
+  2..4:gfx_overlay_people_2;
+  gfx_overlay_people_1;
+}

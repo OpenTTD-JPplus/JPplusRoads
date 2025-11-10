@@ -26,36 +26,31 @@
   [xSecondOffset+70,   20+250, 64, 31,   -31,   0]//◸
   [xSecondOffset+140,  20+250, 64, 31,   -31,   0]//◺
 }
-  template tmpl_overlay(xFirstOffset,xSecondOffset) {
-  [xFirstOffset,      0,   64, 51, -31, -20]//↗
-  [xFirstOffset+70,   0,   64, 51, -31, -20]//↖
+  template tmpl_overlay(xFirstOffset,xSecondOffset,cross_x) {
+  [xFirstOffset,      20,   64, 51, -31, 0]//↗
+  [xFirstOffset+70,   20,   64, 51, -31, 0]//↖
 
-  [xFirstOffset,           310,  64,  51, -31, -20]//X
+  [cross_x, 310,  128, 64, -63, -33]//X
 
-  [xSecondOffset,     250,  64, 51, -31,   -20]//◹
-  [xSecondOffset+70,  250,  64, 51, -31,   -20]//◸
-  [xSecondOffset+140, 250,  64, 51, -31,   -20]//◺
-  [xSecondOffset+210, 250,  64, 51, -31,   -20]//◿
+  [xSecondOffset,     270,  64, 31, -31,   0]//◹
+  [xSecondOffset+70,  270,  64, 31, -31,   0]//◸
+  [xSecondOffset+140, 270,  64, 31, -31,   0]//◺
+  [xSecondOffset+210, 270,  64, 31, -31,   0]//◿
 
-  [xSecondOffset+0,      130,  64, 51, -31,   -20]//⊃
-  [xSecondOffset+70,     130,  64, 51, -31,   -20]//◡
-  [xSecondOffset+140,    130,  64, 51, -31,   -20]//⊂
-  [xSecondOffset+210,    130,  64, 51, -31,   -20]//◠
+  [xSecondOffset+0,      110,  64, 31, -31,   0]//⊃
+  [xSecondOffset+70,     110,  64, 31, -31,   0]//◡
+  [xSecondOffset+140,    110,  64, 31, -31,   0]//⊂
+  [xSecondOffset+210,    110,  64, 31, -31,   0]//◠
 
-  [xSecondOffset,       60, 64, 59,   -31,   -28]//↗
-  [xSecondOffset+70,    60, 64, 43,   -31,   -20]//<
-  [xSecondOffset+140,   60, 64, 43,   -31,   -20]//>
-  [xSecondOffset+210,   60, 64, 59,   -31,   -28]//↖
+  [xSecondOffset,       60, 64, 59,   -31,   -8]//↗
+  [xSecondOffset+70,    60, 64, 43,   -31,   -0]//<
+  [xSecondOffset+140,   60, 64, 43,   -31,   -0]//>
+  [xSecondOffset+210,   60, 64, 59,   -31,   -8]//↖
 
-  [xSecondOffset+210,  190, 64, 51,   -31,   -20]//◿
-  [xSecondOffset,      190, 64, 51,   -31,   -20]//◹
-  [xSecondOffset+70,   190, 64, 51,   -31,   -20]//◸
-  [xSecondOffset+140,  190, 64, 51,   -31,   -20]//◺
-
-  [xSecondOffset+210,  190, 1, 1,   -31,   -20]//◿
-  [xSecondOffset,      190, 1, 1,   -31,   -20]//◹
-  [xSecondOffset+70,   190, 1, 1,   -31,   -20]//◸
-  [xSecondOffset+140,  190, 1, 1,   -31,   -20]//◺
+  [xSecondOffset+210,  150, 64, 31,   -31,   0]//◿
+  [xSecondOffset,      150, 64, 31,   -31,   0]//◹
+  [xSecondOffset+70,   150, 64, 31,   -31,   0]//◸
+  [xSecondOffset+140,  150, 64, 31,   -31,   0]//◺
 }
 template tmpl_level_crossing(y) {
   [0,        y,    64, 31, -31, 0]//↗

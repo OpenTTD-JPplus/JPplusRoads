@@ -69,16 +69,7 @@ grf {
         };
       }
   }
-
-  param 5 {
-    param_show_pedestrians {
-      type: bool;
-      name: string(STR_PARAM_PEDESTRIANS);
-      desc: string(STR_PARAM_PEDESTRIANS);
-      def_value: 0;
-      }
-  }
-
+# 69 "src/import/params.pnml"
   param 6 {
     param_seasons {
       type: int;
@@ -233,36 +224,31 @@ replace road_underlay_12(1347, "gfx/misc/gfx_grass_temp.png") {
   [xSecondOffset+70, 20+250, 64, 31, -31, 0]
   [xSecondOffset+140, 20+250, 64, 31, -31, 0]
 }
-  template tmpl_overlay(xFirstOffset,xSecondOffset) {
-  [xFirstOffset, 0, 64, 51, -31, -20]
-  [xFirstOffset+70, 0, 64, 51, -31, -20]
+  template tmpl_overlay(xFirstOffset,xSecondOffset,cross_x) {
+  [xFirstOffset, 20, 64, 51, -31, 0]
+  [xFirstOffset+70, 20, 64, 51, -31, 0]
 
-  [xFirstOffset, 310, 64, 51, -31, -20]
+  [cross_x, 310, 128, 64, -63, -33]
 
-  [xSecondOffset, 250, 64, 51, -31, -20]
-  [xSecondOffset+70, 250, 64, 51, -31, -20]
-  [xSecondOffset+140, 250, 64, 51, -31, -20]
-  [xSecondOffset+210, 250, 64, 51, -31, -20]
+  [xSecondOffset, 270, 64, 31, -31, 0]
+  [xSecondOffset+70, 270, 64, 31, -31, 0]
+  [xSecondOffset+140, 270, 64, 31, -31, 0]
+  [xSecondOffset+210, 270, 64, 31, -31, 0]
 
-  [xSecondOffset+0, 130, 64, 51, -31, -20]
-  [xSecondOffset+70, 130, 64, 51, -31, -20]
-  [xSecondOffset+140, 130, 64, 51, -31, -20]
-  [xSecondOffset+210, 130, 64, 51, -31, -20]
+  [xSecondOffset+0, 110, 64, 31, -31, 0]
+  [xSecondOffset+70, 110, 64, 31, -31, 0]
+  [xSecondOffset+140, 110, 64, 31, -31, 0]
+  [xSecondOffset+210, 110, 64, 31, -31, 0]
 
-  [xSecondOffset, 60, 64, 59, -31, -28]
-  [xSecondOffset+70, 60, 64, 43, -31, -20]
-  [xSecondOffset+140, 60, 64, 43, -31, -20]
-  [xSecondOffset+210, 60, 64, 59, -31, -28]
+  [xSecondOffset, 60, 64, 59, -31, -8]
+  [xSecondOffset+70, 60, 64, 43, -31, -0]
+  [xSecondOffset+140, 60, 64, 43, -31, -0]
+  [xSecondOffset+210, 60, 64, 59, -31, -8]
 
-  [xSecondOffset+210, 190, 64, 51, -31, -20]
-  [xSecondOffset, 190, 64, 51, -31, -20]
-  [xSecondOffset+70, 190, 64, 51, -31, -20]
-  [xSecondOffset+140, 190, 64, 51, -31, -20]
-
-  [xSecondOffset+210, 190, 1, 1, -31, -20]
-  [xSecondOffset, 190, 1, 1, -31, -20]
-  [xSecondOffset+70, 190, 1, 1, -31, -20]
-  [xSecondOffset+140, 190, 1, 1, -31, -20]
+  [xSecondOffset+210, 150, 64, 31, -31, 0]
+  [xSecondOffset, 150, 64, 31, -31, 0]
+  [xSecondOffset+70, 150, 64, 31, -31, 0]
+  [xSecondOffset+140, 150, 64, 31, -31, 0]
 }
 template tmpl_level_crossing(y) {
   [0, y, 64, 31, -31, 0]
@@ -652,6 +638,46 @@ spriteset(gui_chevron_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl
 spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,375,0)}
 # 8 "src/index.pnml" 2
 # 1 "src/import/gfx_overlay.pnml" 1
+spriteset(gfx_overlay_people_1_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (0,0,0)}
+spriteset(gfx_overlay_people_1_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (140,0,130)}
+spriteset(gfx_overlay_people_1_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (280,280,260)}
+spriteset(gfx_overlay_people_1_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (420,280,390)}
+spriteset(gfx_overlay_people_2_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (0,0,0)}
+spriteset(gfx_overlay_people_2_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (140,0,130)}
+spriteset(gfx_overlay_people_2_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (280,280,260)}
+spriteset(gfx_overlay_people_2_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_2.png") {tmpl_overlay (420,280,390)}
+spriteset(gfx_overlay_people_3_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (0,0,0)}
+spriteset(gfx_overlay_people_3_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (140,0,130)}
+spriteset(gfx_overlay_people_3_3, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (280,280,260)}
+spriteset(gfx_overlay_people_3_4, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_3.png") {tmpl_overlay (420,280,390)}
+
+random_switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_1){
+  1:gfx_overlay_people_1_1;
+  1:gfx_overlay_people_1_2;
+  1:gfx_overlay_people_1_3;
+  1:gfx_overlay_people_1_4;
+}
+random_switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2){
+  1:gfx_overlay_people_2_1;
+  1:gfx_overlay_people_2_2;
+  1:gfx_overlay_people_2_3;
+  1:gfx_overlay_people_2_4;
+}
+random_switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_3){
+  1:gfx_overlay_people_3_1;
+  1:gfx_overlay_people_3_2;
+  1:gfx_overlay_people_3_3;
+  1:gfx_overlay_people_3_4;
+}
+switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2l_primary,town_zone){
+  3..4:gfx_overlay_people_3;
+  1..2:gfx_overlay_people_2;
+  gfx_overlay_people_1;
+}
+switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2l_secondary,town_zone){
+  2..4:gfx_overlay_people_2;
+  gfx_overlay_people_1;
+}
 # 9 "src/index.pnml" 2
 # 1 "src/import/gfx_decorations.pnml" 1
 

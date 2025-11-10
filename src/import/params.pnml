@@ -56,15 +56,15 @@
         };
       }
   }
-//*Enable Pedestrians */
-  param 5 { 
-    param_show_pedestrians {
-      type: bool;
-      name: string(STR_PARAM_PEDESTRIANS);
-      desc: string(STR_PARAM_PEDESTRIANS);
-      def_value: 0;
-      }
-  }
+//*X crossing tweaker */
+  // param 5 { 
+  //   param_show_pedestrians {
+  //     type: bool;
+  //     name: string(STR_PARAM_PEDESTRIANS);
+  //     desc: string(STR_PARAM_PEDESTRIANS);
+  //     def_value: 0;
+  //     }
+  // }
 //*Season Controller */
   param 6 { 
     param_seasons {
