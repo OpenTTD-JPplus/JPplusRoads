@@ -1,2 +1,8 @@
-spriteset(gfx_depot_reldred_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/depots/reldred_choice.png") {tmpl_depots (0,0)}
+spriteset(gfx_def_depot_reldred_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/depots/reldred_choice.png") {tmpl_depots (0,0)}
+spriteset(gfx_snow_depot_reldred_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/depots/reldred_choice.png") {tmpl_depots (0,67)}
+switch(FEAT_ROADTYPES,SELF,gfx_depot_reldred_choice,terrain_type){
+  TILETYPE_SNOW:gfx_snow_depot_reldred_choice;
+  gfx_def_depot_reldred_choice;
+}

@@ -8,7 +8,7 @@ grf {
   name: string(STR_GRF_NAME);
   desc: string(STR_GRF_DESC);
   url: string(STR_GRF_URL);
-  version :012;
+  version :100;
   min_compatible_version :002;
 # 1 "src/import/params.pnml" 1
 
@@ -2762,8 +2762,14 @@ spriteset(gfx_arrows_6l_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/arrows/arrows_6l.png") {tmpl_arrows (100)}
 # 15 "src/index.pnml" 2
 # 1 "src/import/gfx_depots.pnml" 1
-spriteset(gfx_depot_reldred_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/depots/reldred_choice.png") {tmpl_depots (0,0)}
+spriteset(gfx_def_depot_reldred_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/depots/reldred_choice.png") {tmpl_depots (0,0)}
+spriteset(gfx_snow_depot_reldred_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/depots/reldred_choice.png") {tmpl_depots (0,67)}
+switch(FEAT_ROADTYPES,SELF,gfx_depot_reldred_choice,terrain_type){
+  TILETYPE_SNOW:gfx_snow_depot_reldred_choice;
+  gfx_def_depot_reldred_choice;
+}
 # 16 "src/index.pnml" 2
 # 1 "src/import/gfx_stops.pnml" 1
 spriteset(gfx_stops_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_stone.png") {tmpl_stops (0,0)}
