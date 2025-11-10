@@ -13,8 +13,8 @@
     "gfx/decorations/DECO_crashBarrier_l.png") {tmpl_catenary_single (0,0,0,0,0,0,1,1)}
   
   switch (FEAT_ROADTYPES,SELF,gfx_crash_barriers_0,tramtype) {
-    34:gfx_crash_barriers_l;
-    35:gfx_crash_barriers_r;
+    36:gfx_crash_barriers_l;
+    37:gfx_crash_barriers_r;
     crash_barriers;
   }
   switch (FEAT_ROADTYPES,SELF,gfx_crash_barriers,railtype<64) {

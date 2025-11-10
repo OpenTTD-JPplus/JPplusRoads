@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, road_industrial_isr,42) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: gfx_IND_ISR;
     bridge_surfaces:gfx_IND_ISR_bridge;

@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, road_field_path,1) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: sw_road_rural_field_main;
     bridge_surfaces:sw_bridge_rural_stone_nm;
@@ -46,6 +47,7 @@ item(FEAT_ROADTYPES, road_unpaved,2) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    catenary_front:deco_empty;
     catenary_back:deco_empty;
     underlay: sw_road_rural_dirt_main;
 
