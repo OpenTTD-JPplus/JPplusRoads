@@ -22,7 +22,7 @@
   [xSecondOffset+210,   20+40, 64, 39,   -31,  -8]//↖
 
   [xSecondOffset+210,  20+250, 64, 31,   -31,   0]//◿
-  [xSecondOffset,    20+250, 64, 31,   -31,   0]//◹
+  [xSecondOffset,       20+250, 64, 31,   -31,   0]//◹
   [xSecondOffset+70,   20+250, 64, 31,   -31,   0]//◸
   [xSecondOffset+140,  20+250, 64, 31,   -31,   0]//◺
 }
