@@ -5,6 +5,8 @@ STR_GRF_DESC             :{}JP+ Roads is a road and tramtrack set based on the l
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?f=26&t=76183
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
 
+STR_JP_TRACKS:JP+ Tracks is recommended for the best experience
+
 STR_PARAM_COST:Define Costs
 STR_PARAM_COST_1:Almost Free
 STR_PARAM_COST_2:Low
