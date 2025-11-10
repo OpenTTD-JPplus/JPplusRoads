@@ -25,7 +25,7 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
 
         introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
-        map_colour:69;
+        map_colour:VAR_EXPRESSWAY;
         
         toolbar_caption: string(STR_ROAD_EXPRESS);
         menu_text: string(STR_ROAD_EXPRESS);
@@ -55,7 +55,7 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
 
         introduction_date:date(1963,7,16);
         speed_limit:100 km/h;
-        map_colour:69;
+        map_colour:VAR_EXPRESSWAY;
         
         toolbar_caption: string(STR_ROAD_EXPRESS_S);
         menu_text: string(STR_ROAD_EXPRESS_S);
@@ -86,7 +86,7 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
 
         introduction_date:date(1963,7,16);
         speed_limit:60 km/h;
-        map_colour:69;
+        map_colour:VAR_EXPRESSWAY;
         
         toolbar_caption: string(STR_ROAD_EXPRESS_R);
         menu_text: string(STR_ROAD_EXPRESS_R);
