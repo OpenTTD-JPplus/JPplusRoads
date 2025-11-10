@@ -5,41 +5,36 @@ STR_GRF_DESC             :{}JP+ Roads is a road and tramtrack set based on the l
 STR_GRF_URL              :https://www.tt-forums.net/viewtopic.php?f=26&t=76183
 STR_MIN_OPENTTD_VERSION  :20190502-master (1.10.0)
 
-STR_PARAM_1_NAME               :Roadtype Availability
-STR_PARAM_1_DESC               :This parameter changes the availability of roadtypes based on date. {ORANGE}Year-Dependent{BLACK} is default behavior where each roadtype is introduced only after certain years, while {ORANGE}Always Available{BLACK} makes all roadtypes, well, always available
-STR_PARAM_INTRO_YEAR_DEF       :Year-Dependent {SILVER}(Default)
-STR_PARAM_INTRO_YEAR_REMOVE    :Always Available
+STR_PARAM_COST:Define Costs
+STR_PARAM_COST_1:Almost Free
+STR_PARAM_COST_2:Low
+STR_PARAM_COST_3:Normal
+STR_PARAM_COST_4:High
+STR_PARAM_COST_5:xUSSR level madness
 
-STR_PARAM_2_NAME               :Speed Units
-STR_PARAM_2_DESC               :Choose your preferred units for speed {ORANGE}(make sure this is the same as your game setting!){BLACK}. This makes sure your speed limits look 'realistic', e.g. no more silly 57 km/h speed limits due to unit conversions
-STR_PARAM_UNITS_MPH            :MPH
-STR_PARAM_UNITS_KMH            :KM/H
-STR_PARAM_UNITS_MPS            :M/S
+STR_PARAM_SPEED:Define Speed Limits
+STR_PARAM_SPEED_1:Realistic
+STR_PARAM_SPEED_2:Speeding (+20km/h)
+STR_PARAM_SPEED_3:Boosted (+50km/h)
+STR_PARAM_SPEED_4:No limit
 
-STR_PARAM_3_NAME               :Speed Limits
-STR_PARAM_3_DESC               :This parameter adjusts speed limits. {}{ORANGE}Normal{BLACK} is default behavior with generous speeds{}{ORANGE}Hard{BLACK} Lower speed limits{}{ORANGE}Harder{BLACK} Much lower speed limits{}{ORANGE}No Speed Limits{BLACK} Pedal to the metal!
-STR_PARAM_DIFFICULTY_DEF       :Normal {SILVER}(Default)
-STR_PARAM_DIFFICULTY_HARD      :Hard
-STR_PARAM_DIFFICULTY_HARDER    :Harder
-STR_PARAM_DIFFICULTY_NONE      :No Speed Limits
+STR_PARAM_CANDY_ROADS:Enable Eyecandy Roads
+STR_PARAM_CANDY_ROADS_DESC:Show road and tramtypes, that are not functional, but serve as a decorations
 
-STR_PARAM_SPEED_1:             :Realistic
-STR_PARAM_SPEED_2:             :Speeding
-STR_PARAM_SPEED_3:             :Boosted
-STR_PARAM_SPEED_4:             :No Limits
+STR_PARAM_JUNC_MARKINGS:Enable Junction Markings
+STR_PARAM_JUNC_MARKINGS_1:Stop Lines
+STR_PARAM_JUNC_MARKINGS_2:No Markings
 
+STR_PARAM_PEDESTRIANS:Show Pedestrians
+STR_PARAM_SEASONS:Select Hemishere or fixed season
+STR_PARAM_SEASONS_1:Northern Hemishere
+STR_PARAM_SEASONS_2:Down Under
+STR_PARAM_SEASONS_3:Spring
+STR_PARAM_SEASONS_4:Summer
+STR_PARAM_SEASONS_5:Fall
+STR_PARAM_SEASONS_6:Winter (Depression)
 
-STR_PARAM_4_NAME               :Road Style
-STR_PARAM_4_DESC               :This parameter allows you to adjust which road style appears in-game. Currently there are two options: {ORANGE}American{BLACK} and {ORANGE}European/UK
-STR_PARAM_ROAD_STYLE_1         :American {SILVER}(Default)
-STR_PARAM_ROAD_STYLE_2         :European/UK
-
-STR_PARAM_5_NAME               :Enable electrified roads
-STR_PARAM_5_DESC               :If enabled, this option adds electrified versions of 4 roadtypes for use with trolleybuses and other catenary-powered road vehicles. These roadtypes require the addition of NRT-enabled vehicle sets to be useful, hence why they are disabled by default.
-
-# TODO should be by default
-STR_PARAM_6_NAME               :Enable houses along highways
-STR_PARAM_6_DESC               :By default, houses are forbidden from spawning alongside highways; activating this option enables it.{}{} {ORANGE}It is highly recommended to turn this on for multiplayer servers to prevent griefing from malicious or careless players.{BLACK}
+STR_PARAM_GRASS:Grass Style
 
 # Generic strings
 STR_GENERIC_BUILD_VEHICLE            :Build New Road Vehicles

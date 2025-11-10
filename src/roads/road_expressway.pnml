@@ -1,12 +1,12 @@
 //*Orange
   spriteset(sw_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_expressway_dw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  "gfx/roads/pool/road_expressway_dw.png") {tmpl_underlay (0,0,0,0,0)}
 //
   spriteset(sw_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_expressway_sw.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  "gfx/roads/pool/road_expressway_sw.png") {tmpl_underlay (0,0,0,0,0)}
 //
   spriteset(sw_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_expressway_red.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  "gfx/roads/pool/road_expressway_red.png") {tmpl_underlay (0,0,0,0,0)}
 //
 //Bridges
   spriteset(bridge_expressway_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,

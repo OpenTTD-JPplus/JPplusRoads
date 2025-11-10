@@ -5,7 +5,7 @@ grf {
   url: string(STR_GRF_URL);
   version                            :003;//0.0.1
   min_compatible_version             :002;
-// #include "params.pnml"
+#include "params.pnml"
 }
 
 replace trees_remove(4626, "gfx/gfx_placeholder.png") {

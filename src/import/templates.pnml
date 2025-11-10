@@ -1,259 +1,176 @@
 //* Graphic Templates
-  // Underlay
-    template tmpl_underlay() {
-    [  0, 0,  64, 31, -31, 0]//↗
-    [ 70, 0,  64, 31, -31, 0]//↖
-    
-    [140, 0,  64, 31, -31, 0]//X
-    [210, 0,  64, 31, -31, 0]//◹
-    [280, 0,  64, 31, -31, 0]//◸
-    [350, 0,  64, 31, -31, 0]//◺
-    [420, 0,  64, 31, -31, 0]//◿
-
-    [  0, 37, 64, 31, -31, 0]//⊃
-    [ 70, 37, 64, 31, -31, 0]//◡
-    [140, 37, 64, 31, -31, 0]//⊂
-    [210, 37, 64, 31, -31, 0]//◠
-
-    [280, 37, 64, 39, -31,-8]//↗
-    [350, 37, 64, 23, -31, 0]//<
-    [420, 37, 64, 23, -31, 0]//>
-    [490, 37, 64, 39, -31,-8]//↖
-
-    [  0, 74, 64, 31, -31, 0]//◹
-    [ 70, 74, 64, 31, -31, 0]//◸
-    [140, 74, 64, 31, -31, 0]//◺
-    [210, 74, 64, 31, -31, 0]//◿
-}
-  // Underlay
-    template tmpl_underlay_avenues() {
-    [  0, 35,  64, 31, -31, 0]//↗
-    [ 70, 35,  64, 31, -31, 0]//↖
-    
-    [140-6, 0,   76, 40+30, -37, -35]//X
-    [210, 35,  64, 31, -31, 0]//◹
-    [280, 35,  64, 31, -31, 0]//◸
-    [350, 35,  64, 31, -31, 0]//◺
-    [420, 35,  64, 31, -31, 0]//◿
-
-    [  0, 42+30, 64, 31, -31, 0]//⊃
-    [ 70, 42+30, 64, 31, -31, 0]//◡
-    [140, 42+30, 64, 31, -31, 0]//⊂
-    [210, 42+30, 64, 31, -31, 0]//◠
-
-    [280, 42+30, 64, 39, -31,-8]//↗
-    [350, 42+30, 64, 23, -31, 0]//<
-    [420, 42+30, 64, 23, -31, 0]//>
-    [490, 42+30, 64, 39, -31,-8]//↖
-
-    [  0, 79+30, 64, 31, -31, 0]//◹
-    [ 70, 79+30, 64, 31, -31, 0]//◸
-    [140, 79+30, 64, 31, -31, 0]//◺
-    [210, 79+30, 64, 31, -31, 0]//◿
-}
-  template tmpl_trees(x,y) {
-    [ x, y, 64, 64, -31, -34]
-    [ x+70, y, 64, 64, -30, -34]
-
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    //
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-  }
-  template tmpl_trees_front_left(x,y) {
-    [ x, y, 64, 64, -31, -34]
-    [0, 0, 1, 1, 0, 0]
-
-    [0, 0, 1, 1, 0, 0]
-    [x, y, 64, 64, -31, -34]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    //
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-  }
-  template tmpl_trees_back_left(x,y) {
-    [0, 0, 1, 1, 0, 0]
-    [ x+70, y, 64, 64, -30, -34]
-
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [ x+70, y, 64, 64, -30, -34]
-    //
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-  }
-  template tmpl_trees_front_right(x,y) {
-    [0, 0, 1, 1, 0, 0]
-    [ x+70, y, 64, 64, -30, -34]
-
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [ x+70, y, 64, 64, -30, -34]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    //
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-  }
-  template tmpl_trees_back_right(x,y) {
-    [ x, y, 64, 64, -31, -34]
-    [0, 0, 1, 1, 0, 0]
-
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0]
-    [ x, y, 64, 64, -31, -34]
-    [0, 0, 1, 1, 0, 0]
-    //
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-      [0, 0, 1, 1, 0, 0]
-  }
 // Underlay
-    template tmpl_underlay_2(xFirstOffset,xSecondOffset,tJunction_y,cross_x,cross_y) {
-    [xFirstOffset,         20+0,    64, 31, -31, 0]//↗
-    [xFirstOffset+70,      20+0,    64, 31, -31, 0]//↖
+  template tmpl_underlay(xFirstOffset,xSecondOffset,tJunction_y,cross_x,cross_y) {
+  [xFirstOffset,         20+0,    64, 31, -31, 0]//↗
+  [xFirstOffset+70,      20+0,    64, 31, -31, 0]//↖
 
-    [cross_x, 20+290+cross_y,  128, 64, -63, -33]//X
+  [cross_x, 20+290+cross_y,  128, 64, -63, -33]//X
 
-    [xSecondOffset, 20+130+tJunction_y,  64, 31, -31,   0]//◹
-    [xSecondOffset+70, 20+130+tJunction_y,  64, 31, -31,   0]//◸
-    [xSecondOffset+140, 20+130+tJunction_y,  64, 31, -31,   0]//◺
-    [xSecondOffset+210, 20+130+tJunction_y,  64, 31, -31,   0]//◿
+  [xSecondOffset, 20+130+tJunction_y,  64, 31, -31,   0]//◹
+  [xSecondOffset+70, 20+130+tJunction_y,  64, 31, -31,   0]//◸
+  [xSecondOffset+140, 20+130+tJunction_y,  64, 31, -31,   0]//◺
+  [xSecondOffset+210, 20+130+tJunction_y,  64, 31, -31,   0]//◿
 
-    [xSecondOffset+0,      20+90,  64, 31, -31,   0]//⊃
-    [xSecondOffset+70,     20+90,  64, 31, -31,   0]//◡
-    [xSecondOffset+140,    20+90,  64, 31, -31,   0]//⊂
-    [xSecondOffset+210,    20+90,  64, 31, -31,   0]//◠
+  [xSecondOffset+0,      20+90,  64, 31, -31,   0]//⊃
+  [xSecondOffset+70,     20+90,  64, 31, -31,   0]//◡
+  [xSecondOffset+140,    20+90,  64, 31, -31,   0]//⊂
+  [xSecondOffset+210,    20+90,  64, 31, -31,   0]//◠
 
-    [xSecondOffset,       20+40, 64, 39,   -31,  -8]//↗
-    [xSecondOffset+70,    20+40, 64, 23,   -31,   0]//<
-    [xSecondOffset+140,   20+40, 64, 23,   -31,   0]//>
-    [xSecondOffset+210,   20+40, 64, 39,   -31,  -8]//↖
+  [xSecondOffset,       20+40, 64, 39,   -31,  -8]//↗
+  [xSecondOffset+70,    20+40, 64, 23,   -31,   0]//<
+  [xSecondOffset+140,   20+40, 64, 23,   -31,   0]//>
+  [xSecondOffset+210,   20+40, 64, 39,   -31,  -8]//↖
 
-    [xSecondOffset+210,  20+250, 64, 31,   -31,   0]//◿
-    [xSecondOffset,    20+250, 64, 31,   -31,   0]//◹
-    [xSecondOffset+70,   20+250, 64, 31,   -31,   0]//◸
-    [xSecondOffset+140,  20+250, 64, 31,   -31,   0]//◺
+  [xSecondOffset+210,  20+250, 64, 31,   -31,   0]//◿
+  [xSecondOffset,    20+250, 64, 31,   -31,   0]//◹
+  [xSecondOffset+70,   20+250, 64, 31,   -31,   0]//◸
+  [xSecondOffset+140,  20+250, 64, 31,   -31,   0]//◺
 }
+// Catenary
+  template tmpl_catenary_empty() {
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
 
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0]
+  }
+  template tmpl_catenary_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y) {
+    [xFirstOffset,      0,   64, 51, -31, -20+y]//↗
+    [xFirstOffset+70,   0,   64, 51, -31, -20+y]//↖
+
+    [cross_x,           310,  64,  51, -31, -20+y]//X
+
+    [xSecondOffset,     250,  64, 51, -31,   -20+y]//◹
+    [xSecondOffset+70,  250,  64, 51, -31,   -20+y]//◸
+    [xSecondOffset+140, 250,  64, 51, -31,   -20+y]//◺
+    [xSecondOffset+210, 250,  64, 51, -31,   -20+y]//◿
+
+    [xSecondOffset+0,      130,  64, 51, -31,   -20+y]//⊃
+    [xSecondOffset+70,     130,  64, 51, -31,   -20+y]//◡
+    [xSecondOffset+140,    130,  64, 51, -31,   -20+y]//⊂
+    [xSecondOffset+210,    130,  64, 51, -31,   -20+y]//◠
+
+    [xSecondOffset,       60, 64, 59,   -31,   -28+y]//↗
+    [xSecondOffset+70,    60, 64, 43,   -31,   -20+y]//<
+    [xSecondOffset+140,   60, 64, 43,   -31,   -20+y]//>
+    [xSecondOffset+210,   60, 64, 59,   -31,   -28+y]//↖
+
+    [xSecondOffset+210,  190, 64, 51,   -31,   -20+y]//◿
+    [xSecondOffset,      190, 64, 51,   -31,   -20+y]//◹
+    [xSecondOffset+70,   190, 64, 51,   -31,   -20+y]//◸
+    [xSecondOffset+140,  190, 64, 51,   -31,   -20+y]//◺
+
+    [xSecondOffset+210,  190-single_side_offset, 64, 51,   -31,   -20+y]//◿
+    [xSecondOffset,      190-single_side_offset, 64, 51,   -31,   -20+y]//◹
+    [xSecondOffset+70,   190-single_side_offset, 64, 51,   -31,   -20+y]//◸
+    [xSecondOffset+140,  190-single_side_offset, 64, 51,   -31,   -20+y]//◺
+  }
+
+  template tmpl_catenary(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y) {
+    tmpl_catenary_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y)
+
+    [xFirstOffset,      0,   64, 51, -31, -20+y]//↗
+    [xFirstOffset+70,   0,   64, 51, -31, -20+y]//↖
+
+    [xSecondOffset,       60, 64, 59,   -31,   -28]//↗
+    [xSecondOffset+70,    60, 64, 43,   -31,   -20+y]//<
+    [xSecondOffset+140,   60, 64, 43,   -31,   -20+y]//>
+    [xSecondOffset+210,   60, 64, 59,   -31,   -28]//↖
+  }
+  template tmpl_catenary_bridgeless(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y) {
+    tmpl_catenary_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y)
+
+    [0, 0, 1, 1, 0, 0]//↗
+    [0, 0, 1, 1, 0, 0]//↖
+    [0, 0, 1, 1, 0, 0]//↗
+    [0, 0, 1, 1, 0, 0]//<
+    [0, 0, 1, 1, 0, 0]//>
+    [0, 0, 1, 1, 0, 0]//↖
+  }
+  template tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack) {
+    [xFirstOffset,      0,   63*isFront+1, 51, -31, -20+y]//↗
+    [xFirstOffset+70,   0,   63*isBack+1, 51, -31, -20+y]//↖
+
+    [0, 0, 1, 1, 0, 0]//X
+
+    [xSecondOffset,     250,  63*isFront+1, 51, -31,   -20+y]//◹
+    [xSecondOffset+70,  250,  63*isBack+1, 51, -31,   -20+y]//◸
+    [xSecondOffset+140, 250,  63*isFront+1, 51, -31,   -20+y]//◺
+    [xSecondOffset+210, 250,  63*isBack+1, 51, -31,   -20+y]//◿
+
+    [xSecondOffset+0,      130,  63*isBack+1, 51, -31,   -20+y]//⊃
+    [xSecondOffset+70,     130,  63*isBack+1, 51, -31,   -20+y]//◡
+    [xSecondOffset+140,    130,  63*isBack+1, 51, -31,   -20+y]//⊂
+    [xSecondOffset+210,    130,  63*isBack+1, 51, -31,   -20+y]//◠
+
+    [xSecondOffset,       60, 63*isBack+1, 59,   -31,   -28+y]//↗
+    [xSecondOffset+70,    60, 63*isFront+1, 43,   -31,   -20+y]//<
+    [xSecondOffset+140,   60, 63*isBack+1, 43,   -31,   -20+y]//>
+    [xSecondOffset+210,   60, 63*isFront+1, 59,   -31,   -28+y]//↖
+
+    [xSecondOffset+210,  190, 63*isBack+1, 51,   -31,   -20+y]//◿
+    [xSecondOffset,      190, 63*isFront+1, 51,   -31,   -20+y]//◹
+    [xSecondOffset+70,   190, 63*isBack+1, 51,   -31,   -20+y]//◸
+    [xSecondOffset+140,  190, 63*isFront+1, 51,   -31,   -20+y]//◺
+
+    [xSecondOffset+210,  190-single_side_offset, 63*isBack+1, 51,   -31,   -20+y]//◿
+    [xSecondOffset,      190-single_side_offset, 63*isFront+1, 51,   -31,   -20+y]//◹
+    [xSecondOffset+70,   190-single_side_offset, 63*isBack+1, 51,   -31,   -20+y]//◸
+    [xSecondOffset+140,  190-single_side_offset, 63*isFront+1, 51,   -31,   -20+y]//◺
+
+    [xFirstOffset,      0,   63*isFront+1, 51, -31, -20+y]//↗
+    [xFirstOffset+70,   0,   63*isBack+1, 51, -31, -20+y]//↖
+
+  }
+  template tmpl_catenary_single(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack) {
+    tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack)
+
+    [xFirstOffset,      0,   63*isBack+1, 51, -31, -20+y]//↗
+    [xFirstOffset+70,   0,   63*isFront+1, 51, -31, -20+y]//↖
+
+    [xSecondOffset,       60, 63*isBack+1, 59,   -31,   -28+y]//↗
+    [xSecondOffset+70,    60, 63*isFront+1, 43,   -31,   -20+y]//<
+    [xSecondOffset+140,   60, 63*isBack+1, 43,   -31,   -20+y]//>
+    [xSecondOffset+210,   60, 63*isFront+1, 59,   -31,   -28+y]//↖
+  }
+  template tmpl_catenary_single_bridgeless(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack) {
+    tmpl_catenary_single_shared(xFirstOffset,xSecondOffset,cross_x,single_side_offset,y,isFront,isBack)
+
+    [0, 0, 1, 1, 0, 0]//↗
+    [0, 0, 1, 1, 0, 0]//↗
+    [0, 0, 1, 1, 0, 0]//↗
+    [0, 0, 1, 1, 0, 0]//↗
+    [0, 0, 1, 1, 0, 0]//↗
+    [0, 0, 1, 1, 0, 0]//↗
+  }
+//
 template tmpl_bridge(x,y) {
     [x,         20+0,    64, 31, -31, 0]//↗
     [x+70,      20+0,    64, 31, -31, 0]//↖
