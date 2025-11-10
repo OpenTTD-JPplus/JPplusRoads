@@ -1,16 +1,26 @@
 //*Sprites */
   //*Field
-    spriteset(gfx_road_unpaved_path, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_road_unpaved_path, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/pool/road_rural_field_nm.png") {tmpl_underlay (0,0,0,0,0)}
-
+    spriteset(gfx_snow_road_unpaved_path, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/roads/road_snow_rural_field_nm.png") {tmpl_underlay (0,0,0,0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_road_unpaved_path,terrain_type){
+      TILETYPE_SNOW:gfx_snow_road_unpaved_path;
+      gfx_def_road_unpaved_path;
+    }
     switch (FEAT_ROADTYPES,SELF,sw_road_rural_field_main,railtype<64) {
       1:sw_crossing_road_unpaved_path;
       gfx_road_unpaved_path;
     }
   //*Dirt
-    spriteset(sw_road_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_road_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/pool/road_rural_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
-    
+    spriteset(gfx_snow_road_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/roads/road_snow_rural_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
+    switch(FEAT_ROADTYPES,SELF,sw_road_unpaved,terrain_type){
+      TILETYPE_SNOW:gfx_snow_road_unpaved;
+      gfx_road_unpaved;
+    }
     switch (FEAT_ROADTYPES,SELF,sw_road_rural_dirt_main,railtype<64) {
       1:sw_crossing_road_unpaved;
       sw_road_unpaved;
@@ -18,26 +28,80 @@
   //
   //*Stone
     //Left Hand
-      spriteset(gfx_road_lh_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_nm_stone.png") {tmpl_underlay (0,0,0,0,0)}
-      spriteset(gfx_road_lh_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_dw_stone.png") {tmpl_underlay (0,0,0,0,0)}
-      spriteset(gfx_road_lh_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_sw_stone.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_nm_stone.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_dw_stone.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_sw_stone.png") {tmpl_underlay (0,0,0,0,0)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_nm_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_nm_stone;
+        gfx_def_road_lh_rural_nm_stone;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_dw_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_dw_stone;
+        gfx_def_road_lh_rural_dw_stone;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_sw_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_sw_stone;
+        gfx_def_road_lh_rural_sw_stone;
+      }
     //Right Hand
-      spriteset(gfx_road_rh_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_nm_stone.png") {tmpl_underlay (0,0,40,0,70)}
-      spriteset(gfx_road_rh_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_dw_stone.png") {tmpl_underlay (0,0,40,0,70)}
-      spriteset(gfx_road_rh_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_sw_stone.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_nm_stone.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_dw_stone.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_sw_stone.png") {tmpl_underlay (0,0,40,0,70)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_nm_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_nm_stone;
+        gfx_def_road_rh_rural_nm_stone;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_dw_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_dw_stone;
+        gfx_def_road_rh_rural_dw_stone;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_sw_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_sw_stone;
+        gfx_def_road_rh_rural_sw_stone;
+      }
     //No Markings
-      spriteset(gfx_road_nm_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_nm_stone.png") {tmpl_underlay (0,0,80,0,140)}
-      spriteset(gfx_road_nm_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_dw_stone.png") {tmpl_underlay (0,0,80,0,140)}
-      spriteset(gfx_road_nm_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_sw_stone.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_nm_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_nm_stone.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_dw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_dw_stone.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_sw_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_sw_stone.png") {tmpl_underlay (0,0,80,0,140)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_nm_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_nm_stone;
+        gfx_def_road_nm_rural_nm_stone;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_dw_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_dw_stone;
+        gfx_def_road_nm_rural_dw_stone;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_sw_stone,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_sw_stone;
+        gfx_def_road_nm_rural_sw_stone;
+      }
     //Controller
       switch(FEAT_ROADTYPES,SELF,gfx_road_rural_nm_stone_1,traffic_side){
         TRAFFIC_SIDE_RIGHT:gfx_road_rh_rural_nm_stone;
@@ -66,26 +130,80 @@
   //
   //*Concrete */
     //Left Hand
-      spriteset(gfx_road_lh_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_nm_conc.png") {tmpl_underlay (0,0,0,0,0)}
-      spriteset(gfx_road_lh_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_dw_conc.png") {tmpl_underlay (0,0,0,0,0)}
-      spriteset(gfx_road_lh_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_concrete_sw.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_nm_conc.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_dw_conc.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_concrete_sw.png") {tmpl_underlay (0,0,0,0,0)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_nm_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_nm_conc;
+        gfx_def_road_lh_rural_nm_conc;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_dw_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_dw_conc;
+        gfx_def_road_lh_rural_dw_conc;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_sw_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_sw_conc;
+        gfx_def_road_lh_rural_sw_conc;
+      }
     //Right Hand
-      spriteset(gfx_road_rh_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_nm_conc.png") {tmpl_underlay (0,0,40,0,70)}
-      spriteset(gfx_road_rh_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_dw_conc.png") {tmpl_underlay (0,0,40,0,70)}
-      spriteset(gfx_road_rh_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_concrete_sw.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_nm_conc.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_dw_conc.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_concrete_sw.png") {tmpl_underlay (0,0,40,0,70)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_nm_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_nm_conc;
+        gfx_def_road_rh_rural_nm_conc;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_dw_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_dw_conc;
+        gfx_def_road_rh_rural_dw_conc;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_sw_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_sw_conc;
+        gfx_def_road_rh_rural_sw_conc;
+      }
     //No Markings
-      spriteset(gfx_road_nm_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_nm_conc.png") {tmpl_underlay (0,0,80,0,140)}
-      spriteset(gfx_road_nm_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_dw_conc.png") {tmpl_underlay (0,0,80,0,140)}
-      spriteset(gfx_road_nm_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_concrete_sw.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_nm_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_nm_conc.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_dw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_dw_conc.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_sw_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_concrete_sw.png") {tmpl_underlay (0,0,80,0,140)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_nm_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_nm_conc;
+        gfx_def_road_nm_rural_nm_conc;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_dw_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_dw_conc;
+        gfx_def_road_nm_rural_dw_conc;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_sw_conc,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_sw_conc;
+        gfx_def_road_nm_rural_sw_conc;
+      }
     //Controller
       switch(FEAT_ROADTYPES,SELF,gfx_road_rural_nm_conc_1,traffic_side){
         TRAFFIC_SIDE_RIGHT:gfx_road_rh_rural_nm_conc;
@@ -114,26 +232,80 @@
   //
   //*Asphalt */
     //Left Hand
-      spriteset(gfx_road_lh_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_nm.png") {tmpl_underlay (0,0,0,0,0)}
-      spriteset(gfx_road_lh_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_dw.png") {tmpl_underlay (0,0,0,0,0)}
-      spriteset(gfx_road_lh_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_sw.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_nm.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_dw.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_lh_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_sw.png") {tmpl_underlay (0,0,0,0,0)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_nm_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_nm_asph;
+        gfx_def_road_lh_rural_nm_asph;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_dw_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_dw_asph;
+        gfx_def_road_lh_rural_dw_asph;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_sw_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_sw_asph;
+        gfx_def_road_lh_rural_sw_asph;
+      }
     //Right Hand
-      spriteset(gfx_road_rh_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_nm.png") {tmpl_underlay (0,0,40,0,70)}
-      spriteset(gfx_road_rh_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_dw.png") {tmpl_underlay (0,0,40,0,70)}
-      spriteset(gfx_road_rh_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_sw.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_nm.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_dw.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_rh_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_sw.png") {tmpl_underlay (0,0,40,0,70)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_nm_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_nm_asph;
+        gfx_def_road_rh_rural_nm_asph;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_dw_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_dw_asph;
+        gfx_def_road_rh_rural_dw_asph;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_sw_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_sw_asph;
+        gfx_def_road_rh_rural_sw_asph;
+      }
     //Right Hand
-      spriteset(gfx_road_nm_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_nm.png") {tmpl_underlay (0,0,80,0,140)}
-      spriteset(gfx_road_nm_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_dw.png") {tmpl_underlay (0,0,80,0,140)}
-      spriteset(gfx_road_nm_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_sw.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_nm_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_nm.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_dw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_dw.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_nm_rural_sw_asph, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_sw.png") {tmpl_underlay (0,0,80,0,140)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_nm_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_nm_asph;
+        gfx_def_road_nm_rural_nm_asph;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_dw_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_dw_asph;
+        gfx_def_road_nm_rural_dw_asph;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_sw_asph,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_sw_asph;
+        gfx_def_road_nm_rural_sw_asph;
+      }
     //Controller
       switch(FEAT_ROADTYPES,SELF,gfx_road_rural_nm_asph_1,traffic_side){
         TRAFFIC_SIDE_RIGHT:gfx_road_rh_rural_nm_asph;
@@ -160,12 +332,30 @@
         gfx_road_rural_sw_asph_1;
       }
     //Modern
-      spriteset(gfx_road_lh_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_lh_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_sw_1.png") {tmpl_underlay (0,0,0,0,0)}
-      spriteset(gfx_road_rh_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_rh_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_sw_1.png") {tmpl_underlay (0,0,40,0,70)}
-      spriteset(gfx_road_nm_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      spriteset(gfx_def_road_nm_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
       "gfx/roads/gfx_road_rural_asphalt_sw_1.png") {tmpl_underlay (0,0,80,0,140)}
+      spriteset(gfx_snow_road_lh_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_sw_1.png") {tmpl_underlay (0,0,0,0,0)}
+      spriteset(gfx_snow_road_rh_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_sw_1.png") {tmpl_underlay (0,0,40,0,70)}
+      spriteset(gfx_snow_road_nm_rural_sw_asph_new, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+      "gfx/roads/gfx_snow_road_rural_asphalt_sw_1.png") {tmpl_underlay (0,0,80,0,140)}
+      switch(FEAT_ROADTYPES,SELF,gfx_road_lh_rural_sw_asph_new,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_lh_rural_sw_asph_new;
+        gfx_def_road_lh_rural_sw_asph_new;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_rh_rural_sw_asph_new,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_rh_rural_sw_asph_new;
+        gfx_def_road_rh_rural_sw_asph_new;
+      }
+      switch(FEAT_ROADTYPES,SELF,gfx_road_nm_rural_sw_asph_new,terrain_type){
+        TILETYPE_SNOW:gfx_snow_road_nm_rural_sw_asph_new;
+        gfx_def_road_nm_rural_sw_asph_new;
+      }
     //Controller
     switch(FEAT_ROADTYPES,SELF,gfx_road_rural_sw_asph_new_1,traffic_side){
       TRAFFIC_SIDE_RIGHT:gfx_road_rh_rural_sw_asph_new;

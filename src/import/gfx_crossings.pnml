@@ -1,13 +1,37 @@
 //*2 line roads
   //unpaved
-    spriteset(gfx_crossing_road_unpaved_path_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_unpaved_path_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_unpaved.png") {tmpl_level_crossing (80)}
-    spriteset(gfx_crossing_road_unpaved_path_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_unpaved_path_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_unpaved.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_road_unpaved_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_unpaved_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_unpaved.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_road_unpaved_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_unpaved_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_unpaved.png") {tmpl_level_crossing (40)}
+    spriteset(gfx_snow_crossing_road_unpaved_path_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_unpaved.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_road_unpaved_path_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_unpaved.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_road_unpaved_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_unpaved.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_road_unpaved_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_unpaved.png") {tmpl_level_crossing (40)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_unpaved_path_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_unpaved_path_wood;
+      gfx_def_crossing_road_unpaved_path_wood;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_unpaved_path_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_unpaved_path_slab;
+      gfx_def_crossing_road_unpaved_path_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_unpaved_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_unpaved_wood;
+      gfx_def_crossing_road_unpaved_wood;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_unpaved_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_unpaved_slab;
+      gfx_def_crossing_road_unpaved_slab;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_road_unpaved_path,current_year){
       0..1959:gfx_crossing_road_unpaved_path_wood;
@@ -18,12 +42,30 @@
       gfx_crossing_road_unpaved_slab;
     }
   //stone
-    spriteset(gfx_crossing_road_stone_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_stone_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_stone.png") {tmpl_level_crossing (80)}
-    spriteset(gfx_crossing_road_stone_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_stone_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_stone.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_road_stone_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_stone_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_stone.png") {tmpl_level_crossing (160)}
+    spriteset(gfx_snow_crossing_road_stone_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_stone.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_road_stone_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_stone.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_road_stone_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_stone.png") {tmpl_level_crossing (160)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_stone_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_stone_slab;
+      gfx_def_crossing_road_stone_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_stone_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_stone_slab_nm;
+      gfx_def_crossing_road_stone_slab_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_stone_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_stone_wood;
+      gfx_def_crossing_road_stone_wood;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_road_dw_stone_tz,town_zone){
       0..1:gfx_crossing_road_stone_slab_nm;
@@ -34,16 +76,46 @@
       sw_crossing_road_dw_stone_tz;
     }
   //concrete
-    spriteset(gfx_crossing_road_conc_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_conc_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_conc.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_road_conc_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_conc_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_conc.png") {tmpl_level_crossing (40)}
-    spriteset(gfx_crossing_road_conc_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_conc_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_conc.png") {tmpl_level_crossing (80)}
-    spriteset(gfx_crossing_road_conc_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_conc_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_conc.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_road_conc_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_conc_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_conc.png") {tmpl_level_crossing (160)}
+    spriteset(gfx_snow_crossing_road_conc_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_conc.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_road_conc_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_conc.png") {tmpl_level_crossing (40)}
+    spriteset(gfx_snow_crossing_road_conc_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_conc.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_road_conc_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_conc.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_road_conc_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_conc.png") {tmpl_level_crossing (160)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_conc_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_conc_rubber;
+      gfx_def_crossing_road_conc_rubber;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_conc_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_conc_slab;
+      gfx_def_crossing_road_conc_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_conc_slab_tz,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_conc_slab_tz;
+      gfx_def_crossing_road_conc_slab_tz;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_conc_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_conc_slab_nm;
+      gfx_def_crossing_road_conc_slab_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_conc_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_conc_wood;
+      gfx_def_crossing_road_conc_wood;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_road_conc_1,town_zone){
       0:gfx_crossing_road_conc_rubber;
@@ -61,16 +133,46 @@
       sw_crossing_road_conc_2;
     }
   //asphalt
-    spriteset(gfx_crossing_road_asph_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_road_asph_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph.png") {tmpl_level_crossing (160)}
-    spriteset(gfx_crossing_road_asph_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_road_asph_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph.png") {tmpl_level_crossing (40)}
-    spriteset(gfx_crossing_road_asph_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_road_asph_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_road_asph_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph.png") {tmpl_level_crossing (160)}
+    spriteset(gfx_snow_crossing_road_asph_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_road_asph_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph.png") {tmpl_level_crossing (40)}
+    spriteset(gfx_snow_crossing_road_asph_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph.png") {tmpl_level_crossing (80)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_slab_nm;
+      gfx_def_crossing_road_asph_slab_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_wood;
+      gfx_def_crossing_road_asph_wood;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_rubber;
+      gfx_def_crossing_road_asph_rubber;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_slab;
+      gfx_def_crossing_road_asph_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_slab_tz,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_slab_tz;
+      gfx_def_crossing_road_asph_slab_tz;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_road_asph_1,town_zone){
       0:gfx_crossing_road_asph_rubber;
@@ -88,12 +190,30 @@
       sw_crossing_road_asph_2;
     }
     //1960
-    spriteset(gfx_crossing_road_asph_new_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_new_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph_new.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_road_asph_new_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_new_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph_new.png") {tmpl_level_crossing (40)}
-    spriteset(gfx_crossing_road_asph_new_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_road_asph_new_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_road_asph_new.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_road_asph_new_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph_new.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_road_asph_new_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph_new.png") {tmpl_level_crossing (40)}
+    spriteset(gfx_snow_crossing_road_asph_new_slab_tz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_road_asph_new.png") {tmpl_level_crossing (80)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_new_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_new_rubber;
+      gfx_def_crossing_road_asph_new_rubber;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_new_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_new_slab;
+      gfx_def_crossing_road_asph_new_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_road_asph_new_slab_tz,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_road_asph_new_slab_tz;
+      gfx_def_crossing_road_asph_new_slab_tz;
+    }
     switch(FEAT_ROADTYPES,SELF,sw_crossing_road_asph_new_main,town_zone){
       3..4:gfx_crossing_road_asph_new_slab_tz;
       1..2:gfx_crossing_road_asph_new_slab;
@@ -102,36 +222,90 @@
 //
 //*2 line streets
   //unpaved
-    spriteset(gfx_crossing_street_unpaved_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_unpaved_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_unpaved.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_street_unpaved_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_unpaved_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_unpaved.png") {tmpl_level_crossing (160)}
+    spriteset(gfx_snow_crossing_street_unpaved_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_unpaved.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_street_unpaved_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_unpaved.png") {tmpl_level_crossing (160)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_unpaved_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_unpaved_slab;
+      gfx_def_crossing_street_unpaved_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_unpaved_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_unpaved_wood;
+      gfx_def_crossing_street_unpaved_wood;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_street_unpaved,current_year){
       0..1959:gfx_crossing_street_unpaved_wood;
       gfx_crossing_street_unpaved_slab;
     }
   //stone
-    spriteset(gfx_crossing_street_stone_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_stone_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_stone.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_street_stone_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_stone_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_stone.png") {tmpl_level_crossing (160)}
+    spriteset(gfx_snow_crossing_street_stone_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_stone.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_street_stone_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_stone.png") {tmpl_level_crossing (160)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_stone_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_stone_slab;
+      gfx_def_crossing_street_stone_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_stone_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_stone_wood;
+      gfx_def_crossing_street_stone_wood;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_street_stone,current_year){
       0..1952:gfx_crossing_street_stone_wood;
       gfx_crossing_street_stone_slab;
     }
   //conc
-    spriteset(gfx_crossing_street_conc_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_conc_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_conc.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_street_conc_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_conc_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_conc.png") {tmpl_level_crossing (40)}
-    spriteset(gfx_crossing_street_conc_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_conc_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_conc.png") {tmpl_level_crossing (80)}
-    spriteset(gfx_crossing_street_conc_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_conc_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_conc.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_street_conc_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_conc_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_conc.png") {tmpl_level_crossing (160)}
+    spriteset(gfx_snow_crossing_street_conc_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_conc.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_street_conc_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_conc.png") {tmpl_level_crossing (40)}
+    spriteset(gfx_snow_crossing_street_conc_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_conc.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_street_conc_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_conc.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_street_conc_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_conc.png") {tmpl_level_crossing (160)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_conc_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_conc_rubber;
+      gfx_def_crossing_street_conc_rubber;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_conc_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_conc_slab;
+      gfx_def_crossing_street_conc_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_conc_slab_green,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_conc_slab_green;
+      gfx_def_crossing_street_conc_slab_green;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_conc_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_conc_slab_nm;
+      gfx_def_crossing_street_conc_slab_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_conc_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_conc_wood;
+      gfx_def_crossing_street_conc_wood;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_street_conc_1,town_zone){
       0:gfx_crossing_street_conc_rubber;
@@ -149,16 +323,46 @@
       sw_crossing_street_conc_2;
     }
   //secondary
-    spriteset(gfx_crossing_street_secondary_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_secondary_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_secondary.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_street_secondary_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_secondary_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_secondary.png") {tmpl_level_crossing (40)}
-    spriteset(gfx_crossing_street_secondary_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_secondary_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_secondary.png") {tmpl_level_crossing (80)}
-    spriteset(gfx_crossing_street_secondary_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_secondary_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_secondary.png") {tmpl_level_crossing (120)}
-    spriteset(gfx_crossing_street_secondary_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_secondary_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_secondary.png") {tmpl_level_crossing (160)}
+    spriteset(gfx_snow_crossing_street_secondary_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_secondary.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_street_secondary_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_secondary.png") {tmpl_level_crossing (40)}
+    spriteset(gfx_snow_crossing_street_secondary_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_secondary.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_street_secondary_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_secondary.png") {tmpl_level_crossing (120)}
+    spriteset(gfx_snow_crossing_street_secondary_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_secondary.png") {tmpl_level_crossing (160)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_secondary_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_secondary_rubber;
+      gfx_def_crossing_street_secondary_rubber;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_secondary_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_secondary_slab;
+      gfx_def_crossing_street_secondary_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_secondary_slab_green,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_secondary_slab_green;
+      gfx_def_crossing_street_secondary_slab_green;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_secondary_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_secondary_slab_nm;
+      gfx_def_crossing_street_secondary_slab_nm;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_secondary_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_secondary_wood;
+      gfx_def_crossing_street_secondary_wood;
+    }
 
     switch(FEAT_ROADTYPES,SELF,sw_crossing_street_secondary_1,town_zone){
       0:gfx_crossing_street_secondary_rubber;
@@ -176,23 +380,65 @@
       sw_crossing_street_secondary_2;
     }
   //primary
-    spriteset(gfx_crossing_street_primary_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_primary_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_primary_sw.png") {tmpl_level_crossing (120)}
-
-    spriteset(gfx_crossing_street_primary_sw_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_snow_crossing_street_primary_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_primary_sw.png") {tmpl_level_crossing (120)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_primary_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_primary_slab_nm;
+      gfx_def_crossing_street_primary_slab_nm;
+    }
+    
+    spriteset(gfx_def_crossing_street_primary_sw_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_primary_sw.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_street_primary_sw_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_primary_sw_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_primary_sw.png") {tmpl_level_crossing (40)}
-    spriteset(gfx_crossing_street_primary_sw_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/crossings/gfx_crossing_street_primary_sw.png") {tmpl_level_crossing (80)}
+    // spriteset(gfx_def_crossing_street_primary_sw_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    // "gfx/crossings/gfx_crossing_street_primary_sw.png") {tmpl_level_crossing (80)}
+    spriteset(gfx_snow_crossing_street_primary_sw_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_primary_sw.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_street_primary_sw_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_primary_sw.png") {tmpl_level_crossing (40)}
+    // spriteset(gfx_snow_crossing_street_primary_sw_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    // "gfx/crossings/gfx_snow_crossing_street_primary_sw.png") {tmpl_level_crossing (80)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_primary_sw_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_primary_sw_rubber;
+      gfx_def_crossing_street_primary_sw_rubber;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_primary_sw_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_primary_sw_slab;
+      gfx_def_crossing_street_primary_sw_slab;
+    }
+    // switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_primary_sw_slab_green,terrain_type){
+    //   TILETYPE_SNOW:gfx_snow_crossing_street_primary_sw_slab_green;
+    //   gfx_def_crossing_street_primary_sw_slab_green;
+    // }
 
-    spriteset(gfx_crossing_street_primary_so_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_primary_so_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_primary_so.png") {tmpl_level_crossing (0)}
-    spriteset(gfx_crossing_street_primary_so_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_primary_so_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_primary_so.png") {tmpl_level_crossing (40)}
-    spriteset(gfx_crossing_street_primary_so_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    spriteset(gfx_def_crossing_street_primary_so_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/crossings/gfx_crossing_street_primary_so.png") {tmpl_level_crossing (80)}
-
+    spriteset(gfx_snow_crossing_street_primary_so_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_primary_so.png") {tmpl_level_crossing (0)}
+    spriteset(gfx_snow_crossing_street_primary_so_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_primary_so.png") {tmpl_level_crossing (40)}
+    spriteset(gfx_snow_crossing_street_primary_so_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/crossings/gfx_snow_crossing_street_primary_so.png") {tmpl_level_crossing (80)}
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_primary_so_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_primary_so_rubber;
+      gfx_def_crossing_street_primary_so_rubber;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_primary_so_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_primary_so_slab;
+      gfx_def_crossing_street_primary_so_slab;
+    }
+    switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_primary_so_slab_green,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_primary_so_slab_green;
+      gfx_def_crossing_street_primary_so_slab_green;
+    }
+    
     switch(FEAT_ROADTYPES,SELF,sw_crossing_street_primary_1,town_zone){
       0:gfx_crossing_street_primary_sw_rubber;
       gfx_crossing_street_primary_sw_slab;
@@ -210,27 +456,87 @@
     }
 //
 //*4 line street
-  spriteset(gfx_crossing_street_4l_r_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_r_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_r.png") {tmpl_level_crossing (0)}
-  spriteset(gfx_crossing_street_4l_r_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_r_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_r.png") {tmpl_level_crossing (40)}
-  spriteset(gfx_crossing_street_4l_r_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_r_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_r.png") {tmpl_level_crossing (80)}
-  spriteset(gfx_crossing_street_4l_r_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_r_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_r.png") {tmpl_level_crossing (120)}
-  spriteset(gfx_crossing_street_4l_r_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_r_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_r.png") {tmpl_level_crossing (160)}
+  spriteset(gfx_snow_crossing_street_4l_r_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_r.png") {tmpl_level_crossing (0)}
+  spriteset(gfx_snow_crossing_street_4l_r_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_r.png") {tmpl_level_crossing (40)}
+  spriteset(gfx_snow_crossing_street_4l_r_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_r.png") {tmpl_level_crossing (80)}
+  spriteset(gfx_snow_crossing_street_4l_r_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_r.png") {tmpl_level_crossing (120)}
+  spriteset(gfx_snow_crossing_street_4l_r_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_r.png") {tmpl_level_crossing (160)}
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_r_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_r_rubber;
+      gfx_def_crossing_street_4l_r_rubber;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_r_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_r_slab;
+      gfx_def_crossing_street_4l_r_slab;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_r_slab_green,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_r_slab_green;
+      gfx_def_crossing_street_4l_r_slab_green;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_r_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_r_slab_nm;
+      gfx_def_crossing_street_4l_r_slab_nm;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_r_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_r_wood;
+      gfx_def_crossing_street_4l_r_wood;
+    }
   
-  spriteset(gfx_crossing_street_4l_l_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_l_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_l.png") {tmpl_level_crossing (0)}
-  spriteset(gfx_crossing_street_4l_l_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_l_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_l.png") {tmpl_level_crossing (40)}
-  spriteset(gfx_crossing_street_4l_l_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_l_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_l.png") {tmpl_level_crossing (80)}
-  spriteset(gfx_crossing_street_4l_l_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_l_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_l.png") {tmpl_level_crossing (120)}
-  spriteset(gfx_crossing_street_4l_l_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_def_crossing_street_4l_l_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/crossings/gfx_crossing_street_4l_l.png") {tmpl_level_crossing (160)}
+  spriteset(gfx_snow_crossing_street_4l_l_rubber, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_l.png") {tmpl_level_crossing (0)}
+  spriteset(gfx_snow_crossing_street_4l_l_slab, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_l.png") {tmpl_level_crossing (40)}
+  spriteset(gfx_snow_crossing_street_4l_l_slab_green, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_l.png") {tmpl_level_crossing (80)}
+  spriteset(gfx_snow_crossing_street_4l_l_slab_nm, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_l.png") {tmpl_level_crossing (120)}
+  spriteset(gfx_snow_crossing_street_4l_l_wood, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/crossings/gfx_snow_crossing_street_4l_l.png") {tmpl_level_crossing (160)}
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_l_rubber,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_l_rubber;
+      gfx_def_crossing_street_4l_l_rubber;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_l_slab,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_l_slab;
+      gfx_def_crossing_street_4l_l_slab;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_l_slab_green,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_l_slab_green;
+      gfx_def_crossing_street_4l_l_slab_green;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_l_slab_nm,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_l_slab_nm;
+      gfx_def_crossing_street_4l_l_slab_nm;
+    }
+  switch(FEAT_ROADTYPES,SELF,gfx_crossing_street_4l_l_wood,terrain_type){
+      TILETYPE_SNOW:gfx_snow_crossing_street_4l_l_wood;
+      gfx_def_crossing_street_4l_l_wood;
+    }
   
   switch(FEAT_ROADTYPES,SELF,sw_crossing_street_4l_r_main,town_zone){
       3..4:gfx_crossing_street_4l_r_slab_green;

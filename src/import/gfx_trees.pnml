@@ -1376,7 +1376,7 @@
       0..1959:sw_tree_cone_gs_4l_right_f_main;
       sw_tree_cone_br_4l_right_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_right_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_right_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_f_lights_4l_right_main_2;
     } 
@@ -1385,7 +1385,7 @@
       0..1959:sw_tree_cone_gs_4l_right_b_main;
       sw_tree_cone_br_4l_right_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_right_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_right_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_b_lights_4l_right_main_2;
     }    
@@ -1394,7 +1394,7 @@
       0..1959:sw_tree_cone_gs_4l_left_f_main;
       sw_tree_cone_br_4l_left_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_left_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_left_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_f_lights_4l_left_main_2;
     } 
@@ -1403,7 +1403,7 @@
       0..1959:sw_tree_cone_gs_4l_left_b_main;
       sw_tree_cone_br_4l_left_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_left_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_4l_left_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_b_lights_4l_left_main_2;
     }    
@@ -1432,7 +1432,7 @@
       0..1959:sw_tree_cone_gs_6l_right_f_main;
       sw_tree_cone_br_6l_right_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_right_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_right_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_f_lights_6l_right_main_2;
     } 
@@ -1441,7 +1441,7 @@
       0..1959:sw_tree_cone_gs_6l_right_b_main;
       sw_tree_cone_br_6l_right_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_right_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_right_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_b_lights_6l_right_main_2;
     }    
@@ -1450,7 +1450,7 @@
       0..1959:sw_tree_cone_gs_6l_left_f_main;
       sw_tree_cone_br_6l_left_f_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_left_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_left_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_f_lights_6l_left_main_2;
     } 
@@ -1459,7 +1459,7 @@
       0..1959:sw_tree_cone_gs_6l_left_b_main;
       sw_tree_cone_br_6l_left_b_main;
     }
-    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_left_main, railtype<64||tramtype==1||tramtype==40){
+    switch(FEAT_ROADTYPES,SELF,sw_tree_cone_b_lights_6l_left_main, railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
       1:deco_empty;
       sw_tree_cone_b_lights_6l_left_main_2;
     }    
