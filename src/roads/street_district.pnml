@@ -45,6 +45,11 @@ switch(FEAT_ROADTYPES,SELF,sw_road_district_main,town_zone){
     1..2:sw_road_district_dashed_white_gfx;
     sw_road_district_no_markings_gfx;
   }
+switch(FEAT_ROADTYPES,SELF,sw_bridge_district_main,town_zone){
+    3..4:sw_bridge_2l_sw;
+    1..2:sw_bridge_2l_dw;
+    sw_bridge_2l_nm;
+  }
 // switch(FEAT_ROADTYPES,SELF,sw_road_district_main,terrain_type){
     
 //   }
@@ -72,5 +77,6 @@ item(FEAT_ROADTYPES, road_district, 23) {
   graphics {
         underlay: sw_road_district_main;
         catenary_front:deco_empty;
+        bridge_surfaces:sw_bridge_district_main;
     }
 }
