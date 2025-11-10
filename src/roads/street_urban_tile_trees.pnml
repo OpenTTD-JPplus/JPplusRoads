@@ -29,7 +29,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_trees_so_main,current_year){
     sw_road_urban_tile_trees_so_main_2;
   } 
 //
-item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
+item(FEAT_ROADTYPES, road_urban_tile_trees) {
     property {
         name: string(STR_ROAD_SAKURA);
         label: "ST11";
@@ -59,7 +59,7 @@ item(FEAT_ROADTYPES, road_urban_tile_trees, 27) {
         // direction_markings: st_direction_markings;
     }
 }
-item(FEAT_ROADTYPES, road_urban_tile_sakura, 28) {
+item(FEAT_ROADTYPES, road_urban_tile_sakura) {
     property {
         name: string(STR_ROAD_GREEN);
         label: "ST12";

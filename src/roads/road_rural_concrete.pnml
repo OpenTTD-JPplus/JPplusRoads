@@ -21,7 +21,7 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_concrete_main,town_zone){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_rural_concrete, 5) {
+item(FEAT_ROADTYPES, road_rural_concrete) {
     property {
         name: string(STR_ROAD_CONCRETE);
         label: "RRA5";

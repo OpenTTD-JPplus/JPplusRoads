@@ -227,31 +227,31 @@
       [0, 0, 1, 1, 0, 0]
   }
 // Underlay
-    template tmpl_underlay_2(quad,doub,y,cross_x,cross_y) {
-    [quad,         20+0,    64, 31, -31, 0]//↗
-    [quad+70,      20+0,    64, 31, -31, 0]//↖
+    template tmpl_underlay_2(xFirstOffset,xSecondOffset,tJunction_y,cross_x,cross_y) {
+    [xFirstOffset,         20+0,    64, 31, -31, 0]//↗
+    [xFirstOffset+70,      20+0,    64, 31, -31, 0]//↖
 
     [cross_x, 20+290+cross_y,  128, 64, -63, -33]//X
 
-    [doub, 20+130+y,  64, 31, -31,   0]//◹
-    [doub+70, 20+130+y,  64, 31, -31,   0]//◸
-    [doub+140, 20+130+y,  64, 31, -31,   0]//◺
-    [doub+210, 20+130+y,  64, 31, -31,   0]//◿
+    [xSecondOffset, 20+130+tJunction_y,  64, 31, -31,   0]//◹
+    [xSecondOffset+70, 20+130+tJunction_y,  64, 31, -31,   0]//◸
+    [xSecondOffset+140, 20+130+tJunction_y,  64, 31, -31,   0]//◺
+    [xSecondOffset+210, 20+130+tJunction_y,  64, 31, -31,   0]//◿
 
-    [doub+0,      20+90,  64, 31, -31,   0]//⊃
-    [doub+70,     20+90,  64, 31, -31,   0]//◡
-    [doub+140,    20+90,  64, 31, -31,   0]//⊂
-    [doub+210,    20+90,  64, 31, -31,   0]//◠
+    [xSecondOffset+0,      20+90,  64, 31, -31,   0]//⊃
+    [xSecondOffset+70,     20+90,  64, 31, -31,   0]//◡
+    [xSecondOffset+140,    20+90,  64, 31, -31,   0]//⊂
+    [xSecondOffset+210,    20+90,  64, 31, -31,   0]//◠
 
-    [doub,       20+40, 64, 39,   -31,  -8]//↗
-    [doub+70,    20+40, 64, 23,   -31,   0]//<
-    [doub+140,   20+40, 64, 23,   -31,   0]//>
-    [doub+210,   20+40, 64, 39,   -31,  -8]//↖
+    [xSecondOffset,       20+40, 64, 39,   -31,  -8]//↗
+    [xSecondOffset+70,    20+40, 64, 23,   -31,   0]//<
+    [xSecondOffset+140,   20+40, 64, 23,   -31,   0]//>
+    [xSecondOffset+210,   20+40, 64, 39,   -31,  -8]//↖
 
-    [doub+210,  20+250, 64, 31,   -31,   0]//◿
-    [doub,    20+250, 64, 31,   -31,   0]//◹
-    [doub+70,   20+250, 64, 31,   -31,   0]//◸
-    [doub+140,  20+250, 64, 31,   -31,   0]//◺
+    [xSecondOffset+210,  20+250, 64, 31,   -31,   0]//◿
+    [xSecondOffset,    20+250, 64, 31,   -31,   0]//◹
+    [xSecondOffset+70,   20+250, 64, 31,   -31,   0]//◸
+    [xSecondOffset+140,  20+250, 64, 31,   -31,   0]//◺
 }
 
 template tmpl_bridge(x,y) {

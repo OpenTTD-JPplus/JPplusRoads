@@ -6,14 +6,14 @@
     
 //   }
 //
-item(FEAT_ROADTYPES, road_rural_dirt, 2) {
+item(FEAT_ROADTYPES, road_rural_dirt) {
     property {
         name: string(STR_ROAD_DIRT);
         label: "RRA2";
         powered_roadtype_list: [REG_ROAD];
         introduces_roadtype_list: [REG_ROAD];
 
-        introduction_date:date(1800,1,1);
+        introduction_date:date(1700,1,1);
         speed_limit:30 km/h;
         map_colour:14;
 

@@ -100,7 +100,7 @@
   } 
 
 
-item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
+item(FEAT_ROADTYPES, road_avenue_6l_r) {
     property {
         name: string(STR_ROAD_AVENUE_6R);
         label: "ST17";
@@ -125,7 +125,7 @@ item(FEAT_ROADTYPES, road_avenue_6l_r, 33) {
         bridge_surfaces:bridge_avenue_6l_r_main;
     }
 }
-item(FEAT_ROADTYPES, road_avenue_6l_l, 34) {
+item(FEAT_ROADTYPES, road_avenue_6l_l) {
     property {
         name: string(STR_ROAD_AVENUE_6L);
         label: "ST18";

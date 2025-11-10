@@ -1,0 +1,24 @@
+item(FEAT_ROADTYPES, rd_IND_AUZ) {
+  property {
+    sort_order: 43;
+    label: "IND5";
+    powered_roadtype_list: [INDUSTRIAL];
+
+    introduction_date:date(0,1,1);
+    speed_limit:50 km/h;
+    map_colour:VAR_ALLEY;
+
+    name: string(STR_ROAD_AUZ);
+    toolbar_caption: string(STR_ROAD_AUZ);
+    menu_text: string(STR_GEN_ROAD,string(STR_ROAD_AUZ));
+    build_window_caption: string(STR_ROAD_AUZ);
+    autoreplace_text: string(STR_ROAD_AUZ);
+    new_engine_text: string(STR_ROAD_AUZ);
+    roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
+  }
+  graphics {
+    bridge_surfaces:sw_bridge_rural_asphalt_1_new_main;
+    underlay: gfx_IND_AUZ;
+    catenary_back:deco_empty;
+  }
+}
