@@ -1,5 +1,5 @@
 
-#define DEF_SEASON_GREEN(main,north,south,spring,summer,fall,winter) \
+#define DEF_SEASON_GREEN(main,preparam,north,south,spring,summer,fall,winter) \
   switch(FEAT_ROADTYPES,SELF,north, current_day_of_year){\
     71..117:spring;\
     118..304:summer;\
@@ -12,15 +12,20 @@
     305..330:spring;\
     summer;\
   }\
-  switch(FEAT_ROADTYPES,SELF,main, param_seasons){\
+  switch(FEAT_ROADTYPES,SELF,preparam, param_seasons){\
     1:south;\
     2:summer;\
     3:summer;\
     4:fall;\
-    5:spring;\
+    5:winter;\
     north;\
+  }\
+  switch(FEAT_ROADTYPES,SELF,main, terrain_type){\
+    TILETYPE_SNOW:winter;\
+    preparam;\
   }
-#define DEF_SEASON_SAKURA(main,north,south,spring,summer,fall,winter) \
+
+#define DEF_SEASON_SAKURA(main,preparam,north,south,spring,summer,fall,winter) \
   switch(FEAT_ROADTYPES,SELF,north, current_day_of_year){\
     87..107:spring;\
     108..304:summer;\
@@ -33,11 +38,15 @@
     305..330:spring;\
     summer;\
   }\
-  switch(FEAT_ROADTYPES,SELF,main, param_seasons){\
+  switch(FEAT_ROADTYPES,SELF,preparam, param_seasons){\
     1:south;\
     2:spring;\
     3:summer;\
     4:fall;\
-    5:spring;\
+    5:winter;\
     north;\
-  }
+  }\
+  switch(FEAT_ROADTYPES,SELF,main, terrain_type){\
+    TILETYPE_SNOW:winter;\
+    preparam;\
+}

@@ -224,15 +224,11 @@
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_nm_def,param_junc_markings){1:gfx_street_nm_conc_nm_def;gfx_street_conc_nm_def_1;}
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_nm_manhole_1,traffic_side){TRAFFIC_SIDE_RIGHT:gfx_street_rh_conc_nm_manhole;TRAFFIC_SIDE_LEFT:gfx_street_lh_conc_nm_manhole;}
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_nm_manhole,param_junc_markings){1:gfx_street_nm_conc_nm_manhole;gfx_street_conc_nm_manhole_1;}
-      switch(FEAT_ROADTYPES,SELF,gfx_street_conc_nm_diamond_1,traffic_side){TRAFFIC_SIDE_RIGHT:gfx_street_rh_conc_nm_diamond;TRAFFIC_SIDE_LEFT:gfx_street_lh_conc_nm_diamond;}
-      switch(FEAT_ROADTYPES,SELF,gfx_street_conc_nm_diamond,param_junc_markings){1:gfx_street_nm_conc_nm_diamond;gfx_street_conc_nm_diamond_1;}
       
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_dw_def_1,traffic_side){TRAFFIC_SIDE_RIGHT:gfx_street_rh_conc_dw_def;TRAFFIC_SIDE_LEFT:gfx_street_lh_conc_dw_def;}
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_dw_def,param_junc_markings){1:gfx_street_nm_conc_dw_def;gfx_street_conc_dw_def_1;}
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_dw_manhole_1,traffic_side){TRAFFIC_SIDE_RIGHT:gfx_street_rh_conc_dw_manhole;TRAFFIC_SIDE_LEFT:gfx_street_lh_conc_dw_manhole;}
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_dw_manhole,param_junc_markings){1:gfx_street_nm_conc_dw_manhole;gfx_street_conc_dw_manhole_1;}
-      switch(FEAT_ROADTYPES,SELF,gfx_street_conc_dw_diamond_1,traffic_side){TRAFFIC_SIDE_RIGHT:gfx_street_rh_conc_dw_diamond;TRAFFIC_SIDE_LEFT:gfx_street_lh_conc_dw_diamond;}
-      switch(FEAT_ROADTYPES,SELF,gfx_street_conc_dw_diamond,param_junc_markings){1:gfx_street_nm_conc_dw_diamond;gfx_street_conc_dw_diamond_1;}
       
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_sw_def_1,traffic_side){TRAFFIC_SIDE_RIGHT:gfx_street_rh_conc_sw_def;TRAFFIC_SIDE_LEFT:gfx_street_lh_conc_sw_def;}
       switch(FEAT_ROADTYPES,SELF,gfx_street_conc_sw_def,param_junc_markings){1:gfx_street_nm_conc_sw_def;gfx_street_conc_sw_def_1;}
@@ -331,22 +327,20 @@
   //*Secondary */
     //Concrete
       random_switch(FEAT_ROADTYPES,SELF,sw_street_conc_nm_r_1){
-        2:gfx_street_nm_conc_nm_def;
+        3:gfx_street_nm_conc_nm_def;
         1:gfx_street_nm_conc_nm_manhole;
       }
       random_switch(FEAT_ROADTYPES,SELF,sw_street_conc_nm_r_2){
-        2:gfx_street_conc_nm_def;
+        3:gfx_street_conc_nm_def;
         1:gfx_street_conc_nm_manhole;
-        1:gfx_street_conc_nm_diamond;
       }
       switch (FEAT_ROADTYPES,SELF,sw_street_conc_nm,current_year) {
         0..1964:sw_street_conc_nm_r_1;
         sw_street_conc_nm_r_2;
       }
       random_switch(FEAT_ROADTYPES,SELF,sw_street_conc_dw_r){
-        2:gfx_street_conc_dw_def;
+        3:gfx_street_conc_dw_def;
         1:gfx_street_conc_dw_manhole;
-        1:gfx_street_conc_dw_diamond;
       }
       switch (FEAT_ROADTYPES,SELF,sw_street_conc_dw,current_year<1965||town_zone<1) {
         1:sw_street_conc_nm;

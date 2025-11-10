@@ -1296,14 +1296,14 @@
 //*Logic */
   // 2 Line Roads
     //Cone Tree
-      DEF_SEASON_GREEN(sw_tree_cone_gs_f_main,sw_tree_cone_gs_f_north,sw_tree_cone_gs_f_south,
+      DEF_SEASON_GREEN(sw_tree_cone_gs_f_main,sw_tree_cone_gs_f_tiletype,sw_tree_cone_gs_f_north,sw_tree_cone_gs_f_south,
       gfx_tree_cone_gs_spring_f,gfx_tree_cone_gs_summer_f,gfx_tree_cone_gs_fall_f,gfx_tree_cone_gs_winter_f)
-      DEF_SEASON_GREEN(sw_tree_cone_f_main,sw_tree_cone_f_north,sw_tree_cone_f_south,
+      DEF_SEASON_GREEN(sw_tree_cone_f_main,sw_tree_cone_f_tiletype,sw_tree_cone_f_north,sw_tree_cone_f_south,
       gfx_tree_cone_spring_f,gfx_tree_cone_summer_f,gfx_tree_cone_fall_f,gfx_tree_cone_winter_f)
       
-      DEF_SEASON_GREEN(sw_tree_cone_gs_b_main,sw_tree_cone_gs_b_north,sw_tree_cone_gs_b_south,
+      DEF_SEASON_GREEN(sw_tree_cone_gs_b_main,sw_tree_cone_gs_b_tiletype,sw_tree_cone_gs_b_north,sw_tree_cone_gs_b_south,
       gfx_tree_cone_gs_spring_b,gfx_tree_cone_gs_summer_b,gfx_tree_cone_gs_fall_b,gfx_tree_cone_gs_winter_b)
-      DEF_SEASON_GREEN(sw_tree_cone_br_b_main,sw_tree_cone_br_b_north,sw_tree_cone_br_b_south,
+      DEF_SEASON_GREEN(sw_tree_cone_br_b_main,sw_tree_cone_br_b_tiletype,sw_tree_cone_br_b_north,sw_tree_cone_br_b_south,
       gfx_tree_cone_br_spring_b,gfx_tree_cone_br_summer_b,gfx_tree_cone_br_fall_b,gfx_tree_cone_br_winter_b)
 
       switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_2l_main_2, current_year){
@@ -1324,14 +1324,14 @@
         sw_tree_cone_b_lights_2l_main_2;
       }
     //Sakura
-      DEF_SEASON_SAKURA(sw_tree_sakura_gs_f_main,sw_tree_sakura_gs_f_north,sw_tree_sakura_gs_f_south,
+      DEF_SEASON_SAKURA(sw_tree_sakura_gs_f_main,sw_tree_sakura_gs_f_tiletype,sw_tree_sakura_gs_f_north,sw_tree_sakura_gs_f_south,
       gfx_tree_sakura_gs_spring_f,gfx_tree_sakura_gs_summer_f,gfx_tree_sakura_gs_fall_f,gfx_tree_sakura_gs_winter_f)
-      DEF_SEASON_SAKURA(sw_tree_sakura_f_main,sw_tree_sakura_f_north,sw_tree_sakura_f_south,
+      DEF_SEASON_SAKURA(sw_tree_sakura_f_main,sw_tree_sakura_f_tiletype,sw_tree_sakura_f_north,sw_tree_sakura_f_south,
       gfx_tree_sakura_spring_f,gfx_tree_sakura_summer_f,gfx_tree_sakura_fall_f,gfx_tree_sakura_winter_f)
       
-      DEF_SEASON_SAKURA(sw_tree_sakura_gs_b_main,sw_tree_sakura_gs_b_north,sw_tree_sakura_gs_b_south,
+      DEF_SEASON_SAKURA(sw_tree_sakura_gs_b_main,sw_tree_sakura_gs_b_tiletype,sw_tree_sakura_gs_b_north,sw_tree_sakura_gs_b_south,
       gfx_tree_sakura_gs_spring_b,gfx_tree_sakura_gs_summer_b,gfx_tree_sakura_gs_fall_b,gfx_tree_sakura_gs_winter_b)
-      DEF_SEASON_SAKURA(sw_tree_sakura_br_b_main,sw_tree_sakura_br_b_north,sw_tree_sakura_br_b_south,
+      DEF_SEASON_SAKURA(sw_tree_sakura_br_b_main,sw_tree_sakura_br_b_tiletype,sw_tree_sakura_br_b_north,sw_tree_sakura_br_b_south,
       gfx_tree_sakura_br_spring_b,gfx_tree_sakura_br_summer_b,gfx_tree_sakura_br_fall_b,gfx_tree_sakura_br_winter_b)
       
       switch(FEAT_ROADTYPES,SELF,sw_tree_sakura_f_lights_2l_main_2, current_year){
@@ -1352,24 +1352,24 @@
         sw_tree_sakura_b_lights_2l_main_2;
       }
   //4 Line Road
-    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_right_f_main,sw_tree_cone_gs_4l_right_f_north,sw_tree_cone_gs_4l_right_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_right_f_main,sw_tree_cone_gs_4l_right_f_tiletype,sw_tree_cone_gs_4l_right_f_north,sw_tree_cone_gs_4l_right_f_south,
     gfx_tree_cone_gs_4l_right_spring_f,gfx_tree_cone_gs_4l_right_summer_f,gfx_tree_cone_gs_4l_right_fall_f,gfx_tree_cone_gs_4l_right_winter_f)
-    DEF_SEASON_GREEN(sw_tree_cone_br_4l_right_f_main,sw_tree_cone_br_4l_right_f_north,sw_tree_cone_br_4l_right_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_4l_right_f_main,sw_tree_cone_br_4l_right_f_tiletype,sw_tree_cone_br_4l_right_f_north,sw_tree_cone_br_4l_right_f_south,
     gfx_tree_cone_br_4l_right_spring_f,gfx_tree_cone_br_4l_right_summer_f,gfx_tree_cone_br_4l_right_fall_f,gfx_tree_cone_br_4l_right_winter_f)
 
-    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_right_b_main,sw_tree_cone_gs_4l_right_b_north,sw_tree_cone_gs_4l_right_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_right_b_main,sw_tree_cone_gs_4l_right_b_tiletype,sw_tree_cone_gs_4l_right_b_north,sw_tree_cone_gs_4l_right_b_south,
     gfx_tree_cone_gs_4l_right_spring_b,gfx_tree_cone_gs_4l_right_summer_b,gfx_tree_cone_gs_4l_right_fall_b,gfx_tree_cone_gs_4l_right_winter_b)
-    DEF_SEASON_GREEN(sw_tree_cone_br_4l_right_b_main,sw_tree_cone_br_4l_right_b_north,sw_tree_cone_br_4l_right_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_4l_right_b_main,sw_tree_cone_br_4l_right_b_tiletype,sw_tree_cone_br_4l_right_b_north,sw_tree_cone_br_4l_right_b_south,
     gfx_tree_cone_br_4l_right_spring_b,gfx_tree_cone_br_4l_right_summer_b,gfx_tree_cone_br_4l_right_fall_b,gfx_tree_cone_br_4l_right_winter_b)
     
-    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_left_f_main,sw_tree_cone_gs_4l_left_f_north,sw_tree_cone_gs_4l_left_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_left_f_main,sw_tree_cone_gs_4l_left_f_tiletype,sw_tree_cone_gs_4l_left_f_north,sw_tree_cone_gs_4l_left_f_south,
     gfx_tree_cone_gs_4l_left_spring_f,gfx_tree_cone_gs_4l_left_summer_f,gfx_tree_cone_gs_4l_left_fall_f,gfx_tree_cone_gs_4l_left_winter_f)
-    DEF_SEASON_GREEN(sw_tree_cone_br_4l_left_f_main,sw_tree_cone_br_4l_left_f_north,sw_tree_cone_br_4l_left_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_4l_left_f_main,sw_tree_cone_br_4l_left_f_tiletype,sw_tree_cone_br_4l_left_f_north,sw_tree_cone_br_4l_left_f_south,
     gfx_tree_cone_br_4l_left_spring_f,gfx_tree_cone_br_4l_left_summer_f,gfx_tree_cone_br_4l_left_fall_f,gfx_tree_cone_br_4l_left_winter_f)
 
-    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_left_b_main,sw_tree_cone_gs_4l_left_b_north,sw_tree_cone_gs_4l_left_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_4l_left_b_main,sw_tree_cone_gs_4l_left_b_tiletype,sw_tree_cone_gs_4l_left_b_north,sw_tree_cone_gs_4l_left_b_south,
     gfx_tree_cone_gs_4l_left_spring_b,gfx_tree_cone_gs_4l_left_summer_b,gfx_tree_cone_gs_4l_left_fall_b,gfx_tree_cone_gs_4l_left_winter_b)
-    DEF_SEASON_GREEN(sw_tree_cone_br_4l_left_b_main,sw_tree_cone_br_4l_left_b_north,sw_tree_cone_br_4l_left_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_4l_left_b_main,sw_tree_cone_br_4l_left_b_tiletype,sw_tree_cone_br_4l_left_b_north,sw_tree_cone_br_4l_left_b_south,
     gfx_tree_cone_br_4l_left_spring_b,gfx_tree_cone_br_4l_left_summer_b,gfx_tree_cone_br_4l_left_fall_b,gfx_tree_cone_br_4l_left_winter_b)
 
     switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_4l_right_main_2, current_year){
@@ -1408,24 +1408,24 @@
       sw_tree_cone_b_lights_4l_left_main_2;
     }    
   //6 Line Avenue
-    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_right_f_main,sw_tree_cone_gs_6l_right_f_north,sw_tree_cone_gs_6l_right_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_right_f_main,sw_tree_cone_gs_6l_right_f_tiletype,sw_tree_cone_gs_6l_right_f_north,sw_tree_cone_gs_6l_right_f_south,
     gfx_tree_cone_gs_6l_right_spring_f,gfx_tree_cone_gs_6l_right_summer_f,gfx_tree_cone_gs_6l_right_fall_f,gfx_tree_cone_gs_6l_right_winter_f)
-    DEF_SEASON_GREEN(sw_tree_cone_br_6l_right_f_main,sw_tree_cone_br_6l_right_f_north,sw_tree_cone_br_6l_right_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_6l_right_f_main,sw_tree_cone_br_6l_right_f_tiletype,sw_tree_cone_br_6l_right_f_north,sw_tree_cone_br_6l_right_f_south,
     gfx_tree_cone_br_6l_right_spring_f,gfx_tree_cone_br_6l_right_summer_f,gfx_tree_cone_br_6l_right_fall_f,gfx_tree_cone_br_6l_right_winter_f)
 
-    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_right_b_main,sw_tree_cone_gs_6l_right_b_north,sw_tree_cone_gs_6l_right_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_right_b_main,sw_tree_cone_gs_6l_right_b_tiletype,sw_tree_cone_gs_6l_right_b_north,sw_tree_cone_gs_6l_right_b_south,
     gfx_tree_cone_gs_6l_right_spring_b,gfx_tree_cone_gs_6l_right_summer_b,gfx_tree_cone_gs_6l_right_fall_b,gfx_tree_cone_gs_6l_right_winter_b)
-    DEF_SEASON_GREEN(sw_tree_cone_br_6l_right_b_main,sw_tree_cone_br_6l_right_b_north,sw_tree_cone_br_6l_right_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_6l_right_b_main,sw_tree_cone_br_6l_right_b_tiletype,sw_tree_cone_br_6l_right_b_north,sw_tree_cone_br_6l_right_b_south,
     gfx_tree_cone_br_6l_right_spring_b,gfx_tree_cone_br_6l_right_summer_b,gfx_tree_cone_br_6l_right_fall_b,gfx_tree_cone_br_6l_right_winter_b)
     
-    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_left_f_main,sw_tree_cone_gs_6l_left_f_north,sw_tree_cone_gs_6l_left_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_left_f_main,sw_tree_cone_gs_6l_left_f_tiletype,sw_tree_cone_gs_6l_left_f_north,sw_tree_cone_gs_6l_left_f_south,
     gfx_tree_cone_gs_6l_left_spring_f,gfx_tree_cone_gs_6l_left_summer_f,gfx_tree_cone_gs_6l_left_fall_f,gfx_tree_cone_gs_6l_left_winter_f)
-    DEF_SEASON_GREEN(sw_tree_cone_br_6l_left_f_main,sw_tree_cone_br_6l_left_f_north,sw_tree_cone_br_6l_left_f_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_6l_left_f_main,sw_tree_cone_br_6l_left_f_tiletype,sw_tree_cone_br_6l_left_f_north,sw_tree_cone_br_6l_left_f_south,
     gfx_tree_cone_br_6l_left_spring_f,gfx_tree_cone_br_6l_left_summer_f,gfx_tree_cone_br_6l_left_fall_f,gfx_tree_cone_br_6l_left_winter_f)
 
-    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_left_b_main,sw_tree_cone_gs_6l_left_b_north,sw_tree_cone_gs_6l_left_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_gs_6l_left_b_main,sw_tree_cone_gs_6l_left_b_tiletype,sw_tree_cone_gs_6l_left_b_north,sw_tree_cone_gs_6l_left_b_south,
     gfx_tree_cone_gs_6l_left_spring_b,gfx_tree_cone_gs_6l_left_summer_b,gfx_tree_cone_gs_6l_left_fall_b,gfx_tree_cone_gs_6l_left_winter_b)
-    DEF_SEASON_GREEN(sw_tree_cone_br_6l_left_b_main,sw_tree_cone_br_6l_left_b_north,sw_tree_cone_br_6l_left_b_south,
+    DEF_SEASON_GREEN(sw_tree_cone_br_6l_left_b_main,sw_tree_cone_br_6l_left_b_tiletype,sw_tree_cone_br_6l_left_b_north,sw_tree_cone_br_6l_left_b_south,
     gfx_tree_cone_br_6l_left_spring_b,gfx_tree_cone_br_6l_left_summer_b,gfx_tree_cone_br_6l_left_fall_b,gfx_tree_cone_br_6l_left_winter_b)
 
     switch(FEAT_ROADTYPES,SELF,sw_tree_cone_f_lights_6l_right_main_2, current_year){
