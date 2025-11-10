@@ -38,5 +38,7 @@ item(FEAT_ROADTYPES, road_rural_stone,4) {
         underlay: sw_road_rural_stone_main;
         catenary_front:deco_empty;
         bridge_surfaces:sw_bridge_rural_stone_main;
+        direction_markings:gfx_arrows_2l;
+        depots:gfx_depot_reldred_choice;
     }
 }

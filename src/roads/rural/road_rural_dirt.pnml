@@ -30,5 +30,6 @@ item(FEAT_ROADTYPES, road_rural_dirt,2) {
         underlay: sw_road_rural_dirt_main;
         catenary_back:deco_empty;
         bridge_surfaces:sw_bridge_rural_stone_main;
+        depots:gfx_depot_reldred_choice;
     }
 }

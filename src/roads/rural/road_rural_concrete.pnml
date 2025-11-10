@@ -45,5 +45,7 @@ item(FEAT_ROADTYPES, road_rural_concrete,5) {
         underlay: sw_road_rural_concrete_main;
         catenary_back:gfx_light_poles_b;
         bridge_surfaces:sw_bridge_rural_concrete_main;
+        direction_markings:gfx_arrows_2l;
+        depots:gfx_depot_reldred_choice;
     }
 }

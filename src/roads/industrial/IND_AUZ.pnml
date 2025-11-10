@@ -21,5 +21,7 @@ item(FEAT_ROADTYPES, rd_IND_AUZ,43) {
     bridge_surfaces:gfx_IND_AUZ_bridge;
     underlay: gfx_IND_AUZ;
     catenary_back:deco_empty;
+    direction_markings:gfx_arrows_2l;
+    depots:gfx_depot_reldred_choice;
   }
 }

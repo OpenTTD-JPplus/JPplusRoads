@@ -1,0 +1,2 @@
+spriteset(gfx_arrows_2l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+    "gfx/arrows/arrows_2l.png") {tmpl_arrows ()}

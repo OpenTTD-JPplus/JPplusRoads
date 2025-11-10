@@ -39,11 +39,11 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
         catenary_back:crash_barriers;
 
         underlay: sw_road_expressway_dw_main;
-        // depots: depot_normal_road;
         bridge_surfaces: bridge_expressway_dw;
         // roadstops: roadstop_underlay_red;
         // gui: gui_normal;
-        // direction_markings: st_direction_markings;
+        direction_markings:gfx_arrows_2l;
+        depots:gfx_depot_reldred_choice;
     }
 }
 item(FEAT_ROADTYPES, road_expressway_sw,12) {
@@ -72,7 +72,8 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
         bridge_surfaces: bridge_expressway_sw;
         // roadstops: roadstop_underlay_red;
         // gui: gui_normal;
-        // direction_markings: st_direction_markings;
+        direction_markings:gfx_arrows_2l;
+        depots:gfx_depot_reldred_choice;
     }
 }
 
@@ -102,6 +103,7 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
         bridge_surfaces: bridge_expressway_red;
         // roadstops: roadstop_underlay_red;
         // gui: gui_normal;
-        // direction_markings: st_direction_markings;
+        direction_markings:gfx_arrows_2l;
+        depots:gfx_depot_reldred_choice;
     }
 }

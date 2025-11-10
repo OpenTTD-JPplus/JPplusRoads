@@ -43,6 +43,8 @@ item(FEAT_ROADTYPES, rd_urban_unpaved,16) {
         underlay: gfx_rd_unpaved;
         catenary_front:deco_empty;
         bridge_surfaces:sw_bridge_stone_nm;
+        direction_markings:gfx_arrows_2l;
+    depots:gfx_depot_reldred_choice;
     }
 }
 item(FEAT_ROADTYPES, rd_urban_stone,18) {
@@ -68,5 +70,7 @@ item(FEAT_ROADTYPES, rd_urban_stone,18) {
     underlay: sw_road_stone_main;
     catenary_front:deco_empty;
     bridge_surfaces:sw_bridge_stone_nm;
+    direction_markings:gfx_arrows_2l;
+    depots:gfx_depot_reldred_choice;
   }
 }

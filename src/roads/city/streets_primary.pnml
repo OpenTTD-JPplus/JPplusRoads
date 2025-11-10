@@ -96,11 +96,11 @@ item(FEAT_ROADTYPES, road_urban_asphalt,24) {
     gui: gfx_gui_street_urban;
     catenary_back:power_poles;
     underlay: sw_rd_primary_asph_so_gfx;
-    // depots: depot_normal_road;
     bridge_surfaces: sw_bridge_asph_so_gfx_main;
+    direction_markings:gfx_arrows_2l;
+    depots: gfx_depot_reldred_choice;
     // roadstops: roadstop_underlay_red;
     // gui: gui_normal;
-    // direction_markings: st_direction_markings;
   }
 }
 item(FEAT_ROADTYPES, rd_urban_primary_tile,26) {
@@ -126,6 +126,8 @@ item(FEAT_ROADTYPES, rd_urban_primary_tile,26) {
     catenary_back:power_poles;
     underlay: sw_rd_primary_asph_tile_so_gfx;
     bridge_surfaces: sw_bridge_asph_so_gfx_main;
+    direction_markings:gfx_arrows_2l;
+    depots:gfx_depot_reldred_choice;
   }
 }
 item(FEAT_ROADTYPES, rd_urban_primary_tile_tree,27) {
@@ -152,6 +154,8 @@ item(FEAT_ROADTYPES, rd_urban_primary_tile_tree,27) {
     catenary_front:gfx_cone_tree_spring_f;
     catenary_back:gfx_cone_tree_spring_b;
     bridge_surfaces: sw_bridge_asph_so_gfx_main;
+    direction_markings:gfx_arrows_2l;
+    depots:gfx_depot_reldred_choice;
     }
 }
 item(FEAT_ROADTYPES, rd_urban_primary_tile_sakura,28) {
@@ -178,5 +182,7 @@ item(FEAT_ROADTYPES, rd_urban_primary_tile_sakura,28) {
     catenary_front:gfx_sakura_spring_f;
     catenary_back:gfx_sakura_spring_b;
     bridge_surfaces: sw_bridge_asph_so_gfx_main;
+    direction_markings:gfx_arrows_2l;
+    depots:gfx_depot_reldred_choice;
   }
 }
