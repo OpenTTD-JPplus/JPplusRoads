@@ -38,7 +38,7 @@ item(FEAT_ROADTYPES, road_generic, 0) {
         name: string(STR_ROAD_DIRT);
         label: "ROAD";
         powered_roadtype_list: [REG_ROAD];
-        introduces_roadtype_list: [REG_ROAD];
+        //introduces_roadtype_list: [REG_ROAD];
 
         introduction_date:date(0,1,1);
         speed_limit:50 km/h;

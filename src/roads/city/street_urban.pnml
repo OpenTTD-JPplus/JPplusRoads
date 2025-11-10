@@ -29,7 +29,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_urban_asphalt_so_main,current_year){
   sw_road_urban_asphalt_so_main_2;
 } 
 //
-item(FEAT_ROADTYPES, road_urban_asphalt) {
+item(FEAT_ROADTYPES, road_urban_asphalt,24) {
     property {
         name: string(STR_ROAD_URBAN);
         label: "STR9";
@@ -48,6 +48,7 @@ item(FEAT_ROADTYPES, road_urban_asphalt) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
+      gui: gfx_gui_street_urban;
         catenary_back:power_poles;
         underlay: sw_road_urban_asphalt_so_main;
         // depots: depot_normal_road;

@@ -1,4 +1,4 @@
-item(FEAT_ROADTYPES, rd_IND_ISR) {
+item(FEAT_ROADTYPES, rd_IND_ISR,42) {
   property {
     sort_order: 42;
     label: "IND4";
@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, rd_IND_ISR) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    gui:gfx_gui_industrial_isr;
     bridge_surfaces:gfx_IND_ISR_bridge;
     underlay: gfx_IND_ISR;
     catenary_back:deco_empty;

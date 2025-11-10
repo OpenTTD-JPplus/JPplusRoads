@@ -29,7 +29,7 @@ switch(FEAT_ROADTYPES,SELF,sw_road_urban_tile_so_main,current_year){
   sw_road_urban_tile_so_main_2;
 } 
 //
-item(FEAT_ROADTYPES, road_urban_tile) {
+item(FEAT_ROADTYPES, road_urban_tile,26) {
     property {
         name: string(STR_ROAD_PAVED);
         label: "ST10";
@@ -48,6 +48,7 @@ item(FEAT_ROADTYPES, road_urban_tile) {
         roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
     }
     graphics {
+      gui: gfx_gui_street_urban_paved;
         catenary_back:power_poles;
         underlay: sw_road_urban_tile_so_main;
         // depots: depot_normal_road;

@@ -1,4 +1,4 @@
-item(FEAT_ROADTYPES, rd_IND_FIRS_concrete) {
+item(FEAT_ROADTYPES, rd_IND_FIRS_concrete,40) {
   property {
     sort_order: 40;
     label: "IND2";
@@ -17,6 +17,7 @@ item(FEAT_ROADTYPES, rd_IND_FIRS_concrete) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY,ROADTYPE_FLAG_NO_HOUSES);
   }
   graphics {
+    gui:gfx_gui_industrial_firs_concrete;
     bridge_surfaces:gfx_IND_FIRS_concrete_bridge;
     underlay: gfx_IND_FIRS_concrete;
     catenary_back:deco_empty;

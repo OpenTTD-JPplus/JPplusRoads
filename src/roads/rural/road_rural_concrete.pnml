@@ -21,12 +21,12 @@ switch(FEAT_ROADTYPES,SELF,sw_bridge_rural_concrete_main,town_zone){
     
 //   }
 //
-item(FEAT_ROADTYPES, road_rural_concrete) {
+item(FEAT_ROADTYPES, road_rural_concrete,5) {
     property {
         name: string(STR_ROAD_CONCRETE);
         label: "RRA5";
         powered_roadtype_list: [REG_ROAD];
-        introduces_roadtype_list: [REG_ROAD];
+        ////introduces_roadtype_list: [REG_ROAD];
 
         introduction_date:date(1930,1,1);
         speed_limit:60 km/h;
@@ -41,6 +41,7 @@ item(FEAT_ROADTYPES, road_rural_concrete) {
         sort_order: 5;
     }
   graphics {
+    gui:gfx_gui_road_concrete;
         underlay: sw_road_rural_concrete_main;
         catenary_back:gfx_light_poles_b;
         bridge_surfaces:sw_bridge_rural_concrete_main;
