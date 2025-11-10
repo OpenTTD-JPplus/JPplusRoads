@@ -8,7 +8,7 @@ grf {
   name: string(STR_GRF_NAME);
   desc: string(STR_GRF_DESC);
   url: string(STR_GRF_URL);
-  version :011;
+  version :012;
   min_compatible_version :002;
 # 1 "src/import/params.pnml" 1
 
@@ -2684,12 +2684,30 @@ spriteset(sw_bridge_test, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
 
 
 
-  spriteset(bridge_expressway_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_bridge_expressway_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_bridge_shuto_dw.png") {tmpl_bridge (0,0)}
-  spriteset(bridge_expressway_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_bridge_expressway_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_bridge_shuto_sw.png") {tmpl_bridge (0,0)}
-  spriteset(bridge_expressway_red, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_bridge_expressway_red, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_bridge_shuto_red.png") {tmpl_bridge (0,0)}
+  spriteset(gfx_snow_bridge_expressway_dw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_bridge_shuto_dw.png") {tmpl_bridge (0,0)}
+  spriteset(gfx_snow_bridge_expressway_sw, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_bridge_shuto_sw.png") {tmpl_bridge (0,0)}
+  spriteset(gfx_snow_bridge_expressway_red, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_bridge_shuto_red.png") {tmpl_bridge (0,0)}
+  switch(FEAT_ROADTYPES,SELF,bridge_expressway_dw,terrain_type){
+    TILETYPE_SNOW:gfx_snow_bridge_expressway_dw;
+    gfx_bridge_expressway_dw;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_expressway_sw,terrain_type){
+    TILETYPE_SNOW:gfx_snow_bridge_expressway_sw;
+    gfx_bridge_expressway_sw;
+  }
+  switch(FEAT_ROADTYPES,SELF,bridge_expressway_red,terrain_type){
+    TILETYPE_SNOW:gfx_snow_bridge_expressway_red;
+    gfx_bridge_expressway_red;
+  }
 
 
   spriteset(gfx_IND_FIRS_concrete_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -5399,12 +5417,30 @@ item(FEAT_ROADTYPES, road_asphalt_improved,9) {
 # 27 "src/index.pnml" 2
 
 # 1 "src/roads/rural/road_expressway.pnml" 1
-  spriteset(sw_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_shuto_dw.png") {tmpl_underlay (0,0,0,0,0)}
-  spriteset(sw_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_shuto_sw.png") {tmpl_underlay (0,0,0,0,0)}
-  spriteset(sw_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_shuto_slow.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(gfx_snow_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_shuto_dw.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(gfx_snow_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_shuto_sw.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(gfx_snow_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_shuto_slow.png") {tmpl_underlay (0,0,0,0,0)}
+  switch(FEAT_ROADTYPES,SELF,sw_road_expressway_dw_main,terrain_type){
+    TILETYPE_SNOW:gfx_snow_road_expressway_dw_main;
+    gfx_road_expressway_dw_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_road_expressway_sw_main,terrain_type){
+    TILETYPE_SNOW:gfx_snow_road_expressway_sw_main;
+    gfx_road_expressway_sw_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_road_expressway_red_main,terrain_type){
+    TILETYPE_SNOW:gfx_snow_road_expressway_red_main;
+    gfx_road_expressway_red_main;
+  }
 
 item(FEAT_ROADTYPES, road_expressway_dw,11) {
   property {
@@ -6572,10 +6608,22 @@ item(FEAT_TRAMTYPES, deco_slip_lane_l,16) {
 }
 
 # 1 "src/trams/trams.pnml" 1
-spriteset(gfx_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(gfx_def_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/trams/gfx_tram_ballast.png") {tmpl_underlay (0,0,0,0,0)}
-spriteset(gfx_bridge_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(gfx_def_bridge_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/trams/gfx_bridge_tram_ballast.png") {tmpl_bridge (0,0)}
+spriteset(gfx_snow_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/trams/gfx_snow_tram_ballast.png") {tmpl_underlay (0,0,0,0,0)}
+spriteset(gfx_snow_bridge_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/trams/gfx_snow_bridge_tram_ballast.png") {tmpl_bridge (0,0)}
+switch(FEAT_TRAMTYPES,SELF,gfx_tram_ballast,terrain_type){
+  TILETYPE_SNOW:gfx_snow_tram_ballast;
+  gfx_def_tram_ballast;
+  }
+switch(FEAT_TRAMTYPES,SELF,gfx_bridge_tram_ballast,terrain_type){
+  TILETYPE_SNOW:gfx_snow_bridge_tram_ballast;
+  gfx_def_bridge_tram_ballast;
+  }
 
 spriteset(gfx_tram_street, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/trams/gfx_tram_street.png") {tmpl_underlay (0,0,0,0,0)}

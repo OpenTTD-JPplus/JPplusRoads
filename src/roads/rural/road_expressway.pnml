@@ -1,9 +1,27 @@
-  spriteset(sw_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_shuto_dw.png") {tmpl_underlay (0,0,0,0,0)}
-  spriteset(sw_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_shuto_sw.png") {tmpl_underlay (0,0,0,0,0)}
-  spriteset(sw_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(gfx_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/gfx_shuto_slow.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(gfx_snow_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_shuto_dw.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(gfx_snow_road_expressway_sw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_shuto_sw.png") {tmpl_underlay (0,0,0,0,0)}
+  spriteset(gfx_snow_road_expressway_red_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/gfx_snow_shuto_slow.png") {tmpl_underlay (0,0,0,0,0)}
+  switch(FEAT_ROADTYPES,SELF,sw_road_expressway_dw_main,terrain_type){
+    TILETYPE_SNOW:gfx_snow_road_expressway_dw_main;
+    gfx_road_expressway_dw_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_road_expressway_sw_main,terrain_type){
+    TILETYPE_SNOW:gfx_snow_road_expressway_sw_main;
+    gfx_road_expressway_sw_main;
+  }
+  switch(FEAT_ROADTYPES,SELF,sw_road_expressway_red_main,terrain_type){
+    TILETYPE_SNOW:gfx_snow_road_expressway_red_main;
+    gfx_road_expressway_red_main;
+  }
 
 item(FEAT_ROADTYPES, road_expressway_dw,11) {
   property {

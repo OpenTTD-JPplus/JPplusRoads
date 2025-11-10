@@ -1,7 +1,19 @@
-spriteset(gfx_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(gfx_def_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/trams/gfx_tram_ballast.png") {tmpl_underlay (0,0,0,0,0)}
-spriteset(gfx_bridge_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+spriteset(gfx_def_bridge_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/trams/gfx_bridge_tram_ballast.png") {tmpl_bridge (0,0)}
+spriteset(gfx_snow_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/trams/gfx_snow_tram_ballast.png") {tmpl_underlay (0,0,0,0,0)}
+spriteset(gfx_snow_bridge_tram_ballast, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/trams/gfx_snow_bridge_tram_ballast.png") {tmpl_bridge (0,0)}
+switch(FEAT_TRAMTYPES,SELF,gfx_tram_ballast,terrain_type){
+  TILETYPE_SNOW:gfx_snow_tram_ballast;
+  gfx_def_tram_ballast;
+  }
+switch(FEAT_TRAMTYPES,SELF,gfx_bridge_tram_ballast,terrain_type){
+  TILETYPE_SNOW:gfx_snow_bridge_tram_ballast;
+  gfx_def_bridge_tram_ballast;
+  }
 
 spriteset(gfx_tram_street, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/trams/gfx_tram_street.png") {tmpl_underlay (0,0,0,0,0)}
