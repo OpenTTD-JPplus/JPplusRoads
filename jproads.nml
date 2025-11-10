@@ -2087,14 +2087,20 @@ item(FEAT_ROADTYPES, road_urban_tile_sakura, 28) {
 # 1 "src/roads/street_6L_avenue.pnml" 1
 
   spriteset(road_avenue_6l_2_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_asphalt_2_r_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r_conc.png") {tmpl_underlay_2 (0,0,0,0,0)}
   spriteset(road_avenue_6l_3_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_tile_r_conc.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_avenue_6l_tile_r_conc.png") {tmpl_underlay_2 (140,0,0,0,0)}
 
-  spriteset(road_avenue_6l_2_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  spriteset(road_avenue_6l_1_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/roads/pool/road_avenue_6l_asphalt_2_r.png") {tmpl_underlay_2 (0,0,0,0,0)}
+  spriteset(road_avenue_6l_2_r_g_gfx, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_avenue_6l_asphalt_2_r.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  random_switch(FEAT_ROADTYPES,SELF,road_avenue_6l_2_r_g){
+    1:road_avenue_6l_1_r_g;
+    1:road_avenue_6l_2_r_g_gfx;
+  }
   spriteset(road_avenue_6l_3_r_g, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (0,0,0,130,0)}
+  "gfx/roads/pool/road_avenue_6l_tile_r.png") {tmpl_underlay_2 (140,0,0,260,0)}
 
   spriteset(bridge_avenue_6l_2_r_g_conc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/roads/pool/road_avenue_6l_asphalt_2_r_conc.png") {tmpl_bridge (0,0)}
