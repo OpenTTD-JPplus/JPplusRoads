@@ -8,7 +8,7 @@ grf {
   name: string(STR_GRF_NAME);
   desc: string(STR_GRF_DESC);
   url: string(STR_GRF_URL);
-  version :100;
+  version :101;
   min_compatible_version :002;
 # 1 "src/import/params.pnml" 1
 
@@ -5622,7 +5622,7 @@ item(FEAT_ROADTYPES, road_field_path,1) {
   property {
     label: "RD01";
     sort_order: 1;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+20 km/h;
@@ -5652,7 +5652,7 @@ item(FEAT_ROADTYPES, road_unpaved,2) {
   property {
     label: "RD02";
     sort_order: 2;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+30 km/h;
@@ -5682,7 +5682,7 @@ item(FEAT_ROADTYPES, road_stone,4) {
   property {
     label: "RD04";
     sort_order: 4;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -5714,7 +5714,7 @@ item(FEAT_ROADTYPES, road_concrete,5) {
   property {
     label: "RD05";
     sort_order: 5;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+61 km/h;
@@ -5746,7 +5746,7 @@ item(FEAT_ROADTYPES, road_asphalt,7) {
   property {
     sort_order: 7;
     label: "RD07";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+61 km/h;
@@ -5807,7 +5807,7 @@ item(FEAT_ROADTYPES, road_asphalt_improved,9) {
   property {
     sort_order: 9;
     label: "RD09";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1960,1,1);
     speed_limit:SPEED_MODIFIER+81 km/h;
@@ -5865,7 +5865,7 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
   property {
     label: "REX1";
     sort_order: 11;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+101 km/h;
@@ -5896,7 +5896,7 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
     name: string(STR_ROAD_EXPRESS_S);
     label: "REX2";
     sort_order: 12;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+101 km/h;
@@ -5927,7 +5927,7 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
     name: string(STR_ROAD_EXPRESS_R);
     label: "REX3";
     sort_order: 13;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+61 km/h;
@@ -5959,7 +5959,7 @@ item(FEAT_ROADTYPES, street_unpaved,16) {
   property {
     sort_order: 16;
     label: "ST01";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+30 km/h;
@@ -5988,7 +5988,7 @@ item(FEAT_ROADTYPES, street_stone,18) {
   property {
     sort_order: 18;
     label: "ST03";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -6049,7 +6049,7 @@ item(FEAT_ROADTYPES, street_concrete,20) {
   property {
     sort_order: 20;
     label: "ST05";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -6107,7 +6107,7 @@ item(FEAT_ROADTYPES, street_secondary,23) {
   property {
     sort_order: 23;
     label: "ST08";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -6139,7 +6139,7 @@ item(FEAT_ROADTYPES, street_primary_asph,24) {
   property {
     label: "ST09";
     sort_order: 24;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -6197,7 +6197,7 @@ item(FEAT_ROADTYPES, street_primary_tile,26) {
   property {
     sort_order: 26;
     label: "ST11";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1930,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -6226,7 +6226,7 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_cone,27) {
   property {
     sort_order: 27;
     label: "ST12";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -6255,7 +6255,7 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_sakura,28) {
   property {
     sort_order: 28;
     label: "ST13";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
@@ -6288,7 +6288,7 @@ item(FEAT_ROADTYPES, street_4l_r,29) {
     property {
         sort_order: 29;
         label: "ST14";
-        powered_roadtype_list: ["RD07","ST07","ST14","ST15","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+        powered_roadtype_list: ["RD07","ST07","ST14","ST15","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
         introduction_date:date(1850,1,1);
         speed_limit:SPEED_MODIFIER+51 km/h;
@@ -6318,7 +6318,7 @@ item(FEAT_ROADTYPES, street_4l_l,30) {
         name: string(STR_ROAD_STREET_4L);
         label: "ST15";
         sort_order: 30;
-        powered_roadtype_list: ["RD07","ST07","ST14","ST15","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+        powered_roadtype_list: ["RD07","ST07","ST14","ST15","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
         introduction_date:date(1850,1,1);
         speed_limit:SPEED_MODIFIER+51 km/h;
@@ -6350,7 +6350,7 @@ item(FEAT_ROADTYPES, avenue_6l_r,33) {
   property {
     sort_order: 33;
     label: "ST18";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+51 km/h;
@@ -6379,7 +6379,7 @@ item(FEAT_ROADTYPES, avenue_6l_l,34) {
   property {
     label: "ST19";
     sort_order: 34;
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+51 km/h;
@@ -6525,7 +6525,7 @@ item(FEAT_ROADTYPES, road_industrial_firs_concrete,39) {
   property {
     sort_order: 39;
     label: "IND2";
-    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
     alternative_roadtype_list: ["HAUL"];
 
     introduction_date:date(0,1,1);
@@ -6809,7 +6809,7 @@ item(FEAT_ROADTYPES, street_pedestrian_stone,35) {
   property {
     label: "PD01";
     sort_order: 35;
-    powered_roadtype_list: ["PED1","PED2","PED3","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["PED1","PED2","PED3","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1800,1,1);
     speed_limit:0;
@@ -6838,7 +6838,7 @@ item(FEAT_ROADTYPES, street_pedestrian_brown,36) {
   property {
     label: "PD02";
     sort_order: 36;
-    powered_roadtype_list: ["PED1","PED2","PED3","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+    powered_roadtype_list: ["PED1","PED2","PED3","ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
     introduction_date:date(1930,1,1);
     speed_limit:0;
@@ -7149,7 +7149,7 @@ item(FEAT_TRAMTYPES, tram_ballast,45) {
 item(FEAT_ROADTYPES, road_generic, 0) {
     property {
         label: "ROAD";
-        powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
+        powered_roadtype_list: ["ROAD","RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09","REX1","REX2","REX3","REX4","ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19","IND1","IND2","IND3","IND4","IND5","HAUL","RD08","ST04","ST06","ST10","ID2E"];
 
         introduction_date:date(0,1,1);
         speed_limit:SPEED_MODIFIER+51 km/h;

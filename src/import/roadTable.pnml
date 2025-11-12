@@ -59,7 +59,7 @@ tramtypetable {
   "DE12",
 }
 
-# define RURAL "RD01","RD02","RD03","RD04","RD05","RD06","RD08","RD09"
+# define RURAL "RD01","RD02","RD03","RD04","RD05","RD06","RD07","RD08","RD09"
 # define EXPRESS "REX1","REX2","REX3","REX4"
 # define CITY "ST01","ST02","ST03","ST04","ST05","ST06","ST08","ST09","ST10","ST11","ST12","ST13","ST16","ST17","ST18","ST19"
 # define INDUSTRIAL "IND1","IND2","IND3","IND4","IND5","HAUL"
