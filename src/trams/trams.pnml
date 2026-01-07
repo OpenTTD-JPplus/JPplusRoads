@@ -53,6 +53,7 @@ item(FEAT_TRAMTYPES, tram_ballast_ne,44) {
         track_overlay:gfx_tram_overlay_main;
         underlay: gfx_tram_ballast;
         bridge_surfaces: gfx_bridge_tram_ballast_main;
+        depots:gfx_depot_tram_choice;
     }
 }
 item(FEAT_TRAMTYPES, tram_ballast,45) {
@@ -79,5 +80,6 @@ item(FEAT_TRAMTYPES, tram_ballast,45) {
       underlay: gfx_tram_ballast;
       bridge_surfaces: gfx_bridge_tram_ballast_main;
       gui:gui_tram;
+      depots:gfx_depot_tram_choice;
     }
 }

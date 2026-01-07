@@ -3157,6 +3157,14 @@ switch(FEAT_ROADTYPES,SELF,gfx_depot_reldred_choice,terrain_type){
   TILETYPE_SNOW:gfx_snow_depot_reldred_choice;
   gfx_def_depot_reldred_choice;
 }
+spriteset(gfx_def_depot_tram_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/depots/reldred_choice.png") {tmpl_depots (0,134)}
+spriteset(gfx_snow_depot_tram_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
+  "gfx/depots/reldred_choice.png") {tmpl_depots (0,201)}
+switch(FEAT_TRAMTYPES,SELF,gfx_depot_tram_choice,terrain_type){
+  TILETYPE_SNOW:gfx_snow_depot_tram_choice;
+  gfx_def_depot_tram_choice;
+}
 # 16 "src/index.pnml" 2
 # 1 "src/import/gfx_stops.pnml" 1
 spriteset(gfx_stops_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_stone.png") {tmpl_stops (0,0)}
@@ -7082,6 +7090,7 @@ item(FEAT_TRAMTYPES, tram_ballast_ne,44) {
         track_overlay:gfx_tram_overlay_main;
         underlay: gfx_tram_ballast;
         bridge_surfaces: gfx_bridge_tram_ballast_main;
+        depots:gfx_depot_tram_choice;
     }
 }
 item(FEAT_TRAMTYPES, tram_ballast,45) {
@@ -7108,6 +7117,7 @@ item(FEAT_TRAMTYPES, tram_ballast,45) {
       underlay: gfx_tram_ballast;
       bridge_surfaces: gfx_bridge_tram_ballast_main;
       gui:gui_tram;
+      depots:gfx_depot_tram_choice;
     }
 }
 # 57 "src/index.pnml" 2
@@ -7130,15 +7140,15 @@ item(FEAT_TRAMTYPES, tram_ballast,45) {
 
   switch(FEAT_ROADTYPES,SELF,bridge_generic_rural_gfx,current_year){
     0..1934:gfx_bridge_rural_stone_nm;
-    gfx_bridge_rural_stone_sw;
+    gfx_bridge_rural_asphalt_sw;
   }
   switch(FEAT_ROADTYPES,SELF,bridge_generic_city_gfx,current_year){
     0..1934:gfx_bridge_street_stone_nm;
     sw_bridge_street_asph_sw_main;
   }
   switch(FEAT_ROADTYPES,SELF,sw_bridge_generic_main,town_zone){
-    1..4:bridge_generic_rural_gfx;
-    bridge_generic_city_gfx;
+    1..4:bridge_generic_city_gfx;
+    bridge_generic_rural_gfx;
   }
 
   switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_tz_restricted_gen,current_year>1950){

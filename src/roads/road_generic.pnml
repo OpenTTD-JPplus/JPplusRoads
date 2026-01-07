@@ -15,15 +15,15 @@
 
   switch(FEAT_ROADTYPES,SELF,bridge_generic_rural_gfx,current_year){
     0..1934:gfx_bridge_rural_stone_nm;
-    gfx_bridge_rural_stone_sw;
+    gfx_bridge_rural_asphalt_sw;
   }
   switch(FEAT_ROADTYPES,SELF,bridge_generic_city_gfx,current_year){
     0..1934:gfx_bridge_street_stone_nm;
     sw_bridge_street_asph_sw_main;
   }
   switch(FEAT_ROADTYPES,SELF,sw_bridge_generic_main,town_zone){
-    1..4:bridge_generic_rural_gfx;
-    bridge_generic_city_gfx;
+    1..4:bridge_generic_city_gfx;
+    bridge_generic_rural_gfx;
   }
 
   switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_tz_restricted_gen,current_year>1950){
