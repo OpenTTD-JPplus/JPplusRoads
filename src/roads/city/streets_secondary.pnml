@@ -6,6 +6,8 @@ item(FEAT_ROADTYPES, street_concrete,20) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_ST05;
+    maintenance_cost:COST_ST05;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_CONCRETE));
@@ -35,6 +37,8 @@ item(FEAT_ROADTYPES, street_concrete_elec,21) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_ST06;
+    maintenance_cost:COST_ST06;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_CONCRETE)));
@@ -64,6 +68,8 @@ item(FEAT_ROADTYPES, street_secondary,23) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_ST08;
+    maintenance_cost:COST_ST08;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_SECONDARY));

@@ -7,6 +7,8 @@ item(FEAT_TRAMTYPES, deco_lights_r,53) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:COST_DEC1;
+        maintenance_cost:0;
         
         toolbar_caption: string(STR_DECO_LIGHTS_RIGHT);
         menu_text: string(STR_DECO_LIGHTS_RIGHT);
@@ -32,6 +34,8 @@ item(FEAT_TRAMTYPES, deco_lights_l,54) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:COST_DEC2;
+        maintenance_cost:0;
         // map_colour:VAR_AVENUE;
         
         toolbar_caption: string(STR_DECO_LIGHTS_LEFT);

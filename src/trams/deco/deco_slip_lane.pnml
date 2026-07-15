@@ -7,6 +7,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_r,15) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:COST_DE11;
+        maintenance_cost:0;
         
         toolbar_caption: string(STR_DECO_SLIP_R);
         menu_text: string(STR_DECO_SLIP_R);
@@ -32,6 +34,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_l,16) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:COST_DE12;
+        maintenance_cost:0;
         
         toolbar_caption: string(STR_DECO_SLIP_L);
         menu_text: string(STR_DECO_SLIP_L);

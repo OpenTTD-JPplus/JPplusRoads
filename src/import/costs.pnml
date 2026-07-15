@@ -1,0 +1,86 @@
+//*Base prices
+# define COST_TIER_20     2
+# define COST_TIER_30     6
+# define COST_TIER_40    14
+# define COST_TIER_50    20
+# define COST_TIER_60    20
+# define COST_TIER_80    24
+# define COST_TIER_100   28
+# define COST_EYECANDY    8
+
+//*Modifiers
+# define COST_STREET      4
+# define COST_CATENARY    8
+# define COST_AVENUE      8
+# define COST_EXPRESSWAY 24
+# define COST_INDUSTRIAL  2
+# define COST_DECORATED   4
+
+//*Roads
+# define COST_RD01  (COST_TIER_20)                                   //  2  Field Path
+# define COST_RD02  (COST_TIER_30)                                   //  6  Unpaved Road
+# define COST_RD04  (COST_TIER_40)                                   // 14  Stone Road
+# define COST_RD05  (COST_TIER_60)                                   // 20  Concrete Road
+# define COST_RD07  (COST_TIER_60)                                   // 20  Asphalt Road
+# define COST_RD08  (COST_TIER_60 + COST_CATENARY)                   // 28  Asphalt Road (catenary)
+# define COST_RD09  (COST_TIER_80)                                   // 24  Improved Asphalt Road
+
+//*Streets
+# define COST_ST01  (COST_TIER_30 + COST_STREET)                     // 10  Unpaved Street
+# define COST_ST03  (COST_TIER_40 + COST_STREET)                     // 18  Stone Street
+# define COST_ST05  (COST_TIER_40 + COST_STREET)                     // 18  Concrete Street
+# define COST_ST08  (COST_TIER_40 + COST_STREET)                     // 18  Secondary Street
+# define COST_ST09  (COST_TIER_40 + COST_STREET)                     // 18  Primary Street
+# define COST_ST04  (COST_TIER_40 + COST_STREET + COST_CATENARY)     // 26  Stone Street (catenary)
+# define COST_ST06  (COST_TIER_40 + COST_STREET + COST_CATENARY)     // 26  Concrete Street (catenary)
+# define COST_ST10  (COST_TIER_40 + COST_STREET + COST_CATENARY)     // 26  Primary Street (catenary)
+# define COST_ST11  (COST_TIER_40 + COST_STREET + COST_DECORATED)    // 22  Tiled Sidewalk Street
+# define COST_ST12  (COST_TIER_40 + COST_STREET + COST_DECORATED)    // 22  Tall Green Tree Primary
+# define COST_ST13  (COST_TIER_40 + COST_STREET + COST_DECORATED)    // 22  Sakura Tree Primary
+# define COST_ST18  (COST_TIER_50 + COST_STREET + COST_AVENUE)       // 32  6L Avenue R
+# define COST_ST19  (COST_TIER_50 + COST_STREET + COST_AVENUE)       // 32  6L Avenue L
+
+//*Eyecandy streets
+# define COST_ST14  (COST_EYECANDY + COST_STREET)                    // 12  4L Street R
+# define COST_ST15  (COST_EYECANDY + COST_STREET)                    // 12  4L Street L
+# define COST_PD01  (COST_EYECANDY + COST_STREET)                    // 12  Stone Pedestrian Street
+# define COST_PD02  (COST_EYECANDY + COST_STREET)                    // 12  Tiled Pedestrian Street
+
+//*Expressways
+# define COST_REX3  (COST_TIER_60 + COST_EXPRESSWAY)                 // 44  Expressway (Slow)
+# define COST_REX1  (COST_TIER_100 + COST_EXPRESSWAY)                // 52  Expressway
+# define COST_REX2  (COST_TIER_100 + COST_EXPRESSWAY)                // 52  Expressway (Solid)
+
+//*Industrial
+# define COST_IND2  (COST_TIER_40 + COST_INDUSTRIAL)                 // 16  CHIPS Concrete
+# define COST_IND3  (COST_TIER_40 + COST_INDUSTRIAL)                 // 16  CHIPS Cobblestone
+# define COST_IND4  (COST_TIER_40 + COST_INDUSTRIAL)                 // 16  ISR Concrete
+# define COST_IND5  (COST_TIER_40 + COST_INDUSTRIAL)                 // 16  AUZ Concrete
+# define COST_ID2E  (COST_TIER_40 + COST_INDUSTRIAL + COST_CATENARY) // 24  CHIPS Concrete (catenary)
+
+//*Generic
+// Also sets what bulldozing a town road costs, so leave it on vanilla's 8.
+# define COST_ROAD  8                                                //  8  Town Road
+
+//*Trams
+# define COST_TRAM  14
+# define COST_RAIL  (COST_TRAM)                                      // 14  Tram
+# define COST_ELRL  (COST_TRAM + COST_CATENARY)                      // 22  Tram (catenary)
+
+//*Deco tramtypes
+// Maintenance is 0 on all six.
+# define COST_DEC1  (COST_EYECANDY)                                  //  8  Street Lights Right
+# define COST_DEC2  (COST_EYECANDY)                                  //  8  Street Lights Left
+# define COST_DEC8  (COST_EYECANDY)                                  //  8  Sound Barrier R
+# define COST_DEC9  (COST_EYECANDY)                                  //  8  Sound Barrier L
+# define COST_DE11  (COST_EYECANDY)                                  //  8  Slip Road Overlap R
+# define COST_DE12  (COST_EYECANDY)                                  //  8  Slip Road Overlap L
+
+//*Basecosts
+basecost {
+  PR_BUILD_ROAD:          (param_cost - 2) * 2;
+  PR_BUILD_DEPOT_ROAD:    (param_cost - 2) * 2;
+  PR_BUILD_STATION_BUS:   (param_cost - 2) * 2;
+  PR_BUILD_STATION_TRUCK: (param_cost - 2) * 2;
+  PR_MAINTENANCE_ROAD:    (param_cost - 2) * 2;
+}

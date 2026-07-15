@@ -7,6 +7,8 @@ item(FEAT_ROADTYPES, road_industrial_firs_concrete,39) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_IND2;
+    maintenance_cost:COST_IND2;
     map_colour:VAR_ALLEY;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC));
@@ -37,6 +39,8 @@ item(FEAT_ROADTYPES, road_industrial_firs_concrete_elec,40) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_ID2E;
+    maintenance_cost:COST_ID2E;
     map_colour:VAR_ALLEY;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC)));

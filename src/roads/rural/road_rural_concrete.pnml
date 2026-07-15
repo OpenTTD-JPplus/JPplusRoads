@@ -6,6 +6,8 @@ item(FEAT_ROADTYPES, road_concrete,5) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+61 km/h;
+    construction_cost:COST_RD05;
+    maintenance_cost:COST_RD05;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_CONCRETE));

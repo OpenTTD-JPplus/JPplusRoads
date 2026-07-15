@@ -2,6 +2,7 @@
 #include "import/templates.pnml"
 #include "import/roadTable.pnml"
 #include "import/globalVars.pnml"
+#include "import/costs.pnml"
 // #include "import/setIds.pnml"
 
 #include "import/gfx_gui.pnml"

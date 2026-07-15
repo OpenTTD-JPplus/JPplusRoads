@@ -6,6 +6,8 @@ item(FEAT_ROADTYPES, road_industrial_isr,42) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_IND4;
+    maintenance_cost:COST_IND4;
     map_colour:VAR_ALLEY;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_ISR));

@@ -37,6 +37,8 @@ item(FEAT_TRAMTYPES, tram_ballast_ne,44) {
 
         introduction_date:date(0,1,1);
         speed_limit:SPEED_MODIFIER+81 km/h;
+        construction_cost:COST_RAIL;
+        maintenance_cost:COST_RAIL;
         
         name: string(STR_TRAM);
         toolbar_caption: string(STR_TRAM);
@@ -64,6 +66,8 @@ item(FEAT_TRAMTYPES, tram_ballast,45) {
 
         introduction_date:date(1881,1,1);
         speed_limit:SPEED_MODIFIER+81 km/h;
+        construction_cost:COST_ELRL;
+        maintenance_cost:COST_ELRL;
         
         name: string(STR_ROAD_CATENARY,string(STR_TRAM));
         toolbar_caption: string(STR_ROAD_CATENARY,string(STR_TRAM));
