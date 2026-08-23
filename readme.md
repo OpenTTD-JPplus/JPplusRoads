@@ -11,7 +11,3 @@ A part of [JP+ GRF Empire](https://github.com/OpenTTD-JPplus)
 **Coding:** Yozora <br>
 **Graphics:** Yozora, Ufiby <br>
 **Thanks to:** Whole JP+Team for mental support<br>
-
-##
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L8Q122RDZT)<br>
-[<img src="https://github.com/yozora3/technical_stuff/blob/main/logos/qrcode.png?raw=true" width="223"/>](https://ko-fi.com/L8Q122RDZT)
