@@ -791,6 +791,16 @@ if (param_speed == 0) {SPEED_MODIFIER = 0;}
 if (param_speed == 1) {SPEED_MODIFIER = 20;}
 if (param_speed == 2) {SPEED_MODIFIER = 50;}
 # 5 "src/index.pnml" 2
+# 1 "src/import/costs.pnml" 1
+# 80 "src/import/costs.pnml"
+basecost {
+  PR_BUILD_ROAD: (param_cost - 2) * 2;
+  PR_BUILD_DEPOT_ROAD: (param_cost - 2) * 2;
+  PR_BUILD_STATION_BUS: (param_cost - 2) * 2;
+  PR_BUILD_STATION_TRUCK: (param_cost - 2) * 2;
+  PR_MAINTENANCE_ROAD: (param_cost - 2) * 2;
+}
+# 6 "src/index.pnml" 2
 
 
 # 1 "src/import/gfx_gui.pnml" 1
@@ -865,7 +875,7 @@ spriteset(gui_shutoko_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl
 spriteset(gui_chevron_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,325,0)}
 spriteset(gui_chevron_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,350,0)}
 spriteset(gui_crash, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/gui.png") {tmpl_gui (340,375,0)}
-# 8 "src/index.pnml" 2
+# 9 "src/index.pnml" 2
 # 1 "src/import/gfx_overlay.pnml" 1
 spriteset(gfx_overlay_people_1_1, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (0,0,0)}
 spriteset(gfx_overlay_people_1_2, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/overlay/gfx_overlay_people_1.png") {tmpl_overlay (140,0,130)}
@@ -907,7 +917,7 @@ switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2l_secondary,town_zone){
   2..4:gfx_overlay_people_2;
   gfx_overlay_people_1;
 }
-# 9 "src/index.pnml" 2
+# 10 "src/index.pnml" 2
 # 1 "src/import/gfx_decorations.pnml" 1
 
   spriteset(deco_empty, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -1109,9 +1119,9 @@ switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2l_secondary,town_zone){
     gfx_light_poles_left_b_reg;
   }
   switch (FEAT_TRAMTYPES,SELF,gfx_light_poles_left_b,railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")) {1:deco_empty;gfx_light_poles_left_b_1;}
-# 10 "src/index.pnml" 2
-# 1 "src/import/defines.pnml" 1
 # 11 "src/index.pnml" 2
+# 1 "src/import/defines.pnml" 1
+# 12 "src/index.pnml" 2
 # 1 "src/import/gfx_trees.pnml" 1
 
 
@@ -2578,7 +2588,7 @@ switch(FEAT_ROADTYPES,SELF,gfx_overlay_people_2l_secondary,town_zone){
       1:deco_empty;
       sw_tree_cone_b_lights_6l_left_main_2;
     }
-# 12 "src/index.pnml" 2
+# 13 "src/index.pnml" 2
 # 1 "src/import/gfx_catenary.pnml" 1
 spriteset(gfx_catenary_wood_b, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/catenary/CAT_wood_b.png") {tmpl_catenary (0,0,0,190,0)}
@@ -2644,7 +2654,7 @@ switch(FEAT_ROADTYPES,SELF,sw_catenary_trolley_f,current_year){
   0..1950:sw_catenary_trolley_wood_f;
   sw_catenary_trolley_conc_f;
 }
-# 13 "src/index.pnml" 2
+# 14 "src/index.pnml" 2
 # 1 "src/import/bridges.pnml" 1
 spriteset(sw_bridge_test, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/misc/bridge_test.png") {tmpl_bridge (0,0)}
@@ -3131,7 +3141,7 @@ spriteset(sw_bridge_test, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/gfx_bridge_ind_ISR.png") {tmpl_bridge (0,0)}
   spriteset(gfx_IND_AUZ_bridge, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/roads/gfx_bridge_ind_AUZ.png") {tmpl_bridge (0,0)}
-# 14 "src/index.pnml" 2
+# 15 "src/index.pnml" 2
 # 1 "src/import/gfx_arrows.pnml" 1
 spriteset(gfx_arrows_2l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/arrows/arrows_2l.png") {tmpl_arrows (0)}
@@ -3147,7 +3157,7 @@ spriteset(gfx_arrows_6l_r, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/arrows/arrows_6l.png") {tmpl_arrows (0)}
 spriteset(gfx_arrows_6l_l, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
     "gfx/arrows/arrows_6l.png") {tmpl_arrows (100)}
-# 15 "src/index.pnml" 2
+# 16 "src/index.pnml" 2
 # 1 "src/import/gfx_depots.pnml" 1
 spriteset(gfx_def_depot_reldred_choice, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/depots/reldred_choice.png") {tmpl_depots (0,0)}
@@ -3165,7 +3175,7 @@ switch(FEAT_TRAMTYPES,SELF,gfx_depot_tram_choice,terrain_type){
   TILETYPE_SNOW:gfx_snow_depot_tram_choice;
   gfx_def_depot_tram_choice;
 }
-# 16 "src/index.pnml" 2
+# 17 "src/index.pnml" 2
 # 1 "src/import/gfx_stops.pnml" 1
 spriteset(gfx_stops_stone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_stone.png") {tmpl_stops (0,0)}
 spriteset(gfx_stops_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_concrete.png") {tmpl_stops (0,0)}
@@ -3174,7 +3184,7 @@ spriteset(gfx_stops_firs_concrete, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops
 spriteset(gfx_stops_firs_cobble, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_firs_cobble.png") {tmpl_stops (0,0)}
 spriteset(gfx_stops_isr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_isr.png") {tmpl_stops (0,0)}
 spriteset(gfx_stops_auz, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/stops/gfx_stops_auz.png") {tmpl_stops (0,0)}
-# 17 "src/index.pnml" 2
+# 18 "src/index.pnml" 2
 # 1 "src/import/gfx_tunnels.pnml" 1
 spriteset(gfx_tunnel_underlay, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
   "gfx/tunnels/gfx_tunnel_underlay.png") {tmpl_tunnels (0,0)}
@@ -3203,7 +3213,7 @@ alternative_sprites(tunnel_sprite_3,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunn
 alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunnels/gfx_tunnel_overlay.png") {
  [210, 0, 64, 36, -31, -43]
 }
-# 18 "src/index.pnml" 2
+# 19 "src/index.pnml" 2
 # 1 "src/import/gfx_crossings.pnml" 1
 
 
@@ -3854,7 +3864,7 @@ alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunn
       1..2:gfx_crossing_avenue_6l_l_slab;
       gfx_crossing_avenue_6l_l_rubber;
     }
-# 19 "src/index.pnml" 2
+# 20 "src/index.pnml" 2
 
 # 1 "src/roads/city/streets_gfx.pnml" 1
 # 22 "src/roads/city/streets_gfx.pnml"
@@ -4824,7 +4834,7 @@ alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunn
       1:sw_street_primary_asph_crossing;
       sw_street_primary_asph_tile_so_main_road;
     }
-# 21 "src/index.pnml" 2
+# 22 "src/index.pnml" 2
 # 1 "src/roads/city/avenues_gfx.pnml" 1
 
 
@@ -5188,7 +5198,7 @@ alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunn
       1:sw_avenue_6l_l_main_crossing;
       sw_avenue_6l_l_main_road;
     }
-# 22 "src/index.pnml" 2
+# 23 "src/index.pnml" 2
 # 1 "src/roads/rural/roads_gfx.pnml" 1
 
 
@@ -5623,7 +5633,7 @@ alternative_sprites(tunnel_sprite_2,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,"gfx/tunn
       1:sw_crossing_road_asph_new_main;
       gfx_road_rural_sw_asph_new;
     }
-# 23 "src/index.pnml" 2
+# 24 "src/index.pnml" 2
 
 # 1 "src/roads/rural/road_rural_old.pnml" 1
 item(FEAT_ROADTYPES, road_field_path,1) {
@@ -5634,6 +5644,8 @@ item(FEAT_ROADTYPES, road_field_path,1) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+20 km/h;
+    construction_cost:(2);
+    maintenance_cost:(2);
     map_colour:6;
 
     name: string(STR_ROAD_FIELD);
@@ -5664,6 +5676,8 @@ item(FEAT_ROADTYPES, road_unpaved,2) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+30 km/h;
+    construction_cost:(6);
+    maintenance_cost:(6);
     map_colour:10;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_UNPAVED));
@@ -5694,6 +5708,8 @@ item(FEAT_ROADTYPES, road_stone,4) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14);
+    maintenance_cost:(14);
     map_colour:6;
 
     name: string(STR_ROAD_STONE);
@@ -5716,7 +5732,7 @@ item(FEAT_ROADTYPES, road_stone,4) {
     roadstops:gfx_stops_stone;
   }
 }
-# 25 "src/index.pnml" 2
+# 26 "src/index.pnml" 2
 # 1 "src/roads/rural/road_rural_concrete.pnml" 1
 item(FEAT_ROADTYPES, road_concrete,5) {
   property {
@@ -5726,6 +5742,8 @@ item(FEAT_ROADTYPES, road_concrete,5) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+61 km/h;
+    construction_cost:(20);
+    maintenance_cost:(20);
     map_colour:10;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_CONCRETE));
@@ -5748,7 +5766,7 @@ item(FEAT_ROADTYPES, road_concrete,5) {
     roadstops:gfx_stops_concrete;
   }
 }
-# 26 "src/index.pnml" 2
+# 27 "src/index.pnml" 2
 # 1 "src/roads/rural/road_rural_asphalt.pnml" 1
 item(FEAT_ROADTYPES, road_asphalt,7) {
   property {
@@ -5758,6 +5776,8 @@ item(FEAT_ROADTYPES, road_asphalt,7) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+61 km/h;
+    construction_cost:(20);
+    maintenance_cost:(20);
     map_colour:10;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT));
@@ -5789,6 +5809,8 @@ item(FEAT_ROADTYPES, road_asphalt_elec,8) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+61 km/h;
+    construction_cost:(20 + 8);
+    maintenance_cost:(20 + 8);
     map_colour:10;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_ASPHALT)));
@@ -5819,6 +5841,8 @@ item(FEAT_ROADTYPES, road_asphalt_improved,9) {
 
     introduction_date:date(1960,1,1);
     speed_limit:SPEED_MODIFIER+81 km/h;
+    construction_cost:(24);
+    maintenance_cost:(24);
     map_colour:12;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_IMPROVED, string(STR_ROAD_ASPHALT)));
@@ -5841,7 +5865,7 @@ item(FEAT_ROADTYPES, road_asphalt_improved,9) {
     roadstops:gfx_stops_asphalt;
   }
 }
-# 27 "src/index.pnml" 2
+# 28 "src/index.pnml" 2
 
 # 1 "src/roads/rural/road_expressway.pnml" 1
   spriteset(gfx_road_expressway_dw_main, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
@@ -5877,6 +5901,8 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+101 km/h;
+    construction_cost:(28 + 24);
+    maintenance_cost:(28 + 24);
     map_colour:185;
 
     name: string(STR_ROAD_EXPRESS);
@@ -5908,6 +5934,8 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+101 km/h;
+    construction_cost:(28 + 24);
+    maintenance_cost:(28 + 24);
     map_colour:185;
 
     toolbar_caption: string(STR_ROAD_EXPRESS_S);
@@ -5939,6 +5967,8 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+61 km/h;
+    construction_cost:(20 + 24);
+    maintenance_cost:(20 + 24);
     map_colour:185;
 
     toolbar_caption: string(STR_ROAD_EXPRESS_R);
@@ -5960,7 +5990,7 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
     roadstops:gfx_stops_asphalt;
   }
 }
-# 29 "src/index.pnml" 2
+# 30 "src/index.pnml" 2
 
 # 1 "src/roads/city/streets_old.pnml" 1
 item(FEAT_ROADTYPES, street_unpaved,16) {
@@ -5971,6 +6001,8 @@ item(FEAT_ROADTYPES, street_unpaved,16) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+30 km/h;
+    construction_cost:(6 + 4);
+    maintenance_cost:(6 + 4);
     map_colour:6;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_UNPAVED));
@@ -6000,6 +6032,8 @@ item(FEAT_ROADTYPES, street_stone,18) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4);
+    maintenance_cost:(14 + 4);
     map_colour:10;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_STONE));
@@ -6029,6 +6063,8 @@ item(FEAT_ROADTYPES, street_stone_elec,19) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4 + 8);
+    maintenance_cost:(14 + 4 + 8);
     map_colour:10;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_STONE)));
@@ -6051,7 +6087,7 @@ item(FEAT_ROADTYPES, street_stone_elec,19) {
     roadstops:gfx_stops_stone;
   }
 }
-# 31 "src/index.pnml" 2
+# 32 "src/index.pnml" 2
 # 1 "src/roads/city/streets_secondary.pnml" 1
 item(FEAT_ROADTYPES, street_concrete,20) {
   property {
@@ -6061,6 +6097,8 @@ item(FEAT_ROADTYPES, street_concrete,20) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4);
+    maintenance_cost:(14 + 4);
     map_colour:10;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_CONCRETE));
@@ -6090,6 +6128,8 @@ item(FEAT_ROADTYPES, street_concrete_elec,21) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4 + 8);
+    maintenance_cost:(14 + 4 + 8);
     map_colour:10;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_CONCRETE)));
@@ -6119,6 +6159,8 @@ item(FEAT_ROADTYPES, street_secondary,23) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4);
+    maintenance_cost:(14 + 4);
     map_colour:10;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_SECONDARY));
@@ -6140,7 +6182,7 @@ item(FEAT_ROADTYPES, street_secondary,23) {
     roadstops:gfx_stops_asphalt;
   }
 }
-# 32 "src/index.pnml" 2
+# 33 "src/index.pnml" 2
 # 1 "src/roads/city/streets_primary.pnml" 1
 
 item(FEAT_ROADTYPES, street_primary_asph,24) {
@@ -6151,6 +6193,8 @@ item(FEAT_ROADTYPES, street_primary_asph,24) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4);
+    maintenance_cost:(14 + 4);
     map_colour:12;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_PRIMARY));
@@ -6180,6 +6224,8 @@ item(FEAT_ROADTYPES, street_primary_asph_elec,25) {
 
     introduction_date:date(1920,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4 + 8);
+    maintenance_cost:(14 + 4 + 8);
     map_colour:12;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_PRIMARY)));
@@ -6209,6 +6255,8 @@ item(FEAT_ROADTYPES, street_primary_tile,26) {
 
     introduction_date:date(1930,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4 + 4);
+    maintenance_cost:(14 + 4 + 4);
     map_colour:12;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_TILE));
@@ -6238,6 +6286,8 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_cone,27) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4 + 4);
+    maintenance_cost:(14 + 4 + 4);
     map_colour:12;
 
     name:string(STR_GEN_STREET,string(STR_ROAD_GREEN));
@@ -6267,6 +6317,8 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_sakura,28) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 4 + 4);
+    maintenance_cost:(14 + 4 + 4);
     map_colour:12;
 
     name:string(STR_GEN_STREET,string(STR_ROAD_SAKURA));
@@ -6288,7 +6340,7 @@ item(FEAT_ROADTYPES, street_primary_tile_tree_sakura,28) {
     roadstops:gfx_stops_asphalt;
   }
 }
-# 33 "src/index.pnml" 2
+# 34 "src/index.pnml" 2
 
 if (param_eyecandy_roadtypes){
 # 1 "src/roads/city/streets_deco.pnml" 1
@@ -6300,6 +6352,8 @@ item(FEAT_ROADTYPES, street_4l_r,29) {
 
         introduction_date:date(1850,1,1);
         speed_limit:SPEED_MODIFIER+51 km/h;
+        construction_cost:(8 + 4);
+        maintenance_cost:(8 + 4);
         map_colour:51;
 
         name: string(STR_ROAD_STREET_4R);
@@ -6330,6 +6384,8 @@ item(FEAT_ROADTYPES, street_4l_l,30) {
 
         introduction_date:date(1850,1,1);
         speed_limit:SPEED_MODIFIER+51 km/h;
+        construction_cost:(8 + 4);
+        maintenance_cost:(8 + 4);
         map_colour:51;
 
         toolbar_caption: string(STR_ROAD_STREET_4L);
@@ -6350,7 +6406,7 @@ item(FEAT_ROADTYPES, street_4l_l,30) {
       roadstops:gfx_stops_asphalt;
     }
 }
-# 36 "src/index.pnml" 2
+# 37 "src/index.pnml" 2
 }
 
 # 1 "src/roads/city/streets_avenues.pnml" 1
@@ -6362,6 +6418,8 @@ item(FEAT_ROADTYPES, avenue_6l_r,33) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+51 km/h;
+    construction_cost:(20 + 4 + 8);
+    maintenance_cost:(20 + 4 + 8);
     map_colour:51;
 
     name: string(STR_ROAD_AVENUE_6R);
@@ -6391,6 +6449,8 @@ item(FEAT_ROADTYPES, avenue_6l_l,34) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+51 km/h;
+    construction_cost:(20 + 4 + 8);
+    maintenance_cost:(20 + 4 + 8);
     map_colour:51;
 
     name: string(STR_ROAD_AVENUE_6L);
@@ -6412,7 +6472,7 @@ item(FEAT_ROADTYPES, avenue_6l_l,34) {
     roadstops:gfx_stops_asphalt;
   }
 }
-# 39 "src/index.pnml" 2
+# 40 "src/index.pnml" 2
 
 # 1 "src/roads/industrial/industrial_gfx.pnml" 1
   spriteset(gfx_IND_rh_FIRS_concrete_1,ZOOM_LEVEL_NORMAL,BIT_DEPTH_32BPP,
@@ -6526,7 +6586,7 @@ item(FEAT_ROADTYPES, avenue_6l_l,34) {
     1:gfx_IND_nm_ISR_r;
     gfx_IND_ISR_1;
   }
-# 41 "src/index.pnml" 2
+# 42 "src/index.pnml" 2
 
 # 1 "src/roads/industrial/IND_FIRS_concrete.pnml" 1
 item(FEAT_ROADTYPES, road_industrial_firs_concrete,39) {
@@ -6538,6 +6598,8 @@ item(FEAT_ROADTYPES, road_industrial_firs_concrete,39) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 2);
+    maintenance_cost:(14 + 2);
     map_colour:6;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC));
@@ -6568,6 +6630,8 @@ item(FEAT_ROADTYPES, road_industrial_firs_concrete_elec,40) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 2 + 8);
+    maintenance_cost:(14 + 2 + 8);
     map_colour:6;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_ROAD,string(STR_ROAD_FIRS_CONC)));
@@ -6590,7 +6654,7 @@ item(FEAT_ROADTYPES, road_industrial_firs_concrete_elec,40) {
     roadstops:gfx_stops_firs_concrete;
   }
 }
-# 43 "src/index.pnml" 2
+# 44 "src/index.pnml" 2
 # 1 "src/roads/industrial/IND_FIRS_cobble.pnml" 1
 item(FEAT_ROADTYPES, road_industrial_firs_cobble,41) {
   property {
@@ -6600,6 +6664,8 @@ item(FEAT_ROADTYPES, road_industrial_firs_cobble,41) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 2);
+    maintenance_cost:(14 + 2);
     map_colour:6;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_FIRS_COBBLE));
@@ -6622,7 +6688,7 @@ item(FEAT_ROADTYPES, road_industrial_firs_cobble,41) {
     roadstops:gfx_stops_firs_cobble;
   }
 }
-# 44 "src/index.pnml" 2
+# 45 "src/index.pnml" 2
 # 1 "src/roads/industrial/IND_ISR.pnml" 1
 item(FEAT_ROADTYPES, road_industrial_isr,42) {
   property {
@@ -6632,6 +6698,8 @@ item(FEAT_ROADTYPES, road_industrial_isr,42) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 2);
+    maintenance_cost:(14 + 2);
     map_colour:6;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_ISR));
@@ -6654,7 +6722,7 @@ item(FEAT_ROADTYPES, road_industrial_isr,42) {
     roadstops:gfx_stops_isr;
   }
 }
-# 45 "src/index.pnml" 2
+# 46 "src/index.pnml" 2
 # 1 "src/roads/industrial/IND_AUZ.pnml" 1
 item(FEAT_ROADTYPES, road_industrial_auz,43) {
   property {
@@ -6664,6 +6732,8 @@ item(FEAT_ROADTYPES, road_industrial_auz,43) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:(14 + 2);
+    maintenance_cost:(14 + 2);
     map_colour:6;
 
     name: string(STR_GEN_ROAD,string(STR_ROAD_AUZ));
@@ -6686,7 +6756,7 @@ item(FEAT_ROADTYPES, road_industrial_auz,43) {
     roadstops:gfx_stops_auz;
   }
 }
-# 46 "src/index.pnml" 2
+# 47 "src/index.pnml" 2
 
 # 1 "src/roads/pedestrian/pedestrian_gfx.pnml" 1
 
@@ -6811,7 +6881,7 @@ item(FEAT_ROADTYPES, road_industrial_auz,43) {
     1:deco_empty;
     sw_ped_street_trees_main_1;
   }
-# 48 "src/index.pnml" 2
+# 49 "src/index.pnml" 2
 # 1 "src/roads/pedestrian/pedestrian_streets.pnml" 1
 item(FEAT_ROADTYPES, street_pedestrian_stone,35) {
   property {
@@ -6821,6 +6891,8 @@ item(FEAT_ROADTYPES, street_pedestrian_stone,35) {
 
     introduction_date:date(1800,1,1);
     speed_limit:0;
+    construction_cost:(8 + 4);
+    maintenance_cost:(8 + 4);
     map_colour:6;
 
     name: string(STR_GEN_STREET_PED,string(STR_ROAD_STONE));
@@ -6850,6 +6922,8 @@ item(FEAT_ROADTYPES, street_pedestrian_brown,36) {
 
     introduction_date:date(1930,1,1);
     speed_limit:0;
+    construction_cost:(8 + 4);
+    maintenance_cost:(8 + 4);
     map_colour:6;
 
     name: string(STR_GEN_STREET_PED,string(STR_ROAD_TILE));
@@ -6871,7 +6945,7 @@ item(FEAT_ROADTYPES, street_pedestrian_brown,36) {
     roadstops:gfx_stops_stone;
   }
 }
-# 49 "src/index.pnml" 2
+# 50 "src/index.pnml" 2
 if (param_eyecandy_roadtypes){
 # 1 "src/trams/deco/deco_lights.pnml" 1
 item(FEAT_TRAMTYPES, deco_lights_r,53) {
@@ -6883,6 +6957,8 @@ item(FEAT_TRAMTYPES, deco_lights_r,53) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:(8);
+        maintenance_cost:0;
 
         toolbar_caption: string(STR_DECO_LIGHTS_RIGHT);
         menu_text: string(STR_DECO_LIGHTS_RIGHT);
@@ -6908,6 +6984,8 @@ item(FEAT_TRAMTYPES, deco_lights_l,54) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:(8);
+        maintenance_cost:0;
 
 
         toolbar_caption: string(STR_DECO_LIGHTS_LEFT);
@@ -6925,7 +7003,7 @@ item(FEAT_TRAMTYPES, deco_lights_l,54) {
         bridge_surfaces: deco_empty;
     }
 }
-# 51 "src/index.pnml" 2
+# 52 "src/index.pnml" 2
 # 1 "src/trams/deco/deco_shutoko.pnml" 1
 item(FEAT_TRAMTYPES, deco_shutoko_r,60) {
     property {
@@ -6936,6 +7014,8 @@ item(FEAT_TRAMTYPES, deco_shutoko_r,60) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:(8);
+        maintenance_cost:0;
 
         toolbar_caption: string(STR_DECO_SHUTOKO_RIGHT);
         menu_text: string(STR_DECO_SHUTOKO_RIGHT);
@@ -6961,6 +7041,8 @@ item(FEAT_TRAMTYPES, deco_shutoko_l,61) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:(8);
+        maintenance_cost:0;
 
 
         toolbar_caption: string(STR_DECO_SHUTOKO_LEFT);
@@ -6978,7 +7060,7 @@ item(FEAT_TRAMTYPES, deco_shutoko_l,61) {
         bridge_surfaces: deco_empty;
     }
 }
-# 52 "src/index.pnml" 2
+# 53 "src/index.pnml" 2
 
 # 1 "src/trams/deco/deco_slip_lane.pnml" 1
 item(FEAT_TRAMTYPES, deco_slip_lane_r,15) {
@@ -6990,6 +7072,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_r,15) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:(8);
+        maintenance_cost:0;
 
         toolbar_caption: string(STR_DECO_SLIP_R);
         menu_text: string(STR_DECO_SLIP_R);
@@ -7015,6 +7099,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_l,16) {
 
         introduction_date:date(1950,1,1);
         speed_limit:SPEED_MODIFIER+0;
+        construction_cost:(8);
+        maintenance_cost:0;
 
         toolbar_caption: string(STR_DECO_SLIP_L);
         menu_text: string(STR_DECO_SLIP_L);
@@ -7031,7 +7117,7 @@ item(FEAT_TRAMTYPES, deco_slip_lane_l,16) {
         bridge_surfaces: deco_empty;
     }
 }
-# 54 "src/index.pnml" 2
+# 55 "src/index.pnml" 2
 }
 
 # 1 "src/trams/trams.pnml" 1
@@ -7074,6 +7160,8 @@ item(FEAT_TRAMTYPES, tram_ballast_ne,44) {
 
         introduction_date:date(0,1,1);
         speed_limit:SPEED_MODIFIER+81 km/h;
+        construction_cost:(14);
+        maintenance_cost:(14);
 
         name: string(STR_TRAM);
         toolbar_caption: string(STR_TRAM);
@@ -7101,6 +7189,8 @@ item(FEAT_TRAMTYPES, tram_ballast,45) {
 
         introduction_date:date(1881,1,1);
         speed_limit:SPEED_MODIFIER+81 km/h;
+        construction_cost:(14 + 8);
+        maintenance_cost:(14 + 8);
 
         name: string(STR_ROAD_CATENARY,string(STR_TRAM));
         toolbar_caption: string(STR_ROAD_CATENARY,string(STR_TRAM));
@@ -7120,7 +7210,7 @@ item(FEAT_TRAMTYPES, tram_ballast,45) {
       depots:gfx_depot_tram_choice;
     }
 }
-# 57 "src/index.pnml" 2
+# 58 "src/index.pnml" 2
 
 # 1 "src/roads/road_generic.pnml" 1
   switch(FEAT_ROADTYPES,SELF,road_generic_rural_gfx,current_year){
@@ -7163,6 +7253,8 @@ item(FEAT_ROADTYPES, road_generic, 0) {
 
         introduction_date:date(0,1,1);
         speed_limit:SPEED_MODIFIER+51 km/h;
+        construction_cost:8;
+        maintenance_cost:8;
         map_colour:6;
 
         name: string(STR_GEN_STREET,string(STR_ROAD_GEN));
@@ -7185,4 +7277,4 @@ item(FEAT_ROADTYPES, road_generic, 0) {
     roadstops:gfx_stops_asphalt;
     }
 }
-# 59 "src/index.pnml" 2
+# 60 "src/index.pnml" 2

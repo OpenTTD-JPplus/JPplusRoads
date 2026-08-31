@@ -38,6 +38,8 @@ item(FEAT_ROADTYPES, road_generic, 0) {
 
         introduction_date:date(0,1,1);
         speed_limit:SPEED_MODIFIER+51 km/h;
+        construction_cost:COST_ROAD;
+        maintenance_cost:COST_ROAD;
         map_colour:VAR_ALLEY;
 
         name: string(STR_GEN_STREET,string(STR_ROAD_GEN));

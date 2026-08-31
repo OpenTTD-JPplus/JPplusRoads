@@ -6,6 +6,8 @@ item(FEAT_ROADTYPES, street_unpaved,16) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+30 km/h;
+    construction_cost:COST_ST01;
+    maintenance_cost:COST_ST01;
     map_colour:VAR_ALLEY;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_UNPAVED));
@@ -35,6 +37,8 @@ item(FEAT_ROADTYPES, street_stone,18) {
 
     introduction_date:date(0,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_ST03;
+    maintenance_cost:COST_ST03;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_GEN_STREET,string(STR_ROAD_STONE));
@@ -64,6 +68,8 @@ item(FEAT_ROADTYPES, street_stone_elec,19) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+40 km/h;
+    construction_cost:COST_ST04;
+    maintenance_cost:COST_ST04;
     map_colour:VAR_SECONDARY;
 
     name: string(STR_ROAD_CATENARY,string(STR_GEN_STREET,string(STR_ROAD_STONE)));

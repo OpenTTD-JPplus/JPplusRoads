@@ -6,6 +6,8 @@ item(FEAT_ROADTYPES, avenue_6l_r,33) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+51 km/h;
+    construction_cost:COST_ST18;
+    maintenance_cost:COST_ST18;
     map_colour:VAR_AVENUE;
 
     name: string(STR_ROAD_AVENUE_6R);
@@ -35,6 +37,8 @@ item(FEAT_ROADTYPES, avenue_6l_l,34) {
 
     introduction_date:date(1850,1,1);
     speed_limit:SPEED_MODIFIER+51 km/h;
+    construction_cost:COST_ST19;
+    maintenance_cost:COST_ST19;
     map_colour:VAR_AVENUE;
 
     name: string(STR_ROAD_AVENUE_6L);

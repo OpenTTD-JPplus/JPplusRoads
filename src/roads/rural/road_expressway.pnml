@@ -31,6 +31,8 @@ item(FEAT_ROADTYPES, road_expressway_dw,11) {
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+101 km/h;
+    construction_cost:COST_REX1;
+    maintenance_cost:COST_REX1;
     map_colour:VAR_EXPRESSWAY;
     
     name: string(STR_ROAD_EXPRESS);
@@ -62,6 +64,8 @@ item(FEAT_ROADTYPES, road_expressway_sw,12) {
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+101 km/h;
+    construction_cost:COST_REX2;
+    maintenance_cost:COST_REX2;
     map_colour:VAR_EXPRESSWAY;
     
     toolbar_caption: string(STR_ROAD_EXPRESS_S);
@@ -93,6 +97,8 @@ item(FEAT_ROADTYPES, road_expressway_red,13) {
 
     introduction_date:date(1963,7,16);
     speed_limit:SPEED_MODIFIER+61 km/h;
+    construction_cost:COST_REX3;
+    maintenance_cost:COST_REX3;
     map_colour:VAR_EXPRESSWAY;
     
     toolbar_caption: string(STR_ROAD_EXPRESS_R);

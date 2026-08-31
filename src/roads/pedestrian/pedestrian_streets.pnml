@@ -6,6 +6,8 @@ item(FEAT_ROADTYPES, street_pedestrian_stone,35) {
 
     introduction_date:date(1800,1,1);
     speed_limit:0;
+    construction_cost:COST_PD01;
+    maintenance_cost:COST_PD01;
     map_colour:VAR_ALLEY;
     
     name: string(STR_GEN_STREET_PED,string(STR_ROAD_STONE));
@@ -35,6 +37,8 @@ item(FEAT_ROADTYPES, street_pedestrian_brown,36) {
 
     introduction_date:date(1930,1,1);
     speed_limit:0;
+    construction_cost:COST_PD02;
+    maintenance_cost:COST_PD02;
     map_colour:VAR_ALLEY;
     
     name: string(STR_GEN_STREET_PED,string(STR_ROAD_TILE));
