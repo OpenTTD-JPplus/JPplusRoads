@@ -68,7 +68,7 @@
     0..1944:deco_empty;
     sw_power_poles_conc_r;
   }   
-  switch(FEAT_ROADTYPES,SELF,sw_power_poles_secondary_main,railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")){
+  switch(FEAT_ROADTYPES,SELF,sw_power_poles_secondary_main,railtype<64||tramtype==tramtype("RAIL")||tramtype==tramtype("ELRL")||param_hide_power_poles==1){
     1:deco_empty;
     sw_power_poles_secondary_1;
   }   
