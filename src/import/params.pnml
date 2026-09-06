@@ -121,6 +121,14 @@
       type: bool;
       name: string(STR_PARAM_ROAD_GEN);
       desc: string(STR_PARAM_ROAD_GEN_DESC);
+      def_value: 1;
+      }
+  }
+  param 10 { 
+    param_hide_power_poles {
+      type: bool;
+      name: string(STR_PARAM_HIDE_POWER_POLES);
+      desc: string(STR_PARAM_HIDE_POWER_POLES_DESC);
       def_value: 0;
       }
   }

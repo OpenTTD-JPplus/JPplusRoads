@@ -17,8 +17,8 @@ item(FEAT_ROADTYPES, street_unpaved,16) {
     roadtype_flags: bitmask(ROADTYPE_FLAG_CATENARY);
   }
   graphics {
-    catenary_front:sw_light_poles_gas_f_main;
-    catenary_back:sw_light_poles_gas_b_main;
+    catenary_front:deco_empty;
+    catenary_back:deco_empty;
     underlay: sw_street_unpaved;
     bridge_surfaces:gfx_bridge_street_stone_nm;
     direction_markings:gfx_arrows_2l;

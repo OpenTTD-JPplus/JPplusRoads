@@ -379,10 +379,10 @@
   //
   //*Old */
     spriteset(gfx_def_rd_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/road_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
+    "gfx/roads/gfx_street_dirt.png") {tmpl_underlay (0,0,0,0,0)}
     spriteset(gfx_snow_rd_unpaved, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
-    "gfx/roads/road_snow_dirt_nm.png") {tmpl_underlay (0,0,0,0,0)}
-    switch(FEAT_ROADTYPES,SELF,gfx_rd_unpaved,terrain_type){
+    "gfx/roads/gfx_snow_street_dirt.png") {tmpl_underlay (0,0,0,0,0)}
+    switch(FEAT_ROADTYPES,SELF,gfx_street_dirt,terrain_type){
       TILETYPE_SNOW:gfx_snow_rd_unpaved;
       gfx_def_rd_unpaved;
     }
@@ -891,7 +891,7 @@
   //*Old
     switch (FEAT_ROADTYPES,SELF,sw_street_unpaved,railtype<64) {
       1:sw_crossing_street_unpaved;
-      gfx_rd_unpaved;
+      gfx_street_dirt;
     }
     switch (FEAT_ROADTYPES,SELF,sw_street_stone,railtype<64) {
       1:sw_crossing_street_stone;

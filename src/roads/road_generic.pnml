@@ -1,11 +1,11 @@
   switch(FEAT_ROADTYPES,SELF,road_generic_rural_gfx,current_year){
-    0..1849:sw_road_rural_dirt_main;
-    1850..1934:sw_road_rural_stone_main;
+    0..1889:sw_road_rural_dirt_main;
+    1890..1934:sw_road_rural_stone_main;
     sw_road_rural_asph_main;
   }
   switch(FEAT_ROADTYPES,SELF,road_generic_city_gfx,current_year){
-    0..1849:gfx_rd_unpaved;
-    1850..1934:gfx_street_stone_nm_def;
+    0..1889:gfx_street_dirt;
+    1890..1934:gfx_street_stone_nm_def;
     sw_street_secondary_asph_sw_main;
   }
   switch(FEAT_ROADTYPES,SELF,road_generic_main,town_zone){
@@ -26,9 +26,13 @@
     bridge_generic_rural_gfx;
   }
 
-  switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_tz_restricted_gen,current_year>1950){
+  switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_f_tz_restricted_gen,current_year<1890||current_year>1949){
     1:deco_empty;
     sw_light_poles_gas_f_tz_restricted;
+  }
+  switch (FEAT_ROADTYPES,SELF,sw_light_poles_gas_b_tz_restricted_gen,current_year<1890){
+    1:deco_empty;
+    sw_light_poles_metal_b_tz_restricted;
   }
 
 item(FEAT_ROADTYPES, road_generic, 0) {
@@ -51,7 +55,7 @@ item(FEAT_ROADTYPES, road_generic, 0) {
     }
   graphics {
     catenary_front:sw_light_poles_gas_f_tz_restricted_gen;
-    catenary_back:sw_light_poles_metal_b_tz_restricted;
+    catenary_back:sw_light_poles_gas_b_tz_restricted_gen;
     underlay: road_generic_main;
     bridge_surfaces:sw_bridge_generic_main;
     direction_markings:gfx_arrows_2l;
