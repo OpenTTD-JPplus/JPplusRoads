@@ -96,12 +96,13 @@ grf {
       desc: string(STR_PARAM_GRASS);
       min_value: 0;
       max_value: 3;
-      def_value: 2;
+      def_value: 0;
       names: {
-          0: string(STR_PARAM_GRASS_1);
-          1: string(STR_PARAM_GRASS_2);
-          2: string(STR_PARAM_GRASS_3);
-          3: string(STR_PARAM_GRASS_4);
+          0: string(STR_PARAM_GRASS_AUTO);
+          1: string(STR_PARAM_GRASS_1);
+          2: string(STR_PARAM_GRASS_2);
+          3: string(STR_PARAM_GRASS_3);
+          4: string(STR_PARAM_GRASS_4);
         };
       }
   }
@@ -151,7 +152,7 @@ replace lights_remove(1406 , "gfx/gfx_placeholder.png") {
  [ 0,0, 1,1, 0, 0]
 }
 
-if(param_grass_style==0){
+if(param_grass_style==1||(climate==CLIMATE_TEMPERATE && param_grass_style==0)){
   replace road_underlay_1(1313, "gfx/misc/gfx_grass_temp.png") {
     [ 0,0, 64,31, -31, 0]
     [ 0,0, 64,31, -31, 0]
@@ -221,7 +222,7 @@ if(param_grass_style==0){
     [ 0,0, 64,31, -31, 0]
   }
 }
-if(param_grass_style==1){
+if(param_grass_style==2||(climate==CLIMATE_TROPICAL && param_grass_style==0)){
   replace road_underlay_1_1(1313, "gfx/misc/gfx_grass_trop.png") {
     [ 0,0, 64,31, -31, 0]
     [ 0,0, 64,31, -31, 0]
@@ -291,7 +292,7 @@ if(param_grass_style==1){
     [ 0,0, 64,31, -31, 0]
   }
 }
-if(param_grass_style==2){
+if(param_grass_style==3||(climate==CLIMATE_ARCTIC && param_grass_style==0)){
   replace road_underlay2__1(1313, "gfx/misc/gfx_grass_arctic.png") {
     [ 0,0, 64,31, -31, 0]
     [ 0,0, 64,31, -31, 0]
@@ -361,7 +362,7 @@ if(param_grass_style==2){
     [ 0,0, 64,31, -31, 0]
   }
 }
-if(param_grass_style==3){
+if(param_grass_style==4){
   replace road_underlay_3_1(1313, "gfx/misc/gfx_grass_japanset.png") {
     [ 0,0, 64,31, -31, 0]
     [ 0,0, 64,31, -31, 0]

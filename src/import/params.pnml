@@ -92,12 +92,13 @@
       desc: string(STR_PARAM_GRASS);
       min_value: 0;
       max_value: 3;
-      def_value: 2;
+      def_value: 0;
       names: {
-          0: string(STR_PARAM_GRASS_1);
-          1: string(STR_PARAM_GRASS_2);
-          2: string(STR_PARAM_GRASS_3);
-          3: string(STR_PARAM_GRASS_4);
+          0: string(STR_PARAM_GRASS_AUTO);
+          1: string(STR_PARAM_GRASS_1);
+          2: string(STR_PARAM_GRASS_2);
+          3: string(STR_PARAM_GRASS_3);
+          4: string(STR_PARAM_GRASS_4);
         };
       }
   }
