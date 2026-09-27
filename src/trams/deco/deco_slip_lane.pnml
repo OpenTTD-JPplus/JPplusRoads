@@ -18,8 +18,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_r,15) {
     graphics {
       gui:gui_chevron_r;
         catenary_front:deco_empty;
-        catenary_back:gfx_slip_chevron_r;
-        underlay: deco_empty;
+        catenary_back:deco_empty;
+        underlay: gfx_slip_chevron_r;
         bridge_surfaces: deco_empty;
     }
 }
@@ -43,8 +43,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_l,16) {
     graphics {
       gui:gui_chevron_l;
         catenary_front:deco_empty;
-        catenary_back:gfx_slip_chevron_l;
-        underlay: deco_empty;
+        catenary_back:deco_empty;
+        underlay: gfx_slip_chevron_l;
         bridge_surfaces: deco_empty;
     }
 }
