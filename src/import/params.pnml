@@ -91,7 +91,7 @@
       name: string(STR_PARAM_GRASS);
       desc: string(STR_PARAM_GRASS);
       min_value: 0;
-      max_value: 3;
+      max_value: 4;
       def_value: 0;
       names: {
           0: string(STR_PARAM_GRASS_AUTO);

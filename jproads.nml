@@ -95,7 +95,7 @@ grf {
       name: string(STR_PARAM_GRASS);
       desc: string(STR_PARAM_GRASS);
       min_value: 0;
-      max_value: 3;
+      max_value: 4;
       def_value: 0;
       names: {
           0: string(STR_PARAM_GRASS_AUTO);
@@ -7010,8 +7010,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_r,15) {
     graphics {
       gui:gui_chevron_r;
         catenary_front:deco_empty;
-        catenary_back:gfx_slip_chevron_r;
-        underlay: deco_empty;
+        catenary_back:deco_empty;
+        underlay: gfx_slip_chevron_r;
         bridge_surfaces: deco_empty;
     }
 }
@@ -7035,8 +7035,8 @@ item(FEAT_TRAMTYPES, deco_slip_lane_l,16) {
     graphics {
       gui:gui_chevron_l;
         catenary_front:deco_empty;
-        catenary_back:gfx_slip_chevron_l;
-        underlay: deco_empty;
+        catenary_back:deco_empty;
+        underlay: gfx_slip_chevron_l;
         bridge_surfaces: deco_empty;
     }
 }
